@@ -3,6 +3,7 @@
     "agent-caps",
     "agent-sentinel",
     "agent-cost-tracker",
-    "agent-guardrails"
+    "agent-guardrails",
+    "agent-health"
   ]
 }
