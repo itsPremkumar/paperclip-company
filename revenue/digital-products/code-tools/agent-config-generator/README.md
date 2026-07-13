@@ -144,13 +144,29 @@ The **PRO version** generates a complete Paperclip **company configuration** wit
 - **The Paperclip Company Seed Script** — bootstrap your entire autonomous org in one command
 - **Priority support** & lifetime updates
 
+### What's in the PRO package
+
+When you buy PRO you get this repo's `pro/` directory, which contains:
+
+- `pro/company-template.json` — a ready-to-use 5-agent company config (CTO, Engineer, Researcher, Writer, Analyst) with shared memory, a global approval gate, and two orchestration workflows (Feature Development, Research & Report).
+- `pro/seed.js` — the **Company Seed Script** (`gen-company`), a zero-dependency CLI that materialises the template, applies your overrides, validates it, and can POST it straight to a Paperclip-compatible API.
+
+```bash
+# Preview the resolved company config (with an override)
+npx agent-config-generator gen-company --set company.name="Acme Autonomous" --dry-run
+
+# Write it to a file
+npx agent-config-generator gen-company --out company.json
+
+# Bootstrap it against a live Paperclip API
+gen-company --api https://api.paperclip.so --api-key "$PAPERCLIP_API_KEY"
+```
+
 👉 **[Get PRO → premium.premautonomous.co](https://premautonomous.co/products/agent-config-generator)**
 
 ---
 
 ## API Reference
-
-### Paperclip Agent Config Schema
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -191,9 +207,12 @@ npm test
 ```
 agent-config-generator/
 ├── src/
-│   └── index.js          # Main CLI entry point
+│   ├── index.js          # Main CLI entry point (gen-agent)
+│   └── index.test.js     # Unit tests for agent config builder
 ├── pro/
-│   └── company-template.json  # PRO multi-agent orchestration config
+│   ├── company-template.json  # PRO multi-agent orchestration config
+│   ├── seed.js           # PRO Company Seed Script (gen-company)
+│   └── seed.test.js      # Unit tests for the seed script
 ├── package.json
 ├── README.md
 └── .gitignore
