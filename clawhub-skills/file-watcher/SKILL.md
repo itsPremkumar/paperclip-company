@@ -1,86 +1,86 @@
 ---
-name: File System Watcher
-version: 1.0.0
-description: Watch, monitor, and diff file system changes with a polling-based file watcher. Detect creates, modifications, and deletions — no external dependencies. Zero deps (Python stdlib).
-tags: file, watch, monitor, fsnotify, python, devtools
+name: file-watcher
+version: 2.0.0
+description: Monitor directories for changes: snapshots, diffs, glob filtering, event detection
+tags: ["file", "watch", "monitor", "diff", "cli", "automation"]
 ---
 
-# File System Watcher
+# File Watcher v2 🚀
 
-A polling-based file system watcher that detects creates, modifications, and deletions. No external dependencies, no inotify, no OS-specific APIs — pure Python stdlib.
+Monitor directories for changes: snapshots, diffs, glob filtering, event detection
 
-Ideal for build pipelines, development servers, log monitoring, and CI environments where `watchdog` or `inotifywait` isn't available.
+Zero dependencies (Python stdlib only). Works on Windows, macOS, Linux.
+
+## ✨ What's New in v2
+
+| Feature | Description |
+|---------|-------------|
+| Snapshot capture | Snapshot capture |
+| Hash/MD5 tracking | Hash/MD5 tracking |
+| Glob filtering | Glob filtering |
+| Create/delete/modify detection | Create/delete/modify detection |
+| Diff between snapshots | Diff between snapshots |
+| Watch mode | Watch mode |
 
 ## Install
 
 ```bash
-# No dependencies needed — Python 3.8+ stdlib only
-python file_watcher.py --help
+# Requires Python 3.8+. No pip install needed.
+curl -O https://raw.githubusercontent.com/itsPremkumar/file-watcher/main/file_watcher.py
 
-# Make it a system command
-chmod +x file_watcher.py
-sudo cp file_watcher.py /usr/local/bin/file-watcher
+# Or copy the file anywhere — it's self-contained.
 ```
 
 ## Commands
 
 | Command | Description |
 |---------|-------------|
-| `watch` | Continuously watch a path for changes (polling loop) |
-| `once` | Take a one-time snapshot of a path's state |
-| `diff` | Compare two snapshots and show changes |
-
-## Usage
-
-```bash
-# Watch a directory continuously (poll every 1s, show events)
-python file_watcher.py watch ./src --poll-interval 1
-
-# Watch a specific file
-python file_watcher.py watch config.json
-
-# Take a one-time snapshot (saves to stdout or file)
-python file_watcher.py once ./src > snapshot1.json
-python file_watcher.py once ./src --output snapshot2.json
-
-# Diff two snapshots
-python file_watcher.py diff snapshot1.json snapshot2.json
-```
+| `python file_watcher.py once <dir>` | Take a snapshot |
+| `python file_watcher.py once <dir> --output FILE` | Save snapshot to file |
+| `python file_watcher.py diff <a> <b>` | Diff two snapshots |
+| `python file_watcher.py watch <dir>` | Watch for changes (long-running) |
+| `python file_watcher.py --glob PATTERN` | Filter by glob |
+| `python file_watcher.py self-test` | Run built-in tests |
 
 ## Features
 
-- **Zero dependencies** — pure Python stdlib, runs on any Python 3.8+ install
-- **Polling-based** — works on every OS (Windows, macOS, Linux) without kernel-specific APIs
-- **Event filtering** — watch for create, modify, or delete events separately
-- **Snapshot diff** — take snapshots and compare them offline
-- **Glob/regex filtering** — ignore noise like `__pycache__`, `.git`, and `node_modules`
-- **Quiet mode** — only report changes, no banner
-- **JSON snapshots** — machine-readable state captures for CI integration
+- **Snapshot capture**
+- **Hash/MD5 tracking**
+- **Glob filtering**
+- **Create/delete/modify detection**
+- **Diff between snapshots**
+- **Watch mode**
 
-## Examples
+## Example
 
 ```bash
-# Watch a project directory, ignoring common noise
-python file_watcher.py watch . --ignore "**/node_modules" --ignore "**/.git" --ignore "**/__pycache__"
-
-# Watch only Python files
-python file_watcher.py watch . --glob "*.py"
-
-# Take a snapshot before and after a build
-python file_watcher.py once ./src --output pre-build.json
-# ... run build ...
-python file_watcher.py once ./dist --output post-build.json
-python file_watcher.py diff pre-build.json post-build.json
-
-# Watch a config directory for changes and exit after 5 events
-python file_watcher.py watch /etc/myapp --max-events 5
+python file_watcher.py self-test
 ```
 
-## Why File System Watcher?
+## CI Integration
 
-Most file watchers depend on OS-specific APIs — `inotify` on Linux, `FSEvents` on macOS, `ReadDirectoryChangesW` on Windows — or the `watchdog` Python package which wraps these. In CI, Docker, serverless, or locked-down environments, you often can't install additional packages or rely on kernel APIs. This tool uses simple polling (like `make`'s `-w` flag or `entr`'s polling mode) and works everywhere Python runs. The snapshot/diff model is also CI-native: capture state before and after a step and compare offline.
+```yaml
+# .github/workflows/verify.yml
+name: Verify
+on: [push]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Self-test
+        run: python file_watcher.py self-test
+```
+
+## Why
+
+File Watcher is built for agent-native workflows: zero dependencies, offline-first, CI-ready.
+Part of the Hermes autonomous product stack (31 agent-native tools, all CI-tested).
 
 ## Support
 
-- File an issue on the [ClawHub registry](https://clawhub.nousresearch.com)
-- MIT License — free to use, modify, and share
+Free + MIT. Sponsor if useful:
+- GitHub Sponsors: https://github.com/sponsors/itsPremkumar
+- Buy Me a Coffee: https://buymeacoffee.com/itsPremkumar
+
+⭐ Star on [GitHub](https://github.com/itsPremkumar/file-watcher)

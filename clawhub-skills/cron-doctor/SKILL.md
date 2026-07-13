@@ -1,24 +1,85 @@
 ---
 name: cron-doctor
-version: 1.0.0
-description: Validate and diagnose a scheduled-task file for an agent (parse errors, unsafe cmds). Stdlib.
-tags: [cron, schedule, safety, openclaw, hermes, agent]
+version: 2.0.0
+description: Diagnose and fix cron job issues: missed runs, overlapping jobs, silent failures
+tags: ["cron", "doctor", "diagnostics", "cli", "scheduler", "debug"]
 ---
 
-# cron-doctor — don't ship a broken schedule
+# Cron Doctor v2 🚀
 
-Parses a crontab-style file (30m | every 2h | "0 9 * * * <cmd>") and reports
-unparseable lines, collisions, and unsafe commands (rm -rf, sudo, etc). Stdlib, offline.
+Diagnose and fix cron job issues: missed runs, overlapping jobs, silent failures
 
-## Usage
+Zero dependencies (Python stdlib only). Works on Windows, macOS, Linux.
+
+## ✨ What's New in v2
+
+| Feature | Description |
+|---------|-------------|
+| Missed-run detection | Missed-run detection |
+| Overlap detection | Overlap detection |
+| Silent-failure alerts | Silent-failure alerts |
+| Auto-fix suggestions | Auto-fix suggestions |
+| Run history | Run history |
+| JSON output | JSON output |
+
+## Install
+
 ```bash
-python cron_doctor.py check <file> [--json]
+# Requires Python 3.8+. No pip install needed.
+curl -O https://raw.githubusercontent.com/itsPremkumar/cron-doctor/main/cron_doctor.py
+
+# Or copy the file anywhere — it's self-contained.
+```
+
+## Commands
+
+| Command | Description |
+|---------|-------------|
+| `python cron_doctor.py diagnose` | Diagnose cron issues |
+| `python cron_doctor.py list` | List cron jobs |
+| `python cron_doctor.py fix <job>` | Attempt auto-fix |
+| `python cron_doctor.py history <job>` | Show run history |
+| `python cron_doctor.py self-test` | Run built-in tests |
+
+## Features
+
+- **Missed-run detection**
+- **Overlap detection**
+- **Silent-failure alerts**
+- **Auto-fix suggestions**
+- **Run history**
+- **JSON output**
+
+## Example
+
+```bash
+python cron_doctor.py self-test
+```
+
+## CI Integration
+
+```yaml
+# .github/workflows/verify.yml
+name: Verify
+on: [push]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Self-test
+        run: python cron_doctor.py self-test
 ```
 
 ## Why
-A bad cron line fails silently at 3am. Check it first. Free + MIT.
+
+Cron Doctor is built for agent-native workflows: zero dependencies, offline-first, CI-ready.
+Part of the Hermes autonomous product stack (31 agent-native tools, all CI-tested).
 
 ## Support
+
 Free + MIT. Sponsor if useful:
-- GitHub Sponsors: https://github.com/sponsors/itsPremkumar  *(add your link)*
-- Buy Me a Coffee: https://buymeacoffee.com/itsPremkumar      *(add your link)*
+- GitHub Sponsors: https://github.com/sponsors/itsPremkumar
+- Buy Me a Coffee: https://buymeacoffee.com/itsPremkumar
+
+⭐ Star on [GitHub](https://github.com/itsPremkumar/cron-doctor)

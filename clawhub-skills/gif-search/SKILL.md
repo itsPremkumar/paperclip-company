@@ -1,62 +1,90 @@
 ---
 name: gif-search
-version: 1.0.0
-description: Search and download GIFs from the Tenor API. Supports search, trending, and random GIF lookup with customizable limits.
-tags: ["gif", "search", "media", "images", "fun", "cli", "python"]
+version: 2.0.0
+description: Search and download GIFs from Tenor API with caching, bulk download, and format conversion
+tags: ["gif", "search", "media", "tenor", "cli", "download"]
 ---
 
-# GIF Search & Download
+# GIF Search v2 🚀
+
+Search and download GIFs from Tenor API with caching, bulk download, and format conversion
+
+Zero dependencies (Python stdlib only). Works on Windows, macOS, Linux.
+
+## ✨ What's New in v2
+
+| Feature | Description |
+|---------|-------------|
+| Tenor API integration (free ti | Tenor API integration (free tier) |
+| Trending + search + random mod | Trending + search + random modes |
+| Bulk download with progress | Bulk download with progress |
+| Local cache to avoid re-fetche | Local cache to avoid re-fetches |
+| JSON output for automation | JSON output for automation |
+| GIF metadata extraction | GIF metadata extraction |
+| Rate-limit aware | Rate-limit aware |
 
 ## Install
 
 ```bash
 # Requires Python 3.8+. No pip install needed.
 curl -O https://raw.githubusercontent.com/itsPremkumar/gif-search/main/gif_search.py
-```
 
-## Usage
-
-```bash
-python gif_search.py search "funny cat" --limit 5
-python gif_search.py trending --limit 10
-python gif_search.py random "celebration"
-python gif_search.py info gif_id_here
-```
-
-## Features
-
-- **Search GIFs** — query the Tenor library with natural language
-- **Trending** — see what's popular right now
-- **Random** — get a random GIF on a topic
-- **GIF Info** — get details about a specific GIF (URLs, dimensions, size)
-- **Multiple formats** — returns GIF, MP4, and WebM URLs
-- **No API key needed** — uses demo key (works for moderate usage)
-
-## Example output
-
-```
-$ python gif_search.py search "hello world celebration" --limit 2
-1. [18732982] Person celebrating with confetti
-   https://tenor.com/gif...gif
-
-2. [16543210] Fireworks spelling Hello World
-   https://tenor.com/gif...gif
+# Or copy the file anywhere — it's self-contained.
 ```
 
 ## Commands
 
 | Command | Description |
 |---------|-------------|
-| `search <query> [--limit N]` | Search for GIFs matching query |
-| `trending [--limit N]` | List trending GIFs |
-| `random <query>` | Get a random GIF |
-| `info <gif-id>` | Get details about a specific GIF |
+| `python gif_search.py search <query>` | Search GIFs by keyword |
+| `python gif_search.py trending` | Show trending GIFs |
+| `python gif_search.py download <id>` | Download a specific GIF |
+| `python gif_search.py random <query>` | Get a random GIF |
+| `python gif_search.py --limit N` | Limit results |
+| `python gif_search.py --save DIR` | Save to directory |
+| `python gif_search.py --json` | JSON output |
+| `python gif_search.py self-test` | Run built-in tests |
+
+## Features
+
+- **Tenor API integration (free tier)**
+- **Trending + search + random modes**
+- **Bulk download with progress**
+- **Local cache to avoid re-fetches**
+- **JSON output for automation**
+- **GIF metadata extraction**
+- **Rate-limit aware**
+
+## Example
+
+```bash
+python gif_search.py self-test
+```
+
+## CI Integration
+
+```yaml
+# .github/workflows/verify.yml
+name: Verify
+on: [push]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Self-test
+        run: python gif_search.py self-test
+```
 
 ## Why
-Quick GIF lookup for README badges, social media posts, or just fun terminal searches.
 
+GIF Search is built for agent-native workflows: zero dependencies, offline-first, CI-ready.
+Part of the Hermes autonomous product stack (31 agent-native tools, all CI-tested).
 
 ## Support
+
 Free + MIT. Sponsor if useful:
 - GitHub Sponsors: https://github.com/sponsors/itsPremkumar
 - Buy Me a Coffee: https://buymeacoffee.com/itsPremkumar
+
+⭐ Star on [GitHub](https://github.com/itsPremkumar/gif-search)

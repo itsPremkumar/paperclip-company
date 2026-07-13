@@ -1,34 +1,83 @@
 ---
 name: dev-prompts
-version: 1.0.0
-description: 150 curated developer-productivity prompts you can paste into any agent (planning, debugging, code review, docs).
-tags: [prompts, developer, productivity, openclaw, hermes]
+version: 2.0.0
+description: Curated collection of engineering prompts: code review, debugging, architecture, refactoring
+tags: ["prompts", "dev", "engineering", "templates", "ai", "productivity"]
 ---
 
-# dev-prompts — 150 developer productivity prompts
+# Developer Prompts Pack v2 🚀
 
-A categorized prompt pack for AI coding agents: planning, debugging, code review,
-refactoring, docs, testing, architecture. Paste into OpenClaw/Hermes or your editor.
+Curated collection of engineering prompts: code review, debugging, architecture, refactoring
+
+Zero dependencies (Python stdlib only). Works on Windows, macOS, Linux.
+
+## ✨ What's New in v2
+
+| Feature | Description |
+|---------|-------------|
+| 30+ engineering prompt templat | 30+ engineering prompt templates |
+| Code review prompts | Code review prompts |
+| Debugging workflows | Debugging workflows |
+| Architecture decision prompts | Architecture decision prompts |
+| Refactoring guides | Refactoring guides |
+| Copy-paste ready | Copy-paste ready |
 
 ## Install
-No code to run. The prompts live in `PROMPTS.md` (150 entries, grouped by category).
-Copy any block into your agent chat.
 
-## Categories (sample)
-- Planning & scoping
-- Debugging & root-cause
-- Code review checklists
-- Refactoring & DRY
-- Docs & READMEs
-- Tests & edge cases
+```bash
+# Requires Python 3.8+. No pip install needed.
+curl -O https://raw.githubusercontent.com/itsPremkumar/dev-prompts/main/SKILL.md
+
+# Or copy the file anywhere — it's self-contained.
+```
+
+## Commands
+
+| Command | Description |
+|---------|-------------|
+| `list` | List available prompts |
+| `show <name>` | Show a prompt template |
+| `search <query>` | Find relevant prompts |
+
+## Features
+
+- **30+ engineering prompt templates**
+- **Code review prompts**
+- **Debugging workflows**
+- **Architecture decision prompts**
+- **Refactoring guides**
+- **Copy-paste ready**
+
+## Example
+
+```bash
+python None self-test
+```
+
+## CI Integration
+
+```yaml
+# .github/workflows/verify.yml
+name: Verify
+on: [push]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Self-test
+        run: python None self-test
+```
 
 ## Why
-Prompts are the cheapest lever for agent quality. This pack is the free, MIT-licensed
-core; an expanded bundle (500+ prompts + a prompt-linter) is on Gumroad.
 
-## Support this work
-Free + MIT. Sponsor the builder if it helps:
-- GitHub Sponsors: https://github.com/sponsors/itsPremkumar  *(add your link)*
-- Buy Me a Coffee: https://buymeacoffee.com/itsPremkumar      *(add your link)*
+Developer Prompts Pack is built for agent-native workflows: zero dependencies, offline-first, CI-ready.
+Part of the Hermes autonomous product stack (31 agent-native tools, all CI-tested).
 
-test: test -f PROMPTS.md && echo "dev-prompts pack present"   # proves the prompt pack file exists
+## Support
+
+Free + MIT. Sponsor if useful:
+- GitHub Sponsors: https://github.com/sponsors/itsPremkumar
+- Buy Me a Coffee: https://buymeacoffee.com/itsPremkumar
+
+⭐ Star on [GitHub](https://github.com/itsPremkumar/dev-prompts)

@@ -1,92 +1,86 @@
 ---
-name: Markdown Linter & Fixer
-version: 1.0.0
-description: Lint, check, and auto-fix Markdown files — table of contents, broken links, YAML frontmatter validation, and formatting. Zero dependencies (Python stdlib).
-tags: markdown, lint, format, documentation, python
+name: md-linter
+version: 2.0.0
+description: Lint and auto-format Markdown: trailing whitespace, frontmatter validation, TOC generation
+tags: ["markdown", "lint", "format", "toc", "cli", "docs"]
 ---
 
-# Markdown Linter & Fixer
+# Markdown Linter v2 🚀
 
-A zero-dependency CLI tool to lint, validate, and auto-fix Markdown documentation. Checks heading consistency, generates tables of contents, validates links, verifies YAML frontmatter, and normalizes formatting.
+Lint and auto-format Markdown: trailing whitespace, frontmatter validation, TOC generation
 
-Perfect for docs-heavy repos, static sites (Jekyll, Hugo, MkDocs), and CI pipelines where installing Node.js toolchains (markdownlint, prettier) is overkill.
+Zero dependencies (Python stdlib only). Works on Windows, macOS, Linux.
+
+## ✨ What's New in v2
+
+| Feature | Description |
+|---------|-------------|
+| Trailing whitespace detection  | Trailing whitespace detection (CI-friendly exit 1) |
+| Frontmatter validation | Frontmatter validation |
+| TOC generation with nesting | TOC generation with nesting |
+| Format with dry-run | Format with dry-run |
+| TOC insertion | TOC insertion |
+| Multiple rule sets | Multiple rule sets |
 
 ## Install
 
 ```bash
-# No dependencies needed — Python 3.8+ stdlib only
-python md_linter.py --help
+# Requires Python 3.8+. No pip install needed.
+curl -O https://raw.githubusercontent.com/itsPremkumar/md-linter/main/md_linter.py
 
-# Make it a system command
-chmod +x md_linter.py
-sudo cp md_linter.py /usr/local/bin/md-linter
+# Or copy the file anywhere — it's self-contained.
 ```
 
 ## Commands
 
 | Command | Description |
 |---------|-------------|
-| `check` | Lint a Markdown file for heading, whitespace, and formatting issues |
-| `toc` | Generate and optionally insert a table of contents |
-| `links` | Check for broken links (file-local and HTTP 200 validation) |
-| `frontmatter` | Validate YAML frontmatter fields |
-| `format` | Auto-fix common formatting issues (trailing spaces, heading spacing) |
-
-## Usage
-
-```bash
-# Lint a file
-python md_linter.py check README.md
-
-# Generate a table of contents
-python md_linter.py toc docs/guide.md
-
-# Insert TOC into the file (after frontmatter)
-python md_linter.py toc docs/guide.md --insert
-
-# Check links
-python md_linter.py links documentation.md
-
-# Validate frontmatter
-python md_linter.py frontmatter post.md --require title,date,tags
-
-# Auto-format
-python md_linter.py format README.md --write
-```
+| `python md_linter.py check <file>` | Lint a Markdown file |
+| `python md_linter.py frontmatter <file>` | Validate YAML frontmatter |
+| `python md_linter.py toc <file>` | Generate table of contents |
+| `python md_linter.py format <file>` | Auto-format (dry-run by default) |
+| `python md_linter.py toc --insert <file>` | Insert TOC into file |
+| `python md_linter.py self-test` | Run built-in tests |
 
 ## Features
 
-- **Zero dependencies** — pure Python stdlib, no npm/pip installs
-- **TOC generation** — builds ordered lists from `#` headings with proper nesting
-- **Broken link detection** — checks local file references and HTTP links (HEAD requests)
-- **Frontmatter validation** — verifies YAML frontmatter has required fields
-- **Format auto-fix** — trailing whitespace removal, heading spacing, consistent list markers
-- **CI-friendly** — exits with status code 1 when issues are found
-- **Glob support** — lint multiple files at once
+- **Trailing whitespace detection (CI-friendly exit 1)**
+- **Frontmatter validation**
+- **TOC generation with nesting**
+- **Format with dry-run**
+- **TOC insertion**
+- **Multiple rule sets**
 
-## Examples
+## Example
 
 ```bash
-# Lint all markdown files in a project
-python md_linter.py check README.md CHANGELOG.md CONTRIBUTING.md
-
-# Validate frontmatter on blog posts
-python md_linter.py frontmatter _posts/*.md --require title,date,categories
-
-# Generate a TOC and preview before inserting
-python md_linter.py toc long-doc.md
-python md_linter.py toc long-doc.md --insert
-
-# Format-check in CI
-python md_linter.py check --verbose README.md
-if [ $? -ne 0 ]; then echo "Docs need fixing!"; exit 1; fi
+python md_linter.py self-test
 ```
 
-## Why Markdown Linter & Fixer?
+## CI Integration
 
-Existing Markdown linters (markdownlint-cli, prettier) require Node.js and a `node_modules` directory. In CI, Docker, or constrained environments, that's a heavy dependency for what should be a simple text parsing job. This tool is a single Python file you can audit, vendor, or curl into any environment with Python 3.8+. It handles the 80% case — TOC generation, link validation, frontmatter checks, and formatting — without any ceremony.
+```yaml
+# .github/workflows/verify.yml
+name: Verify
+on: [push]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Self-test
+        run: python md_linter.py self-test
+```
+
+## Why
+
+Markdown Linter is built for agent-native workflows: zero dependencies, offline-first, CI-ready.
+Part of the Hermes autonomous product stack (31 agent-native tools, all CI-tested).
 
 ## Support
 
-- File an issue on the [ClawHub registry](https://clawhub.nousresearch.com)
-- MIT License — free to use, modify, and share
+Free + MIT. Sponsor if useful:
+- GitHub Sponsors: https://github.com/sponsors/itsPremkumar
+- Buy Me a Coffee: https://buymeacoffee.com/itsPremkumar
+
+⭐ Star on [GitHub](https://github.com/itsPremkumar/md-linter)

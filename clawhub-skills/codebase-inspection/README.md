@@ -1,25 +1,41 @@
-# Codebase Inspector v2 🚀
+# Codebase Inspector 🚀
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)]()
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)]()
-![Lines](https://img.shields.io/badge/codebase-20K%20lines%20%E2%80%A2%205%20langs-brightgreen)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+![codebase](https://img.shields.io/badge/tag-codebase-blue) ![analysis](https://img.shields.io/badge/tag-analysis-blue) ![metrics](https://img.shields.io/badge/tag-metrics-blue) ![devtools](https://img.shields.io/badge/tag-devtools-blue) ![python](https://img.shields.io/badge/tag-python-blue) ![cli](https://img.shields.io/badge/tag-cli-blue)
 
-**Analyze any codebase: lines of code, language breakdowns, file-type ratios, complexity metrics.**  
+Advanced codebase analysis with HTML reports, git-aware diffs, trend tracking, SVG badges, CSV export, and CI/CD integration
+
 Zero dependencies (Python stdlib only). Works on Windows, macOS, Linux.
 
 ## ✨ Features
 
-| Feature | Description |
+- Automatic language detection (40+ extensions → 30+ languages)
+- Smart directory skipping (.git, node_modules, __pycache__, etc.)
+- Blank/comment/code line counting
+- HTML visual report with bar charts + summary cards
+- Historical trend tracking (snapshot-based)
+- Git-aware codebase diffing
+- SVG badge generation for README
+- CSV export for dashboards
+- JSON mode for CI/CD pipelines
+- Cross-platform (Windows/macOS/Linux)
+- 13 built-in self-tests
+
+## Commands
+
+| Command | Description |
 |---------|-------------|
-| 📊 **Language Breakdown** | 40+ extensions → 30+ languages with file/line/blank/comment/code counts |
-| 🎨 **HTML Reports** | Full-color visual report with bar charts + summary cards |
-| 📈 **Trend Tracking** | `--snapshot` + `--trend` to watch your codebase grow over time |
-| 🔍 **Git-aware Diff** | `--diff <dir>` — compare branches, checkouts, or releases |
-| 🏷️ **SVG Badge** | `--badge` generates a shields.io badge URL for README |
-| 📋 **CSV Export** | `--csv` for spreadsheets and dashboards |
-| 📂 **File-level Detail** | Top 20 largest files with relative path + language |
-| ⚙️ **Exclusion Patterns** | `--exclude "target,.build"` to skip custom dirs |
-| 🧪 **Self-test** | `codebase_inspector.py self-test` — 13 built-in checks |
+| `analyze <dir>` | Analyze directory, print text report |
+| `--json` | JSON output for pipelines |
+| `--html FILE` | Generate visual HTML report with charts |
+| `--csv` | CSV export for spreadsheets |
+| `--badge` | Generate shields.io badge URL |
+| `--snapshot` | Save as trend data point |
+| `--trend` | Show historical trends |
+| `--diff <dir2>` | Compare two codebases |
+| `--exclude DIRS` | Skip custom directories |
+| `self-test` | Run 13 built-in checks |
 
 ## Quick Start
 
@@ -28,34 +44,18 @@ Zero dependencies (Python stdlib only). Works on Windows, macOS, Linux.
 curl -O https://raw.githubusercontent.com/itsPremkumar/codebase-inspection/main/codebase_inspector.py
 
 # Run
-python codebase_inspector.py /path/to/project
-python codebase_inspector.py /path/to/project --html report.html
-python codebase_inspector.py ./branch-a --diff ./branch-b
 python codebase_inspector.py self-test
-```
-
-## Sample Output
-
-```
-Language             Files    Lines    Blank  Comments    Code
-Python                  42     3845      412       189    3244
-JavaScript              18     2104      198        76    1830
-TypeScript               7     1567      145        34    1388
-Markdown                12      845      210         0     635
-HTML                     5      423       42         5     376
-------------------------------------------------------------------------
-TOTAL                   84     8784      807       304    7673
 ```
 
 ## Why Codebase Inspector?
 
-- **CI-ready** — `--json` for pipelines, `--html` for visual reports, `--diff` for PR analysis
-- **Zero deps** — works in any Python environment, no `pip install` needed
-- **Privacy-first** — fully offline, no telemetry, no uploads
-- **Cross-platform** — same output on Windows, macOS, Linux
+- **Zero deps** — runs in any Python 3.8+ environment
+- **Offline-first** — no telemetry, no uploads, fully private
+- **CI-ready** — JSON output + self-tests for pipelines
+- **Cross-platform** — identical output on Windows/macOS/Linux
 
 ---
 
-📦 Also available on [ClawHub](https://clawhub.ai/skills/skills/codebase-inspection)  
+📦 Also on [ClawHub](https://clawhub.ai/skills/skills/codebase-inspection)  
 ⭐ Star on [GitHub](https://github.com/itsPremkumar/codebase-inspection)  
 ☕ [Buy Me a Coffee](https://buymeacoffee.com/itsPremkumar)

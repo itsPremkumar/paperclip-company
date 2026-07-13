@@ -1,41 +1,88 @@
 ---
 name: maps-cli
-version: 1.0.0
-description: Geocode addresses, search points of interest, get routes and directions, and look up timezones — all from the CLI. Uses free OpenStreetMap/OSRM APIs.
-tags: ["maps", "geocoding", "routes", "osm", "cli", "python"]
+version: 2.0.0
+description: Advanced OpenStreetMap CLI: geocode, reverse geocode, route, POI search, timezone, CSV export
+tags: ["maps", "osm", "geocode", "routing", "poi", "cli", "location"]
 ---
 
-# Maps & Geocoding CLI
+# Maps CLI v2 🚀
+
+Advanced OpenStreetMap CLI: geocode, reverse geocode, route, POI search, timezone, CSV export
+
+Zero dependencies (Python stdlib only). Works on Windows, macOS, Linux.
+
+## ✨ What's New in v2
+
+| Feature | Description |
+|---------|-------------|
+| OpenStreetMap Nominatim geocod | OpenStreetMap Nominatim geocoding |
+| OSRM routing engine | OSRM routing engine |
+| Overpass API for POI search | Overpass API for POI search |
+| Timezone lookup | Timezone lookup |
+| CSV export | CSV export |
+| Zero external dependencies | Zero external dependencies |
 
 ## Install
+
 ```bash
 # Requires Python 3.8+. No pip install needed.
 curl -O https://raw.githubusercontent.com/itsPremkumar/maps-cli/main/maps_cli.py
+
+# Or copy the file anywhere — it's self-contained.
 ```
 
-## Usage
-```bash
-python maps_cli.py geocode "1600 Amphitheatre Parkway, Mountain View"
-python maps_cli.py reverse 37.422,-122.084
-python maps_cli.py search "coffee shop" --near "New York"
-python maps_cli.py route "New York" "Boston" --mode driving
-python maps_cli.py timezone 37.422,-122.084
-```
+## Commands
+
+| Command | Description |
+|---------|-------------|
+| `python maps_cli.py geocode <query>` | Geocode a place name |
+| `python maps_cli.py reverse <lat> <lon>` | Reverse geocode coordinates |
+| `python maps_cli.py route <s> <d>` | Driving route between points |
+| `python maps_cli.py poi <lat> <lon>` | Find points of interest |
+| `python maps_cli.py timezone <lat> <lon>` | Lookup timezone |
+| `python maps_cli.py export <lat> <lon>` | Export POIs as CSV |
+| `python maps_cli.py --json` | JSON output |
+| `python maps_cli.py self-test` | Run built-in tests |
 
 ## Features
-- **Geocoding** — convert addresses to lat/lng coordinates
-- **Reverse geocoding** — convert coordinates to addresses
-- **POI search** — find places near a location
-- **Routing** — get driving, walking, or cycling directions
-- **Timezone lookup** — get timezone for any coordinates
-- **Zero API keys** — uses free OpenStreetMap Nominatim + OSRM APIs
+
+- **OpenStreetMap Nominatim geocoding**
+- **OSRM routing engine**
+- **Overpass API for POI search**
+- **Timezone lookup**
+- **CSV export**
+- **Zero external dependencies**
+
+## Example
+
+```bash
+python maps_cli.py self-test
+```
+
+## CI Integration
+
+```yaml
+# .github/workflows/verify.yml
+name: Verify
+on: [push]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Self-test
+        run: python maps_cli.py self-test
+```
 
 ## Why
-Quick location lookups from the terminal. No Google Maps API bills.
+
+Maps CLI is built for agent-native workflows: zero dependencies, offline-first, CI-ready.
+Part of the Hermes autonomous product stack (31 agent-native tools, all CI-tested).
 
 ## Support
+
 Free + MIT. Sponsor if useful:
 - GitHub Sponsors: https://github.com/sponsors/itsPremkumar
 - Buy Me a Coffee: https://buymeacoffee.com/itsPremkumar
 
-test: python maps_cli.py --help   # install first: curl -O https://raw.githubusercontent.com/itsPremkumar/maps-cli/main/maps_cli.py
+⭐ Star on [GitHub](https://github.com/itsPremkumar/maps-cli)

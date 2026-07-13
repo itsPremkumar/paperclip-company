@@ -1,53 +1,85 @@
 ---
 name: agent-caps
-version: 1.0.0
-description: Validate, scaffold, and cross-check AI-agent capability manifests so agents stay swappable and safe. Zero dependencies (Python stdlib).
-tags: [agent, manifest, validation, devtools, openclaw, paperclip]
+version: 2.0.0
+description: Define, validate, and audit agent capability manifests for safe skill installation
+tags: ["agent", "caps", "security", "manifest", "cli", "safety"]
 ---
 
-# agent-caps — Agent Capability Manifest Toolkit
+# Agent Capability Manifest v2 🚀
 
-Lets an OpenClaw / Hermes / Paperclip-style agent declare, validate, and cross-check
-its capabilities as a machine-readable manifest — implementing the standard agent
-interface (Name / Version / Capabilities / Dependencies / Memory / Tools / API / Status)
-so agents can be swapped or audited without breaking the system.
+Define, validate, and audit agent capability manifests for safe skill installation
 
-This is the runnable enforcement behind any "agent marketplace" idea: catch missing
-fields, bad versions, illegal statuses, and unknown dependencies **before** an agent
-goes live.
+Zero dependencies (Python stdlib only). Works on Windows, macOS, Linux.
+
+## ✨ What's New in v2
+
+| Feature | Description |
+|---------|-------------|
+| Manifest schema validation | Manifest schema validation |
+| Skill audit before install | Skill audit before install |
+| Capability diffing | Capability diffing |
+| Risk scoring | Risk scoring |
+| JSON output | JSON output |
+| CI integration | CI integration |
 
 ## Install
-No dependencies. Requires Python 3.8+. Copy `agent_caps.py` anywhere.
 
-## Commands
 ```bash
-python agent_caps.py validate  path/to/manifest.json   # validate against schema
-python agent_caps.py scaffold  ./my-agent --name X      # generate a manifest
-python agent_caps.py check-deps a.json b.json          # cross-check dependencies
-python agent_caps.py schema                          # print the JSON schema
+# Requires Python 3.8+. No pip install needed.
+curl -O https://raw.githubusercontent.com/itsPremkumar/agent-caps/main/agent_caps.py
+
+# Or copy the file anywhere — it's self-contained.
 ```
 
-## Example manifest
-```json
-{
-  "name": "Hermes",
-  "version": "1.0",
-  "capabilities": ["executive reasoning", "planning", "documentation"],
-  "dependencies": ["Paperclip API", "git CLI"],
-  "memory_requirements": "256MB",
-  "tools": ["terminal", "file", "browser"],
-  "api": "hermes_local / hermes_gateway",
-  "status": "active"
-}
+## Commands
+
+| Command | Description |
+|---------|-------------|
+| `python agent_caps.py validate <manifest>` | Validate capability manifest |
+| `python agent_caps.py audit <skill>` | Audit a skill folder |
+| `python agent_caps.py diff <a> <b>` | Compare manifests |
+| `python agent_caps.py report <agent>` | Generate capability report |
+| `python agent_caps.py self-test` | Run built-in tests |
+
+## Features
+
+- **Manifest schema validation**
+- **Skill audit before install**
+- **Capability diffing**
+- **Risk scoring**
+- **JSON output**
+- **CI integration**
+
+## Example
+
+```bash
+python agent_caps.py self-test
+```
+
+## CI Integration
+
+```yaml
+# .github/workflows/verify.yml
+name: Verify
+on: [push]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Self-test
+        run: python agent_caps.py self-test
 ```
 
 ## Why
-Most "agent marketplaces" are docs, not enforcement. agent-caps turns the standard
-interface into a validator. It is MIT licensed, offline, no telemetry.
 
-## Premium
-A curated bundle (extra manifests for 10+ popular agents + a CI check script) is
-available on Gumroad. This ClawHub skill is free and fully functional on its own.
+Agent Capability Manifest is built for agent-native workflows: zero dependencies, offline-first, CI-ready.
+Part of the Hermes autonomous product stack (31 agent-native tools, all CI-tested).
 
-> Note: this is a developer tool, not a revenue generator by itself — it saves
-> real integration time when running multi-agent stacks.
+## Support
+
+Free + MIT. Sponsor if useful:
+- GitHub Sponsors: https://github.com/sponsors/itsPremkumar
+- Buy Me a Coffee: https://buymeacoffee.com/itsPremkumar
+
+⭐ Star on [GitHub](https://github.com/itsPremkumar/agent-caps)

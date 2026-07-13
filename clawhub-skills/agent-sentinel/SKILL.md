@@ -1,41 +1,82 @@
 ---
 name: agent-sentinel
-version: 1.0.0
-description: Scan OpenClaw/Hermes skills for risky permission patterns before you install them. Stdlib-only, offline.
-tags: [security, audit, skill, openclaw, hermes, vetting]
+version: 2.0.0
+description: Scan OpenClaw/Hermes skills for risky permission patterns before installation
+tags: ["security", "audit", "skill", "openclaw", "hermes", "vetting"]
 ---
 
-# agent-sentinel — vet a skill before you trust it
+# Agent Sentinel v2 🚀
 
-The #1 OpenClaw risk is installing a third-party skill that asks for more access than it
-needs (e.g. a "weather" skill requesting shell execution). agent-sentinel scans a skill
-folder and flags exactly that — before you give it machine access.
+Scan OpenClaw/Hermes skills for risky permission patterns before installation
+
+Zero dependencies (Python stdlib only). Works on Windows, macOS, Linux.
+
+## ✨ What's New in v2
+
+| Feature | Description |
+|---------|-------------|
+| Simple-named skill requesting  | Simple-named skill requesting shell → HIGH |
+| Shell/exec capability requeste | Shell/exec capability requested → MEDIUM |
+| Hardcoded secret detection → H | Hardcoded secret detection → HIGH |
+| No human approval gate → LOW | No human approval gate → LOW |
+| Network egress without reason | Network egress without reason |
+| Offline, private, no telemetry | Offline, private, no telemetry |
 
 ## Install
-No dependencies. Python 3.8+. Copy `agent_sentinel.py` anywhere.
 
-## Usage
 ```bash
-python agent_sentinel.py scan <skill-folder> [--json]   # risk report
-python agent_sentinel.py self-test                      # built-in test
+# Requires Python 3.8+. No pip install needed.
+curl -O https://raw.githubusercontent.com/itsPremkumar/agent-sentinel/main/agent_sentinel.py
+
+# Or copy the file anywhere — it's self-contained.
 ```
 
-## What it checks
-- Simple-named skill (weather/hello/joke) requesting shell/exec → **HIGH**
-- Shell/exec capability requested at all → **MEDIUM**
-- Possible hardcoded secret (api_key/token) in skill files → **HIGH**
-- No human approval gate for privileged actions → **LOW**
-- Network egress without stated reason
+## Commands
 
-Returns a risk level (OK / LOW / MEDIUM / HIGH) + actionable findings.
+| Command | Description |
+|---------|-------------|
+| `python agent_sentinel.py scan <skill-folder>` | Risk report for a skill |
+| `python agent_sentinel.py self-test` | Run built-in tests |
+
+## Features
+
+- **Simple-named skill requesting shell → HIGH**
+- **Shell/exec capability requested → MEDIUM**
+- **Hardcoded secret detection → HIGH**
+- **No human approval gate → LOW**
+- **Network egress without reason**
+- **Offline, private, no telemetry**
+
+## Example
+
+```bash
+python agent_sentinel.py self-test
+```
+
+## CI Integration
+
+```yaml
+# .github/workflows/verify.yml
+name: Verify
+on: [push]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Self-test
+        run: python agent_sentinel.py self-test
+```
 
 ## Why
-ClawHub's own docs tell you to "vet every skill before installing" and check its
-security report. agent-sentinel is the local, private, offline version you can run
-yourself — no upload, no telemetry.
 
-## Support this work
-This is free and MIT licensed. If it saves you from a bad skill, sponsor the builder:
-- GitHub Sponsors: https://github.com/sponsors/itsPremkumar  *(add your link)*
-- Buy Me a Coffee: https://buymeacoffee.com/itsPremkumar      *(add your link)*
-A premium "batch-scan + CI gate" bundle is on Gumroad.
+Agent Sentinel is built for agent-native workflows: zero dependencies, offline-first, CI-ready.
+Part of the Hermes autonomous product stack (31 agent-native tools, all CI-tested).
+
+## Support
+
+Free + MIT. Sponsor if useful:
+- GitHub Sponsors: https://github.com/sponsors/itsPremkumar
+- Buy Me a Coffee: https://buymeacoffee.com/itsPremkumar
+
+⭐ Star on [GitHub](https://github.com/itsPremkumar/agent-sentinel)

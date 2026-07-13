@@ -1,45 +1,89 @@
 ---
 name: excalidraw-cli
-version: 1.0.0
-description: Generate hand-drawn style Excalidraw diagrams (architecture, flow, sequence) as JSON files from the CLI. Edit and merge existing diagrams.
-tags: ["excalidraw", "diagrams", "drawing", "visualization", "cli", "python"]
+version: 2.0.0
+description: Generate Excalidraw diagrams (flowcharts, sequences, architecture) as valid .excalidraw JSON
+tags: ["excalidraw", "diagrams", "flowchart", "architecture", "cli", "drawing"]
 ---
 
-# Excalidraw Diagram Generator
+# Excalidraw CLI v2 🚀
+
+Generate Excalidraw diagrams (flowcharts, sequences, architecture) as valid .excalidraw JSON
+
+Zero dependencies (Python stdlib only). Works on Windows, macOS, Linux.
+
+## ✨ What's New in v2
+
+| Feature | Description |
+|---------|-------------|
+| Valid Excalidraw JSON output | Valid Excalidraw JSON output |
+| Multiple diagram types (flowch | Multiple diagram types (flowchart, sequence, arch, gantt) |
+| Colored elements | Colored elements |
+| Text labels | Text labels |
+| Compatible with excalidraw.com | Compatible with excalidraw.com |
+| Zero dependencies | Zero dependencies |
 
 ## Install
+
 ```bash
 # Requires Python 3.8+. No pip install needed.
 curl -O https://raw.githubusercontent.com/itsPremkumar/excalidraw-cli/main/excalidraw_cli.py
+
+# Or copy the file anywhere — it's self-contained.
 ```
 
-## Usage
-```bash
-# Create various diagram types
-python excalidraw_cli.py diagram --type architecture --title "System Design" --output system.excalidraw.json
-python excalidraw_cli.py diagram --type flow --title "Auth Flow" --steps "Login,Validate,Redirect"
-python excalidraw_cli.py diagram --type sequence --title "API Call" --actors "Client,Server,DB" --steps "Request,Process,Response"
+## Commands
 
-# Manipulate existing diagrams
-python excalidraw_cli.py merge base.json overlay.json
-python excalidraw_cli.py info diagram.json
-python excalidraw_cli.py export diagram.json --format png
-```
+| Command | Description |
+|---------|-------------|
+| `python excalidraw_cli.py create flowchart` | Generate a flowchart |
+| `python excalidraw_cli.py create sequence` | Generate a sequence diagram |
+| `python excalidraw_cli.py create arch` | Generate architecture diagram |
+| `python excalidraw_cli.py create gantt` | Generate a Gantt chart |
+| `python excalidraw_cli.py render <file>` | Render to SVG/PNG |
+| `python excalidraw_cli.py export <file>` | Export diagram |
+| `python excalidraw_cli.py list` | List templates |
+| `python excalidraw_cli.py show <file>` | Show diagram JSON |
+| `python excalidraw_cli.py self-test` | Run built-in tests |
 
 ## Features
-- **Architecture diagrams** — cloud/infra system design with labeled boxes
-- **Flow charts** — step-by-step process flows with arrows
-- **Sequence diagrams** — actor-based interaction diagrams
-- **Merge diagrams** — combine multiple Excalidraw files
-- **Info/export** — inspect and export to PNG/SVG
-- **Hand-drawn style** — Excalidraw's signature sketch aesthetic
+
+- **Valid Excalidraw JSON output**
+- **Multiple diagram types (flowchart, sequence, arch, gantt)**
+- **Colored elements**
+- **Text labels**
+- **Compatible with excalidraw.com**
+- **Zero dependencies**
+
+## Example
+
+```bash
+python excalidraw_cli.py self-test
+```
+
+## CI Integration
+
+```yaml
+# .github/workflows/verify.yml
+name: Verify
+on: [push]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Self-test
+        run: python excalidraw_cli.py self-test
+```
 
 ## Why
-Quick architecture and flow diagrams from the terminal. No drag-and-drop needed.
+
+Excalidraw CLI is built for agent-native workflows: zero dependencies, offline-first, CI-ready.
+Part of the Hermes autonomous product stack (31 agent-native tools, all CI-tested).
 
 ## Support
+
 Free + MIT. Sponsor if useful:
 - GitHub Sponsors: https://github.com/sponsors/itsPremkumar
 - Buy Me a Coffee: https://buymeacoffee.com/itsPremkumar
 
-test: python excalidraw_cli.py --help   # install first: curl -O https://raw.githubusercontent.com/itsPremkumar/excalidraw-cli/main/excalidraw_cli.py
+⭐ Star on [GitHub](https://github.com/itsPremkumar/excalidraw-cli)
