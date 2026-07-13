@@ -27,6 +27,10 @@ PIPELINES = [
      "data": "NICHE_TEMPLATES", "outdir": "email_packs", "builder": "build_package", "keyname": None},
     {"module": "pipeline3_video_service", "kind": "Video Service",
      "data": "FORMATS", "outdir": "video_packs", "builder": "build_package", "keyname": None},
+    {"module": "pipeline4_support_bot", "kind": "Support Bot Deployer",
+     "data": "VERTICALS", "outdir": "bot_packs", "builder": "build_package", "keyname": None},
+    {"module": "pipeline5_seo_reporter", "kind": "SEO/Audit Reporter",
+     "data": "PLANS", "outdir": "audit_packs", "builder": "build_package", "keyname": None},
 ]
 
 
@@ -42,7 +46,7 @@ def price_of(pkg):
     """Extract a representative price from any package shape."""
     if "pricing" in pkg:
         p = pkg["pricing"]
-        return p.get("price") or p.get("setup") or 0
+        return p.get("price") or p.get("setup") or p.get("monthly") or 0
     return pkg.get("price", 0)
 
 
@@ -84,7 +88,8 @@ def build_dashboard(rows):
     lines.append("## Summary")
     lines.append("| Pipeline | Packages | Price range | Recurring? |")
     lines.append("|----------|:--------:|-------------|:----------:|")
-    recur = {"Fiverr Gig Factory": "Hybrid", "Cold-Email Agency": "Yes", "Video Service": "Hybrid"}
+    recur = {"Fiverr Gig Factory": "Hybrid", "Cold-Email Agency": "Yes", "Video Service": "Hybrid",
+             "Support Bot Deployer": "Yes", "SEO/Audit Reporter": "Yes"}
     for pk, items in by_pipeline.items():
         prices = [i["price"] for i in items if i["price"]]
         rng = f"${min(prices)}–${max(prices)}" if prices else "—"
@@ -117,11 +122,11 @@ def main():
 
     if a.cmd == "self-test":
         rows = collect(dry_run=True)
-        assert len(rows) == 18, f"expected 18 packages, got {len(rows)}"
+        assert len(rows) == 26, f"expected 26 packages, got {len(rows)}"
         pls = {r["pipeline"] for r in rows}
-        assert len(pls) == 3, f"expected 3 pipelines, got {pls}"
+        assert len(pls) == 5, f"expected 5 pipelines, got {pls}"
         assert all(r["price"] > 0 for r in rows), "all packages must have a price"
-        print(f"self-test: OK — 3 pipelines, {len(rows)} packages, all priced")
+        print(f"self-test: OK — 5 pipelines, {len(rows)} packages, all priced")
         return
 
     dry = a.dry_run
@@ -131,7 +136,7 @@ def main():
         out = os.path.join(HERE, "INCOME_DASHBOARD.md")
         with open(out, "w", encoding="utf-8") as f:
             f.write(dash)
-        print(f"Regenerated {len(rows)} packages across 3 pipelines.")
+        print(f"Regenerated {len(rows)} packages across {len({r['pipeline'] for r in rows})} pipelines.")
         print(f"Wrote dashboard -> {out}")
     else:
         print(f"[dry-run] {len(rows)} packages, "

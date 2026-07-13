@@ -1,0 +1,46 @@
+{
+  "plan": "agency",
+  "gig_title": "I will provide white-label audit reports for your agency clients",
+  "sites_included": 10,
+  "frequency": "weekly",
+  "checks": [
+    "everything in Pro",
+    "white-label branding",
+    "client-ready PDFs",
+    "trend tracking",
+    "priority fixes list"
+  ],
+  "pricing": {
+    "monthly": 399,
+    "annual": 3990,
+    "margin_pct": 97,
+    "note": "runs on your ClawHub skills; only compute cost"
+  },
+  "pipeline_spec": {
+    "scheduler": "n8n cron",
+    "tools": [
+      "codebase-inspection",
+      "secret-scanner",
+      "skill-lint"
+    ],
+    "report_engine": "Stirling-PDF",
+    "delivery": "email + dashboard",
+    "frequency": "weekly",
+    "note": "All tools are free/self-hosted ClawHub skills."
+  },
+  "delivery_steps": [
+    "1. Client subscribes + adds site URL(s)",
+    "2. n8n cron triggers weekly audit",
+    "3. Run codebase-inspection + secret-scanner + skill-lint",
+    "4. Render branded PDF via Stirling-PDF",
+    "5. Email report + track trend deltas"
+  ],
+  "tags": [
+    "seo audit",
+    "website audit",
+    "security scan",
+    "technical seo",
+    "automated report",
+    "agency audit"
+  ]
+}

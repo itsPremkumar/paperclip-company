@@ -24,6 +24,29 @@ Generates per-format packages (gig copy, render manifest, delivery steps, pricin
 - Tools: Remotion + Edge-TTS + free stock (Pexels/Pixabay)
 - Formats: product-promo, faceless-short, explainer, social-batch, real-estate
 
+## Pipeline #4 — AI Support Bot Deployer ✅
+`pipeline4_support_bot.py` → done-for-you AI support bots on Chatwoot.
+- **Packages generated:** `bot_packs/*.json` (5 verticals)
+- Validated 2026 pricing: $500–$1200 setup + $99–$299/mo, 90% margin
+- Tools: Chatwoot + Hermes/OpenClaw + agent-sentinel (all self-hosted)
+- Verticals: ecommerce, saas, clinic, agency, local
+
+## Pipeline #5 — SEO/Audit Reporter ✅
+`pipeline5_seo_reporter.py` → recurring website/code audit reports (subscription).
+- **Packages generated:** `audit_packs/*.json` (3 plans)
+- Validated 2026 pricing: $49–$399/mo, **97% margin, pure recurring**
+- Tools: codebase-inspection + secret-scanner + skill-lint + Stirling-PDF
+- Plans: starter, pro, agency (white-label)
+
+## Master orchestrator
+`run_all.py` regenerates ALL packages + writes `INCOME_DASHBOARD.md`.
+```bash
+python run_all.py            # regenerate 26 packages + dashboard
+python run_all.py --dry-run  # income totals only
+python run_all.py self-test  # verify 5 pipelines, 26 packages
+```
+Current: **26 packages, 5 pipelines, $13,016 combined one-time value.**
+
 ## Usage
 ```bash
 python pipeline1_fiverr_gig_factory.py --list

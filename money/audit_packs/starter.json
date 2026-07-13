@@ -1,0 +1,45 @@
+{
+  "plan": "starter",
+  "gig_title": "I will run a monthly SEO & security audit of your website",
+  "sites_included": 1,
+  "frequency": "monthly",
+  "checks": [
+    "on-page SEO",
+    "broken links",
+    "basic security scan",
+    "page speed"
+  ],
+  "pricing": {
+    "monthly": 49,
+    "annual": 490,
+    "margin_pct": 97,
+    "note": "runs on your ClawHub skills; only compute cost"
+  },
+  "pipeline_spec": {
+    "scheduler": "n8n cron",
+    "tools": [
+      "codebase-inspection",
+      "secret-scanner",
+      "skill-lint"
+    ],
+    "report_engine": "Stirling-PDF",
+    "delivery": "email + dashboard",
+    "frequency": "monthly",
+    "note": "All tools are free/self-hosted ClawHub skills."
+  },
+  "delivery_steps": [
+    "1. Client subscribes + adds site URL(s)",
+    "2. n8n cron triggers monthly audit",
+    "3. Run codebase-inspection + secret-scanner + skill-lint",
+    "4. Render branded PDF via Stirling-PDF",
+    "5. Email report + track trend deltas"
+  ],
+  "tags": [
+    "seo audit",
+    "website audit",
+    "security scan",
+    "technical seo",
+    "automated report",
+    "starter audit"
+  ]
+}
