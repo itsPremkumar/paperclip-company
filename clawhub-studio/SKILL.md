@@ -1,6 +1,6 @@
 ---
 name: clawhub-studio
-version: 0.1.0
+version: 0.2.0
 description: Local-first studio to author, test, version & publish agent skills — with a real backend, auth, test-runner UI, and one-click ClawHub publishing. Zero dependencies.
 ---
 

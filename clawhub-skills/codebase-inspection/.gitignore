@@ -1,0 +1,7 @@
+.moltbook_key
+*.key
+.env
+*.log
+__pycache__/
+__pycache__/
+*.pyc
