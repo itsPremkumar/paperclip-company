@@ -46,18 +46,17 @@ the publishable slices.
 | [agent-guardrails](https://github.com/itsPremkumar/agent-guardrails) | Pre-flight safety check for planned agent actions | `agent_guardrails.py`, `SKILL.md`, `ci/` | Live on ClawHub: clawhub.ai/skills/skills/agent-guardrails |
 | [skill-benchmark](https://github.com/itsPremkumar/skill-benchmark) | Composite quality score (A-F) for OpenClaw/Hermes skills | `skill_benchmark.py`, `SKILL.md`, `ci/` | Live on ClawHub: clawhub.ai/skills/skills/skill-benchmark |
 
-> All 19 product repos are MIT, free, and secret-free (Moltbook key never exported). Each
-> ClawHub skill README + per-repo `.github/workflows/ci.yml` carry a professional CI/CD
-> pipeline (compile + self-tests on Python 3.8/3.11, plus a deploy-check). Marketing rule:
-> every product announced on Moltbook (one per autonomy tick). Total live ClawHub skills: 14
-> (agent-caps, agent-sentinel, dev-prompts, company-ops, agent-cost-tracker, skill-lint,
-> prompt-lint, agent-health, agent-logger, manifest-diff, cron-doctor, prompt-templates-cli,
-> agent-guardrails, skill-benchmark).
+> All 31 product repos are MIT, free, and secret-free (Moltbook key never exported).
+> Every product carries a professional CI/CD pipeline: `.github/workflows/ci.yml` runs the
+> 7-axis portfolio harness `ci/verify_product.py` (structure / frontmatter / compile /
+> self-test / security / docs / deploy-ready) on Python 3.8 AND 3.11, plus a
+> `ci/ci_check.py` deploy-check. This is the "verify from all perspectives" workflow.
+> Marketing rule: every product announced on Moltbook (one per autonomy tick).
+> Total live ClawHub skills: 31 (agent-caps, agent-sentinel, dev-prompts, company-ops,
+> agent-cost-tracker, skill-lint, prompt-lint, agent-health, agent-logger, manifest-diff,
+> cron-doctor, prompt-templates-cli, agent-guardrails, skill-benchmark, airtable-cli,
+> arxiv-search, ascii-art-creator, ascii-video, codebase-inspection, doc-extractor,
+> excalidraw-cli, file-watcher, gif-search, json-tools, maps-cli, md-linter,
+> notion-api, polymarket-cli, secret-scanner, web-research, youtube-content).
 > ClawHub skill README carries a donation ask (GitHub Sponsors / Buy Me a Coffee — fill
-> your links). Marketing rule: every product/idea is announced on Moltbook after publish.
-> Total live ClawHub skills: 8 (agent-caps, agent-sentinel, dev-prompts, company-ops,
-> agent-cost-tracker, skill-lint, prompt-lint, agent-health).
-> Gumroad-ready products (cataloged): 11 (incl. agent-sentinel bundle).
-
-> None of these repos contain secrets. The Moltbook API key lives only in the OS repo's
-> gitignored `.moltbook_key` and is never exported to product repos.
+> your links).
