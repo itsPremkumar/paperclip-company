@@ -1,0 +1,113 @@
+{
+  "vertical": "realestate",
+  "package_title": "I will run a monthly AI-agent retainer for your real-estate team",
+  "price": 4000,
+  "tags": [
+    "ai agent",
+    "real estate lead gen",
+    "n8n",
+    "crm automation",
+    "lead qualification",
+    "autonomous agent",
+    "ai retainer"
+  ],
+  "description": "\ud83d\udd27 I will run a monthly AI-agent retainer for your real-estate team\n\nI operate an agent that qualifies leads, drafts follow-ups, and logs hot prospects to your CRM using n8n + Hermes/OpenClaw + Crawl4AI + pgvector + Chatwoot \u2014 all free/self-hosted.\n\n\u2705 What you get:\n\u2022 A live AI agent working for you every month (not a one-off build)\n\u2022 Free, open-source tools (you own the stack, no SaaS lock-in)\n\u2022 Charge $2,500\u2013$6,000/mo retainer; <$20/mo inference\n\u2022 Weekly report + monthly strategy call\n\n\ud83d\udce6 Tiers:\n\u2022 Pilot ($1333/mo, 1 week): 1 agent, Core workflow, Email support, Weekly report\n\u2022 Growth ($4000/mo, 1 week): 2\u20133 agents, CRM/marketplace hooks, Loom updates, Monthly call\n\u2022 Scale ($8000/mo, 2 weeks): Unlimited agents, Full autonomy, Priority support, Quarterly roadmap\n\n\ud83d\ude80 How it works:\n1. You tell me the process to automate (form on order)\n2. I build + deploy the agent on your infra\n3. I monitor, improve, and report every month\n\n\u26a1 Why me: I run the same agent stack that powers a 100-skill autonomous company.\n",
+  "packages": [
+    {
+      "name": "Pilot",
+      "price": 1333,
+      "delivery": "1 week",
+      "revisions": 0,
+      "features": [
+        "1 agent",
+        "Core workflow",
+        "Email support",
+        "Weekly report"
+      ]
+    },
+    {
+      "name": "Growth",
+      "price": 4000,
+      "delivery": "1 week",
+      "revisions": 0,
+      "features": [
+        "2\u20133 agents",
+        "CRM/marketplace hooks",
+        "Loom updates",
+        "Monthly call"
+      ]
+    },
+    {
+      "name": "Scale",
+      "price": 8000,
+      "delivery": "2 weeks",
+      "revisions": 0,
+      "features": [
+        "Unlimited agents",
+        "Full autonomy",
+        "Priority support",
+        "Quarterly roadmap"
+      ]
+    }
+  ],
+  "n8n_workflow": {
+    "name": "deliver-agent-realestate",
+    "nodes": [
+      {
+        "parameters": {},
+        "name": "Schedule / Webhook (trigger)",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 1,
+        "position": [
+          0,
+          0
+        ]
+      },
+      {
+        "parameters": {},
+        "name": "Hermes agent (reason + act)",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 1,
+        "position": [
+          300,
+          0
+        ]
+      },
+      {
+        "parameters": {},
+        "name": "Deliver + log to pgvector",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 1,
+        "position": [
+          600,
+          0
+        ]
+      }
+    ],
+    "connections": {
+      "Schedule / Webhook (trigger)": {
+        "main": [
+          [
+            {
+              "node": "Hermes agent (reason + act)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Hermes agent (reason + act)": {
+        "main": [
+          [
+            {
+              "node": "Deliver + log to pgvector",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "note": "Tools: n8n + Hermes/OpenClaw + Crawl4AI + pgvector + Chatwoot \u2014 all free/self-hosted. Replace code node with your agent logic."
+  }
+}

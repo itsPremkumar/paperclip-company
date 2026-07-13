@@ -45,6 +45,12 @@ PIPELINES = [
      "data": "TYPES", "outdir": "proposal_packs", "builder": "build_package", "keyname": None},
     {"module": "pipeline12_social_poster", "kind": "Social Auto-Poster",
      "data": "PLANS", "outdir": "social_packs", "builder": "build_package", "keyname": None},
+    {"module": "pipeline13_voice_agent", "kind": "Voice AI Agent Deployer",
+     "data": "NICHE_TEMPLATES", "outdir": "voice_packs", "builder": "build_package", "keyname": None},
+    {"module": "pipeline14_document_automation", "kind": "Document Automation Service",
+     "data": "SERVICES", "outdir": "doc_packs", "builder": "build_package", "keyname": None},
+    {"module": "pipeline15_agent_retainer", "kind": "AI Agent Retainer Builder",
+     "data": "VERTICALS", "outdir": "retainer_packs", "builder": "build_package", "keyname": None},
 ]
 
 
@@ -127,7 +133,7 @@ def build_dashboard(rows):
     lines.append("3. Publish → deliver → upsell to monthly retainer")
     lines.append("")
     lines.append("> Regenerate anytime: `python run_all.py`. "
-                 "See `MONEY_AUTOMATION_IDEAS.md` for the full 12-pipeline roadmap.")
+                 "See `research/MONEY_IDEAS_2026.md` for the full 20-idea roadmap.")
     return "\n".join(lines) + "\n"
 
 
@@ -139,11 +145,11 @@ def main():
 
     if a.cmd == "self-test":
         rows = collect(dry_run=True)
-        assert len(rows) == 50, f"expected 50 packages, got {len(rows)}"
+        assert len(rows) == 62, f"expected 62 packages, got {len(rows)}"
         pls = {r["pipeline"] for r in rows}
-        assert len(pls) == 12, f"expected 12 pipelines, got {pls}"
+        assert len(pls) == 15, f"expected 15 pipelines, got {pls}"
         assert all(r["price"] > 0 for r in rows), "all packages must have a price"
-        print(f"self-test: OK — 12 pipelines, {len(rows)} packages, all priced")
+        print(f"self-test: OK — 15 pipelines, {len(rows)} packages, all priced")
         return
 
     dry = a.dry_run

@@ -1,0 +1,113 @@
+{
+  "niche": "plumbing",
+  "package_title": "I will deploy a 24/7 AI voice receptionist for your plumbing business",
+  "price": 1200,
+  "tags": [
+    "ai voice agent",
+    "phone answering",
+    "plumbing automation",
+    "virtual receptionist",
+    "chatwoot",
+    "n8n",
+    "small business automation",
+    "missed call recovery"
+  ],
+  "description": "\ud83d\udd27 I will deploy a 24/7 AI voice receptionist for your plumbing business\n\nI deploy an AI voice agent that answers calls, books jobs, and texts you the details \u2014 so you stop losing the 27% of calls owners miss using Piper (local TTS) + Whisper (local STT) + Hermes/OpenClaw + Chatwoot + n8n \u2014 all free/self-hosted.\n\n\u2705 What you get:\n\u2022 Done-for-you setup \u2014 no technical skills needed\n\u2022 100% free, open-source tools (you own it, no SaaS lock-in)\n\u2022 Charge $900\u2013$1,800 setup + $299\u2013$599/mo; your inference cost ~$0 (local) to <$5/mo\n\u2022 7-day support after go-live\n\n\ud83d\udce6 Packages:\n\u2022 Basic ($300, 3 days, 1 rev): Single-line agent, 1 script, Email support\n\u2022 Standard ($1200, 5 days, 2 rev): Full voice agent, Booking/CRM hook, Loom walkthrough, 7-day support\n\u2022 Premium ($2400, 7 days, 3 rev): Multi-line + escalation, Unlimited scripts, Monthly retainer option, Priority support\n\n\ud83d\ude80 How it works:\n1. You tell me your call flow + tools (form on order)\n2. I build, test, and voice-train the agent\n3. I hand over + record a 5-min Loom walkthrough\n\n\u26a1 Why me: I use the same free-tool stack that powers a 100-skill autonomous company.\n",
+  "packages": [
+    {
+      "name": "Basic",
+      "price": 300,
+      "delivery": "3 days",
+      "revisions": 1,
+      "features": [
+        "Single-line agent",
+        "1 script",
+        "Email support"
+      ]
+    },
+    {
+      "name": "Standard",
+      "price": 1200,
+      "delivery": "5 days",
+      "revisions": 2,
+      "features": [
+        "Full voice agent",
+        "Booking/CRM hook",
+        "Loom walkthrough",
+        "7-day support"
+      ]
+    },
+    {
+      "name": "Premium",
+      "price": 2400,
+      "delivery": "7 days",
+      "revisions": 3,
+      "features": [
+        "Multi-line + escalation",
+        "Unlimited scripts",
+        "Monthly retainer option",
+        "Priority support"
+      ]
+    }
+  ],
+  "n8n_workflow": {
+    "name": "deliver-voice-agent-plumbing",
+    "nodes": [
+      {
+        "parameters": {},
+        "name": "Twilio/Webhook (inbound call)",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 1,
+        "position": [
+          0,
+          0
+        ]
+      },
+      {
+        "parameters": {},
+        "name": "Whisper STT + Hermes agent",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 1,
+        "position": [
+          300,
+          0
+        ]
+      },
+      {
+        "parameters": {},
+        "name": "Piper TTS + Chatwoot handoff",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 1,
+        "position": [
+          600,
+          0
+        ]
+      }
+    ],
+    "connections": {
+      "Twilio/Webhook (inbound call)": {
+        "main": [
+          [
+            {
+              "node": "Whisper STT + Hermes agent",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Whisper STT + Hermes agent": {
+        "main": [
+          [
+            {
+              "node": "Piper TTS + Chatwoot handoff",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "note": "Tools: Piper (local TTS) + Whisper (local STT) + Hermes/OpenClaw + Chatwoot + n8n \u2014 all free/self-hosted. Replace code nodes with your STT/LLM/TTS logic."
+  }
+}
