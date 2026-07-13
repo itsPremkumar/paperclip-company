@@ -15,3 +15,5 @@ secrets/
 .DS_Store
 cj.txt
 build.log
+paperclip/
+_live_backup/

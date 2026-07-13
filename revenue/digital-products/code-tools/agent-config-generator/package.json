@@ -1,0 +1,56 @@
+{
+  "name": "agent-config-generator",
+  "version": "1.0.0",
+  "description": "Interactive CLI tool that generates ready-to-use Paperclip agent configuration JSON files. Companion to the Full Autonomous Company Starter Kit.",
+  "keywords": [
+    "paperclip",
+    "agent",
+    "config",
+    "cli",
+    "autonomous-agents",
+    "ai-agents",
+    "paperclip-config"
+  ],
+  "homepage": "https://github.com/premautonomousco/agent-config-generator#readme",
+  "bugs": {
+    "url": "https://github.com/premautonomousco/agent-config-generator/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Prem Autonomous Co",
+    "url": "https://premautonomous.co"
+  },
+  "bin": {
+    "gen-agent": "src/index.js",
+    "gen-company": "pro/seed.js"
+  },
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./seed": "./pro/seed.js"
+  },
+  "files": [
+    "src/",
+    "pro/",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/premautonomousco/agent-config-generator.git"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test",
+    "seed": "node pro/seed.js",
+    "prepublishOnly": "node -e \"import('./src/index.js').then(m => m.help())\""
+  },
+  "dependencies": {
+    "inquirer": "^11.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "module"
+}

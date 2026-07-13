@@ -1,0 +1,20 @@
+{
+  "type": "artifact",
+  "provider": "paperclip",
+  "title": "PRE-3 Product Analysis & Zero-Investment Monetization Plan",
+  "status": "ready_for_review",
+  "reviewState": "none",
+  "isPrimary": true,
+  "healthStatus": "unknown",
+  "summary": "Analysis of the AVG flagship product plus a $0-cost monetization model (service, MIT template packs, free-channel sponsorships, lead-gen) for Prem Autonomous Co.",
+  "createdByRunId": "aee6e051-cc8f-49fd-85d9-7513fdca46df",
+  "metadata": {
+    "attachmentId": "819f2f1b-a994-4c03-9568-3ba84000da13",
+    "contentType": "text/markdown",
+    "byteSize": 5180,
+    "contentPath": "/api/attachments/819f2f1b-a994-4c03-9568-3ba84000da13/content",
+    "openPath": "/api/attachments/819f2f1b-a994-4c03-9568-3ba84000da13/content",
+    "downloadPath": "/api/attachments/819f2f1b-a994-4c03-9568-3ba84000da13/content?download=1",
+    "originalFilename": "PRE-3-monetization-plan.md"
+  }
+}

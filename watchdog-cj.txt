@@ -1,0 +1,2 @@
+# Netscape HTTP Cookie File
+localhost	FALSE	/	FALSE	0	paperclip-default.session_token	5PvLCxkIQl6PTHlXx3d3hw4QnQeEfc4T.RqLXXcV9UdGUhMILULXbG%2FC3RjFoJhxs4wTTvaiXBTw%3D

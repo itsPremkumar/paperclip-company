@@ -1,0 +1,46 @@
+{
+  "kind": "request_confirmation",
+  "payload": {
+    "version": 1,
+    "idempotencyKey": "confirmation:PRE-3:gtm:1",
+    "continuationPolicy": "wake_assignee",
+    "title": "Finalize AVG zero-investment go-to-market",
+    "prompt": "The PRE-3 analysis is complete. To lock the go-to-market, confirm these 3 founder decisions:",
+    "options": [
+      {
+        "label": "Accept recommended defaults",
+        "value": "defaults",
+        "description": "Niche: job-seeker/tech-creator shorts; floor INR 499/video, cap 20 videos/wk; use AVG publicly as Prem Autonomous Co demo."
+      },
+      {
+        "label": "I will specify different answers",
+        "value": "custom",
+        "description": "Founder will supply niche, price floor/capacity, and public-demo yes/no."
+      }
+    ],
+    "freeText": true,
+    "questions": [
+      {
+        "id": "niche",
+        "label": "Target niche for Path A (done-for-you service)",
+        "type": "text",
+        "required": true,
+        "placeholder": "e.g. local businesses / edu / job-seekers / tech creators"
+      },
+      {
+        "id": "pricing",
+        "label": "Price floor and weekly capacity (videos/week)",
+        "type": "text",
+        "required": true,
+        "placeholder": "e.g. INR 499 floor, 20 videos/week"
+      },
+      {
+        "id": "publicDemo",
+        "label": "OK to use AVG publicly as the Prem Autonomous Co demo (Path D)?",
+        "type": "text",
+        "required": true,
+        "placeholder": "yes / no"
+      }
+    ]
+  }
+}

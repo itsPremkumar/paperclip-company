@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "company": "Prem Autonomous Co",
+  "seller_profile": "prem_autonomous_co",
+  "generated_at": "2026-07-13",
+  "gigs": [
+    {
+      "id": "ai-company-setup",
+      "title": "I Will Set Up Your AI Agent Company (Paperclip + Hermes)",
+      "seo_title": "Set up your AI agent company with Paperclip and Hermes",
+      "category": "Programming & Tech > AI Development",
+      "starting_price": 99,
+      "tiers": {
+        "basic":    { "price": 99,  "delivery_days": 3,  "revisions": 2,  "agent_capacity": "basic" },
+        "standard": { "price": 199, "delivery_days": 5,  "revisions": 0,  "agent_capacity": "standard" },
+        "premium":  { "price": 299, "delivery_days": 7,  "revisions": 0,  "agent_capacity": "premium" }
+      },
+      "fulfillment": {
+        "type": "agent_setup",
+        "module": "agent_company_setup",
+        "inputs": ["client_host_os", "vertical", "agent_count", "mcp_servers"],
+        "outputs": ["paperclip_install", "agent_profiles", "mcp_config", "cron_schedule", "deployment_guide"]
+      }
+    },
+    {
+      "id": "content-pipeline",
+      "title": "I Will Automate Your Content Creation Pipeline",
+      "seo_title": "Automate your content creation pipeline with AI agents",
+      "category": "Writing > Content Strategy",
+      "starting_price": 149,
+      "tiers": {
+        "basic":    { "price": 149, "delivery_days": 5,  "revisions": 2,  "agent_capacity": "basic" },
+        "standard": { "price": 249, "delivery_days": 7,  "revisions": 0,  "agent_capacity": "standard" },
+        "premium":  { "price": 399, "delivery_days": 10, "revisions": 0,  "agent_capacity": "premium" }
+      },
+      "fulfillment": {
+        "type": "content_pipeline",
+        "module": "content_pipeline_build",
+        "inputs": ["niche", "channels", "voice_profiles"],
+        "outputs": ["pipeline_config", "research_agent", "drafting_agent", "editorial_review", "publishing_modules"]
+      }
+    },
+    {
+      "id": "custom-ai-workflows",
+      "title": "I Will Build Custom AI Workflows for Your Business",
+      "seo_title": "Build custom AI workflows and agent automations for your business",
+      "category": "Programming & Tech > AI Integration",
+      "starting_price": 299,
+      "tiers": {
+        "basic":    { "price": 299, "delivery_days": 7,  "revisions": 2, "agent_capacity": "basic" },
+        "standard": { "price": 499, "delivery_days": 14, "revisions": 3, "agent_capacity": "standard" },
+        "premium":  { "price": 799, "delivery_days": 21, "revisions": 0, "agent_capacity": "premium" }
+      },
+      "fulfillment": {
+        "type": "custom_workflow",
+        "module": "custom_workflow_build",
+        "inputs": ["process_description", "success_criteria", "apis"],
+        "outputs": ["discovery_doc", "process_map", "workflow_arch", "deployed_automation", "runbook"]
+      }
+    },
+    {
+      "id": "code-review",
+      "title": "I Will Review and Optimize Your Codebase Using AI Agents",
+      "seo_title": "Review and optimize your codebase using AI agents",
+      "category": "Programming & Tech > Code Review",
+      "starting_price": 79,
+      "tiers": {
+        "basic":    { "price": 79,  "delivery_days": 2,  "revisions": 1, "agent_capacity": "basic" },
+        "standard": { "price": 129, "delivery_days": 3,  "revisions": 2, "agent_capacity": "standard" },
+        "premium":  { "price": 199, "delivery_days": 5,  "revisions": 3, "agent_capacity": "premium" }
+      },
+      "fulfillment": {
+        "type": "code_review",
+        "module": "code_review_pipeline",
+        "inputs": ["repo_url", "languages", "scope"],
+        "outputs": ["architecture_assessment", "security_audit", "performance_analysis", "test_coverage", "dependency_scan", "remediation_roadmap"]
+      }
+    },
+    {
+      "id": "video-creation",
+      "title": "I Will Create AI-Generated Videos for Your Business",
+      "seo_title": "Create AI-generated explainer videos and demos for your business",
+      "category": "Video & Animation > AI Video Production",
+      "starting_price": 49,
+      "tiers": {
+        "basic":    { "price": 49,  "delivery_days": 3, "revisions": 2, "agent_capacity": "basic",    "video_seconds": 60 },
+        "standard": { "price": 99,  "delivery_days": 5, "revisions": 3, "agent_capacity": "standard", "video_seconds": 120 },
+        "premium":  { "price": 149, "delivery_days": 7, "revisions": 0, "agent_capacity": "premium",  "video_seconds": 180 }
+      },
+      "fulfillment": {
+        "type": "video",
+        "module": "avg_video_generation",
+        "inputs": ["script_brief", "target_platform", "brand_assets"],
+        "outputs": ["script", "narrated_video_1080p_mp4", "cutdowns"]
+      }
+    }
+  ]
+}

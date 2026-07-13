@@ -1,0 +1,98 @@
+{
+  "generatedAt": "2026-07-12",
+  "store": {
+    "name": "Prem Autonomous Co \u2014 Digital Products",
+    "tagline": "Build tools that make founders and creators money.",
+    "platform": "Gumroad",
+    "bundle_price_usd": 99
+  },
+  "affiliatePolicy": "Only tools the company uses; links are placeholders {{{AFF_LINK:tool}}}. No paid promotions.",
+  "blog": [
+    {
+      "slug": "zero-cost-ai-business",
+      "title": "How to Start a Zero-Cost AI Business (and Reach Your First Paying Customer in 30 Days)",
+      "file": "blog/zero-cost-ai-business.md"
+    },
+    {
+      "slug": "run-company-with-ai-agents",
+      "title": "Can You Really Run a Company with AI Agents? (What We Learned)",
+      "file": "blog/run-company-with-ai-agents.md"
+    },
+    {
+      "slug": "short-form-video-zero-cost",
+      "title": "How to Produce Short-Form Video at Zero Render Cost",
+      "file": "blog/short-form-video-zero-cost.md"
+    },
+    {
+      "slug": "cold-outreach-that-replies",
+      "title": "Cold Outreach That Gets Replies (Not Ignored)",
+      "file": "blog/cold-outreach-that-replies.md"
+    },
+    {
+      "slug": "pricing-ai-agent-services",
+      "title": "How to Price AI-Agent Services Without Scaring Buyers Away",
+      "file": "blog/pricing-ai-agent-services.md"
+    },
+    {
+      "slug": "complete-bundle-99",
+      "title": "The $99 Bundle: Everything to Launch an AI-Native Business at $0",
+      "file": "blog/complete-bundle-99.md"
+    }
+  ],
+  "products": [
+    {
+      "id": "prem-50-viral-scripts",
+      "title": "50 Viral Short-Form Video Scripts",
+      "price_usd": 12,
+      "file": "products/prem-50-viral-scripts.md"
+    },
+    {
+      "id": "prem-agent-playbook",
+      "title": "Autonomous AI Agent Operations Playbook",
+      "price_usd": 29,
+      "file": "products/prem-agent-playbook.md"
+    },
+    {
+      "id": "prem-remotion-templates",
+      "title": "Remotion Short-Form Video Template Pack",
+      "price_usd": 19,
+      "file": "products/prem-remotion-templates.md"
+    },
+    {
+      "id": "prem-monetization-kit",
+      "title": "AI-Powered Business Monetization Kit",
+      "price_usd": 29,
+      "file": "products/prem-monetization-kit.md"
+    },
+    {
+      "id": "prem-cold-outreach",
+      "title": "Cold Outreach & Lead Generation Pack",
+      "price_usd": 15,
+      "file": "products/prem-cold-outreach.md"
+    },
+    {
+      "id": "prem-job-board-guide",
+      "title": "Free Job Board Outreach Mastery Guide",
+      "price_usd": 12,
+      "file": "products/prem-job-board-guide.md"
+    },
+    {
+      "id": "prem-pricing-templates",
+      "title": "AI Agent Service Catalog + Pricing Templates",
+      "price_usd": 19,
+      "file": "products/prem-pricing-templates.md"
+    },
+    {
+      "id": "prem-30-day-launch",
+      "title": "30-Day Zero-Cost Business Launch Plan",
+      "price_usd": 9,
+      "file": "products/prem-30-day-launch.md"
+    },
+    {
+      "id": "bundle",
+      "title": "Complete Bundle",
+      "price_usd": 99,
+      "file": "products/bundle.md"
+    }
+  ]
+}

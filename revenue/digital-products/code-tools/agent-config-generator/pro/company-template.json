@@ -1,0 +1,185 @@
+{
+  "$schema": "https://schemas.paperclip.so/company-v2.json",
+  "$note": "PRO TEMPLATE — Multi-Agent Company Configuration",
+  "$version": "1.0.0",
+  "$generator": "agent-config-generator",
+  "$tier": "pro",
+  "$purchased_at": "https://premautonomous.co/products/agent-config-generator",
+
+  "company": {
+    "name": "My Autonomous Company",
+    "description": "A fully autonomous AI company powered by Paperclip agents",
+    "timezone": "UTC",
+    "defaultMaxIterations": 50,
+    "defaultTimeoutSec": 1800,
+    "sharedMemory": {
+      "enabled": true,
+      "storeType": "persistent",
+      "contextSyncIntervalSec": 60,
+      "fields": [
+        "decisions",
+        "task_status",
+        "shared_knowledge",
+        "agent_handoffs"
+      ]
+    },
+    "globalApproval": {
+      "enabled": true,
+      "requiredRoles": ["cto"],
+      "approveAfterConsecutiveFailures": 3
+    }
+  },
+
+  "agents": [
+    {
+      "name": "Paperclip CTO",
+      "adapterType": "hermes_local",
+      "role": "cto",
+      "description": "Chief Technology Officer — oversees all engineering decisions, reviews output, approves deliverables",
+      "adapterConfig": {
+        "model": "anthropic/claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "maxIterations": 60,
+        "timeoutSec": 3000,
+        "enabledToolsets": ["terminal", "file", "web", "memory", "search"],
+        "heartbeat": {
+          "enabled": true,
+          "maxConcurrentRuns": 5
+        }
+      },
+      "approvalAuthority": true,
+      "handoffRules": {
+        "acceptFrom": ["engineer", "researcher", "analyst"],
+        "delegateTo": ["engineer", "writer"]
+      }
+    },
+    {
+      "name": "Paperclip Engineer",
+      "adapterType": "hermes_local",
+      "role": "engineer",
+      "description": "Software engineer — writes code, runs tests, debug systems, ships features",
+      "adapterConfig": {
+        "model": "tencent/hy3:free",
+        "provider": "openrouter",
+        "maxIterations": 50,
+        "timeoutSec": 1800,
+        "enabledToolsets": ["terminal", "file", "web", "github", "gitlab"],
+        "heartbeat": {
+          "enabled": true,
+          "maxConcurrentRuns": 3
+        }
+      },
+      "handoffRules": {
+        "acceptFrom": ["cto", "analyst"],
+        "delegateTo": ["cto"],
+        "escalateOnFailure": true,
+        "escalateTo": "cto"
+      }
+    },
+    {
+      "name": "Paperclip Researcher",
+      "adapterType": "hermes_local",
+      "role": "researcher",
+      "description": "Research analyst — gathers information, reads docs, synthesises findings",
+      "adapterConfig": {
+        "model": "google/gemini-2.0-flash-exp",
+        "provider": "google",
+        "maxIterations": 30,
+        "timeoutSec": 1200,
+        "enabledToolsets": ["web", "memory", "search", "file"],
+        "heartbeat": {
+          "enabled": true,
+          "maxConcurrentRuns": 4
+        }
+      },
+      "handoffRules": {
+        "acceptFrom": ["cto", "engineer"],
+        "delegateTo": ["writer", "cto"]
+      }
+    },
+    {
+      "name": "Paperclip Writer",
+      "adapterType": "hermes_local",
+      "role": "writer",
+      "description": "Technical writer — produces documentation, blog posts, release notes, reports",
+      "adapterConfig": {
+        "model": "anthropic/claude-3-haiku",
+        "provider": "anthropic",
+        "maxIterations": 40,
+        "timeoutSec": 600,
+        "enabledToolsets": ["file", "web", "memory", "search"],
+        "heartbeat": {
+          "enabled": false,
+          "maxConcurrentRuns": 0
+        }
+      },
+      "handoffRules": {
+        "acceptFrom": ["cto", "researcher", "engineer"],
+        "delegateTo": ["cto"]
+      }
+    },
+    {
+      "name": "Paperclip Analyst",
+      "adapterType": "hermes_local",
+      "role": "analyst",
+      "description": "Data analyst — processes data, generates charts, runs metrics, writes reports",
+      "adapterConfig": {
+        "model": "openai/gpt-4o",
+        "provider": "openai",
+        "maxIterations": 50,
+        "timeoutSec": 1800,
+        "enabledToolsets": ["terminal", "file", "web", "memory", "search"],
+        "heartbeat": {
+          "enabled": true,
+          "maxConcurrentRuns": 3
+        }
+      },
+      "handoffRules": {
+        "acceptFrom": ["cto", "engineer"],
+        "delegateTo": ["writer", "cto"]
+      }
+    }
+  ],
+
+  "workflows": [
+    {
+      "name": "Feature Development Pipeline",
+      "trigger": "on_issue_created",
+      "steps": [
+        {"agent": "cto", "action": "review_requirement", "nextOnApproval": "engineer"},
+        {"agent": "engineer", "action": "implement_feature", "nextOnComplete": "engineer"},
+        {"agent": "engineer", "action": "run_tests", "nextOnPass": "analyst", "nextOnFail": "engineer"},
+        {"agent": "analyst", "action": "verify_quality", "nextOnApproval": "writer"},
+        {"agent": "writer", "action": "write_documentation", "nextOnComplete": "cto"},
+        {"agent": "cto", "action": "final_approval", "nextOnApproval": "__complete__", "nextOnReject": "engineer"}
+      ]
+    },
+    {
+      "name": "Research & Report Pipeline",
+      "trigger": "on_research_requested",
+      "steps": [
+        {"agent": "researcher", "action": "gather_information", "nextOnComplete": "analyst"},
+        {"agent": "analyst", "action": "synthesize_findings", "nextOnComplete": "writer"},
+        {"agent": "writer", "action": "produce_report", "nextOnComplete": "cto"},
+        {"agent": "cto", "action": "review_and_publish", "nextOnApproval": "__complete__"}
+      ]
+    }
+  ],
+
+  "observability": {
+    "logging": {
+      "level": "info",
+      "structured": true,
+      "outputs": ["stdout", "file"]
+    },
+    "metrics": {
+      "enabled": true,
+      "collectEverySec": 60,
+      "exportTo": "prometheus"
+    },
+    "tracing": {
+      "enabled": true,
+      "samplingRate": 0.1
+    }
+  }
+}
