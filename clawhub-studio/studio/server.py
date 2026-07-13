@@ -23,6 +23,7 @@ import studio.auth as auth
 import studio.skills as skills
 import studio.testrunner as testrunner
 import studio.publish as publish
+import studio.workspace as workspace
 
 
 def _json(handler, code, obj):
@@ -147,6 +148,8 @@ def make_handler(data_dir):
                     b = self._body()
                     try:
                         vid = db.add_version(con, slug, b["version"], json.dumps(b.get("manifest", {})))
+                        # scaffold real skill files on disk so test/publish have something to run
+                        workspace.scaffold(data_dir, slug, b.get("manifest", {}))
                         return _json(self, 201, {"id": vid, "version": b["version"]})
                     except KeyError:
                         return _json(self, 404, {"error": "skill missing"})
