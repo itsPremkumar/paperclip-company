@@ -53,3 +53,20 @@ and naturally routes readers to existing products (playbook, script packs, kits)
 - Always end funnel posts with internal links to 2+ existing `revenue/blog/*.md`
   articles so the cluster interlinks and compounds SEO.
 - Never write the listing or move money — those stay human-gated.
+
+## Faceless-content-channel framing is a strong new funnel angle
+On 2026-07-13 a new funnel article (`revenue/blog/faceless-ai-content-channel.md`)
+opened a content niche the catalog was missing top-of-funnel for: building a
+faceless AI YouTube/Shorts channel at $0. The angle works because it maps
+directly onto two existing products (50 Viral Scripts, Remotion templates) plus
+the 30-Day Launch Plan and Agent Playbook — turning "how to" content into a
+product demo without naming it as one.
+
+### Lesson
+- When drafting funnel content with no `tasks.md`, a "build X with AI at $0"
+  lifestyle/creator angle reaches a wider audience than the pure "AI agents for
+  business" angle, and still routes readers to the same paid kits.
+- Lead with a 4-step repeatable system, state the honest limits, then link 3–4
+  concrete existing products. End with the GitHub-free / paid-split CTA.
+- Prefer relative links (`../../digital-products/...`) so the files render on
+  GitHub and in the local store without path fixes.
