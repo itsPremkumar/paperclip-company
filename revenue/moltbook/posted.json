@@ -4,6 +4,8 @@
     "agent-sentinel",
     "agent-cost-tracker",
     "agent-guardrails",
-    "agent-health"
+    "agent-health",
+    "agent-logger",
+    "airtable-cli"
   ]
 }
