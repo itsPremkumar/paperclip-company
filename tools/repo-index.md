@@ -35,10 +35,16 @@ the publishable slices.
 | [agent-sentinel](https://github.com/itsPremkumar/agent-sentinel) | Scan OpenClaw/Hermes skills for risky permission patterns (stdlib, offline) | `agent_sentinel.py`, `SKILL.md` | Live on ClawHub: clawhub.ai/skills/skills/agent-sentinel |
 | [dev-prompts-pack](https://github.com/itsPremkumar/dev-prompts-pack) | 150 curated developer-productivity prompts (ClawHub skill source) | `PROMPTS.md`, `SKILL.md` | Live on ClawHub: clawhub.ai/skills/skills/dev-prompts |
 | [company-ops](https://github.com/itsPremkumar/company-ops) | Autonomous AI company OS (CONSTITUTION + confidence-gated loop) | `CONSTITUTION.md`, `autonomy-loop.py`, `SKILL.md` | Live on ClawHub: clawhub.ai/skills/skills/company-ops |
+| [agent-cost-tracker](https://github.com/itsPremkumar/agent-cost-tracker) | LLM token/cost estimator from agent logs (gpt/claude/gemini) | `agent_cost_tracker.py`, `SKILL.md` | Live on ClawHub: clawhub.ai/skills/skills/agent-cost-tracker |
+| [skill-lint](https://github.com/itsPremkumar/skill-lint) | Validate ClawHub/OpenClaw skill folders before publishing | `skill_lint.py`, `SKILL.md` | Live on ClawHub: clawhub.ai/skills/skills/skill-lint |
+| [prompt-lint](https://github.com/itsPremkumar/prompt-lint) | Lint prompts/SKILL.md for quality (score 0-100) | `prompt_lint.py`, `SKILL.md` | Live on ClawHub: clawhub.ai/skills/skills/prompt-lint |
+| [agent-health](https://github.com/itsPremkumar/agent-health) | Probe agent dependency endpoints for up/down + latency | `agent_health.py`, `endpoints.txt`, `SKILL.md` | Live on ClawHub: clawhub.ai/skills/skills/agent-health |
 
-> All 8 product repos are MIT, free, and secret-free (Moltbook key never exported). Each
+> All 12 product repos are MIT, free, and secret-free (Moltbook key never exported). Each
 > ClawHub skill README carries a donation ask (GitHub Sponsors / Buy Me a Coffee — fill
 > your links). Marketing rule: every product/idea is announced on Moltbook after publish.
+> Total live ClawHub skills: 8 (agent-caps, agent-sentinel, dev-prompts, company-ops,
+> agent-cost-tracker, skill-lint, prompt-lint, agent-health).
 
 > None of these repos contain secrets. The Moltbook API key lives only in the OS repo's
 > gitignored `.moltbook_key` and is never exported to product repos.
