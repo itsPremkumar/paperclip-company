@@ -9,6 +9,9 @@
     "airtable-cli",
     "arxiv-search",
     "ascii-art-creator",
-    "ascii-video"
+    "ascii-video",
+    "clawhub-studio",
+    "codebase-inspection",
+    "company-ops"
   ]
 }
