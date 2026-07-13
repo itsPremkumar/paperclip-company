@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Build an AI Agent Team on Zero Budget — Prem Autonomous Co — AI Agent Income Lab</title>
+<meta name="description" content="A step-by-step guide to building a 7-agent AI company team using free, open-source tools — no VC, no paid subscriptions, no hype.">
+<style>body{font:16px/1.6 system-ui,Segoe UI,Arial,sans-serif;margin:0;color:#1a1a1a;background:#fafafa}header{background:#111;color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}.brand{color:#fff;font-weight:700;text-decoration:none;font-size:18px}nav a{color:#ddd;margin-left:16px;text-decoration:none}nav a:hover{color:#fff}main{max-width:820px;margin:30px auto;padding:0 18px}footer{max-width:820px;margin:40px auto;padding:18px;color:#777;font-size:14px;border-top:1px solid #eee}h1,h2,h3{line-height:1.25}a{color:#0a66c2}ul,ol{margin-left:20px}.meta{color:#888;font-size:14px;margin-bottom:20px}</style></head>
+<body>
+<header><a href="index.html" class="brand">Prem Autonomous Co — AI Agent Income Lab</a>
+<nav><a href="index.html">Home</a><a href="tools.html">Tools</a><a href="gumroad.html">Products</a><a href="disclosure.html">Disclosure</a></nav></header>
+<main><p class="meta">Published 2026-07-13 · niche: build an ai agent team</p><h1>How to Build an AI Agent Team on Zero Budget</h1>
+<p>You&#x27;ve heard the pitch: &quot;AI agents will run your business for you.&quot; But the actual guides either sell a $500 course or assume you have a cloud budget. Here&#x27;s how to build a real, working 7-agent company on a laptop with $0 spent — including the honest limits of what agents can and cannot do today.</p>
+<h2>What a &quot;7-agent team&quot; actually looks like</h2>
+<p>A realistic autonomous company is not one super-agent that does everything. It&#x27;s a set of specialized agents working under a coordinator, each with a narrow role:</p>
+<p>| Role | What it does | Tool | |------|-------------|------| | **CEO / Executive** | Coordinates all agents, reads the task board, delegates | Hermes Agent | | **CTO / Engineer** | Writes and reviews code, runs builds | Claude Code / Codex | | **CMO / Marketing** | Drafts content, SEO research, social posts | Hermes (prompt template) | | **CFO / Finance** | Tracks spending, flags budget warnings | Paperclip + ledger | | **COO / Ops** | Client intake, delivery tracking, SLA monitoring | Paperclip + OpenClaw | | **Comms / Support** | Handles computer-use, browser automation, response drafting | OpenClaw | | **QA / Reviewer** | Sanity-checks outputs before they ship | Hermes (review prompt) |</p>
+<h2>Step 1: The orchestration layer (Paperclip)</h2>
+<p>Start with <a href="https://github.com/nousresearch/paperclip">Paperclip</a> — an open-source agent org chart that runs entirely locally. It&#x27;s the backbone: it manages which agents exist, what their budgets are, what tasks they&#x27;re working on, and who approves what.</p>
+<p>**What you do:**</p>
+<ol>
+<li>Clone the repo and run the embedded Postgres + server (one `run-server.bat` on Windows).</li>
+<li>Define your org roles in the GUI or config file.</li>
+<li>Set budget caps and approval gates *before* connecting any agent.</li>
+<li>Onboard each agent via its adapter (Hermes, OpenClaw, etc.).</li>
+</ol>
+<p>**Cost:** $0. One laptop, ~300MB RAM for the server process.</p>
+<h2>Step 2: The executive agent (Hermes)</h2>
+<p><a href="https://github.com/nousresearch/hermes">Hermes Agent</a> is the CEO brain. It reads the task board from Paperclip, decides what to work on, delegates to sub-agents, and reports results back.</p>
+<p>**Configure it with:**</p>
+<ul>
+<li>A `SOUL.md` that defines its identity, rules, and non-negotiables (the &quot;company</li>
+</ul>
+<p>  constitution&quot;).</p>
+<ul>
+<li>A `HEARTBEAT.md` that tells it how often to wake, what to check, and where to</li>
+</ul>
+<p>  report.</p>
+<ul>
+<li>Approved tool list — what it can invoke without human sign-off.</li>
+</ul>
+<p>**Cost:** $0. Runs on CPU for most tasks; uses free-tier OpenRouter models when stronger reasoning is needed.</p>
+<h2>Step 3: The doers (OpenClaw, coding CLIs)</h2>
+<p><a href="https://github.com/nousresearch/openclaw">OpenClaw</a> handles computer-use — filling forms, navigating GUIs, browser automation. For code, connect a coding CLI (Claude Code, Codex, Gemini CLI) as a sub-agent.</p>
+<p>**The key design rule:** every role is an *adapter*, not an identity. If a better coding agent appears next month, swap the adapter — nothing else changes.</p>
+<h2>Step 4: GitHub as the single source of truth</h2>
+<p>This pattern is mandatory: **if it isn&#x27;t committed, it didn&#x27;t happen.**</p>
+<ul>
+<li>Every prompt, every product, every lesson learned lives in a git repository.</li>
+<li>Every task completion commits: what changed, why, how to roll it back.</li>
+<li>The repo outlives any single agent or model — fire your CEO agent, hire a new</li>
+</ul>
+<p>  one, hand it the repo, and the company continues.</p>
+<h2>Honest limits (what agents cannot do yet)</h2>
+<p>An AI agent team can **draft, prepare, track, and remind**. It cannot:</p>
+<ul>
+<li>Sign contracts or accept ToS on your behalf.</li>
+<li>Publish listings on Gumroad or any platform requiring your identity.</li>
+<li>Move money, link bank accounts, or handle taxes.</li>
+<li>Make irreversible business commitments.</li>
+</ul>
+<p>This is not a bug — it&#x27;s the correct safety boundary. The agents earn their keep by removing the busywork so you only step in for the decisions that matter.</p>
+<h2>7-day setup plan</h2>
+<p>| Day | Task | |-----|------| | 1 | Clone Paperclip + Hermes + OpenClaw repos | | 2 | Start Paperclip server, define org roles and budgets | | 3 | Write your SOUL.md with non-negotiables, approvals, and rules | | 4 | Connect Hermes via adapter, run a test tick of the autonomy loop | | 5 | Connect OpenClaw, test a browser-automation task | | 6 | Push everything to GitHub, verify the loop commits + pushes | | 7 | Write your first product (a guide, a prompt pack, a template kit) |</p>
+<h2>Where to go from here</h2>
+<p>The complete setup — SOUL.md templates, AGENTS.md templates, adapter configs, heartbeat definitions, and the autonomy loop script — is packaged in the **<a href="https://github.com/itsPremkumar/Hermes-Full-Autonomous-Company">Autonomous AI Agent Operations Playbook</a>**, available on GitHub as source and as a ready-to-use download on Gumroad.</p>
+<p>*This guide is operated by Prem Autonomous Co. All tools referenced are open-source and free. Affiliate links support the project at no extra cost to you.*</p></main>
+<footer><p>Prem Autonomous Co — AI Agent Income Lab — zero-cost autonomous income systems by Prem Autonomous Co. Contact premkumar016555@gmail.com.</p>
+<p><a href="disclosure.html">Affiliate disclosure</a></p></footer></body></html>

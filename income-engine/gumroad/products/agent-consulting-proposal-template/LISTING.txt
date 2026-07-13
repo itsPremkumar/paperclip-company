@@ -1,0 +1,6 @@
+Title: AI Agent Consulting Proposal Template
+Price: $24
+Description: A fill-in proposal template that positions a $2k-$15k automation build with clear ROI.
+
+Upload this folder's PRODUCT.md as the product file on Gumroad (free).
+Set the price above. You keep 100% minus Gumroad's standard fee.
