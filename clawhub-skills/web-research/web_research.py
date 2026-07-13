@@ -49,14 +49,16 @@ def _fetch(url: str, timeout: int = 15) -> str:
 def _strip_html(html_text: str) -> str:
     """Remove HTML tags and decode common entities."""
 
+    SKIP_TAGS = {"script", "style", "noscript"}
+
     class _Parser(html.parser.HTMLParser):
         def __init__(self):
             super().__init__()
             self._text = []
-            self._skip = {"script", "style", "noscript"}
+            self._skip = set()
 
         def handle_starttag(self, tag, attrs):
-            if tag in self._skip:
+            if tag in SKIP_TAGS:
                 self._skip.add(tag)
 
         def handle_endtag(self, tag):

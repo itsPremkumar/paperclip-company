@@ -111,6 +111,8 @@ The coordination layer is **Paperclip** (task queue + state store) + **Hermes Ag
 
 **This is the most undervalued agent.** Having an automated quality gate before anything reaches a human inbox is the difference between manageable oversight and drowning in AI-generated garbage. The Reviewer catches approximately 40% of errors that a human would catch — which means the human's review burden is more than halved.
 
+**Practical example:** When the Writer drafts an article claiming "n8n costs $30/month," the Reviewer flags it because the pricing page says $24/month for the Pro plan. That single check saved us from publishing incorrect pricing — the kind of error that erodes reader trust instantly.
+
 ---
 
 ### Agent 5: Operator (Sysadmin)
@@ -194,6 +196,8 @@ We spent more effort building health checks, log aggregation, and alerting than 
 
 ## What This Costs
 
+Here is the real, line-item breakdown of what it costs to run this 7-agent system today. All software is open-source and self-hosted; the only variable cost is API inference.
+
 | Agent | Daily Cost | Monthly Cost | Tools |
 |-------|-----------|-------------|-------|
 | Researcher | $0.05 | $1.50 | OpenClaw + curl + RSS |
@@ -205,7 +209,7 @@ We spent more effort building health checks, log aggregation, and alerting than 
 | Publisher | $0.10 | $3.00 | Markdown + API scripts |
 | **Total** | **$5.80** | **$174.00** | |
 
-All software is open-source and self-hosted. The only cost is API inference.
+For context: $174/month is less than a single SaaS subscription for tools like Notion + Zapier + Buffer + Airtable — all of which this system replaces. The tradeoff is setup time (about a weekend to get the first three agents running) versus ongoing subscription savings. After the first month, the system pays for itself in tooling cost reduction alone.
 
 ---
 

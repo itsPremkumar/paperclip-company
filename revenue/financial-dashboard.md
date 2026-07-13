@@ -1,8 +1,8 @@
 # PREM AUTONOMOUS CO — REVENUE TRACKING DASHBOARD
 
 **Owner:** Hermes CMO / Hermes Engineer · **Status:** live (tracking artifact)
-**Cadence:** updated weekly (every Monday) · **Last updated:** 2026-07-13 (Week 0 / M2 plan set)
-**Window tracked:** Month 1 (30-day) projection, from launch 2026-07-12 — **+ Month-2 projection, burn analysis & runway (this section: PRE-73)**
+**Cadence:** updated weekly (every Monday) · **Last updated:** 2026-07-13 (M3 plan set; M1/M2 baselines carried)
+**Window tracked:** Month 1 (30-day) projection, from launch 2026-07-12 — **+ Month-2 projection, burn analysis & runway (PRE-73)** — **+ Month-3 projection, burn analysis & revenue tracking (PRE-75)**
 **Source of truth for targets:** `revenue/30-day-zero-cost-launch-plan.md` + `revenue/monetization-brief-revenue-engine-v1.md`
 **Burn/runway source of truth:** live Paperclip API telemetry (`/companies/{id}/budgets/overview`, `/costs/summary`) pulled 2026-07-13
 
@@ -103,6 +103,95 @@ Runway has two valid definitions; only one is computable from system data today.
 > Note: the only tracked cost is autonomous agent inference. Human-owned acquisition spend stays $0
 > by policy (organic/product-led). If Prem later funds paid acquisition, that must be added to gross
 > burn and the budget cap revisited.
+
+---
+
+## 1c. Month-3 Projection, Burn Analysis & Revenue Tracking (PRE-75)
+
+> Added 2026-07-13. Targets come straight from `monetization-brief-revenue-engine-v1.md` §6
+> (the published 90-day conservative plan): **Month 3 = 35 subs + 2 builds + 1 reseller ≈ $3,200/mo.**
+> Actuals are pulled from **live Paperclip telemetry** (`/companies/3056c999-.../budgets/overview`,
+> `/costs/summary`) as of 2026-07-13T06:25Z, plus the new revenue ledger
+> (`/companies/{id}/revenue`, `/companies/{id}/revenue/summary`) which was **wired in for this
+> milestone** (see §1c.3 — the route existed but was never mounted in `server/src/app.ts`).
+
+### 1c.1 Month-3 revenue projection (target vs. actual, to be filled weekly)
+
+Month 3 window: 2026-09-11 → 2026-10-11 (60 days after launch). The strategy doc's conservative
+month-3 line is **35 subscribers + 2 builds + 1 reseller ≈ $3,200/mo**.
+
+| Metric | Month-1 target | Month-2 target | Month-3 target | Month-3 actual (W0 baseline) | Source |
+|--------|---------------:|---------------:|---------------:|-----------------------------:|--------|
+| Paid subscribers (starter/team) | 5 | 15 | **35** | 0 | Gumroad/Stripe |
+| Build proposals closed | 0 | 1 | **2** | 0 | CRM |
+| Reseller / affiliate deals | — | (reseller later) | **1** | 0 | dashboards |
+| **MRR (month-3 end)** | **$245** | **~$1,240** | **~$3,200** | **$0** | billing |
+| One-time build revenue | $0 | ~$990–$4,900 | ~$1,980–$9,800 | $0 | billing |
+| Affiliate/recurring add-ons | — | (reseller later) | ~$0–$640 | $0 | dashboards |
+
+> At the $49 starter price, 35 subscribers = $1,715/mo. The brief's ~$3,200/mo assumes a starter/team
+> mix plus 2 builds and the first reseller's recurring cut. Track the blended figure weekly and
+> reconcile to the brief.
+
+### 1c.2 Burn analysis (live)
+
+Pulled 2026-07-13T06:25Z from the Paperclip budgets endpoint (company scope, calendar-month UTC
+window 2026-07-01 → 2026-08-01). **Identical to the M2 baseline** — no spend has occurred since
+the 2026-07-12 process boot; the only tracked cost remains autonomous model inference (OpenRouter).
+
+| Burn metric | Value | Notes |
+|-------------|------:|-------|
+| Recognized revenue (M-T-D) | **$0.00** | No revenue events recorded; pre-revenue stage |
+| Gross burn (M-T-D) | **$70.00** (7,000¢) | 100% OpenRouter model inference (tencent/hy3:free), attributed to Hermes CMO |
+| Monthly budget cap | **$500.00** (50,000¢) | hard-stop policy, calendar-month UTC |
+| Budget remaining | **$430.00** (43,000¢) | 14% of cap used; 0 active incidents |
+| Net burn (M-T-D) | **$70.00 / mo** | = gross burn (revenue is $0) |
+| Burn rate (month-to-date run-rate) | **$6.02 / day** (~$183 / mo) | principled figure: $70 ÷ 11.6 days elapsed — **use this for planning** |
+| Burn rate (process-uptime burst) | **$35.53 / hr** (~$852 / day) | artifact of a fresh process started 2026-07-12T13:10Z; **do NOT use for runway** |
+
+> Trajectory of burn rate across milestones (single telemetry source, no new spend):
+> - M1/M2 baseline (2026-07-13T04:39Z): $70 MTD, $6.02/day run-rate.
+> - M3 baseline (2026-07-13T06:25Z): **unchanged** — $70 MTD, $6.02/day. The agent fleet is holding
+>   a flat, sub-cap burn; the $500/mo cap is safe with $430 remaining and no ad spend by policy.
+
+### 1c.3 Revenue tracking — actual payouts (Gumroad / GitHub Sponsors / Medium Partner)
+
+This is the new tracking layer for M3. A revenue ledger route existed in `server/src/routes/revenue.ts`
+but was **never mounted** — revenue could not be recorded or read via the API. PRE-75 wired it into
+`server/src/app.ts` (`api.use(revenueRoutes(db))`) so actual payouts can now be tracked.
+
+**Live pull (2026-07-13T06:25Z):**
+
+```
+GET /companies/3056c999-.../revenue/summary  →  entryCount: 0, byCurrency: {}, totalGross: 0, currency: "USD"
+```
+
+| Payout channel | Credentials / account | Status | Recorded (USD) | Source of truth |
+|----------------|----------------------|--------|---------------:|-----------------|
+| Gumroad | founder-owned (PRE-52, human gate) | 2 free products live; 0 paid sales | $0 | `revenue` ledger + Gumroad dashboard |
+| GitHub Sponsors | `github.com/sponsors/itsPremkumar` (PRE-57, human gate) | not enabled | $0 | `revenue` ledger + Sponsors dashboard |
+| Medium Partner Program | not enrolled | not started | $0 | `revenue` ledger + Medium dashboard |
+
+> **Recording workflow (from now on):** when a real payout lands, POST to
+> `POST /companies/{id}/revenue` with `{source:"gumroad"|"github_sponsors"|"medium", gross:<cents/usd>, currency:"USD", memo}`.
+> The dashboard's weekly log (§8) and this table are then reconciled against the ledger `summary`.
+
+### 1c.4 Net position & 3-month picture
+
+| Snapshot | Value |
+|----------|------:|
+| Cumulative burn (launch → 2026-07-13) | $70.00 |
+| Cumulative revenue (launch → 2026-07-13) | $0.00 |
+| Net cash impact (launch → now) | **–$70.00** |
+| Month-3 revenue target (added MRR + builds + reseller) | +$3,200/mo |
+| Projected burn if M-T-D pace holds | ~$183/mo |
+| Projected net for Month 3 (if targets hit) | **≈ +$3,017** (deeply net-positive month) |
+| Breakeven point | burn ($183/mo) is covered once ≈ 4 subscribers (@$49) are retained — reached the moment M2's 15-subscriber target is touched |
+
+> The only tracked cost is autonomous agent inference; human-owned acquisition spend stays $0 by
+> policy. The dominant risk to the M3 target is **not burn** — it is the founder gates on Gumroad
+> (PRE-52) and GitHub Sponsors (PRE-57) that keep the paid storefronts from going live. Unblock those
+> and the revenue engine can publish + track autonomously.
 
 ---
 
@@ -212,9 +301,11 @@ Append a row every Monday. Keep the latest on top.
 |---------|--------------:|----:|-----------:|---------:|------:|------------:|------:|-------|
 | 2026-07-13 (W0) | 2 | $0 | 0 | 3 | untracked | 0 | 0 | baseline; launch 2026-07-12 |
 | 2026-07-13 (W1) | 0 | $0 | 0 | 0 | untracked | 0 | 0 | cataloged 11 products incl. agent-sentinel bundle (#11) |
+| 2026-07-13 (M3 baseline) | 2 | $0 | 0 | 3 | untracked | 0 | 0 | PRE-75: M3 projection + burn added; revenue ledger route wired into API (app.ts) |
 
 ---
 
-*This dashboard is the single source of truth for PRE-59 (Month-1) and PRE-73 (Month-2 projection,
-burn analysis & runway). Edit it directly each week; no code changes needed.
+*This dashboard is the single source of truth for PRE-59 (Month-1), PRE-73 (Month-2 projection,
+burn analysis & runway), and PRE-75 (Month-3 projection, burn analysis & revenue tracking). Edit it
+directly each week; no code changes needed.
 Do not auto-publish founder-owned pricing/payment pages — that remains a Prem (founder) decision.*
