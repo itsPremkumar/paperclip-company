@@ -276,6 +276,43 @@ def cmd_batch(args: argparse.Namespace) -> None:
 # ── CLI ─────────────────────────────────────────────────────────────────────
 
 
+def _self_test():
+    """Real test of the core text/encoding extraction (no PDF/DOCX deps)."""
+    import tempfile, os
+    d = tempfile.mkdtemp(prefix="de_selftest_")
+    try:
+        # Plain text file extraction
+        p = os.path.join(d, "sample.txt")
+        with open(p, "w", encoding="utf-8") as f:
+            f.write("Hello world\nSecond line\n")
+        txt = _extract_text_file(p)
+        if txt != "Hello world\nSecond line":
+            print(f"self-test: FAIL (txt extract: {txt!r})")
+            return 1
+
+        # UTF-16 encoding auto-detection
+        p2 = os.path.join(d, "utf16.txt")
+        with open(p2, "w", encoding="utf-16") as f:
+            f.write("unicode content 你好")
+        txt2 = _extract_text_file(p2)
+        if txt2 != "unicode content 你好":
+            print(f"self-test: FAIL (utf16 extract: {txt2!r})")
+            return 1
+
+        # Format detection
+        if _get_extractor(p) is not _extract_text_file:
+            print("self-test: FAIL (extractor routing for .txt wrong)")
+            return 1
+        if _get_extractor(os.path.join(d, "x.unknownext")) is not None:
+            print("self-test: FAIL (unknown ext should have no extractor)")
+            return 1
+        print("self-test: PASS")
+        return 0
+    finally:
+        import shutil
+        shutil.rmtree(d, ignore_errors=True)
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Document Text Extractor — extract text from DOCX, PDF, and TXT files",
@@ -306,6 +343,9 @@ def main():
     p_batch.add_argument("--outdir", help="Output directory (default: print all)")
     p_batch.add_argument("--ext", help="Comma-separated extensions (e.g., .docx,.pdf)")
 
+    # self-test
+    sub.add_parser("self-test", help="Run built-in self tests")
+
     args = parser.parse_args()
 
     if args.command == "extract":
@@ -314,6 +354,8 @@ def main():
         cmd_list_formats()
     elif args.command == "batch":
         cmd_batch(args)
+    elif args.command == "self-test":
+        sys.exit(_self_test())
     else:
         parser.print_help()
         sys.exit(1)

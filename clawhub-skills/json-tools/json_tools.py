@@ -270,6 +270,8 @@ def build_parser():
     p.add_argument("files", nargs="+", metavar="FILE", help="Files to merge (first is base)")
     p.add_argument("--output", "-o", help="Output file (default: stdout)")
 
+    sub.add_parser("self-test", help="Run built-in self tests")
+
     return parser
 
 

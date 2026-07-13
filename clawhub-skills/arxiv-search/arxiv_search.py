@@ -123,7 +123,49 @@ def cmd_abstract(arxiv_id):
 
 import re
 
+def _self_test():
+    """Real test of the core Atom entry parser (no network). Returns 0/1."""
+    import xml.etree.ElementTree as ET
+    ns = {"": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
+    fake = (
+        '<entry xmlns="http://www.w3.org/2005/Atom" '
+        'xmlns:arxiv="http://arxiv.org/schemas/atom">'
+        '<id>http://arxiv.org/abs/1234.5678v2</id>'
+        '<title>Hello  World</title>'
+        '<summary>An  example  abstract.</summary>'
+        '<published>2021-01-02</published>'
+        '<author><name>Jane Doe</name></author>'
+        '<category term="cs.LG"/>'
+        '<link title="pdf" href="http://x/p.pdf"/>'
+        '</entry>'
+    )
+    entry = ET.fromstring(fake)
+    r = _parse_entry(entry)
+    if r["id"] != "1234.5678":
+        print("self-test: FAIL (id parse)")
+        return 1
+    if r["title"] != "Hello World":
+        print("self-test: FAIL (title parse)")
+        return 1
+    if r["authors"] != ["Jane Doe"]:
+        print("self-test: FAIL (authors parse)")
+        return 1
+    if r["published"] != "2021-01-02":
+        print("self-test: FAIL (published parse)")
+        return 1
+    if "cs.LG" not in r["categories"]:
+        print("self-test: FAIL (category parse)")
+        return 1
+    if r["pdf_url"] != "http://x/p.pdf":
+        print("self-test: FAIL (pdf url parse)")
+        return 1
+    print("self-test: PASS")
+    return 0
+
+
 def main():
+    if len(sys.argv) >= 2 and sys.argv[1] == "self-test":
+        sys.exit(_self_test())
     if len(sys.argv) < 3:
         print(__doc__.strip())
         sys.exit(1)

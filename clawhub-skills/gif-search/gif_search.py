@@ -74,7 +74,55 @@ def cmd_info(gif_id):
     else:
         print("GIF not found")
 
+def _self_test():
+    """Real test: stub the network layer, exercise cmd_search parsing. 0/1."""
+    import io
+    import contextlib
+    import json
+
+    captured = {}
+
+    def fake_get(endpoint, params):
+        captured["endpoint"] = endpoint
+        # Return a minimal Tenor-shaped payload.
+        return {
+            "results": [
+                {
+                    "content_description": "funny cat",
+                    "id": "abc123",
+                    "media_formats": {"gif": {"url": "http://x/cat.gif"}},
+                }
+            ]
+        }
+
+    global _get
+    saved, _get = _get, fake_get
+    try:
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            cmd_search("cat", limit=1)
+        out = buf.getvalue()
+        if "funny cat" not in out:
+            print("self-test: FAIL (search output missing description)")
+            return 1
+        if "abc123" not in out:
+            print("self-test: FAIL (search output missing id)")
+            return 1
+        if "http://x/cat.gif" not in out:
+            print("self-test: FAIL (search output missing url)")
+            return 1
+        if captured.get("endpoint") != "search":
+            print("self-test: FAIL (wrong endpoint used)")
+            return 1
+        print("self-test: PASS")
+        return 0
+    finally:
+        _get = saved
+
+
 def main():
+    if len(sys.argv) >= 2 and sys.argv[1] == "self-test":
+        sys.exit(_self_test())
     if len(sys.argv) < 2:
         print(__doc__.strip())
         sys.exit(1)

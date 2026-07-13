@@ -264,9 +264,52 @@ def build_parser():
     return parser
 
 
+def _self_test():
+    """Real test of snapshot + diff + format_event core. Returns 0/1."""
+    import tempfile, os, time
+    d = tempfile.mkdtemp(prefix="fw_selftest_")
+    try:
+        f1 = os.path.join(d, "a.txt")
+        with open(f1, "w", encoding="utf-8") as fh:
+            fh.write("v1")
+        before = snapshot_state(d)
+        if "a.txt" not in before or before["a.txt"] is None:
+            print("self-test: FAIL (snapshot missing file)")
+            return 1
+
+        # create + modify a file
+        with open(os.path.join(d, "b.txt"), "w", encoding="utf-8") as fh:
+            fh.write("new")
+        time.sleep(0.01)
+        with open(f1, "w", encoding="utf-8") as fh:
+            fh.write("v2-longer")
+
+        after = snapshot_state(d)
+        events = diff_states(before, after)
+        types = {e["type"] for e in events}
+        if "created" not in types:
+            print("self-test: FAIL (created event not detected)")
+            return 1
+        if "modified" not in types:
+            print("self-test: FAIL (modified event not detected)")
+            return 1
+        # format_event must render a string for each
+        for ev in events:
+            if not format_event(ev):
+                print("self-test: FAIL (format_event empty)")
+                return 1
+        print("self-test: PASS")
+        return 0
+    finally:
+        import shutil
+        shutil.rmtree(d, ignore_errors=True)
+
+
 def main():
     parser = build_parser()
     args = parser.parse_args()
+    if args.command == "self-test":
+        sys.exit(_self_test())
     cmds = {
         "watch": cmd_watch,
         "once": cmd_once,

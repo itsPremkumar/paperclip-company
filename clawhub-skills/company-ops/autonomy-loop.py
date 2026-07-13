@@ -153,7 +153,36 @@ def log_benchmark(ram, success, failure_cat=None):
     except Exception as e:
         log(f"benchmark write skipped: {e}")
 
+def _self_test():
+    """Real test of the human-gating / task-picking core. Returns 0/1."""
+    # is_human_gated must catch money-moving tasks and ignore safe ones.
+    if not is_human_gated("please pay the invoice via bank account"):
+        print("self-test: FAIL (human-gated task not detected)")
+        return 1
+    if is_human_gated("write the next marketing draft"):
+        print("self-test: FAIL (safe task flagged as human-gated)")
+        return 1
+    # pick_actionable must skip human-gated and done tasks, returning the first safe one.
+    tasks = [
+        "- [x] finished thing",
+        "- [ ] pay the contractor (bank account)",
+        "- [ ] review the prompt library",
+        "- [ ] publish on gumroad",
+    ]
+    picked = pick_actionable(tasks)
+    if picked != "- [ ] review the prompt library":
+        print(f"self-test: FAIL (pick_actionable returned: {picked!r})")
+        return 1
+    if pick_actionable(["- [x] a", "- [ ] pay out"]) is not None:
+        print("self-test: FAIL (only human-gated tasks should yield None)")
+        return 1
+    print("self-test: PASS")
+    return 0
+
+
 def main():
+    if len(sys.argv) >= 2 and sys.argv[1] == "self-test":
+        sys.exit(_self_test())
     log("=== autonomy tick start ===")
     ram = free_ram_mb()
     log(f"free RAM: {ram} MB")

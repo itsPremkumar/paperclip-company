@@ -57,7 +57,38 @@ def print_report(result):
     print("-" * 60)
     print(f"{'TOTAL':<20} {result['total_files']:>8} {result['total_lines']:>8}")
 
+def _self_test():
+    """Real test of the analyze() core on a tiny temp codebase. Returns 0/1."""
+    import tempfile, os
+    d = tempfile.mkdtemp(prefix="cbi_selftest_")
+    try:
+        with open(os.path.join(d, "a.py"), "w", encoding="utf-8") as f:
+            f.write("# comment\nx = 1\n\n\ndef f():\n    return x\n")
+        with open(os.path.join(d, "b.md"), "w", encoding="utf-8") as f:
+            f.write("# Title\n\nsome text\n")
+        result = analyze(d)
+        if result["total_files"] != 2:
+            print(f"self-test: FAIL (expected 2 files, got {result['total_files']})")
+            return 1
+        if result["stats"].get("Python", {}).get("files") != 1:
+            print("self-test: FAIL (python stats wrong)")
+            return 1
+        if result["stats"].get("Markdown", {}).get("files") != 1:
+            print("self-test: FAIL (markdown stats wrong)")
+            return 1
+        if result["total_lines"] <= 0:
+            print("self-test: FAIL (no lines counted)")
+            return 1
+        print("self-test: PASS")
+        return 0
+    finally:
+        import shutil
+        shutil.rmtree(d, ignore_errors=True)
+
+
 if __name__ == "__main__":
+    if len(sys.argv) >= 2 and sys.argv[1] == "self-test":
+        sys.exit(_self_test())
     if len(sys.argv) < 2:
         print(__doc__.strip())
         sys.exit(1)

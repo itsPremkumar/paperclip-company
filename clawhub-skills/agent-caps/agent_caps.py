@@ -169,6 +169,31 @@ def cmd_schema():
     return 0
 
 
+def _self_test():
+    """Real test of the core validation logic. Returns 0 on pass, 1 on fail."""
+    good = {
+        "name": "demo", "version": "1.0.0", "capabilities": ["x"],
+        "dependencies": [], "memory_requirements": "256MB", "tools": ["python"],
+        "api": "noop", "status": "active",
+    }
+    ok, errors = validate_manifest(good)
+    if not ok:
+        print("self-test: FAIL (valid manifest rejected)")
+        print("  errors:", errors)
+        return 1
+    # A manifest missing required fields and with a bad status must be rejected.
+    bad = {"name": 123, "status": "bogus"}
+    ok2, errors2 = validate_manifest(bad)
+    if ok2:
+        print("self-test: FAIL (invalid manifest accepted)")
+        return 1
+    if "status" not in str(errors2):
+        print("self-test: FAIL (status error not detected)")
+        return 1
+    print("self-test: PASS")
+    return 0
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(description="Agent Capability Manifest toolkit")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -179,6 +204,7 @@ def main(argv=None):
     cd = sub.add_parser("check-deps")
     cd.add_argument("manifests", nargs="+")
     sub.add_parser("schema")
+    sub.add_parser("self-test")
     args = p.parse_args(argv)
 
     if args.cmd == "validate":
@@ -189,6 +215,8 @@ def main(argv=None):
         return cmd_check_deps(args.manifests)
     if args.cmd == "schema":
         return cmd_schema()
+    if args.cmd == "self-test":
+        return _self_test()
     return 2
 
 

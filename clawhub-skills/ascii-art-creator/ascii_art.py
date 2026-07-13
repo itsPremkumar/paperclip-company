@@ -519,6 +519,43 @@ def cmd_image(args: argparse.Namespace) -> None:
 # ═══════════════════════════════════════════════════════════════════════════════
 
 
+def _self_test():
+    """Real test of the banner/box rendering core (no images). Returns 0/1."""
+    import io
+    import contextlib
+
+    # 1. Banner must render known letters using block glyphs.
+    ns = argparse.Namespace(text=["HI"], font=None)
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        cmd_banner(ns)
+    banner_out = buf.getvalue()
+    if not banner_out.strip():
+        print("self-test: FAIL (banner produced no output)")
+        return 1
+    if "█" not in banner_out:
+        print("self-test: FAIL (banner missing expected block glyphs)")
+        return 1
+
+    # 2. Box must render a unicode border.
+    ns = argparse.Namespace(text=["OK"], style=None)
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        cmd_box(ns)
+    box_out = buf.getvalue()
+    if "┌" not in box_out or "┐" not in box_out or "OK" not in box_out:
+        print("self-test: FAIL (box missing expected border/content)")
+        return 1
+
+    # 3. Font/style tables must exist.
+    if not BANNER_FONTS or not BOX_STYLES:
+        print("self-test: FAIL (missing font/style tables)")
+        return 1
+
+    print("self-test: PASS")
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="ASCII Art Creator — banners, boxes, cowsay, tables, and image-to-ASCII",
@@ -565,6 +602,9 @@ def main():
     p_image.add_argument("--width", type=int, default=80,
                          help="Output width in characters (default: 80)")
 
+    # self-test
+    sub.add_parser("self-test", help="Run built-in self tests")
+
     args = parser.parse_args()
 
     if args.command == "banner":
@@ -577,6 +617,8 @@ def main():
         cmd_table(args)
     elif args.command == "image":
         cmd_image(args)
+    elif args.command == "self-test":
+        sys.exit(_self_test())
     else:
         parser.print_help()
         sys.exit(1)
