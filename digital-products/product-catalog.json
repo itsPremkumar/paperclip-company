@@ -148,6 +148,6 @@
     "total_product_categories": 10,
     "ready_to_list": 11,
     "runnable_tools": 2,
-    "file_formats_used": ["PDF", "Markdown", "CSV", "JSON", "YAML", "Python", "Bash"]
+    "file_formats_used": ["PDF", "Markdown", "CSV", "JSON", "Configuration", "Python", "Bash"]
   }
 }
