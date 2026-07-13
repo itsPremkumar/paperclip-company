@@ -11,9 +11,20 @@
     "productivity"
   ],
   "license": "MIT",
-  "author": "Paperclip Company",
+  "author": {
+    "name": "Paperclip Company",
+    "url": "https://github.com/itsPremkumar/prompt-executor"
+  },
   "bin": {
     "prompt-executor": "bin/prompt-executor.js"
+  },
+  "homepage": "https://github.com/itsPremkumar/prompt-executor#readme",
+  "bugs": {
+    "url": "https://github.com/itsPremkumar/prompt-executor/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsPremkumar/prompt-executor.git"
   },
   "files": [
     "bin/",
