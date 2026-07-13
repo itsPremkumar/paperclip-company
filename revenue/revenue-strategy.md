@@ -16,7 +16,8 @@ realincomelab.com (Fiverr AI 2026), grizzlypeaksoftware (free AI APIs 2026).
 |---|---------|-------------|-----------|----|-----|---------|
 | 1 | **Affiliate content engine** (SEO blog + affiliate links) | 85% | apply for affiliate programs (approval); disclose links | Yes | High (reuses our blog + products) | **DO NOW** |
 | 2 | **Gumroad product sales** (7 packages ready) | 70% | create acct + link payout + publish | Yes | High | **YOU PUBLISH** (PRE-52) |
-| 3 | **Micro-SaaS: resell free-tier AI APIs** (wrap + charge) | 60% | hosting (free tier ok), payments = Gumroad/PayPal | Yes | Med (agent-caps shows we can build tools) | **PILOT** |
+| 7 | **ClawHub skill (distribution)** | **95%** | none for publish (authed); Gumroad premium = human | Yes | **High** (CLI authed as itsPremkumar) | **PUBLISHED** |
+| 8 | Moltbook (agent social, visibility) | 80% | account | Yes | Med | Next step |
 | 4 | **Fiverr/Upwork gigs (AI services)** | 40% | account + gig approval + deliverables may need review | Yes | Med | Later (low automation) |
 | 5 | **Ad revenue (Mediavine/Ezoic)** | 20% | need traffic threshold (10k+ visits/mo) + account | Yes | Low (traffic takes months) | Defer |
 | 6 | **Newsletter sponsorship** | 30% | need list size | Yes | Low | Defer |
