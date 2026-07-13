@@ -1,0 +1,11 @@
+# ClawHub Studio - local-first studio to author, test, version & publish agent skills.
+# Zero-dependency (stdlib http.server + sqlite3). See ARCHITECTURE.md.
+
+[build-system.flit]
+module = "studio"
+
+[project]
+name = "clawhub-studio"
+version = "0.1.0"
+description = "Local-first studio to author, test, version & publish agent skills."
+requires-python = ">=3.8"
