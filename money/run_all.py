@@ -133,7 +133,7 @@ def build_dashboard(rows):
     lines.append("3. Publish → deliver → upsell to monthly retainer")
     lines.append("")
     lines.append("> Regenerate anytime: `python run_all.py`. "
-                 "See `research/MONEY_IDEAS_2026.md` for the full 20-idea roadmap.")
+                 "See `money/MONEY_AUTOMATION_IDEAS.md` for the full 15-pipeline roadmap.")
     return "\n".join(lines) + "\n"
 
 
