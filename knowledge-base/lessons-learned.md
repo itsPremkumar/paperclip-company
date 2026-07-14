@@ -304,3 +304,15 @@ The continuous agent-safe board item is "author next SEO/article drafts into rev
 - A validation piece naturally cross-links to every downstream post (products, agency, prompts, outreach, tool comparison) and funnels to `zero-cost-launch-plan`, `dev-prompts-pack`, and `ai-pricing-templates-pack` — making it a high-leverage cluster hub, not an orphan page.
 - Keep the "ugly offer beats a polished product" framing: it teaches demand-testing without implying any money movement, so the piece stays 100% agent-safe.
 - Editorial SEO drafts remain the safest, highest-leverage tick under any RAM condition: pure markdown, no build, no inference, no external account, no money movement.
+
+## Zero-budget lead-engine angle fills the mid-funnel "how to get leads" gap (Tick 2026-07-14)
+
+### Context
+The continuous agent-safe board item is "author next SEO/article drafts into revenue/blog/". This tick wrote `build-ai-lead-generation-system-2026.md` — a 4-stage source→enrich→reach→capture blueprint for a self-refilling AI lead engine on a $0 stack, cross-linking the cold-outreach, n8n-comparison, 7-workflows, zero-cost-products, package-prompts, and how-to-run-ai-company articles, and reinforcing the non-negotiable human gate on every send/cash action.
+
+### Lesson
+- Lead generation is a distinct, high-commercial-intent funnel stage that was previously only implied (via cold-outreach and 7-workflows). A dedicated lead-engine piece lets the blog answer the buyer's most urgent question ("where do clients come from?") while staying 100% agent-safe — no listing, no ad spend, no money movement.
+- Structure the post as a 4-stage pipeline (source, enrich, reach, capture) so each stage maps to an existing article: sourcing/qualification → enrichment (n8n comparison), reach (cold-outreach + prompt packs), capture (7-workflows #1). This turns one new post into a cluster hub that lifts the whole funnel's internal-link SEO.
+- Always restate the human-approval gate on sends and cash — it keeps the piece Constitution-S0 compliant and is itself a trust signal to readers.
+- New `revenue/blog/*.md` articles must carry the front-matter schema (title, description, slug, date, niche, tags, author) so the income-engine generator can ingest them without rework; mixed convention across older posts is a known inconsistency to normalize on future edits.
+- Editorial SEO drafts remain the safest, highest-leverage tick under any RAM condition: pure markdown, no build, no inference, no external account, no money movement.

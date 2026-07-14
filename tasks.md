@@ -27,6 +27,12 @@
       faceless-channel, zero-cost-products, package-prompts; funnels to the
       paid ai-content-machine-blueprint + ai-video-script-pack products). Updated
       tasks.md + lessons-learned.
+- [x] Tick 2026-07-14 (10th): authored `build-ai-lead-generation-system-2026.md`
+      zero-budget lead-engine blueprint into revenue/blog/ (4-stage source→enrich→
+      reach→capture pipeline; cross-links cold-outreach, n8n comparison, 7-workflows,
+      zero-cost-products, package-prompts, how-to-run-ai-company; fills the lead-gen
+      gap in the funnel). Added matching front-matter schema. Updated tasks.md +
+      lessons-learned.
 
 ## Done (recent ticks)
 - [x] Tick 2026-07-14 (9th): authored `48-hour-digital-product-validation-2026.md`
