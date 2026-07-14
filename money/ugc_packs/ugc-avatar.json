@@ -1,0 +1,113 @@
+{
+  "service": "ugc-avatar",
+  "package_title": "I will generate AI UGC avatar ad videos (no actors, no studio)",
+  "price": 300,
+  "tags": [
+    "ugc ads",
+    "ai video",
+    "facebook ads",
+    "tiktok ads",
+    "ai avatar",
+    "remotion",
+    "cogvideox",
+    "ad creative"
+  ],
+  "description": "\ud83d\udd27 I will generate AI UGC avatar ad videos (no actors, no studio)\n\nI deliver scroll-stopping 15-60s UGC-style ad videos with a consistent AI spokesperson, in any niche using Remotion + Edge-TTS + CogVideoX + Flowise (local) \u2014 all free/self-hosted.\n\n\u2705 What you get:\n\u2022 Done-for-you setup \u2014 no technical skills needed\n\u2022 Free, open-source tools (you own it, no SaaS lock-in)\n\u2022 Charge $100-$500/video; your cost $0 (self-hosted GPU or free tier)\n\u2022 7-day support after delivery\n\n\ud83d\udce6 Packages:\n\u2022 Basic ($75, 3 days, 1 rev): 1 video, 1 workflow, Email support\n\u2022 Standard ($300, 5 days, 2 rev): Up to 5 videos, Setup + test, Loom walkthrough, 7-day support\n\u2022 Premium ($600, 7 days, 3 rev): Unlimited videos, Full system, Monthly retainer option, Priority support\n\n\ud83d\ude80 How it works:\n1. You send product URL / script / brand kit\n2. I generate & test the video creatives\n3. I hand over + a 5-min Loom walkthrough\n\n\u26a1 Why me: I use the same tools that power a 100-skill autonomous company.\n",
+  "packages": [
+    {
+      "name": "Basic",
+      "price": 75,
+      "delivery": "3 days",
+      "revisions": 1,
+      "features": [
+        "1 video",
+        "1 workflow",
+        "Email support"
+      ]
+    },
+    {
+      "name": "Standard",
+      "price": 300,
+      "delivery": "5 days",
+      "revisions": 2,
+      "features": [
+        "Up to 5 videos",
+        "Setup + test",
+        "Loom walkthrough",
+        "7-day support"
+      ]
+    },
+    {
+      "name": "Premium",
+      "price": 600,
+      "delivery": "7 days",
+      "revisions": 3,
+      "features": [
+        "Unlimited videos",
+        "Full system",
+        "Monthly retainer option",
+        "Priority support"
+      ]
+    }
+  ],
+  "n8n_workflow": {
+    "name": "deliver-ugc-ugc-avatar",
+    "nodes": [
+      {
+        "parameters": {},
+        "name": "Webhook (intake)",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 1,
+        "position": [
+          0,
+          0
+        ]
+      },
+      {
+        "parameters": {},
+        "name": "Render video (Remotion/CogVideoX)",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 1,
+        "position": [
+          300,
+          0
+        ]
+      },
+      {
+        "parameters": {},
+        "name": "Deliver + notify",
+        "type": "n8n-nodes-base.emailSend",
+        "typeVersion": 1,
+        "position": [
+          600,
+          0
+        ]
+      }
+    ],
+    "connections": {
+      "Webhook (intake)": {
+        "main": [
+          [
+            {
+              "node": "Render video (Remotion/CogVideoX)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Render video (Remotion/CogVideoX)": {
+        "main": [
+          [
+            {
+              "node": "Deliver + notify",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "note": "Tools: Remotion + Edge-TTS + CogVideoX + Flowise (local) \u2014 all free/self-hosted. Replace code node with your render logic."
+  }
+}

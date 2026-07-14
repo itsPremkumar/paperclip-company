@@ -35,6 +35,7 @@
     "money-automation-ideas",
     "notion-api",
     "polymarket-cli",
-    "prompt-lint"
+    "prompt-lint",
+    "prompt-templates-cli"
   ]
 }

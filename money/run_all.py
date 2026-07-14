@@ -51,6 +51,12 @@ PIPELINES = [
      "data": "SERVICES", "outdir": "doc_packs", "builder": "build_package", "keyname": None},
     {"module": "pipeline15_agent_retainer", "kind": "AI Agent Retainer Builder",
      "data": "VERTICALS", "outdir": "retainer_packs", "builder": "build_package", "keyname": None},
+    {"module": "pipeline16_whatsapp_commerce", "kind": "WhatsApp AI Commerce Agent",
+     "data": "SERVICES", "outdir": "whatsapp_packs", "builder": "build_package", "keyname": None},
+    {"module": "pipeline17_ugc_ad_factory", "kind": "AI UGC/Ad-Creative Factory",
+     "data": "SERVICES", "outdir": "ugc_packs", "builder": "build_package", "keyname": None},
+    {"module": "pipeline18_backend_agent", "kind": "Autonomous Backend Agent",
+     "data": "SERVICES", "outdir": "backend_packs", "builder": "build_package", "keyname": None},
 ]
 
 
@@ -145,11 +151,11 @@ def main():
 
     if a.cmd == "self-test":
         rows = collect(dry_run=True)
-        assert len(rows) == 62, f"expected 62 packages, got {len(rows)}"
+        assert len(rows) == 74, f"expected 74 packages, got {len(rows)}"
         pls = {r["pipeline"] for r in rows}
-        assert len(pls) == 15, f"expected 15 pipelines, got {pls}"
+        assert len(pls) == 18, f"expected 18 pipelines, got {pls}"
         assert all(r["price"] > 0 for r in rows), "all packages must have a price"
-        print(f"self-test: OK — 15 pipelines, {len(rows)} packages, all priced")
+        print(f"self-test: OK — 18 pipelines, {len(rows)} packages, all priced")
         return
 
     dry = a.dry_run

@@ -1,0 +1,113 @@
+{
+  "service": "support-agent",
+  "package_title": "I will automate your WhatsApp customer support with an AI agent",
+  "price": 800,
+  "tags": [
+    "whatsapp support",
+    "ai chatbot",
+    "customer service automation",
+    "chatwoot",
+    "baileys",
+    "n8n",
+    "helpdesk automation",
+    "rag"
+  ],
+  "description": "\ud83d\udd27 I will automate your WhatsApp customer support with an AI agent\n\nI deliver a 24/7 support agent trained on your FAQs that resolves common tickets and escalates the rest using Baileys + Chatwoot + n8n + local LLM + your doc-extractor skill \u2014 all free.\n\n\u2705 What you get:\n\u2022 Done-for-you setup \u2014 no technical skills needed\n\u2022 Free, open-source tools (you own it, no lock-in, no per-message fees)\n\u2022 Charge $600-$1,800 setup + $299-$799/mo; recovers lost after-hours inquiries\n\u2022 7-day support after delivery\n\n\ud83d\udce6 Packages:\n\u2022 Basic ($200, 3 days, 1 rev): Single flow, 1 workflow, Email support\n\u2022 Standard ($800, 5 days, 2 rev): Setup + test, Up to 3 flows, Loom walkthrough, 7-day support\n\u2022 Premium ($1600, 7 days, 3 rev): Full system, Unlimited flows, Monthly retainer option, Priority support\n\n\ud83d\ude80 How it works:\n1. You tell me your products/goals (form on order)\n2. I build & test the WhatsApp agent\n3. I hand over + record a 5-min Loom walkthrough\n\n\u26a1 Why me: I use the same tools that power a 100-skill autonomous company.\n",
+  "packages": [
+    {
+      "name": "Basic",
+      "price": 200,
+      "delivery": "3 days",
+      "revisions": 1,
+      "features": [
+        "Single flow",
+        "1 workflow",
+        "Email support"
+      ]
+    },
+    {
+      "name": "Standard",
+      "price": 800,
+      "delivery": "5 days",
+      "revisions": 2,
+      "features": [
+        "Setup + test",
+        "Up to 3 flows",
+        "Loom walkthrough",
+        "7-day support"
+      ]
+    },
+    {
+      "name": "Premium",
+      "price": 1600,
+      "delivery": "7 days",
+      "revisions": 3,
+      "features": [
+        "Full system",
+        "Unlimited flows",
+        "Monthly retainer option",
+        "Priority support"
+      ]
+    }
+  ],
+  "n8n_workflow": {
+    "name": "deliver-wa-support-agent",
+    "nodes": [
+      {
+        "parameters": {},
+        "name": "Baileys (WhatsApp intake)",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 1,
+        "position": [
+          0,
+          0
+        ]
+      },
+      {
+        "parameters": {},
+        "name": "Agent / Chatwoot logic",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 1,
+        "position": [
+          300,
+          0
+        ]
+      },
+      {
+        "parameters": {},
+        "name": "Deliver + notify",
+        "type": "n8n-nodes-base.emailSend",
+        "typeVersion": 1,
+        "position": [
+          600,
+          0
+        ]
+      }
+    ],
+    "connections": {
+      "Baileys (WhatsApp intake)": {
+        "main": [
+          [
+            {
+              "node": "Agent / Chatwoot logic",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Agent / Chatwoot logic": {
+        "main": [
+          [
+            {
+              "node": "Deliver + notify",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "note": "Tools: Baileys + Chatwoot + n8n + local LLM + your doc-extractor skill \u2014 all free. Replace code node with your agent logic. Baileys repo: https://github.com/WhiskeySockets/Baileys"
+  }
+}
