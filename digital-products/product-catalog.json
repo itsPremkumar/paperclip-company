@@ -189,6 +189,22 @@
       "dependencies": "Python 3.8+ (stdlib only)",
       "status": "ready",
       "product_dir": "agent-sentinel"
+    },
+    {
+      "id": "prem-prompt-executor",
+      "title": "prompt-executor CLI",
+      "tagline": "Dependency-free CLI that prints expert-crafted prompts for any category — agent-built, open source",
+      "price_usd": 9,
+      "category": "Developer Tools / Prompts",
+      "file_formats": [
+        "JavaScript",
+        "Markdown"
+      ],
+      "runnable": true,
+      "dependencies": "Node.js v14+ (zero npm dependencies)",
+      "github_url": "https://github.com/itsPremkumar/prompt-executor",
+      "status": "live",
+      "product_dir": "code-tools/prompt-executor"
     }
   ],
   "pricing_summary": {
@@ -200,10 +216,10 @@
     "total_if_bought_separately": 186
   },
   "stats": {
-    "total_products": 11,
+    "total_products": 12,
     "total_product_categories": 10,
-    "ready_to_list": 11,
-    "runnable_tools": 2,
+    "ready_to_list": 12,
+    "runnable_tools": 3,
     "file_formats_used": [
       "PDF",
       "Markdown",
