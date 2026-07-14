@@ -229,6 +229,19 @@ plus builds + reseller recurring cut), M4 target is built as:
 > M4 line so the founder can ratify or revise it. If Prem prefers the brief's geometric method,
 > the upper bound is ~$7,400/mo at 75 subs; if linear, ~$5,100/mo at 55 subs.
 
+> **M1–M3 reconciliation (target vs. actual, 2026-07-14):** the prior three months all
+> landed at $0 actual revenue. Root cause: every revenue stream funnels through founder-owned,
+> human-gated storefronts (Gumroad live publish PRE-52, GitHub Sponsors PRE-57, Medium PRE-54).
+> The agent can *build and stage* products/articles autonomously, but cannot *go live / collect
+> payment* without Prem's login. Catalog grew 10→12, articles 3→24, yet **$0 booked** —
+> the cash-collection path is gated. This is the dominant carry-in risk for M4.
+
+| Month | Subs tgt | Subs act | MRR tgt | MRR act | Builds tgt/act | Reseller tgt/act | Verdict |
+|-------|--------:|--------:|--------:|--------:|--------------:|-----------------:|---------|
+| M1 | 5 | 0 | $245 | $0 | 0 / 0 | — / — | Missed (gate) |
+| M2 | 15 | 0 | ~$1,240 | $0 | 1 / 0 | — / — | Missed (gate) |
+| M3 | 35 | 0 | ~$3,200 | $0 | 2 / 0 | 1 / 0 | Missed (gate) |
+
 ### 1d.2 Month-4 revenue projection (target vs. actual, to be filled weekly)
 
 Month 4 window: 2026-10-11 → 2026-11-11 (90 days after launch). Note the brief's 90-day target
@@ -297,12 +310,12 @@ $47,841, realistic 90-day target **$3,000–$8,000/mo**. Reconciling the two vie
 
 ## 2. Products Published
 
-Real inventory as of 2026-07-13 (from `digital-products/product-catalog.json` and
-`income-engine/gumroad/.used_products.json`).
+Real inventory as of 2026-07-14 (reconciled in PRE-86 (M1–M3 reconciliation block in §1d)):
 
-**Cataloged & ready:** 10 digital products.
-**Gumroad published (live):** 2.
-**Gumroad listings drafted (not yet published):** 5 more.
+**Cataloged:** 12 digital products (all `ready`; 1 marked `live`: prompt-executor CLI) — up from 10 at M3 baseline.
+**Gumroad product pages staged in pipeline (`.used_products.json`):** 5.
+**Gumroad published (live):** 2 (confirmed at M3 baseline; remaining staged pages pending the
+founder live-publish gate — PRE-52).
 
 | # | Product | Price (USD) | Catalog status | Gumroad status |
 |---|---------|------------:|----------------|----------------|
@@ -316,10 +329,12 @@ Real inventory as of 2026-07-13 (from `digital-products/product-catalog.json` an
 | 8 | 30-Day Zero-Cost Business Launch Plan | 9 | ready | drafted |
 | 9 | AI Agent Capability Manifest Toolkit | 14 | ready | drafted |
 | 10 | 150 Developer Productivity Prompts | 14 | ready | drafted |
+| 11 | Agent Sentinel — Security Audit Toolkit for AI Skills | 14 | ready | staged |
+| 12 | prompt-executor CLI | 9 | live | staged |
 | — | ai-agent-roi-calculator (lead magnet / product) | 0/free | — | **published** |
 | — | n8n-starter-workflow-pack | — | — | **published** |
 
-**Total published products:** 2 · **Total cataloged:** 10 · **Bundle price:** $109 (35% saving vs $167 separately).
+**Total cataloged:** 12 · **Total published (live):** 2 · **Bundle price:** $119 (36% saving vs $186 separately).
 
 ---
 
@@ -348,24 +363,29 @@ Baseline = 0. Fill in weekly from Gumroad + Stripe dashboards.
 
 ## 4. Articles Published & Views
 
-Real articles on disk as of 2026-07-13:
+Real articles on disk as of 2026-07-14 (reconciled in PRE-86 (M1–M3 reconciliation block in §1d)):
+- `revenue/blog/`: 17 markdown articles.
+- `income-engine/content/`: 7 markdown articles.
+- **Total articles written / on-disk: 24** (up from 3 at the M3 baseline — content engine accelerated).
 
-| # | Article | Location | Views | Source |
-|---|---------|----------|------:|--------|
+| # | Article (sample) | Location | Views | Source |
+|---|------------------|----------|------:|--------|
 | 1 | Best AI Agents for Small Business Automation | `income-engine/content/` | 0 (untracked) | blog |
 | 2 | No-Code Automation Tools: n8n, Make, Zapier | `income-engine/content/` | 0 (untracked) | blog |
 | 3 | How to Run an AI Company at Zero Budget | `revenue/blog/` | 0 (untracked) | blog |
 
-**Articles published:** 3 · **Total views:** not yet tracked (no analytics connected to the site).
+**Articles published (written):** 24 · **Live-published + views:** not yet tracked (no analytics
+connected; founder gate on live blog deploy — see PRE-5 showcase).
 > Action: connect site analytics (GitHub Pages / Vercel / Plausible) and record weekly view counts here.
 
 ---
 
 ## 5. Fiverr Gigs Live
 
-**Gigs live:** 0 — no Fiverr assets exist anywhere in the repo (no `fiverr` references found).
-**Plan:** this is a future channel. Create gigs once the first 2–3 digital products have proof of sale.
-Track the count here each week once gigs go live.
+**Gigs live:** 0 — but Fiverr *assets* now exist: the income-engine `Fiverr Gig Factory` pipeline
+has **8 staged gig packages** ($120–$1,500, hybrid recurring). Going live requires the founder-owned
+Fiverr seller account (PRE-58 — human gate), so 0 gigs are published.
+**Plan:** publish the first 2–3 gigs once the founder Fiverr account is set up; track count here weekly.
 
 | Gig title | Price (USD) | Status | Orders |
 |-----------|------------:|--------|-------:|
@@ -399,7 +419,7 @@ Append a row every Monday. Keep the latest on top.
 
 | Week of | Products live | MRR | Units sold | Articles | Views | Fiverr gigs | Leads | Notes |
 |---------|--------------:|----:|-----------:|---------:|------:|------------:|------:|-------|
-| 2026-07-14 (M4 baseline) | 2 | $0 | 0 | 3 | untracked | 0 | 0 | "Revenue dashboard M4": M4 projection + burn reconciliation added; re-pulled live telemetry (burn flat $70/$500); derived M4 target ≈ $5,600/mo; reconciled vs income-engine 74-pkg inventory |
+| 2026-07-14 (M4 baseline) | 12 | $0 | 0 | 24 | untracked | 0 | 0 | PRE-86: M1–M3 reconciliation + M4 integration; burn flat $70/$500; M4 target ≈ $5,600/mo (range $5.1k–$7.4k); 12 products + 24 articles staged, $0 booked (founder publish gates PRE-52/57/58/54) |
 | 2026-07-13 (W0) | 2 | $0 | 0 | 3 | untracked | 0 | 0 | baseline; launch 2026-07-12 |
 | 2026-07-13 (W1) | 0 | $0 | 0 | 0 | untracked | 0 | 0 | cataloged 11 products incl. agent-sentinel bundle (#11) |
 | 2026-07-13 (M3 baseline) | 2 | $0 | 0 | 3 | untracked | 0 | 0 | PRE-75: M3 projection + burn added; revenue ledger route wired into API (app.ts) |
@@ -408,6 +428,6 @@ Append a row every Monday. Keep the latest on top.
 
 *This dashboard is the single source of truth for PRE-59 (Month-1), PRE-73 (Month-2 projection,
 burn analysis & runway), PRE-75 (Month-3 projection, burn analysis & revenue tracking), and
-"Revenue dashboard M4" (Month-4 projection, burn analysis & reconciliation). Edit it
+"Revenue dashboard M4" / PRE-86 (Month-4 projection, burn analysis & reconciliation). Edit it
 directly each week; no code changes needed.
 Do not auto-publish founder-owned pricing/payment pages — that remains a Prem (founder) decision.*
