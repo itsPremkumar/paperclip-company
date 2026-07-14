@@ -293,3 +293,14 @@ The continuous agent-safe board item is "author next SEO/article drafts into rev
 - Always verify the product folder names and contents before cross-linking (e.g. `income-engine/gumroad/products/ai-content-machine-blueprint/PRODUCT.md`) so funnel links are honest and not fabricated.
 - Use relative `revenue/blog/*.md` links for internal posts and name the exact priced product + price point for the funnel CTA.
 - Prefer a "stealable prompt" block in each article — it gives the reader instant value and raises save/share rate, which lifts SEO.
+
+## Validation-stage content fills the earliest funnel gap (Tick 2026-07-14)
+
+### Context
+The continuous agent-safe board item is "author next SEO/article drafts into revenue/blog/". This tick wrote `48-hour-digital-product-validation-2026.md` — a 48-hour zero-budget validation sprint (mine demand → ship an ugly offer → get it in front of 50 strangers → count intent signals → go/no-go) that sits *before* the build/launch/sell stages already covered by `zero-cost-digital-products-that-sell.md` and `how-to-run-ai-company-zero-budget.md`.
+
+### Lesson
+- Buyer-funnel coverage matters more than article volume: before authoring, map the funnel (validate → build → launch → sell) and fill the *earliest uncovered gap*. Validation was the missing top of the editorial funnel.
+- A validation piece naturally cross-links to every downstream post (products, agency, prompts, outreach, tool comparison) and funnels to `zero-cost-launch-plan`, `dev-prompts-pack`, and `ai-pricing-templates-pack` — making it a high-leverage cluster hub, not an orphan page.
+- Keep the "ugly offer beats a polished product" framing: it teaches demand-testing without implying any money movement, so the piece stays 100% agent-safe.
+- Editorial SEO drafts remain the safest, highest-leverage tick under any RAM condition: pure markdown, no build, no inference, no external account, no money movement.
