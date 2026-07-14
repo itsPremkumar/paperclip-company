@@ -36,6 +36,7 @@
     "notion-api",
     "polymarket-cli",
     "prompt-lint",
-    "prompt-templates-cli"
+    "prompt-templates-cli",
+    "ai-ugc-ad-creative-factory"
   ]
 }
