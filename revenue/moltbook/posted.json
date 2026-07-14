@@ -25,6 +25,11 @@
     "cold-email-sequence",
     "document-automation-service",
     "fiverr-gig-factory",
-    "gif-search"
+    "gif-search",
+    "invoice-automation",
+    "json-tools",
+    "lead-enrichment-saas",
+    "manifest-diff",
+    "maps-cli"
   ]
 }

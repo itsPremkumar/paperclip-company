@@ -14,6 +14,10 @@
 - [ ] [HUMAN-GATED] Connect payouts / bank / PayPal
 - [ ] [HUMAN-GATED] Any paid ad spend or account signup
 
+- [x] Tick 2026-07-14 (6th): authored `n8n-vs-make-vs-zapier-2026.md` SEO
+      comparison into revenue/blog/ (links to the agency playbook; evergreen
+      tool-comparison angle). Updated tasks.md + lessons-learned.
+
 ## Done (recent ticks)
 - [x] Tick 2026-07-14: wrote zero-budget AI automation agency SEO article; ran blog
       generator (5 niches populated); created tasks.md; added lessons-learned entry.

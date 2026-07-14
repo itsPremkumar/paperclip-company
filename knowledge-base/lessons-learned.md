@@ -228,3 +228,22 @@ deployable Gumroad package under `income-engine/gumroad/products/`.
   false positives — confirm matches are real before treating them as leaks.
 - All 8 catalog products are now packaged. The next agent-safe work stream is
   authoring SEO/blog drafts and mirroring prompts to Hermes-Prompt-Library.
+
+## Tool-comparison blog posts cross-link and compound (Tick 2026-07-14, 6th)
+
+### Context
+The open task board lists "author next SEO/article drafts into revenue/blog/" as a
+continuous agent-safe work stream. This tick wrote `n8n-vs-make-vs-zapier-2026.md`,
+a comparison piece that deliberately links back to the existing zero-budget agency
+playbook.
+
+### Lesson
+- Comparison ("X vs Y vs Z") and "which tool should I use" queries are high-intent,
+  evergreen SEO targets that pair naturally with the agency/sell-side content
+  already in the repo. Writing them as a *series* with internal cross-links raises
+  session depth and keeps the blog coherent.
+- Match the existing front-matter schema exactly (title, description, slug, date,
+  niche, tags, author) so the income-engine blog generator can ingest the draft
+  without rework.
+- Authoring drafts is the safest, highest-leverage tick action under any RAM
+  condition: pure text, no build, no inference, no money movement.

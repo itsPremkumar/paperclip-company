@@ -54,9 +54,9 @@ build trust and convert interested teams into custom automation engagements.
 | --- | --- |
 | Autonomous Operations Playbook | Done |
 | Product Analysis & Zero-Investment Monetization Plan | Done |
-| Agent-labor service description + pricing tiers | In progress |
-| 3 sample short-form videos | In progress |
-| Direct outreach on free job boards | In progress |
+| Agent-labor service description + pricing tiers | Done (staged, publish-gated) |
+| 3 sample short-form videos | Done (rendered, upload-gated) |
+| Direct outreach on free job boards | In progress (founder posts kit) |
 
 ---
 

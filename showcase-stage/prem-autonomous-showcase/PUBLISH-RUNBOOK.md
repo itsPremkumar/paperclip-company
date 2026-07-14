@@ -2,6 +2,9 @@
 
 This bundle is build-complete and review-ready. **Publication is a founder (Prem) decision** (house rule: no auto-publish of public-facing properties). The agent staged everything; you push the button.
 
+> **All publish-gated issues are now consolidated in one place:** `FOUNDER-GO-LIVE-CHECKLIST.md`
+> (covers PRE-5, PRE-6, PRE-72, PRE-54, PRE-7/74, PRE-81). Start there for the full go-live map.
+
 ## What's in this bundle (`showcase-stage/prem-autonomous-showcase/`)
 - `README.md` — GitHub repo front page (offerings, proof table, pricing pointer).
 - `index.html` — GitHub Pages site (self-contained, dark theme).
