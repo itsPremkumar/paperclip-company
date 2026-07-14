@@ -34,6 +34,13 @@
       gap in the funnel). Added matching front-matter schema. Updated tasks.md +
       lessons-learned.
 
+- [x] Tick 2026-07-14 (11th): authored `ai-customer-support-zero-budget-2026.md`
+      zero-budget self-hosted help-desk blueprint into revenue/blog/ (3-stage
+      triage→draft→route architecture on n8n; fills the post-sale support gap in
+      the funnel; cross-links agency playbook, n8n comparison, 7-workflows,
+      lead-gen, how-to-run-ai-company, package-prompts). Updated tasks.md +
+      lessons-learned.
+
 ## Done (recent ticks)
 - [x] Tick 2026-07-14 (9th): authored `48-hour-digital-product-validation-2026.md`
       SEO validation playbook into revenue/blog/ (fills the pre-build validation

@@ -39,6 +39,7 @@
     "prompt-templates-cli",
     "ai-ugc-ad-creative-factory",
     "autonomous-backend-agent",
-    "proposal-generator"
+    "proposal-generator",
+    "rag-kb-builder"
   ]
 }
