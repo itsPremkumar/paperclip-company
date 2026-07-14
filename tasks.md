@@ -66,6 +66,15 @@
       customer-support; funnels to zero-to-10k-ai-agents). Updated tasks.md +
       lessons-learned.
 
+- [x] Tick 2026-07-14 (15th): authored `how-to-build-ai-voice-agent-2026.md`
+      zero-budget voice-agent blueprint into revenue/blog/ (STT→LLM→TTS loop on
+      n8n; free/open stack table; 5-step build; fills the voice/phone gap in the
+      funnel — no voice content existed before; cross-links customer-support,
+      lead-gen, n8n + framework comparisons, LLM comparison, faceless channel,
+      content-repurposing, how-to-run-ai-company, monetization, package-prompts,
+      security checklist; funnels to monetization-kit + ai-content-machine
+      blueprint products). Updated tasks.md + lessons-learned.
+
 ## Done (recent ticks)
 - [x] Tick 2026-07-14 (9th): authored `48-hour-digital-product-validation-2026.md`
       SEO validation playbook into revenue/blog/ (fills the pre-build validation

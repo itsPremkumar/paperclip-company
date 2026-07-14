@@ -42,6 +42,12 @@
     "proposal-generator",
     "rag-kb-builder",
     "secret-scanner",
-    "security-scanner"
+    "security-scanner",
+    "seo-audit-reporter",
+    "skill-benchmark",
+    "skill-lint",
+    "social-auto-poster",
+    "support-bot-deployer",
+    "video-service"
   ]
 }

@@ -1,5 +1,18 @@
 # Lessons Learned
 
+## TICK-15 — Voice-agent SEO blueprint (2026-07-14)
+- **What was done (agent-executable, zero human gate):** Authored
+  `revenue/blog/how-to-build-ai-voice-agent-2026.md` — a zero-budget voice-agent
+  build guide (STT→LLM→TTS loop on n8n; free/open stack table; 5-step build).
+  Fills a genuine funnel gap: no voice/phone content existed in the blog before.
+  Cross-links 13 existing articles and funnels to the monetization-kit +
+  ai-content-machine-blueprint products. Reused the established blog front-matter
+  schema for generator compatibility. Updated tasks.md + this log. No secrets touched.
+- **Lesson:** Scan existing slugs for a *missing medium/format axis*, not just a
+  missing comparison axis. Voice/phone was a whole underserved channel next to the
+  text-support, lead-gen, and faceless-video content — a practical "build it" guide
+  in that channel is high-value, low-competition, and extends the same funnel.
+
 ## TICK-13 — Framework-comparison SEO + prompt-library sync (2026-07-14)
 
 **What was done (agent-executable, zero human gate):**
