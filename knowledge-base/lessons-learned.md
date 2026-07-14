@@ -282,3 +282,14 @@ The continuous agent-safe board item is "author next SEO/article drafts into rev
 - Lead each item with the cheapest tool and add a "what to do this week" section so the post is useful standalone and naturally routes readers to existing `revenue/blog/*.md` and `digital-products/` assets via relative links.
 - Front-matter must match the existing schema exactly (title, description, slug, date, niche, tags, author) so the income-engine generator can ingest it without rework.
 - Authoring pure-markdown drafts remains the safest, highest-leverage tick under any RAM condition: no build, no inference, no external account, no money movement.
+
+## Content-repurposing angle closes the "content→product" loop (Tick 2026-07-14)
+
+### Context
+The continuous agent-safe board item is "author next SEO/article drafts into revenue/blog/". This tick wrote `content-repurposing-engine-2026.md` — a 4-stage "write one pillar, shred into 10 formats" pipeline that cross-links the faceless-channel, zero-cost-products, and package-prompts articles and explicitly funnels to the paid `ai-content-machine-blueprint` ($47) and `ai-video-script-pack` (50 scripts) products in `income-engine/gumroad/products/`.
+
+### Lesson
+- A repurposing playbook is a high-intent, evergreen content-cluster piece that bridges the *free blog* to the *priced product catalog*: it teaches the workflow, then points at the kit that automates it. This directly supports the income engine without any money movement.
+- Always verify the product folder names and contents before cross-linking (e.g. `income-engine/gumroad/products/ai-content-machine-blueprint/PRODUCT.md`) so funnel links are honest and not fabricated.
+- Use relative `revenue/blog/*.md` links for internal posts and name the exact priced product + price point for the funnel CTA.
+- Prefer a "stealable prompt" block in each article — it gives the reader instant value and raises save/share rate, which lifts SEO.

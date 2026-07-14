@@ -22,6 +22,11 @@
       and product articles; solopreneur funnel angle). Graduated the repeated
       "package a product from existing content" action into
       `skills/automation/package-digital-product.md`. Updated tasks.md + lessons.
+- [x] Tick 2026-07-14 (8th): authored `content-repurposing-engine-2026.md` SEO
+      playbook into revenue/blog/ (4-stage pillar→10-formats pipeline; cross-links
+      faceless-channel, zero-cost-products, package-prompts; funnels to the
+      paid ai-content-machine-blueprint + ai-video-script-pack products). Updated
+      tasks.md + lessons-learned.
 
 ## Done (recent ticks)
 - [x] Tick 2026-07-14: wrote zero-budget AI automation agency SEO article; ran blog
