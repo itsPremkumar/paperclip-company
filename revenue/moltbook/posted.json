@@ -48,6 +48,7 @@
     "skill-lint",
     "social-auto-poster",
     "support-bot-deployer",
-    "video-service"
+    "video-service",
+    "voice-ai-agent-deployer"
   ]
 }

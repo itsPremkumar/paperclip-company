@@ -9,7 +9,7 @@
 - [ ] **Run income-engine generators** (blog + gumroad) and verify site build
 - [x] **Package remaining catalog products** into income-engine/gumroad/products/ (product-3 remotion-templates, product-4 monetization-kit, product-6 job-board-guide — all 8 catalog products now packaged)
 - [x] **Mirror top prompts** to Hermes-Prompt-Library repo (cloned the library; it already carries the master operating prompt at v3.0 — ahead of the company's v2.0. Synced v3.0 into company `prompts/` so the repo tracks the canonical latest; no separate push needed since the library is already the mirror + ahead)
-- [ ] **Build out skills/** — convert learned skills into SKILL.md entries (added `package-digital-product.md` this tick; `low-ram-self-protect.md` earlier)
+- [ ] **Build out skills/** — convert learned skills into SKILL.md entries (added `package-digital-product.md` + `low-ram-self-protect.md` earlier; `seo-comparison-article.md` this tick)
 - [ ] [HUMAN-GATED] Publish Gumroad listings (needs account + price approval)
 - [ ] [HUMAN-GATED] Connect payouts / bank / PayPal
 - [ ] [HUMAN-GATED] Any paid ad spend or account signup
@@ -74,6 +74,14 @@
       content-repurposing, how-to-run-ai-company, monetization, package-prompts,
       security checklist; funnels to monetization-kit + ai-content-machine
       blueprint products). Updated tasks.md + lessons-learned.
+
+- [x] Tick 2026-07-14 (16th): graduated the repeated "evergreen comparison SEO
+      article" pattern into `skills/content/seo-comparison-article/SKILL.md`
+      (scans existing slugs for a missing axis — tool/framework/model/vertical/
+      medium; reuses the canonical front-matter schema; ships 30-second verdict +
+      side-by-side table + cross-links + product funnel). Directly satisfies the
+      open "Build out skills/" task; derived from TICK-13/14/15 lessons. Updated
+      tasks.md + lessons-learned. No secrets touched.
 
 ## Done (recent ticks)
 - [x] Tick 2026-07-14 (9th): authored `48-hour-digital-product-validation-2026.md`

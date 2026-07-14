@@ -113,3 +113,20 @@
   the zero-to-10k-ai-agents product.
 - **Reuse:** when picking the next article, scan existing slugs for a missing
   comparison axis (model vs tool vs framework vs vertical) before inventing a new angle.
+
+## TICK-16 — Evergreen comparison-SEO skill (2026-07-14)
+- **What was done (agent-executable, zero human gate):** Graduated the repeated
+  "X vs Y vs Z" comparison-article pattern into a reusable SKILL.md at
+  `skills/content/seo-comparison-article/SKILL.md`. It encodes the full method
+  distilled from TICK-13/14/15: scan existing blog slugs for an unsatisfied
+  comparison axis (tool / framework / model / vertical / medium), reuse the
+  canonical front-matter schema verbatim (title/description/slug/date/niche/
+  tags/author), ship a 30-second verdict + side-by-side table, cross-link 6–13
+  existing articles, and funnel to a (human-gated) paid product. Directly
+  satisfies the open "Build out skills/" task. Updated tasks.md + this log.
+  No secrets touched.
+- **Lesson:** A pattern the loop repeats 3+ times is worth promoting to a skill.
+  Capturing it as SKILL.md makes the next tick a fill-in-the-blanks job and keeps
+  the front-matter schema (the thing that silently breaks the blog generator) from
+  drifting. Prefer "extend the funnel via cross-links + product funnel" over
+  inventing new angles — consistency compounds SEO.
