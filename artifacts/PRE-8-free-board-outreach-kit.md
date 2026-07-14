@@ -94,19 +94,39 @@ Compliance guardrails:
 
 ---
 
-## 4. Outcome Tracker (founder fills, then reports on PRE-8)
+## 4. Outcome Tracker (founder fills, then reports on PRE-8 / PRE-81)
 
-| Board | Posted? (Y/N) | Date | Link/Ref | Replies/Inbound | Next action |
+> PRE-81 status: kit is **execution-ready** (see Section 6). Posting is **PENDING founder action** — it requires authenticated human accounts the agent cannot use, plus the standing founder-publish approval gate. "Link/Ref" below is the *target where to post*, not a live post URL. Replace with the real posted URL after go-live and flip Posted? to Y.
+
+| Board | Posted? (Y/N) | Date | Link/Ref (where to post) | Replies/Inbound | Next action |
 |---|---|---|---|---|---|
-| LinkedIn | | | | | |
-| Naukri | | | | | |
-| Wellfound | | | | | |
-| RemoteAI | | | | | |
-| YC Work at a Startup | | | | | |
+| LinkedIn | PENDING | — | https://www.linkedin.com/feed/ (Start a post) + /groups + /messaging | — | Founder posts + 10 DMs |
+| Naukri | PENDING | — | https://www.naukri.com/mnjuser/profile + /rise + /mnjuser/chat | — | Free profile + 5 DMs |
+| Wellfound | PENDING | — | https://wellfound.com/ (company profile) + /inbox | — | Profile + 5 DMs |
+| RemoteAI | PENDING | — | https://remoteai.com/ (free service listing) | — | Listing + 3 apps |
+| YC Work at a Startup | PENDING | — | https://www.workatastartup.com/ (company profile) | — | Profile + 3 DMs |
+
+---
+
+## 6. PRE-81 Execution-Readiness Report (2026-07-14, Hermes Engineer)
+
+**What was actually executed by the agent:** the kit was made *execution-ready* — Sections 1-3 (copy) verified intact, Section 4 tracker pre-populated with exact posting deep-links and PENDING status, and the monitoring handoff (PRE-11 → PRE-79) wired so the founder has a single reply path for live responses.
+
+**What could NOT be executed by the agent — first-class blocker:**
+- **Authorization boundary.** LinkedIn, Naukri, Wellfound, RemoteAI, and YC Work at a Startup all require **authenticated human accounts** to post jobs, profiles, listings, or DMs. An autonomous agent cannot log in or post to these (see Section 0). This is a hard technical/legal boundary, not a missing step in the kit.
+- **Founder-publish approval gate.** Standing company house rules require founder (Premkumar M) approval before any public publishing (GitHub pages, LinkedIn, YouTube, job boards). PRE-81 does not carry an explicit founder "go" for posting.
+
+**Remediation / unblock owner (founder = Premkumar M):**
+1. Approve go-live for the five free boards (reply on PRE-81 with "approved").
+2. Log into each board and execute Section 3 runbook (~45 min). Paste each live post URL into the Section 4 tracker.
+3. Reply on **PRE-79** (https://github.com/itsPremkumar) with the reply summary so Hermes Engineer can triage leads and schedule the next monitor check.
+
+**No-cost compliance confirmed:** NO paid RemoteOK; NO paid Naukri recruiter slot; all spend at $0.
 
 ---
 
 ## 5. Handoff & Next Steps
-- This kit is the PRE-8 deliverable. The founder executes Section 3 and returns the Section 4 tracker.
-- On execution, the issue can be closed `done`; or kept `in_progress` with the founder as the live continuation owner.
+- This kit is the PRE-8 deliverable and the PRE-81 execution target. The founder executes Section 3 and returns the Section 4 tracker.
+- **Live-response monitoring is delegated to PRE-11 → PRE-79.** The agent cannot read replies from these boards (same auth boundary). The founder reports replies on PRE-79; Hermes Engineer then triages leads, drafts engagement replies, and schedules the next monitor check (next check fires ~2026-07-15T13:33Z if no reply).
+- On execution, PRE-81 can be closed `done` (tracker filled with live URLs); or kept `in_progress` with the founder as the live continuation owner.
 - Sibling issues to close first for a stronger launch: PRE-5 (showcase), PRE-6 (pricing sign-off), PRE-7 (samples).

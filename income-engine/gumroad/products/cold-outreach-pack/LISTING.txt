@@ -1,0 +1,11 @@
+Title: Cold Outreach Pack — Done-for-You Reply-Getting Sequences
+Price: $14
+Description: 30+ ready-to-send cold outreach templates (3-touch founder + operator email sequences, LinkedIn connect notes, subject swipe file, personalization bracket system) plus the 4-step research-first system that actually gets replies. Built from the playbook we run internally.
+Category: Sales & Marketing Templates
+
+HOW TO PUBLISH (human step):
+1. Create a free Gumroad account at gumroad.com (email + identity + tax verification).
+2. Link a payout method (bank/PayPal) in Settings > Payouts.
+3. Create a new product, copy the Title/Price/Description above.
+4. Upload PRODUCT.md (this folder) as the deliverable file. Set "Software / File" access.
+5. Publish. You keep 100% minus Gumroad's standard ~10% fee.

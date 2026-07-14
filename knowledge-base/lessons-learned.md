@@ -131,3 +131,23 @@ niches were configured.
   actually get Gumroad-ready listings (still human-gated to publish).
 - Path gotcha re-confirmed: write_file with `/c/one/...` produced `C:\c\one\...`.
   Always use `C:\one\...` absolute Windows paths in this environment.
+
+## Packaging existing content into catalog products is a high-leverage agent action (2026-07-14)
+On this tick, free RAM was ~347 MB (above threshold). Rather than run heavy
+builds, the loop packaged the already-published blog article
+`revenue/blog/cold-outreach-that-gets-replies.md` into a new Gumroad-ready
+product folder `income-engine/gumroad/products/cold-outreach-pack/` (PRODUCT.md
++ LISTING.txt), mirroring the established dev/sales pack format.
+
+### Lesson
+- The repo holds a lot of finished blog/outreach content that has NOT yet been
+  packaged into its corresponding catalog product folder. Converting published
+  articles into the PRODUCT.md + LISTING.txt shape is pure-text, zero-cost, and
+  directly grows the sellable catalog (still human-gated to publish).
+- Conventions to reuse: PRODUCT.md = `# Title`, TOC table, numbered templates in
+  fenced blocks, system recap; LISTING.txt = Title/Price/Description/Category +
+  explicit "HOW TO PUBLISH (human step)" block. Keep the publish step clearly
+  human-gated — never imply the loop will publish or move money.
+- While packaging, scan source content for stray non-ASCII/garbage characters
+  (this tick found a stray CJK char in the outreach article — fixed in place).
+  Cheap quality pass that prevents shipping a visibly broken product.

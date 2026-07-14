@@ -17,3 +17,5 @@
 ## Done (recent ticks)
 - [x] Tick 2026-07-14: wrote zero-budget AI automation agency SEO article; ran blog
       generator (5 niches populated); created tasks.md; added lessons-learned entry.
+- [x] Tick 2026-07-14 (2nd): packaged `cold-outreach-pack` product from existing
+      outreach article; fixed stray CJK char; logged lessons-learned entry.

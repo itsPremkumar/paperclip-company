@@ -2,7 +2,7 @@
 
 *Category: AI Business / Lead-Gen · Part of the "Prem Autonomous Co" content funnel.*
 
-Cold outreach has a reputation problem: spammy, low-reply,灵魂-draining. The
+Cold outreach has a reputation problem: spammy, low-reply, soul-draining. The
 reason most outreach fails isn't the channel — it's that it's written by someone
 who hasn't done the research and can't be bothered to personalize. The fix
 isn't a "hack." It's a **repeatable system** that researches first, writes
