@@ -83,6 +83,15 @@
       open "Build out skills/" task; derived from TICK-13/14/15 lessons. Updated
       tasks.md + lessons-learned. No secrets touched.
 
+- [x] Tick 2026-07-14 (17th): authored `faceless-youtube-vs-tiktok-vs-newsletter-2026.md`
+      medium/channel-comparison SEO piece into revenue/blog/ (Faceless YouTube vs
+      TikTok vs Newsletter — unsaturated *channel* axis matching the n8n +
+      framework + model comparisons; 30-second verdict + side-by-side table +
+      cross-links 9 existing articles; funnels to ai-content-machine-blueprint +
+      zero-to-10k-ai-agents products). Also flushed the prior tick's uncommitted
+      generator WIP (real-estate raw content + cold-email gumroad product) that
+      was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
+
 ## Done (recent ticks)
 - [x] Tick 2026-07-14 (9th): authored `48-hour-digital-product-validation-2026.md`
       SEO validation playbook into revenue/blog/ (fills the pre-build validation

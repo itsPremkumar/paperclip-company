@@ -1,5 +1,21 @@
 # Lessons Learned
 
+## TICK-17 — Channel-comparison SEO (Faceless YouTube vs TikTok vs Newsletter) (2026-07-14)
+- **What was done (agent-executable, zero human gate):** Authored
+  `revenue/blog/faceless-youtube-vs-tiktok-vs-newsletter-2026.md` — a
+  medium/channel-comparison SEO piece reusing the proven "X vs Y vs Z" pattern
+  (30-second verdict + side-by-side table + cross-links to 9 existing articles +
+  product funnel). Targets an *unsaturated channel axis* (faceless YouTube vs
+  TikTok vs newsletter) next to the already-covered tool/framework/model axes.
+  Also flushed the prior tick's uncommitted generator WIP (real-estate raw
+  source content + cold-email-templates-ai-agencies gumroad product) that had
+  been left staged but never committed. Updated tasks.md + this log. No secrets.
+- **Lesson:** The comparison pattern extends beyond tools/frameworks/models to
+  *channels/media* — picking the next unsaturated axis (vertical, medium, or
+  model) keeps the corpus compounding without inventing a brand-new format.
+  Always flush accumulated uncommitted WIP at commit time so a tick's partial
+  generator output doesn't drift from the recorded task board.
+
 ## TICK-15 — Voice-agent SEO blueprint (2026-07-14)
 - **What was done (agent-executable, zero human gate):** Authored
   `revenue/blog/how-to-build-ai-voice-agent-2026.md` — a zero-budget voice-agent

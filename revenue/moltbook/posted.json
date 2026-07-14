@@ -49,6 +49,8 @@
     "social-auto-poster",
     "support-bot-deployer",
     "video-service",
-    "voice-ai-agent-deployer"
+    "voice-ai-agent-deployer",
+    "web-research",
+    "whatsapp-ai-commerce-agent"
   ]
 }

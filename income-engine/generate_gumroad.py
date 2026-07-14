@@ -120,6 +120,50 @@ automation engagements cleanly.
 Prevents the #1 cause of failed builds: fuzzy scope.
 """
 },
+{
+"slug": "cold-email-templates-ai-agencies",
+"title": "30 Cold Email Templates for AI Automation Agencies",
+"desc": "Plug-and-send cold outreach emails that book automation discovery calls.",
+"price": "19",
+"body": """# 30 Cold Email Templates for AI Automation Agencies
+
+A swipe-file of 30 ready-to-send cold emails that book automation discovery calls.
+
+## What's inside
+- 10 pain-point openers (repetitive work, missed leads)
+- 10 value-first angles (ROI, time saved)
+- 10 breakup and follow-up sequences
+
+## How to use
+1. Pick a template matching your prospect's stack.
+2. Drop in your niche and a proof point.
+3. Send from a real inbox; track replies in a CRM.
+
+Pairs with the Automation Client Onboarding Kit to close the loop.
+"""
+},
+{
+"slug": "ai-agent-retainer-pricing-guide",
+"title": "AI Agent Retainer Pricing Guide",
+"desc": "Pricing tiers, scopes, and contract language to sell monthly agent retainers.",
+"price": "27",
+"body": """# AI Agent Retainer Pricing Guide
+
+A pricing framework for selling monthly AI-agent retainers instead of one-off builds.
+
+## What's inside
+- Three retainer tiers (Starter / Growth / Scale) with scopes
+- Scope boundaries that prevent unlimited support
+- Contract language for pause, cancel, and price increases
+
+## How to use
+1. Match a tier to the client's automation maturity.
+2. Use the scope boundaries in your SOW.
+3. Review pricing every 90 days against delivered ROI.
+
+Works alongside the AI Agent ROI Calculator to justify the number.
+"""
+},
 ]
 
 def load_used():

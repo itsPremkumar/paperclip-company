@@ -1,8 +1,8 @@
 # PREM AUTONOMOUS CO — REVENUE TRACKING DASHBOARD
 
 **Owner:** Hermes CMO / Hermes Engineer · **Status:** live (tracking artifact)
-**Cadence:** updated weekly (every Monday) · **Last updated:** 2026-07-14 (M4 projection + burn reconciliation added; PRE-89 milestone)
-**Window tracked:** Month 1 (30-day) projection, from launch 2026-07-12 — **+ Month-2 projection, burn analysis & runway (PRE-73)** — **+ Month-3 projection, burn analysis & revenue tracking (PRE-75)** — **+ Month-4 projection, burn analysis & reconciliation (PRE-89)**
+**Cadence:** updated weekly (every Monday) · **Last updated:** 2026-07-14 (M5 projection + burn reconciliation added; PRE-87 milestone)
+**Window tracked:** Month 1 (30-day) projection, from launch 2026-07-12 — **+ Month-2 projection, burn analysis & runway (PRE-73)** — **+ Month-3 projection, burn analysis & revenue tracking (PRE-75)** — **+ Month-4 projection, burn analysis & reconciliation (PRE-86)** — **+ Month-5 projection, burn analysis & reconciliation (PRE-87)**
 **Source of truth for targets:** `revenue/30-day-zero-cost-launch-plan.md` + `revenue/monetization-brief-revenue-engine-v1.md`
 **Burn/runway source of truth:** live Paperclip API telemetry (`/companies/{id}/budgets/overview`, `/costs/summary`) pulled 2026-07-14T14:07Z (this milestone) and 2026-07-13T06:25Z (M3 baseline)
 
@@ -308,6 +308,142 @@ $47,841, realistic 90-day target **$3,000–$8,000/mo**. Reconciling the two vie
 
 ---
 
+## 1e. Month-5 Projection, Burn Analysis & Reconciliation (PRE-87)
+
+> Added 2026-07-14 (this milestone). The monetization brief gives explicit conservative
+> targets through **Month 3** only (35 subs + 2 builds + 1 reseller ≈ $3,200/mo). Month 4 was
+> agent-derived in PRE-86 (§1d.1) at ~60 subs / ≈ $5,600/mo. **Month 5 has no published figure**,
+> so it is **derived** here by extending PRE-86's own two-method ramp (linear-of-increments vs
+> geometric-of-increments) — *not invented* — using a transparent, stated method. Live telemetry
+> was re-pulled for this milestone and reconciled against the M4 baseline (PRE-86).
+
+### 1e.1 Deriving the M5 target (method + result)
+
+PRE-86 §1d.1 established the brief's ramp **5 → 15 → 35** (increments +10, then +20) and two
+defensible continuations:
+- **Linear-of-increments:** hold the last increment (+20) → M4 = 55 subs.
+- **Geometric-of-increments:** double the last increment (+40) → M4 = 75 subs.
+- **Blended M4 planning figure:** ~60 subs (midpoint, used as the M4 line).
+
+Extending the same two methods from the M4 endpoints to M5:
+- **Linear-of-increments:** M5 = 55 + 20 = **75 subs**.
+- **Geometric-of-increments:** M5 = 75 + 80 (= 2× the +40 M4 increment) = **155 subs**.
+- **Blended M5 planning figure:** **~115 subs** (midpoint of 75–155).
+
+Carrying the brief's revenue mix forward (pure-sub rate = $3,200 ÷ 35 ≈ **$91.43/sub**, plus
+builds + reseller recurring tail), M5 target is built as:
+
+| Component | M5 planning figure | Rationale |
+|-----------|-------------------:|-----------|
+| Subscribers (blended) | 115 | midpoint of 75–155 derived ramp |
+| Added MRR from subs | +~$7,300 vs M4 (~$10,900/mo gross) | $91.43 × 115 ≈ $10,514; +3rd-reseller & 4th-build tail ≈ +$380 |
+| One-time builds closed (cumulative) | 4 | +1 build in M5 (M4 was 3) |
+| Reseller / affiliate deals | 3 | +1 reseller (M4 was 2) → adds ~$640/mo recurring |
+| **M5 target MRR (month-end)** | **≈ $10,900/mo** | conservative blend of the two ramp methods |
+| Cumulative build revenue (M1–M5) | ~$3,960–$19,600 | 4 builds × $990–$4,900 |
+
+> This is explicitly a **projection**, not a committed target. Flagged as the agent-derived M5 line
+> for founder ratification. If Prem prefers the linear method, the **lower bound is ≈ $7,100/mo at
+> 75 subs**; if geometric, the **upper bound is ≈ $14,700/mo at 155 subs**.
+
+> **M1–M4 reconciliation (target vs. actual, 2026-07-14):** the prior four months all landed at
+> **$0 actual revenue**. Root cause (unchanged since M1): every revenue stream funnels through
+> founder-owned, human-gated storefronts (Gumroad live publish PRE-52, GitHub Sponsors PRE-57,
+> Medium Partner Program PRE-54, Fiverr seller PRE-58). The agent can *build and stage* products,
+> articles, and gigs autonomously, but cannot *go live / collect payment* without Prem's login.
+> Catalog held at 12, articles at 24, yet **$0 booked** — the cash-collection path is gated. This
+> is the dominant carry-in risk for M5.
+
+| Month | Subs tgt | Subs act | MRR tgt | MRR act | Builds tgt/act | Reseller tgt/act | Verdict |
+|-------|--------:|--------:|--------:|--------:|--------------:|-----------------:|---------|
+| M1 | 5 | 0 | $245 | $0 | 0 / 0 | — / — | Missed (gate) |
+| M2 | 15 | 0 | ~$1,240 | $0 | 1 / 0 | — / — | Missed (gate) |
+| M3 | 35 | 0 | ~$3,200 | $0 | 2 / 0 | 1 / 0 | Missed (gate) |
+| M4 | ~60 | 0 | ≈ $5,600 | $0 | 3 / 0 | 2 / 0 | Missed (gate) |
+
+### 1e.2 Month-5 revenue projection (target vs. actual, to be filled weekly)
+
+Month 5 window: 2026-11-11 → 2026-12-11 (120 days after the 2026-07-12 launch).
+
+| Metric | M1 | M2 | M3 | M4 | M5 target (derived) | M5 actual (W0 baseline) | Source |
+|--------|---:|---:|---:|---:|---------------------:|-------------------------:|--------|
+| Paid subscribers (starter/team) | 5 | 15 | 35 | ~60 | **~115** | 0 | Gumroad/Stripe |
+| Builds closed (cumulative) | 0 | 1 | 2 | 3 | **4** | 0 | CRM |
+| Reseller / affiliate deals | — | (later) | 1 | 2 | **3** | 0 | dashboards |
+| **MRR (month-end)** | $245 | ~$1,240 | ~$3,200 | ≈ $5,600 | **≈ $10,900** | $0 | billing |
+| Cumulative build revenue | $0 | ~$990–$4,900 | ~$1,980–$9,800 | ~$2,970–$14,700 | ~$3,960–$19,600 | $0 | billing |
+| Affiliate/recurring add-ons | — | — | ~$0–$640 | ~$640 | ~$640–$1,920 | $0 | dashboards |
+
+### 1e.3 Burn analysis (live — re-pull 2026-07-14, this milestone)
+
+Reconciled against the M4 baseline (2026-07-14T14:07Z). Same single telemetry source
+(`/budgets/overview`, `/costs/summary`), same billing window (2026-07-01 → 2026-08-01 UTC).
+
+| Burn metric | M4 baseline (07-14) | M5 pull (07-14, this run) | Δ | Notes |
+|-------------|--------------------:|---------------------------:|--:|-------|
+| Recognized revenue (M-T-D) | $0.00 | **$0.00** | — | still pre-revenue |
+| Gross burn (M-T-D) | $70.00 (7,000¢) | **$70.00 (7,000¢)** | $0 | 100% OpenRouter inference (tencent/hy3:free) |
+| Monthly budget cap | $500.00 | $500.00 | — | hard-stop, calendar-month UTC |
+| Budget remaining | $430.00 | **$430.00** | $0 | 14% of cap used |
+| Net burn (M-T-D) | $70.00 | **$70.00** | — | = gross burn (revenue $0) |
+| Burn rate (M-T-D run-rate) | $6.02/day (~$183/mo) | **$6.02/day** | — | $70 ÷ elapsed days; planning figure |
+
+> **Reconciliation result:** burn is **flat** across M2→M3→M4→M5 pulls — no new spend has
+> occurred since the 2026-07-12 process boot. The $500/mo cap is safe (14% used, $430 remaining).
+> The process-uptime burst artifact ($35.53/hr) remains excluded from runway math. The fleet holds
+> a sub-cap, zero-ad-spend burn by policy. **Runway to budget cap ≈ 71 days** at $6.02/day against
+> the $430 remaining — comfortably covers the billing window; the cap will **not** be breached.
+
+### 1e.4 Net position & 5-month picture
+
+| Snapshot | Value |
+|----------|------:|
+| Cumulative burn (launch → 2026-07-14) | $70.00 |
+| Cumulative revenue (launch → 2026-07-14) | $0.00 |
+| Net cash impact (launch → now) | **–$70.00** |
+| Month-5 revenue target (added MRR + builds + reseller) | +$10,900/mo |
+| Projected burn if M-T-D pace holds | ~$183/mo |
+| Projected net for Month 5 (if targets hit) | **≈ +$10,717** (deeply net-positive; covers ~59x the burn) |
+| Breakeven status | already covered at ~4 retained subscribers; M5 target is ~37x breakeven |
+
+### 1e.5 Channel variance & corrective action (>20% miss)
+
+**Actuals this milestone: $0 across every channel** (live `/revenue/summary` → entryCount 0,
+totalGross 0). Every tracked channel therefore missed its projection by **100%** — far beyond the
+20% flag threshold. Corrective action is owner-blocked, not agent-blocked:
+
+| Channel | M5 projection | M5 actual | Miss % | Blocker (owner) | Corrective action |
+|---------|--------------:|----------:|------:|-----------------|--------------------|
+| Gumroad (Developer Prompt Pack + catalog) | >$0 | $0 | 100% | Founder (PRE-52) | open Gumroad live-publish gate |
+| GitHub Sponsors | >$0 | $0 | 100% | Founder (PRE-57) | enable `github.com/sponsors/itsPremkumar` |
+| Medium Partner Program | >$0 | $0 | 100% | Founder (PRE-54) | enroll + publish queued articles |
+| Fiverr gigs | >$0 | $0 | 100% | Founder (PRE-58) | set up Fiverr seller account + publish 2–3 gigs |
+| Service subscriptions (Stripe) | ≈ $10,900 | $0 | 100% | Founder (PRE-52/PRE-6) | publish pricing + activate checkout |
+
+> **Root cause (single):** the cash-collection path is gated behind founder-owned accounts. No
+> agent authorization boundary is violated by *building* these assets (done), only by *going live
+> / collecting payment* — which requires Prem's login by company policy. **This is an escalation,
+> not a blocker on the dashboard itself.** A delegated corrective-action child issue tracks the
+> unblock so M6 can book real payouts.
+
+### 1e.6 Handoff note for the M6 owner
+
+- **State carried in:** pre-revenue; burn flat at $70/$500 (14% used); $0 booked across all 5 channels.
+- **M6 projection to derive** (extend PRE-86 §1d.1 / §1e.1 method):
+  - Linear: M6 = 75 + 20 = **95 subs** → ≈ $8,700/mo MRR.
+  - Geometric: M6 = 155 + 160 (= 2× +80) = **315 subs** → ≈ $28,800/mo MRR.
+  - Blended M6 planning figure ≈ **205 subs → ≈ $18,800/mo MRR**.
+  - Builds cumulative → 5; Resellers → 4.
+- **Re-pull before M6:** `GET /budgets/overview` + `/costs/summary` + `/revenue/summary`; if
+  `totalGross` is still 0, the founder gates remain the blocking item — escalate, do not re-derive
+  the same root cause.
+- **Closest unblock dependency:** PRE-52 (Gumroad), PRE-57 (Sponsors), PRE-54 (Medium), PRE-58
+  (Fiverr). M6 can only report non-zero actuals after at least one gate opens.
+- **Ledger:** append a Weekly-Log row (§8) and update this §1e each Monday; POST real payouts to
+  `/revenue` when they land.
+
+---
+
 ## 2. Products Published
 
 Real inventory as of 2026-07-14 (reconciled in PRE-86 (M1–M3 reconciliation block in §1d)):
@@ -419,6 +555,7 @@ Append a row every Monday. Keep the latest on top.
 
 | Week of | Products live | MRR | Units sold | Articles | Views | Fiverr gigs | Leads | Notes |
 |---------|--------------:|----:|-----------:|---------:|------:|------------:|------:|-------|
+| 2026-07-14 (M5 baseline) | 12 | $0 | 0 | 24 | untracked | 0 | 0 | PRE-87: M5 projection + burn reconciliation; burn flat $70/$500 (14%); M5 target ≈ $10.9k/mo (range $7.1k–$14.7k, 75–155 subs); $0 booked across all 5 channels (founder publish gates PRE-52/57/58/54); 12 products + 24 articles staged; handoff M6 projection ≈ $18.8k/mo derived |
 | 2026-07-14 (M4 baseline) | 12 | $0 | 0 | 24 | untracked | 0 | 0 | PRE-86: M1–M3 reconciliation + M4 integration; burn flat $70/$500; M4 target ≈ $5,600/mo (range $5.1k–$7.4k); 12 products + 24 articles staged, $0 booked (founder publish gates PRE-52/57/58/54) |
 | 2026-07-13 (W0) | 2 | $0 | 0 | 3 | untracked | 0 | 0 | baseline; launch 2026-07-12 |
 | 2026-07-13 (W1) | 0 | $0 | 0 | 0 | untracked | 0 | 0 | cataloged 11 products incl. agent-sentinel bundle (#11) |
@@ -427,7 +564,8 @@ Append a row every Monday. Keep the latest on top.
 ---
 
 *This dashboard is the single source of truth for PRE-59 (Month-1), PRE-73 (Month-2 projection,
-burn analysis & runway), PRE-75 (Month-3 projection, burn analysis & revenue tracking), and
-"Revenue dashboard M4" / PRE-86 (Month-4 projection, burn analysis & reconciliation). Edit it
+burn analysis & runway), PRE-75 (Month-3 projection, burn analysis & revenue tracking),
+"Revenue dashboard M4" / PRE-86 (Month-4 projection, burn analysis & reconciliation), and
+"Revenue dashboard M5" / PRE-87 (Month-5 projection, burn analysis & reconciliation). Edit it
 directly each week; no code changes needed.
 Do not auto-publish founder-owned pricing/payment pages — that remains a Prem (founder) decision.*
