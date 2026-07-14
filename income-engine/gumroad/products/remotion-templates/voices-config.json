@@ -1,0 +1,28 @@
+{
+  "note": "Edge-TTS voices — free, no API key required. Pick one per template or rotate.",
+  "voices": {
+    "en-US-GuyNeural": "Warm male, great for facts/motivation",
+    "en-US-JennyNeural": "Clear female, education/nature",
+    "en-US-ChristopherNeural": "Calm male, productivity/history",
+    "en-US-AndrewNeural": "Neutral male, tech/news",
+    "en-US-EricNeural": "Bright male, coding",
+    "en-US-RogerNeural": "Deep male, narrative/inspiration",
+    "en-US-AriaNeural": "Expressive female, book summaries"
+  },
+  "orientation_presets": {
+    "portrait": { "width": 1080, "height": 1920, "fps": 30 },
+    "landscape": { "width": 1920, "height": 1080, "fps": 30 }
+  },
+  "text_style": {
+    "font": "Inter-Bold",
+    "size": 64,
+    "position": "bottom-center",
+    "highlight": "semi-transparent dark bar"
+  },
+  "transition_timing": {
+    "scene_ms": 4000,
+    "crossfade_ms": 350,
+    "hold_last_ms": 1500
+  },
+  "music": "Royalty-free: YouTube Audio Library / Pixabay Music (search 'upbeat corporate')"
+}

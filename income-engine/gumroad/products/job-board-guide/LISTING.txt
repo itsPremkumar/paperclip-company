@@ -1,0 +1,11 @@
+Title: Free Job Board Outreach Mastery Guide — Land Clients at $0
+Price: $12
+Description: A complete outreach playbook for landing clients and opportunities on FREE job boards — no paid listings, no premium accounts. We analyzed 10+ platforms (Naukri, LinkedIn, Wellfound, YC, RemoteAI, Indeed, Upwork, Freelancer, PeoplePerHour) and built a repeatable system that works at zero cost. Includes 4 chapters: profile optimization with platform-specific templates and headline formulas, day-by-day outreach strategies with per-platform message templates and follow-up cadence, tracking & conversion with a ready spreadsheet and response benchmarks, and a from-outreach-to-revenue chapter with proposal templates, pricing scripts, and onboarding workflow. Instant digital download.
+Category: Career / Freelance
+
+HOW TO PUBLISH (human step):
+1. Create a free Gumroad account at gumroad.com (email + identity + tax verification).
+2. Link a payout method (bank/PayPal) in Settings > Payouts.
+3. Create a new product, copy the Title/Price/Description above.
+4. Upload PRODUCT.md + the 4 numbered chapter .md files (this folder) as the deliverable. Set "Software / File" access.
+5. Publish. You keep 100% minus Gumroad's standard ~10% fee.

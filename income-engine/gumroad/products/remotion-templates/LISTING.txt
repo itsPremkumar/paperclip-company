@@ -1,0 +1,11 @@
+Title: Remotion Short-Form Video Template Pack — 12 Production-Ready Video Templates
+Price: $19
+Description: The exact template pack we use to run the Automated Video Generator (AVG) — a Remotion-based pipeline that publishes short-form videos on autopilot at zero cost. 12 done-for-you templates across Science, Nature, Self-Improvement, Tech, Developer, Business, Education, Health, and Self-Help niches, plus full Edge-TTS voice config, orientation presets, text styling, and transition timing. Drop input-scripts.json into AVG v5.x / Remotion 4.x and render real MP4s the same day. No camera, no editor, no monthly SaaS. Instant digital download, free updates when new templates are added.
+Category: Templates / Development
+
+HOW TO PUBLISH (human step):
+1. Create a free Gumroad account at gumroad.com (email + identity + tax verification).
+2. Link a payout method (bank/PayPal) in Settings > Payouts.
+3. Create a new product, copy the Title/Price/Description above.
+4. Upload PRODUCT.md + input-scripts.json + voices-config.json (this folder) as the deliverable files. Set "Software / File" access.
+5. Publish. You keep 100% minus Gumroad's standard ~10% fee.

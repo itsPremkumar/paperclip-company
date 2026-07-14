@@ -198,3 +198,33 @@ promise.
   -5, -7, -8 done earlier; product-2 this tick). Remaining un-packaged:
   product-3 (remotion templates), product-4 (monetization kit), product-6
   (job-board guide).
+
+## Packaging the Final 3 Catalog Products (Tick 2026-07-14, 5th)
+
+### Context
+The remaining un-packaged catalog products were `product-3-remotion-templates`,
+`product-4-monetization-kit`, and `product-6-job-board`, each with only a
+`README.md` in `digital-products/`. This tick turned each into a complete,
+deployable Gumroad package under `income-engine/gumroad/products/`.
+
+### What shipped
+- `remotion-templates/`: `input-scripts.json` (12 full video templates with
+  hooks, scripts, voices, orientation), `voices-config.json` (7 free Edge-TTS
+  voices, orientation/text/transition presets), `PRODUCT.md`, `LISTING.txt`.
+- `monetization-kit/`: 8 interlocking markdown assets (brief, service catalog,
+  pricing sheet, one-pager, ROI calculator lead magnet, cold outreach, reseller
+  program, 30-day launch plan) + `PRODUCT.md` + `LISTING.txt`.
+- `job-board-guide/`: 4 chapter files (profile optimization, outreach
+  strategies, tracking/conversion, to-revenue) + `PRODUCT.md` + `LISTING.txt`.
+
+### Lesson
+- Catalog `README.md` files are *specs*, not products. A real package needs the
+  actual deliverable files the README describes — generate them from the README's
+  own outline rather than shipping the README alone.
+- The `write_file` tool doubled the `/c/one/...` MSYS path into `C:\c\one\...`.
+  Always use native `C:\one\...` absolute paths on this Windows host to avoid
+  stray directories (then verify with `find /c/c` and clean up if needed).
+- Final secret scan flagged "secret" (prose) and "tokens" (usage metric) as
+  false positives — confirm matches are real before treating them as leaks.
+- All 8 catalog products are now packaged. The next agent-safe work stream is
+  authoring SEO/blog drafts and mirroring prompts to Hermes-Prompt-Library.

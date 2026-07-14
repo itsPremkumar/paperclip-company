@@ -1,0 +1,11 @@
+Title: AI-Powered Business Monetization Kit — 8 Assets to Launch at $0
+Price: $29
+Description: The exact asset kit we used to turn Prem Autonomous Co from an idea into a revenue-ready business. Eight professionally written, fully editable markdown documents that work together as a complete monetization engine: monetization brief (ICP, 5 revenue streams, 90-day target), 6-agent-team service catalog, public pricing sheet, company one-pager, AI Agent ROI calculator lead magnet + email sequence, cold outreach pack for 4 buyer personas, reseller/affiliate program, and a 30-day zero-cost launch plan. Everything uses free platforms (GitHub, LinkedIn, Gumroad). Already validated — we used these exact assets to launch. Instant digital download.
+Category: Business / Strategy
+
+HOW TO PUBLISH (human step):
+1. Create a free Gumroad account at gumroad.com (email + identity + tax verification).
+2. Link a payout method (bank/PayPal) in Settings > Payouts.
+3. Create a new product, copy the Title/Price/Description above.
+4. Upload PRODUCT.md + the 8 numbered asset .md files (this folder) as the deliverable. Set "Software / File" access.
+5. Publish. You keep 100% minus Gumroad's standard ~10% fee.

@@ -7,7 +7,7 @@
 ## Open
 - [ ] **Author next SEO/article drafts into revenue/blog/** (agent-safe, continuous)
 - [ ] **Run income-engine generators** (blog + gumroad) and verify site build
-- [ ] **Package remaining catalog products** into income-engine/gumroad/products/ (3 left: product-3 remotion-templates, product-4 monetization-kit, product-6 job-board-guide)
+- [x] **Package remaining catalog products** into income-engine/gumroad/products/ (product-3 remotion-templates, product-4 monetization-kit, product-6 job-board-guide — all 8 catalog products now packaged)
 - [ ] **Mirror top prompts** to Hermes-Prompt-Library repo
 - [ ] **Build out skills/** — convert learned skills into SKILL.md entries
 - [ ] [HUMAN-GATED] Publish Gumroad listings (needs account + price approval)
@@ -23,6 +23,7 @@
       content — `ai-pricing-templates-pack` (MD+CSV+JSON, 6 tiers) and
       `zero-cost-launch-plan` — into income-engine/gumroad/products/; appended
       lessons-learned entry. 6 catalog products still un-packaged.
+- [x] Tick 2026-07-14 (5th): packaged the final 3 catalog products — `remotion-templates` (12 JSON templates + voice config), `monetization-kit` (8 interlocking markdown assets), and `job-board-guide` (4 chapters) — into income-engine/gumroad/products/; all 8 catalog products now packaged. Updated tasks.md + lessons-learned.
 - [x] Tick 2026-07-14 (4th): packaged `agent-ops-playbook` (product-2, $29) from
       its README into income-engine/gumroad/products/agent-ops-playbook/ — authored
       the four promised bonus templates (AGENTS.md, .env.example, issue-template.json,

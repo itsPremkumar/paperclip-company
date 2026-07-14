@@ -1,0 +1,157 @@
+{
+  "pack": "Remotion Short-Form Video Template Pack",
+  "version": "1.0",
+  "engine": "AVG v5.x / Remotion 4.x",
+  "output": {
+    "portrait": "1080x1920 (MP4 H.264)",
+    "landscape": "1920x1080 (MP4 H.264)"
+  },
+  "audio": "Edge-TTS (free, no API key)",
+  "stock": "Pexels / Pixabay / Openverse (free tiers)",
+  "templates": [
+    {
+      "id": "template-space-facts",
+      "name": "Space Facts",
+      "niche": "Science",
+      "style": "Educate + Amaze",
+      "orientation": "portrait",
+      "voice": "en-US-GuyNeural",
+      "showText": true,
+      "defaultVideo": "default.mp4",
+      "hook": "Space is stranger than you think.",
+      "script": "Space is stranger than you think. A day on Venus is longer than its whole year. [Visual: rotating Venus] Neutron stars spin up to 600 times per second. [Visual: pulsar beam] And there are more stars in the universe than grains of sand on every beach on Earth. [Visual: starfield] Mind-blowing, right?"
+    },
+    {
+      "id": "template-ocean-mysteries",
+      "name": "Ocean Mysteries",
+      "niche": "Nature",
+      "style": "Curiosity Hook",
+      "orientation": "portrait",
+      "voice": "en-US-JennyNeural",
+      "showText": true,
+      "defaultVideo": "default.mp4",
+      "hook": "We've explored more of Mars than our own ocean floor.",
+      "script": "We've mapped more of Mars than our own ocean floor. [Visual: ocean depth map] 80% of the ocean remains completely unmapped. [Visual: underwater drone] Somewhere down there lives a jellyfish that is biologically immortal. [Visual: translucent jellyfish] The deep is still the true final frontier."
+    },
+    {
+      "id": "template-productivity-hacks",
+      "name": "Productivity Hacks",
+      "niche": "Self-Improvement",
+      "style": "Actionable Tips",
+      "orientation": "portrait",
+      "voice": "en-US-ChristopherNeural",
+      "showText": true,
+      "defaultVideo": "default.mp4",
+      "hook": "Stop using a to-do list. Do this instead.",
+      "script": "Stop using a to-do list. Do this instead. [Visual: crossed-out list] Use a 'done list' — write what you finished, not what looms. [Visual: checkmark] Time-box every task to 25 minutes. [Visual: timer] And batch all notifications into one hour. Your focus is a finite asset. Spend it like money."
+    },
+    {
+      "id": "template-ai-news-flash",
+      "name": "AI News Flash",
+      "niche": "Tech",
+      "style": "Timely Updates",
+      "orientation": "portrait",
+      "voice": "en-US-AndrewNeural",
+      "showText": true,
+      "defaultVideo": "default.mp4",
+      "hook": "This AI update changes everything.",
+      "script": "This AI update changes everything. [Visual: news ticker] A new open model just matched last year's flagship — at a tenth of the cost. [Visual: cost chart] Translation went from 'good enough' to flawless. [Visual: language globe] The pace is not slowing. Build while it's cheap."
+    },
+    {
+      "id": "template-coding-tips",
+      "name": "Coding Tips",
+      "niche": "Developer",
+      "style": "Quick Wins",
+      "orientation": "portrait",
+      "voice": "en-US-EricNeural",
+      "showText": true,
+      "defaultVideo": "default.mp4",
+      "hook": "One git command that saves your career.",
+      "script": "One git command that saves your career: git reflog. [Visual: terminal] Deleted a branch? Lost a commit? Reflog remembers everything git forgot. [Visual: log scroll] Pair it with 'git stash' before every risky rebase. [Visual: stash pop] Your future self will thank you."
+    },
+    {
+      "id": "template-startup-stories",
+      "name": "Startup Stories",
+      "niche": "Business",
+      "style": "Narrative",
+      "orientation": "portrait",
+      "voice": "en-US-RogerNeural",
+      "showText": true,
+      "defaultVideo": "default.mp4",
+      "hook": "They pitched from a garage with $0.",
+      "script": "They pitched from a garage with zero dollars. [Visual: garage] No office, no salary, just a spreadsheet and a stubborn idea. [Visual: spreadsheet] Eighteen months later they served a million users. [Visual: growth curve] The garage was never the limit. Your excuse is."
+    },
+    {
+      "id": "template-book-summaries",
+      "name": "Book Summaries",
+      "niche": "Education",
+      "style": "Value in 60s",
+      "orientation": "portrait",
+      "voice": "en-US-AriaNeural",
+      "showText": true,
+      "defaultVideo": "default.mp4",
+      "hook": "The one idea from this book you need.",
+      "script": "The one idea from this book you actually need: atomic habits. [Visual: book cover] You don't rise to your goals, you fall to your systems. [Visual: habit loop] Make good habits obvious, attractive, easy, satisfying. [Visual: 4 laws] Small wins, stacked daily, beat big plans that never start."
+    },
+    {
+      "id": "template-fitness-tips",
+      "name": "Fitness Tips",
+      "niche": "Health",
+      "style": "Quick Workouts",
+      "orientation": "portrait",
+      "voice": "en-US-GuyNeural",
+      "showText": true,
+      "defaultVideo": "default.mp4",
+      "hook": "A 4-minute workout that actually works.",
+      "script": "A four-minute workout that actually works — the tabata. [Visual: stopwatch] 20 seconds hard, 10 seconds rest, repeat eight times. [Visual: interval timer] No gym, no gear, just your body and a floor. [Visual: bodyweight moves] Do it daily and watch your baseline change."
+    },
+    {
+      "id": "template-language-lessons",
+      "name": "Language Lessons",
+      "niche": "Education",
+      "style": "Daily Practice",
+      "orientation": "portrait",
+      "voice": "en-US-JennyNeural",
+      "showText": true,
+      "defaultVideo": "default.mp4",
+      "hook": "Learn 10 words a day, fluently in a year.",
+      "script": "Learn ten words a day and you'll be conversational in a year. [Visual: flashcards] Use them in one sentence each — context beats memorization. [Visual: sentence builder] Listen during your commute, speak in the shower. [Visual: headphones] Consistency, not intensity, is the secret."
+    },
+    {
+      "id": "template-history-shorts",
+      "name": "History Shorts",
+      "niche": "Education",
+      "style": "Surprising Facts",
+      "orientation": "portrait",
+      "voice": "en-US-ChristopherNeural",
+      "showText": true,
+      "defaultVideo": "default.mp4",
+      "hook": "Oxford is older than the Aztec empire.",
+      "script": "Oxford University is older than the Aztec empire. [Visual: timeline] When classes began in 1096, the Aztecs hadn't built Tenochtitlan yet. [Visual: contrast map] History isn't a straight line — it's layers of 'what if.' [Visual: layered scrolls] The past is stranger than any fiction."
+    },
+    {
+      "id": "template-tech-reviews",
+      "name": "Tech Reviews",
+      "niche": "Tech",
+      "style": "Honest Opinions",
+      "orientation": "portrait",
+      "voice": "en-US-AndrewNeural",
+      "showText": true,
+      "defaultVideo": "default.mp4",
+      "hook": "I tested it for 30 days so you don't have to.",
+      "script": "I tested it for thirty days so you don't have to. [Visual: device] The battery lied, the ads didn't. [Visual: battery icon] But the core feature? Genuinely useful, daily. [Visual: checkmark] Verdict: buy it used, skip the subscription. [Visual: price tag] Honest reviews save you money."
+    },
+    {
+      "id": "template-motivation",
+      "name": "Motivation",
+      "niche": "Self-Help",
+      "style": "Inspirational",
+      "orientation": "portrait",
+      "voice": "en-US-RogerNeural",
+      "showText": true,
+      "defaultVideo": "default.mp4",
+      "hook": "The only failure is quitting.",
+      "script": "The only real failure is quitting. [Visual: sunrise] Every expert was once a beginner who refused to stop. [Visual: progress bars] Your pace doesn't matter — only that you don't stop moving. [Visual: forward arrow] Start ugly. Start small. Just start."
+    }
+  ]
+}
