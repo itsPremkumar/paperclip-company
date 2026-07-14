@@ -70,3 +70,20 @@ product demo without naming it as one.
   concrete existing products. End with the GitHub-free / paid-split CTA.
 - Prefer relative links (`../../digital-products/...`) so the files render on
   GitHub and in the local store without path fixes.
+
+## Skill-security is an underserved funnel niche (2026-07-13 tick)
+A new funnel article (`revenue/blog/ai-agent-skill-security-checklist.md`) opened
+a content angle the catalog had no top-of-funnel for: vetting third-party agent
+skills (shell/network/file capabilities) before installing them, then automating
+the audit with an offline CLI scanner. It maps directly onto the **Agent Sentinel**
+product (`income-engine/gumroad/products/agent-sentinel/`, $14, status ready) and
+the free `secret-scanner` / `skill-lint` skills already in `clawhub-skills/`.
+
+### Lesson
+- Security/ops-adjacent "before you install X" framing is high-intent: readers
+  are one bad skill away from a leaked `.env` or runaway API spend, so the pain is
+  immediate and the paid tool (offline, stdlib-only, CI-gate) is an obvious yes.
+- Tie each funnel article to a *specific ready product ID* (not just a category)
+  so the funnel has a concrete destination and the post ages well.
+- The article should be runnable on the same constrained box the company runs on
+  (no deps, no network) — demonstrate that constraint as proof, not an apology.
