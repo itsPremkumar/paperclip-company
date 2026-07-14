@@ -88,3 +88,15 @@
    main-repo copy is just a mirror. Avoid editing both from one commit.
 4. `gh` CLI is **not installed** here; repo creation would need the GitHub API +
    a token, so prefer pushing to an already-created repo.
+
+### Tick 2026-07-14 (14th) — LLM comparison article
+- **Lesson:** The content funnel had tool comparisons (n8n vs Make vs Zapier) and
+  framework comparisons (LangGraph vs AutoGen vs CrewAI vs n8n) but **no LLM
+  model comparison**. Evergreen "which model wins for X" pieces are high-volume,
+  low-competition SEO and pair naturally with the orchestration comparisons.
+- Added `chatgpt-vs-claude-vs-gemini-vs-llama-2026.md` with a side-by-side superpower
+  table + a 4-line decision shortcut (Claude=agents, ChatGPT=ecosystem, Gemini=context/
+  scale, Llama=privacy/fixed cost). Cross-linked 9 existing articles and funneled to
+  the zero-to-10k-ai-agents product.
+- **Reuse:** when picking the next article, scan existing slugs for a missing
+  comparison axis (model vs tool vs framework vs vertical) before inventing a new angle.

@@ -57,6 +57,15 @@
       synced v3.0 into company `prompts/` so the repo isn't left behind. Updated
       tasks.md + lessons-learned.
 
+- [x] Tick 2026-07-14 (14th): authored `chatgpt-vs-claude-vs-gemini-vs-llama-2026.md`
+      LLM-comparison SEO piece into revenue/blog/ (ChatGPT vs Claude vs Gemini vs
+      Llama for business automation — evergreen model-comparison angle that fills
+      the gap left by the n8n + framework comparisons; side-by-side table + decision
+      shortcut; cross-links how-to-run-ai-company, autonomous-stack, n8n comparison,
+      framework comparison, package-prompts, zero-cost-products, monetization,
+      customer-support; funnels to zero-to-10k-ai-agents). Updated tasks.md +
+      lessons-learned.
+
 ## Done (recent ticks)
 - [x] Tick 2026-07-14 (9th): authored `48-hour-digital-product-validation-2026.md`
       SEO validation playbook into revenue/blog/ (fills the pre-build validation
