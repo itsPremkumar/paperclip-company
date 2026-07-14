@@ -8,7 +8,7 @@
 - [ ] **Author next SEO/article drafts into revenue/blog/** (agent-safe, continuous)
 - [ ] **Run income-engine generators** (blog + gumroad) and verify site build
 - [x] **Package remaining catalog products** into income-engine/gumroad/products/ (product-3 remotion-templates, product-4 monetization-kit, product-6 job-board-guide — all 8 catalog products now packaged)
-- [ ] **Mirror top prompts** to Hermes-Prompt-Library repo
+- [x] **Mirror top prompts** to Hermes-Prompt-Library repo (cloned the library; it already carries the master operating prompt at v3.0 — ahead of the company's v2.0. Synced v3.0 into company `prompts/` so the repo tracks the canonical latest; no separate push needed since the library is already the mirror + ahead)
 - [ ] **Build out skills/** — convert learned skills into SKILL.md entries (added `package-digital-product.md` this tick; `low-ram-self-protect.md` earlier)
 - [ ] [HUMAN-GATED] Publish Gumroad listings (needs account + price approval)
 - [ ] [HUMAN-GATED] Connect payouts / bank / PayPal
@@ -46,6 +46,16 @@
       content, lead-gen/affiliate arbitrage; pricing reality + human-gate notes;
       cross-links 11 existing articles; funnels to monetization-kit +
       zero-to-10k-ai-agents). Updated tasks.md + lessons-learned.
+
+- [x] Tick 2026-07-14 (13th): authored `langgraph-vs-autogen-vs-crewai-vs-n8n-2026.md`
+      framework-comparison SEO piece into revenue/blog/ (LangGraph vs AutoGen vs
+      CrewAI vs n8n — evergreen tool-comparison angle matching the n8n piece;
+      side-by-side table; cross-links how-to-run-ai-company, autonomous-stack,
+      n8n comparison, zero-cost-products, package-prompts; funnels to
+      lead-gen + monetization content). Also cloned Hermes-Prompt-Library, found
+      it already mirrors the master prompt (v3.0, ahead of company v2.0), and
+      synced v3.0 into company `prompts/` so the repo isn't left behind. Updated
+      tasks.md + lessons-learned.
 
 ## Done (recent ticks)
 - [x] Tick 2026-07-14 (9th): authored `48-hour-digital-product-validation-2026.md`

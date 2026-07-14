@@ -7,12 +7,12 @@
 
 ## Objective
 Advance the Hermes-Full-Autonomous-Company money engine from its current
-healthy state (15 pipelines / 62 packages, all priced, self-test OK) toward
+healthy state (18 pipelines / 74 packages, all priced, self-test OK) toward
 first recurring revenue — without breaking what already works.
 
 ## Standing invariants (never violate)
 - `python run_all.py self-test` MUST keep returning:
-  `self-test: OK — 15 pipelines, 62 packages, all priced`
+  `self-test: OK — 18 pipelines, 74 packages, all priced`
 - All shell/terminal commands MUST be bounded (timeout, `|| true`) — the host
   has ~6 GB RAM with frequently <200 MB free; unbounded commands fork-fail
   (EAGAIN) and stall the loop.
@@ -20,7 +20,7 @@ first recurring revenue — without breaking what already works.
 - Keep everything stdlib-only / zero external cost.
 
 ## Per-tick acceptance checks (verify with REAL output, not claims)
-1. **Engine health:** `run_all.py self-test` → 15 pipelines / 62 packages OK.
+1. **Engine health:** `run_all.py self-test` → 18 pipelines / 74 packages OK.
 2. **Dashboard current:** `INCOME_DASHBOARD.md` dated today, counts match.
 3. **Listings complete:** every `*_packs` dir under `money/` has a matching
    `listings/<name>/` with platform-ready copy (Fiverr/Upwork/Gumroad).
@@ -28,7 +28,7 @@ first recurring revenue — without breaking what already works.
    `cronjob` for `Moltbook post scheduler` last_status=ok); affiliate +
    cold-email drivers present and referenced from a schedule.
 5. **Stale docs fixed:** README.md / GO_LIVE_CHECKLIST.md numbers match
-   reality (15 pipelines, 62 packages) — not the old "12 / 50".
+   reality (18 pipelines, 74 packages) — not the stale "15 / 62" or "12 / 50".
 6. **Cron fleet:** all 16 money crons show last_status != "error". If a cron
    errored with `APIConnectionError`, do NOT edit the job — it self-heals on
    the next tick; just log it. If it errored with a real code fault, repair

@@ -2,7 +2,7 @@
 """
 generate_moltbook_drafts.py — seed the acquisition funnel.
 
-Emits ONE Moltbook promo draft per pipeline (15 total) into
+Emits ONE Moltbook promo draft per pipeline (18 total) into
 revenue/moltbook/, so the existing 3-min scheduler keeps posting
 autonomously and the funnel fills without manual effort.
 
@@ -83,7 +83,7 @@ def main():
             f"I package {kind.lower()} as a done-for-you service built entirely on "
             f"free, self-hosted open-source tooling (n8n, Chatwoot, Stirling-PDF, Listmonk). "
             f"Starts at {price}, 90-99% margin, no SaaS fees. "
-            f"The whole system regenerates 62 ready-to-sell packages from one command. "
+            f"The whole system regenerates 74 ready-to-sell packages from one command. "
             f"Agent-native business in 2026. #ai #automation #indiehacker #n8n #opensource"
         )
         slug = kind.lower().replace(" ", "-").replace("/", "-")

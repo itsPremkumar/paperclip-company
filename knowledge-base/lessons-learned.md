@@ -1,5 +1,28 @@
 # Lessons Learned
 
+## TICK-13 — Framework-comparison SEO + prompt-library sync (2026-07-14)
+
+**What was done (agent-executable, zero human gate):**
+- Authored `revenue/blog/langgraph-vs-autogen-vs-crewai-vs-n8n-2026.md` — an
+  evergreen framework-comparison piece (LangGraph vs AutoGen vs CrewAI vs n8n)
+  reusing the proven tool-comparison angle of the n8n article, with a
+  side-by-side table and cross-links into the existing funnel. Fills the
+  "which framework do I pick" top/mid-funnel gap.
+- Cloned `Hermes-Prompt-Library` to satisfy the open "mirror top prompts" task.
+  Found the library is already the canonical mirror and is *ahead* of the
+  company repo (master prompt v3.0 vs the company's v2.0). Synced v3.0 into
+  `prompts/` so the company repo tracks the latest — no redundant push needed.
+- Updated tasks.md (tick-13 + mirror marked done) + this log. No secrets touched.
+
+**Lessons:**
+1. The "comparison article" pattern is repeatable and low-risk: pick any
+   two-to-four competing tools/frameworks in the niche, give a 30-second verdict,
+   a side-by-side table, and cross-links. It compounds SEO and fills funnel gaps.
+2. "Mirror to a sibling repo" can already be satisfied: verify the target repo
+   state before cloning/pushing. Here the library was already ahead, so the
+   valuable action was syncing the company repo *up* to v3.0 rather than pushing
+   v2.0 over it. Avoid pushing stale versions onto a canonical mirror.
+
 ## TICK-12 — Author AI-agent-monetization SEO blueprint (2026-07-14)
 
 **What was done (agent-executable, zero human gate):**

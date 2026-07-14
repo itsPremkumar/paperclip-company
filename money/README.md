@@ -41,15 +41,15 @@ Generates per-format packages (gig copy, render manifest, delivery steps, pricin
 ## Master orchestrator
 `run_all.py` regenerates ALL packages + writes `INCOME_DASHBOARD.md`.
 ```bash
-python run_all.py            # regenerate 62 packages + dashboard
+python run_all.py            # regenerate 74 packages + dashboard
 python run_all.py --dry-run  # income totals only
-python run_all.py self-test  # verify 15 pipelines, 62 packages
+python run_all.py self-test  # verify 18 pipelines, 74 packages
 ```
-Current: **62 packages, 15 pipelines, $39,000+ combined one-time value.** Run `python money/run_all.py` to regenerate everything.
+Current: **74 packages, 18 pipelines, $47,841 combined one-time value.** Run `python money/run_all.py` to regenerate everything.
 
 ## Helper scripts
-- `generate_listings.py` → turns all 62 packages into Fiverr/Upwork-ready `.md` copy under `listings/`
-- `generate_moltbook_drafts.py` → seeds 15 promo drafts into `revenue/moltbook/` for the acquisition funnel
+- `generate_listings.py` → turns all 74 packages into Fiverr/Upwork-ready `.md` copy under `listings/`
+- `generate_moltbook_drafts.py` → seeds one promo draft per pipeline (18 total) into `revenue/moltbook/` for the acquisition funnel
 - `../GO_LIVE_CHECKLIST.md` → the 3 human gates, step-by-step, to go live in ~15 min
 - `PAYMENT.md` → your payment destinations (UPI `premkumar016555@oksbi` + marketplace payouts)
 

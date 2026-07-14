@@ -1,109 +1,83 @@
-# PREM AUTONOMOUS CO — WEEKLY STATUS REPORT
+# PREM AUTONOMOUS CO — REVENUE ENGINE STATUS REPORT
 **Generated:** 2026-07-14 (Week 1) — Revenue Engine Monitor (Hermes Cron)
-**Source data:** `company-status.json` (cached 2026-07-12), `financial-dashboard.md` (updated 2026-07-13), Paperclip API attempt (2026-07-14), filesystem inventory (live)
-**Previous report:** 2026-07-13 (this run refreshes it)
+**Source data:** `company-status.json` (cached 2026-07-12, now STALE), `financial-dashboard.md` (updated 2026-07-13), local board mirror `issues.json` (fresh, updated 2026-07-14 17:11), filesystem inventory (live)
+**Task inputs:** financial dashboard ✅ · master plan v2 ❌ (missing) · status json ✅ · product/plat inventories ✅ · Paperclip server ❌ (DOWN) · board API ❌ (server down)
+**Previous report:** 2026-07-14 (earlier run, when server was UP but cookie-expired) — this run supersedes it with degraded server state.
 
 ---
 
-## 0. MONITOR RUN NOTES (what changed since last report)
+## 0. MONITOR RUN NOTES (what changed / data quality)
 
 | Check | Result | Note |
 |-------|--------|------|
-| Paperclip server (`localhost:3100`) | ✅ **UP** | Served HTML on probe |
-| Paperclip API (issues/board) | 🔴 **UNAUTHORIZED** | `GET /api/companies/.../issues` returned `{"error":"Unauthorized"}`. The `cj.txt` cookie (166 bytes, dated 2026-07-14 11:04) is **no longer valid**. Live PRE-5x revenue-issue statuses could NOT be verified today. |
-| `REVENUE-MASTER-PLAN-v2.md` | 🔴 **MISSING** | File does not exist. Used `revenue-strategy.md` + `30-day-zero-cost-launch-plan.md` + `financial-dashboard.md` as source of truth instead. |
-| Digital products on disk | 11 files | Unchanged from last report |
-| Platform setup files | 8 files | Unchanged from last report |
-| Agents | 7 (per cached status.json) | `company-status.json` is dated 2026-07-12; live agent heartbeat/health currently unverifiable because the API is unauthorized. |
+| Paperclip server (`localhost:3100`) | 🔴 **DOWN** | `curl` → `Connection refused` on 127.0.0.1:3100. The 7-agent org is **offline**. Prior run saw it UP; it has since crashed/stopped. |
+| Paperclip API (issues/board) | 🔴 **UNREACHABLE** | Cannot read live board — server not listening. Used local board mirror `issues.json` (updated 17:11 today) instead. |
+| `REVENUE-MASTER-PLAN-v2.md` | 🔴 **MISSING** | Does not exist anywhere in repo. Used `revenue-strategy.md` + `30-day-zero-cost-launch-plan.md` + `financial-dashboard.md` as source of truth. |
+| `cj.txt` cookie | ⚠️ STALE | Dated 2026-07-14 11:04; now moot since server is down anyway. |
+| `company-status.json` | ⚠️ STALE/WRONG | Generated 2026-07-12 claiming `server:"ok"`, 7 agents running. **Contradicted by live probe** — server is down. Do not trust this file for liveness. |
+| Digital products on disk | 12 `.md` files | +1 vs prior run (prompt-executor added `PUBLISH.md`). |
+| Platform setup files | 8 `.md` files | Unchanged. |
 
-> **Action for founder:** re-authenticate the Paperclip session and refresh `cj.txt` so the monitor can read live board state again. Until then, board-derived facts below are *last-known-good (2026-07-13)* from the previous monitor run, not live-verified.
-
----
-
-## 1. COMPANY HEALTH OVERVIEW
-
-| Health Metric | Status | Detail |
-|---------------|--------|--------|
-| Server (Paperclip) | ✅ OK | Running on localhost:3100 |
-| Agents (cached) | 7 total / 7 running | CEO, COO, CMO, CFO, Head of Product, QA, Engineer — all heartbeat=true as of 2026-07-12 snapshot |
-| Worker (Engineer) | Running (cached) | Active |
-| Open issues (cached) | 14 | From `company-status.json` (2026-07-12); live count unverifiable today |
-| Critical items | None | No critical alert in cached status |
-| Live board read | 🔴 Blocked | Unauthorized — see §0 |
+> **Top alert this run:** The autonomous engine that is supposed to work the revenue backlog is **not running**. Everything is stuck because there is no agent online to execute. Restarting Paperclip is the single highest-leverage action.
 
 ---
 
-## 2. DIGITAL PRODUCTS INVENTORY (live filesystem)
+## 1. PRODUCTS BUILT · PLATFORM LISTINGS · ISSUES IN PROGRESS
 
-`find` returned **11 product `.md` files** across 5 categories (same as last report — no new products built since):
+### 1.1 Digital products (live filesystem — 12 product `.md` files)
+- **Blueprint Kits (1):** `ai-content-machine-blueprint.md`
+- **Code Tools (2):** `agent-config-generator/README.md`, `prompt-executor/README.md` + `PUBLISH.md`
+- **Ebooks (1):** `zero-to-10k-ai-agents.md`
+- **Prompt Packs (2):** `dev-prompts.md`, `sales-prompts-pack.md`
+- **Video Templates (5):** explainer, faceless-channel, linkedin-thought-leadership, social-media-ad, video-newsletter
 
-**Blueprint Kits (1):** `ai-content-machine-blueprint.md`
-**Code Tools (2):** `agent-config-generator/README.md`, `prompt-executor/README.md`
-**Ebooks (1):** `zero-to-10k-ai-agents.md`
-**Prompt Packs (2):** `dev-prompts.md`, `sales-prompts-pack.md`
-**Video Templates (5):** `explainer-video-template.md`, `faceless-channel-template.md`, `linkedin-thought-leadership-template.md`, `social-media-ad-template.md`, `video-newsletter-template.md`
+**Publish status (from `financial-dashboard.md`, 2026-07-13 + board mirror):**
+- 10 products cataloged & ready (prices $9–$29).
+- 5 paid products drafted on Gumroad but **NOT published**.
+- 2 free products **live**: `ai-agent-roi-calculator` (lead magnet) + `n8n-starter-workflow-pack`.
+- **Units sold: 0 · Revenue: $0.**
 
-### Catalog / publish status (from `financial-dashboard.md`, 2026-07-13)
-- **10 products cataloged & ready** (prices $9–$29), **5 drafted on Gumroad but NOT published**, **2 published live** (free `ai-agent-roi-calculator` lead magnet + `n8n-starter-workflow-pack`), **1 in review** (Developer Prompt Pack, PRE-58/PRE-72).
-- **Units sold: 0. Revenue: $0.**
+### 1.2 Platform setup (8 `.md` files) — NONE live, all founder-gated
+| Platform | Setup file | Live? | Gate |
+|----------|:---------:|:-----:|:-----|
+| Gumroad | `gumroad-listing-copy.md` | ❌ 2 free live, 5 paid drafted | 🔴 Founder: create seller account |
+| Fiverr | `fiverr-gig-listings.md` (5 gigs) | ❌ 0 gigs | 🔴 Founder: seller account |
+| GitHub Sponsors | `github-sponsors-profile.md` (5 tiers) | ❌ not enabled | 🔴 Founder: enable Sponsors |
+| Medium | `medium-content-calendar.md` (20 articles) + 4 drafts | ❌ 0 published | 🔴 Founder: publish |
+| Blog | 3 articles written | 0 tracked views (no analytics) | ⏳ Tech: connect analytics |
 
----
+### 1.3 Issues in progress / blocked (from live board mirror, 85 total)
+**Status counts:** done 35 · blocked 22 · cancelled 19 · in_review 7 · in_progress 2 · backlog 0.
 
-## 3. PLATFORM SETUP STATUS (live filesystem — 8 files)
+**Revenue-relevant BLOCKED issues (the real blockers):**
+| Issue | Title | Blocker type |
+|-------|-------|:------------:|
+| PRE-52 | Launch Gumroad store (3 initial products) | 🔴 Founder gate |
+| PRE-55 | Create 5 Fiverr gigs w/ automated fulfillment | 🔴 Founder gate |
+| PRE-57 | Set up GitHub Sponsors (5 tiers) | 🔴 Founder gate |
+| PRE-7 / PRE-74 | Produce & publish 3 sample videos (YouTube/TikTok) | 🔴 Founder gate (login) |
+| PRE-81 / PRE-82 | Free-board outreach kit posting | 🔴 Founder gate (auth) |
+| PRE-51 | Auto-generate + publish affiliate blog | 🔴 Depends on platforms |
+| PRE-53 | Build NPM `agent-config-generator` PRO tier | 🟡 Mostly technical (needs npm creds) |
+| PRE-17 / PRE-39 | GTM: publish pricing + launch plan | 🟡 Process/approval |
+| PRE-19 / PRE-34 / PRE-35 | Finance: revenue ledger + burn guard | 🟡 Technical |
+| PRE-15/16/40/42/49/50 | AVG video-tool product line | 🟡 Product dev |
 
-| Platform | Setup file exists | Live/Published | Needed action | Gate |
-|----------|:-----------------:|:--------------:|---------------|:----:|
-| **Gumroad** | `gumroad-listing-copy.md` | ❌ 2 free products live; 5 paid drafted | Publish 5 drafted paid products | 🔴 Founder gate |
-| **Fiverr** | `fiverr-gig-listings.md` (5 gigs) | ❌ 0 gigs live | Create seller account, publish gigs | 🔴 Founder gate |
-| **GitHub Sponsors** | `github-sponsors-profile.md` (5 tiers $1–$50/mo) | ❌ not enabled | Enable Sponsors, publish tiers | 🔴 Founder gate |
-| **Medium** | `medium-content-calendar.md` (20 articles) + 4 drafts | ❌ 0 published | Publish 2/wk for Partner Program | 🔴 Founder gate |
-| **Lead magnet (ROI calc)** | `ai-agent-roi-calculator` | ✅ free product live | Wire to email-capture + CRM | ⏳ Tech setup |
+**In review (closest to revenue):**
+- **PRE-72** — Publish Developer Prompt Pack ($14) on Gumroad → sits behind PRE-52 (Gumroad account). Closest path to first $.
+- **PRE-54** — Publish 2 Medium articles for Partner Program.
+- **PRE-71** — Publish `prompt-executor` CLI to GitHub/npm → **PRE-85 (PRE-71-A) is DONE** (progress since prior run).
 
-> All four external-platform gates still require founder (Prem) action. The agent ecosystem can build/draft but cannot register on external platforms. **This remains the single biggest revenue bottleneck.**
-
-### Blog articles (3 published, 0 tracked views — no analytics connected)
-1. Best AI Agents for Small Business Automation
-2. No-Code Automation Tools: n8n, Make, Zapier
-3. How to Run an AI Company at Zero Budget
-
-### Service catalog (priced, ready): Content Machine $149 · Ops Autopilot $199 · Lead Engine $249 · Support Agent $129 · Founder's CoS $299 · Autonomous Team $499 · Build-It Custom $990+.
-
----
-
-## 4. ISSUES TRACKER — REVENUE & PRODUCT FOCUS
-
-> ⚠️ **Caveat:** Live board is Unauthorized today. The breakdown below is reconstructed from the **2026-07-13 monitor run** + the **2026-07-12 `company-status.json` snapshot** and is **NOT live-verified for 2026-07-14**. Re-auth the board to confirm.
-
-### 4.1 In Progress (cached status.json)
-| Issue | Title | Status |
-|-------|-------|:------:|
-| PRE-19 | Finance: revenue ledger + burn guard | in_progress |
-| PRE-18 | Ops: client intake + delivery SLA | in_progress |
-| PRE-17 | GTM: publish pricing + launch-plan | in_progress |
-| PRE-12 | Implement/publish monetization assets | in_progress |
-| PRE-11 | Monitor job board outreach | in_progress |
-| PRE-7 | Produce & publish 3 sample videos | in_progress |
-| PRE-16/15/14/13/25/24 | AVG + master-plan + probes | in_progress |
-
-### 4.2 Blocked / Backlog revenue issues (last known, 2026-07-13)
-| Issue | Title | Status | Gate |
-|-------|-------|:------:|:----:|
-| **PRE-52** | Launch Gumroad store (3+ products) | 🔴 BLOCKED | Founder gate — Gumroad account |
-| **PRE-55** | Create 5 Fiverr gigs | 🔴 BLOCKED | Founder gate — Fiverr account |
-| **PRE-57** | GitHub Sponsors, 5 tiers | 🔴 BLOCKED | Founder gate — GitHub Sponsors |
-| **PRE-51** | Affiliate blog auto-publish | 🔴 BLOCKED | Depends on platform gates |
-| **PRE-71** | Publish prompt-executor CLI → GitHub/npm | 🔴 BLOCKED | **Technical — agent can unblock** |
-| **PRE-53** | agent-config-generator PRO tier (NPM) | 🔴 BLOCKED | Technical — can be unblocked |
-| PRE-72 | Publish Developer Prompt Pack (Gumroad) | 🔍 in_review | Closest path to first $ |
+**No issues are in `backlog` status** in the live board (only `blocked`). See §6 for recommended follow-up sub-issues.
 
 ---
 
-## 5. REVENUE PROGRESS vs TARGET
+## 2. REVENUE PROGRESS vs ₹5,00,000/mo TARGET
 
-### 5.1 Current position (unchanged since launch)
-| Metric | Actual | M-1 Target | M-2 Target | M-3 Target |
-|--------|:-----:|:----------:|:----------:|:----------:|
-| **MRR** | **$0.00** | $245 | ~$1,240 | ~$3,200 |
+### 2.1 Current position
+| Metric | Actual | M-1 | M-2 | M-3 target |
+|--------|:-----:|:---:|:---:|:----------:|
+| **MRR** | **$0** | $245 | ~$1,240 | ~$3,200 |
 | Paid subscribers | 0 | 5 | 15 | 35 |
 | Units sold | 0 | — | — | — |
 | Calculator visitors | 0 | 500 | — | — |
@@ -111,105 +85,100 @@
 | Fit calls booked | 0 | 12 | — | — |
 | Fiverr gigs live | 0 | TBD | 5 | — |
 
-### 5.2 ₹5,00,000/mo target — progress
-| Target | USD/mo | INR/mo (≈83/$) | vs ₹5L |
-|--------|:-----:|:--------------:|:------:|
-| Month-1 | $245 | ~₹20,335 | 2.0% |
-| Month-2 | ~$1,240 | ~₹1,02,920 | 10.3% |
-| Month-3 | ~$3,200 | ~₹2,65,600 | 26.6% |
+### 2.2 ₹5,00,000/mo target — progress
+| Milestone | USD/mo | INR/mo (≈83/$) | vs ₹5L |
+|-----------|:-----:|:--------------:|:------:|
+| Month-1 target | $245 | ~₹20,335 | 2.0% |
+| Month-2 target | ~$1,240 | ~₹1,02,920 | 10.3% |
+| Month-3 target | ~$3,200 | ~₹2,65,600 | 26.6% |
 | **₹5L goal** | **~$6,024** | **₹5,00,000** | **100%** |
 
-**Progress vs ₹5,00,000/mo: ₹0 / 0%.** Actual MRR is $0.
+**Progress vs ₹5,00,000/mo: ₹0 / 0%.** Actual MRR = $0.
 
-> ⚠️ **The ₹5,00,000/mo target is undocumented in any repo strategy file.** Every planning doc uses USD ($245 → $1,240 → $3,200). ₹5L ≈ **$6,024/mo**, ~2× the documented Month-3 conservative target. Reaching it requires Month 4–5 acceleration or new streams beyond current plans. **Founder action: write this target into a strategy doc so it can be tracked.**
+> ⚠️ **The ₹5,00,000/mo target is undocumented in any repo strategy file.** Every planning doc uses USD ($245→$1,240→$3,200). ₹5L ≈ **$6,024/mo**, ~2× the documented Month-3 conservative plan. Hitting it needs Month 4–5 acceleration or new streams. **Founder action: write this target into a strategy doc so it can be tracked.**
 
-### 5.3 Gap analysis
-- **INR deficit to ₹5L:** ₹5,00,000/mo (100% shortfall) — zero revenue recorded.
-- **Core blocker:** Products are built but not on live paid storefronts. No external account exists yet.
+**Gap to target:** ₹5,00,000/mo shortfall (100%). Core blocker = products built but no live paid storefront (all external accounts still uncreated).
 
 ---
 
-## 6. BURN RATE ANALYSIS
+## 3. NEXT MOST VALUABLE ACTION (specific, actionable)
 
-> ⚠️ Live Paperclip cost telemetry (`/budgets/overview`, `/costs/summary`) is **inaccessible today** (Unauthorized). Figures below are the **last recorded baseline from `financial-dashboard.md` (2026-07-13)**, not a fresh 2026-07-14 pull.
+**#1 — Restart Paperclip (server is DOWN).** The 7-agent autonomous org is offline (`Connection refused` on :3100). Until it's back, *nothing* on the board advances and the monitor is blind. Start the Paperclip server, confirm `curl localhost:3100` returns 200, then re-run the monitor. This is the single highest-leverage move — it re-activates the entire revenue engine.
 
-| Metric | Value | Notes |
-|--------|:----:|-------|
-| **Gross burn (M-T-D)** | **$70.00** | 100% OpenRouter inference (Hermes CMO), tencent/hy3:free |
-| **Revenue (M-T-D)** | **$0.00** | Pre-revenue |
-| **Net burn** | **$70.00** | = gross (revenue $0) |
-| **Burn rate (planning)** | **$6.02/day ≈ $183/mo** | Calendar run-rate; use for planning |
-| **Budget cap** | **$500.00/mo** | Hard stop; **$430 remaining** (14% used) |
-| **Runway to cap** | **~71 days** | Cap safe this month |
-| **Ad spend** | **$0** ✅ | Policy met — all spend is autonomous infra, not acquisition |
+**#2 (founder, unblocks all digital revenue) — Create the Gumroad seller account (PRE-52).** Listing copy for 5 paid products + the Developer Prompt Pack ($14) is ready in `platform-setup/gumroad/gumroad-listing-copy.md`. One account creation unlocks every digital-product sale. After this, push PRE-72 (Developer Prompt Pack) live for first revenue.
 
-**Burn rate = $0 human cash burn.** The only tracked cost is autonomous agent inference. No paid acquisition exists. The $500 cap will not be breached. True "runway to insolvency" remains **NOT computable** because `cashBalanceCents` is null (founder must supply a cash balance).
+**#3 (agent-executable, post-restart) — Finish PRE-53:** package + publish `agent-config-generator` PRO tier to npm (mostly technical; only needs an npm token). PRE-71-A already shipped, so this is the next clean agent win.
+
+**#4 (founder) — Enable GitHub Sponsors (PRE-57) + publish 2 Medium articles (PRE-54).** Both setup files are ready; just need founder activation.
 
 ---
 
-## 7. NEXT MOST VALUABLE ACTION
-
-### 🎯 This cycle (agent-executable, no human needed)
-1. **Unblock PRE-71: publish `prompt-executor` CLI to GitHub + npm.** Fully technical — README exists at `digital-products/code-tools/prompt-executor/README.md`. Initialize repo, push code, `npm publish`. Adds a real public asset with zero human gate.
-2. **Advance PRE-72: publish Developer Prompt Pack to Gumroad** ($14) — closest path to first dollar, but currently blocked on the Gumroad founder account (PRE-52).
-3. **Push PRE-11 forward:** keep monitoring job-board outreach replies; log any lead conversations.
-
-### 🔴 Founder-gated (needs Prem)
-4. **PRE-52 — Create Gumroad seller account & publish 5 drafted paid products.** Listing copy ready in `platform-setup/gumroad/gumroad-listing-copy.md`. Unblocks ALL digital-product revenue.
-5. **PRE-55 — Create Fiverr seller account & publish 5 gigs** (`platform-setup/fiverr/fiverr-gig-listings.md`).
-6. **PRE-57 — Enable GitHub Sponsors & activate 5 tiers** (`platform-setup/github-sponsors/github-sponsors-profile.md`).
-7. **Re-authenticate Paperclip** (refresh `cj.txt`) so the monitor can read live board state.
-8. **Document the ₹5,00,000/mo target** in a strategy file; supply `cashBalanceCents` for runway.
-
----
-
-## 8. FOUNDER GATES — ISSUES REQUIRING HUMAN ATTENTION
+## 4. FOUNDER GATES — ISSUES REQUIRING HUMAN ATTENTION (Prem)
 
 | Priority | Issue | What's needed | Impact of delay |
 |:--------:|:-----:|---------------|:---------------:|
-| 🔴 P0 | **PRE-52** Gumroad store | Create seller account; publish 5 drafted products | Blocks ALL digital-product revenue |
+| 🔴 P0 | **Paperclip server DOWN** | Restart the server; verify `:3100` is up | Entire autonomous org offline; all work stalled |
+| 🔴 P0 | **PRE-52** Gumroad store | Create seller account; publish 5 drafted paid products | Blocks ALL digital-product revenue |
 | 🔴 P0 | **PRE-55** Fiverr gigs | Create Fiverr seller account; publish 5 gigs | Blocks service-revenue channel |
 | 🔴 P0 | **PRE-57** GitHub Sponsors | Enable Sponsors; activate 5 tiers | Blocks donation channel |
-| 🔴 P0 | **Paperclip re-auth** | Refresh `cj.txt` cookie | Monitor blind to live board |
-| 🟡 P1 | **PRE-54** Medium articles | Publish 2 pre-written articles | Delays content marketing |
-| 🟡 P1 | **PRE-5** Showcase repo / LinkedIn | Push public repo + update company page | Delays social proof |
+| 🟡 P1 | **PRE-7/PRE-74** Sample videos | Log in to YouTube/TikTok; publish 3 videos | Delays top-of-funnel content |
+| 🟡 P1 | **PRE-54** Medium articles | Publish 2 pre-written articles | Delays content marketing / Partner Program |
+| 🟡 P1 | **PRE-81/PRE-82** Free-board outreach | Post the free-board kit; track responses | Delays organic lead gen |
 | 🟡 P1 | **₹ target documentation** | Write ₹5L/mo target into a strategy doc | Target untracked |
-| 🟢 P2 | **Cash balance input** | Supply `cashBalanceCents` | Runway gap |
+| 🟢 P2 | **Cash balance input** | Supply `cashBalanceCents` to telemetry | Runway-to-insolvency gap |
 
 ---
 
-## 9. FOLLOW-UP SUB-ISSUES (RECOMMENDED — NOT CREATED)
+## 5. BURN RATE ANALYSIS
 
-> **Why not created:** This monitor run operates read-only per its charter, AND the live Paperclip board returned `Unauthorized` today, so the API cannot be written to regardless. The sub-issues below are **recommended**; create them once the board is re-authenticated (or have a write-enabled run do so). These advance the blocked revenue issues called out in §4.2.
+> Live Paperclip cost telemetry (`/budgets/overview`, `/costs/summary`) is **inaccessible** (server down). Figures below are the **last recorded baseline from `financial-dashboard.md` (2026-07-13)** — still valid as no new spend is expected while the server is offline.
+
+| Metric | Value (USD) | Value (≈INR) | Notes |
+|--------|:-----------:|:------------:|-------|
+| **Human-cash burn (ads/tooling)** | **$0** ✅ | **₹0** ✅ | Policy met — **burn rate = ₹0 human cash** |
+| Gross burn (M-T-D) | $70.00 | ~₹5,810 | 100% OpenRouter inference (tencent/hy3:free) |
+| Revenue (M-T-D) | $0.00 | ₹0 | Pre-revenue |
+| Net burn | $70.00 | ~₹5,810 | = gross (revenue $0) |
+| Burn rate (planning) | $6.02/day ≈ $183/mo | ~₹500/day ≈ ₹15,190/mo | Calendar run-rate; use for planning |
+| Budget cap | $500.00/mo | ~₹41,500 | Hard stop; **$430 remaining** (14% used) |
+| Runway to cap | ~71 days | — | Cap safe this month |
+
+**Burn rate = ₹0 of human cash** (no paid acquisition, no tooling spend by policy). The only tracked cost is autonomous agent inference (~$70 MTD). The $500/mo cap is safe. True "runway to insolvency" remains **NOT computable** because `cashBalanceCents` is null — founder must supply a cash balance.
+
+---
+
+## 6. FOLLOW-UP SUB-ISSUES (RECOMMENDED — NOT CREATED)
+
+> **Why not created:** (a) This monitor run is **read-only per charter** ("DO NOT change any existing files… Only read data, analyze, and report"); (b) the live Paperclip board is **down**, so no issue can be written via API regardless; (c) local board data was not mutated. The sub-issues below are **recommended** — create them once the server is restarted and the board is writable, or have a write-enabled run do so. They advance the 22 `blocked` revenue issues from §1.3.
 
 | Parent | Proposed sub-issue | Action | Agent-executable? |
-|--------|-------------------|--------|:-----------------:|
-| **PRE-71** | PRE-71-A: Set up GitHub repo for prompt-executor | Init repo, push code, configure package.json | ✅ Yes — DO THIS |
-| **PRE-71** | PRE-71-B: Publish prompt-executor to npm | `npm publish` with README + metadata | ✅ Yes — DO THIS |
-| PRE-52 | PRE-52-A: Gumroad listing data bundle (paste-ready) | Generate import-ready product data for founder | ✅ Yes |
-| PRE-52 | PRE-52-B: Gumroad account setup guide for founder | Step-by-step registration instructions | ✅ Yes |
-| PRE-53 | PRE-53-A: Ship agent-config-generator PRO tier to npm | Package + publish | ✅ Yes |
-| PRE-55 | PRE-55-A: Export Fiverr gigs as paste-ready bundle | Assemble 5 gig descriptions into one doc | ✅ Yes |
-| PRE-57 | PRE-57-A: Sponsors tiers as submission-ready file | Bundle tier descriptions for copy-paste | ✅ Yes |
-| PRE-51 | PRE-51-A: Draft first 3 affiliate blog posts | Content for auto-publishing pipeline | ✅ Yes |
+|--------|--------------------|--------|:-----------------:|
+| **PRE-53** | PRE-53-A: Package + publish `agent-config-generator` PRO tier to npm | Write package.json, `npm publish` | ✅ Yes (needs npm token) |
+| **PRE-52** | PRE-52-A: Gumroad paste-ready listing bundle | Assemble 5 product descriptions + prices for founder copy-paste | ✅ Yes |
+| **PRE-52** | PRE-52-B: Gumroad account setup runbook for founder | Step-by-step registration guide | ✅ Yes |
+| **PRE-55** | PRE-55-A: Fiverr gigs as paste-ready bundle | Consolidate 5 gig descriptions into one doc | ✅ Yes |
+| **PRE-57** | PRE-57-A: Sponsors tiers submission-ready file | Bundle 5 tier descriptions for copy-paste | ✅ Yes |
+| **PRE-51** | PRE-51-A: Draft first 3 affiliate blog posts | Content for auto-publishing pipeline | ✅ Yes |
+| **PRE-17/39** | PRE-17-A: Stage pricing page for founder approval | Render pricing from `public-pricing-sheet.md` | ✅ Yes |
+| **PRE-19** | PRE-19-C: Wire revenue-ledger POST into weekly log | Automate burn/rev recording | ✅ Yes |
 
-**Highest-value sub-issue:** **PRE-71-A / PRE-71-B** (publish `prompt-executor` CLI to GitHub + npm) — entirely in the agent's power, no human gate, produces a real public asset.
+**Highest-value sub-issue once server is back:** **PRE-53-A** (publish `agent-config-generator` to npm) — entirely technical, no founder gate beyond an npm token, ships a real public revenue asset.
 
 ---
 
-## 10. EXECUTIVE SUMMARY
+## 7. EXECUTIVE SUMMARY
 
-> **Prem Autonomous Co is in Week 1. Server is up; 7 agents healthy (last verified 2026-07-12).**
+> **Prem Autonomous Co is in Week 1. The autonomous engine is currently OFFLINE — Paperclip is DOWN (connection refused on :3100), so the 7-agent org is not running and the monitor cannot read the live board.** This is a degradation from the prior run (which saw the server up but cookie-expired).
 >
-> **Revenue: $0 / ₹0 — 0% of the ₹5,00,000/mo target.** The engine has built 11 digital products (10 cataloged + 1 in review + 2 free published), drafted 5 Fiverr gigs, a GitHub Sponsors profile, a 20-article Medium calendar, and 6 priced service tiers. But **zero sales** — no external paid storefronts are live.
+> **Revenue: $0 / ₹0 — 0% of the ₹5,00,000/mo target.** The engine has built 12 digital-product assets (10 cataloged + 2 free published), drafted 5 Fiverr gigs, a GitHub Sponsors profile, a 20-article Medium calendar, and 6 priced service tiers. But **zero sales** — no external paid storefronts are live.
 >
-> **Burn: $70 MTD** ($6.02/day) from autonomous inference only. **No ad spend. Burn rate = $0 human cash.** $500 cap safe ($430 remaining). Live cost telemetry is currently inaccessible (board Unauthorized).
+> **Burn:** human-cash burn = **₹0** (no ad spend, no tooling spend). Only tracked cost is autonomous inference (~$70 MTD ≈ ₹5,810; ~$6.02/day planning rate). $500/mo cap safe ($430 remaining).
 >
-> **Critical bottleneck = founder gates** (Gumroad PRE-52, Fiverr PRE-55, GitHub Sponsors PRE-57) plus a now-expired Paperclip session cookie blocking monitor visibility. The closest path to first revenue is **PRE-72** (Developer Prompt Pack, $14) — but it sits behind the Gumroad founder account.
+> **Critical bottleneck = (1) the server being down, and (2) founder gates** on Gumroad (PRE-52), Fiverr (PRE-55), and GitHub Sponsors (PRE-57). Since the prior run, PRE-71-A (`prompt-executor`→npm) shipped DONE and PRE-72 (Developer Prompt Pack) moved to in_review — but it still sits behind the Gumroad founder account.
 >
-> **Two monitor-blocking issues this run:** (1) Paperclip board `Unauthorized` — refresh `cj.txt`; (2) `REVENUE-MASTER-PLAN-v2.md` referenced by the task does not exist — used available strategy docs instead.
+> **Two monitor-blocking issues this run:** (1) Paperclip server **DOWN** — restart it; (2) `REVENUE-MASTER-PLAN-v2.md` referenced by the task does not exist — used available strategy docs instead.
 >
-> **Next concrete action:** Unblock PRE-71 (publish `prompt-executor` CLI to GitHub/npm — zero human gate) and get Prem to create the Gumroad account to unblock PRE-52.
+> **Next concrete action:** **Restart Paperclip** (re-activates the whole org + monitor), then **create the Gumroad seller account (PRE-52)** to unblock all digital-product revenue, and push **PRE-72** (Developer Prompt Pack, $14) live for first sales.
 
 ---
 

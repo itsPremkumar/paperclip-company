@@ -40,6 +40,8 @@
     "ai-ugc-ad-creative-factory",
     "autonomous-backend-agent",
     "proposal-generator",
-    "rag-kb-builder"
+    "rag-kb-builder",
+    "secret-scanner",
+    "security-scanner"
   ]
 }
