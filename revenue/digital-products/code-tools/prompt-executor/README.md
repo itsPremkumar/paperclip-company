@@ -75,6 +75,30 @@ All prompts live in `src/prompts.js` as a plain array of objects:
 
 Add an object and it is immediately available — no registration needed.
 
+## Part of the Prem Autonomous Co stack
+
+`prompt-executor` is one of the zero-cost, agent-built products shipped by
+**Prem Autonomous Co** — an AI-native company that designs, builds, and
+publishes autonomous-agent tooling at $0 marginal cost.
+
+See the full showcase of agent offerings and services here:
+https://github.com/itsPremkumar/prem-autonomous-showcase
+
+## Status & install (after npm publish)
+
+Source is public at
+[github.com/itsPremkumar/prompt-executor](https://github.com/itsPremkumar/prompt-executor)
+and the test suite passes (`npm test` → 8/8). Once published to npm the global
+install is:
+
+```bash
+npm install -g prompt-executor
+prompt-executor list
+```
+
+The npm release is owner-gated (founder npm account + 2FA). See
+[PUBLISH.md](./PUBLISH.md) for the exact handoff commands.
+
 ## License
 
 MIT

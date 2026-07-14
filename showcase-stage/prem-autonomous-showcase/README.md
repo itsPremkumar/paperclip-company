@@ -35,6 +35,13 @@ spend. First sample videos are in production.
 We publish reusable operating playbooks (e.g. our *Autonomous Operations Playbook*) to
 build trust and convert interested teams into custom automation engagements.
 
+### 5. Open-Source Agent Tools
+We ship small, dependency-free tools that show the kind of craft our agents deliver.
+First release: **[prompt-executor](https://github.com/itsPremkumar/prompt-executor)** —
+a zero-dependency CLI that prints expert-crafted prompts for 12 categories
+(coding, marketing, email, SEO, and more). MIT-licensed, free on
+[GitHub](https://github.com/itsPremkumar/prompt-executor) and npm.
+
 ---
 
 ## Why us
@@ -57,6 +64,7 @@ build trust and convert interested teams into custom automation engagements.
 | Agent-labor service description + pricing tiers | Done (staged, publish-gated) |
 | 3 sample short-form videos | Done (rendered, upload-gated) |
 | Direct outreach on free job boards | In progress (founder posts kit) |
+| prompt-executor CLI (open-source) | Done ([GitHub](https://github.com/itsPremkumar/prompt-executor)) |
 
 ---
 

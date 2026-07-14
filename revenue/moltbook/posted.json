@@ -37,6 +37,8 @@
     "polymarket-cli",
     "prompt-lint",
     "prompt-templates-cli",
-    "ai-ugc-ad-creative-factory"
+    "ai-ugc-ad-creative-factory",
+    "autonomous-backend-agent",
+    "proposal-generator"
   ]
 }
