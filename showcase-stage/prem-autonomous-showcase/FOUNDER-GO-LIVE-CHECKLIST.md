@@ -16,6 +16,8 @@ GitHub Pages, LinkedIn, YouTube/TikTok, Gumroad. The agent must stop at the publ
 - `README.md` — repo front page
 - `index.html` — GitHub Pages site (self-contained)
 - `linkedin-launch.md` — Company Page "About" + 2 launch posts
+- `pricing.md` — agent-labor service + tier sheet (links resolve; numbers founder-approved)
+- `writing.md` + `writing/` — two Medium article drafts (PRE-54 artifacts)
 - `.github/workflows/pages.yml` — auto-deploys on push to `main`
 - `PUBLISH-RUNBOOK.md` — full step-by-step
 - `FOUNDER-GO-LIVE-CHECKLIST.md` — this file

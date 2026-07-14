@@ -60,16 +60,30 @@ build trust and convert interested teams into custom automation engagements.
 
 ---
 
+## Writing
+
+We publish original long-form articles written end-to-end by our agents (research → draft →
+review → package), then published by the founder under the human-in-the-loop gate. See
+[`writing.md`](./writing.md) for the index, or read them directly:
+
+- [How I Built a Zero-Cost AI Company](./writing/how-i-built-a-zero-cost-ai-company.md)
+- [AI Agents Replace $10k/mo Agencies — Here's the Math](./writing/ai-agents-replace-10k-agencies.md)
+
+---
+
 ## Pricing & engagement
 
-We offer free-tier-friendly engagement tiers (defined in sibling issue PRE-6). Typical
-entry points:
+We offer free-tier-friendly engagement tiers — see [`pricing.md`](./pricing.md) for the full
+tier sheet and service definitions. Typical entry points:
 
 - **Trial task** — one scoped deliverable, free or low-cost, to prove the workflow.
 - **Recurring agent labor** — defined weekly/monthly task volume.
 - **Custom automation** — bespoke agent workflows and playbooks for your team.
 
-> Exact tiers and rates are finalized in `OFFERINGS.md` / the pricing issue before launch.
+> Exact tiers and rates are finalized in [`pricing.md`](./pricing.md). Tier definitions:
+> Content Machine $149 · Ops Autopilot $199 · Lead Engine $249 · Support Agent $129 ·
+> Founder's CoS $299 · Autonomous Team $499/mo · Custom build from $990. Public numbers are
+> founder-approved before launch (issue PRE-6).
 
 ---
 

@@ -9,7 +9,7 @@
 - [ ] **Run income-engine generators** (blog + gumroad) and verify site build
 - [x] **Package remaining catalog products** into income-engine/gumroad/products/ (product-3 remotion-templates, product-4 monetization-kit, product-6 job-board-guide — all 8 catalog products now packaged)
 - [ ] **Mirror top prompts** to Hermes-Prompt-Library repo
-- [ ] **Build out skills/** — convert learned skills into SKILL.md entries
+- [ ] **Build out skills/** — convert learned skills into SKILL.md entries (added `package-digital-product.md` this tick; `low-ram-self-protect.md` earlier)
 - [ ] [HUMAN-GATED] Publish Gumroad listings (needs account + price approval)
 - [ ] [HUMAN-GATED] Connect payouts / bank / PayPal
 - [ ] [HUMAN-GATED] Any paid ad spend or account signup
@@ -17,6 +17,11 @@
 - [x] Tick 2026-07-14 (6th): authored `n8n-vs-make-vs-zapier-2026.md` SEO
       comparison into revenue/blog/ (links to the agency playbook; evergreen
       tool-comparison angle). Updated tasks.md + lessons-learned.
+- [x] Tick 2026-07-14 (7th): authored `7-workflows-solopreneurs-automate-first.md`
+      SEO/list-building piece into revenue/blog/ (cross-links the outreach, n8n,
+      and product articles; solopreneur funnel angle). Graduated the repeated
+      "package a product from existing content" action into
+      `skills/automation/package-digital-product.md`. Updated tasks.md + lessons.
 
 ## Done (recent ticks)
 - [x] Tick 2026-07-14: wrote zero-budget AI automation agency SEO article; ran blog
@@ -33,3 +38,7 @@
       the four promised bonus templates (AGENTS.md, .env.example, issue-template.json,
       heartbeat-config.yaml); updated tasks.md + lessons-learned. 3 catalog products
       remain un-packaged.
+- [x] Tick 2026-07-14: authored `15-ai-automations-small-business-2026.md`
+      top-of-funnel SEO article into revenue/blog/ (15 zero-cost automations for
+      small business; links to agency playbook, n8n comparison, cold-outreach,
+      and digital-products funnel). Updated tasks.md + lessons-learned.

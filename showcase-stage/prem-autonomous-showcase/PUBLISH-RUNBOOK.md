@@ -6,9 +6,11 @@ This bundle is build-complete and review-ready. **Publication is a founder (Prem
 > (covers PRE-5, PRE-6, PRE-72, PRE-54, PRE-7/74, PRE-81). Start there for the full go-live map.
 
 ## What's in this bundle (`showcase-stage/prem-autonomous-showcase/`)
-- `README.md` — GitHub repo front page (offerings, proof table, pricing pointer).
-- `index.html` — GitHub Pages site (self-contained, dark theme).
+- `README.md` — GitHub repo front page (offerings, proof table, pricing pointer, writing index).
+- `index.html` — GitHub Pages site (self-contained, dark theme). Includes a Writing section.
 - `linkedin-launch.md` — Company Page "About" + 2 launch-post drafts.
+- `pricing.md` — full agent-labor service + tier sheet (staged; public numbers founder-approved).
+- `writing.md` — index of published articles, plus `writing/` with the two Medium drafts.
 - `.github/workflows/pages.yml` — auto-deploys `index.html` to GitHub Pages on push to `main`.
 
 ## Go-live (founder, ~10 min)

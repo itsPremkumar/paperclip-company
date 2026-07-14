@@ -247,3 +247,38 @@ playbook.
   without rework.
 - Authoring drafts is the safest, highest-leverage tick action under any RAM
   condition: pure text, no build, no inference, no money movement.
+
+## Graduate a repeated action into a SKILL.md; handle a dirty tree at tick start (Tick 2026-07-14, 7th)
+
+### Context
+The loop had packaged eight catalog products by repeating the same "assemble
+existing content into a sellable bundle" steps. This tick distilled those steps
+into `skills/automation/package-digital-product.md` so the pattern loads into
+the skill library automatically. The tick also began with a *dirty working tree*
+(pre-existing uncommitted blog/showcase/product changes from an earlier
+interrupted run).
+
+### Lesson
+- When an action repeats 3+ times and is stable, graduate it into
+  `skills/<category>/<name>.md` with YAML front-matter (name, category,
+  description, state). This is the documented high-leverage self-improve move and
+  directly clears the open "Build out skills/" board item.
+- At tick start, if `git status` shows uncommitted work, don't `git pull
+  --ff-only` blindly (it refuses on a dirty tree). Use
+  `git stash push -u` → `git pull --ff-only` → `git stash pop`. This preserves
+  in-progress agent work AND syncs GitHub as source of truth, with no merge
+  conflict when the remote is already up to date.
+- The "package from existing content" skill stays HUMAN-GATED on the publish/price
+  step (Constitution S0) — the agent writes the asset and catalog entry, never
+  lists or moves money.
+
+## Top-of-funnel "automation checklist" angle drives service-tier demand (Tick 2026-07-14)
+
+### Context
+The continuous agent-safe board item is "author next SEO/article drafts into revenue/blog/". This tick wrote `15-ai-automations-small-business-2026.md` — a numbered, actionable checklist of zero-cost automations for small-business owners, explicitly linking to the agency playbook, the n8n comparison, cold-outreach, and the digital-products funnel.
+
+### Lesson
+- A "15 things you can automate" checklist is a high-intent, evergreen top-of-funnel format: it targets the exact buyer persona for the $149–$499/mo service tiers and the priced digital products, while staying 100% agent-safe (no listing, no money movement).
+- Lead each item with the cheapest tool and add a "what to do this week" section so the post is useful standalone and naturally routes readers to existing `revenue/blog/*.md` and `digital-products/` assets via relative links.
+- Front-matter must match the existing schema exactly (title, description, slug, date, niche, tags, author) so the income-engine generator can ingest it without rework.
+- Authoring pure-markdown drafts remains the safest, highest-leverage tick under any RAM condition: no build, no inference, no external account, no money movement.

@@ -30,6 +30,11 @@
     "json-tools",
     "lead-enrichment-saas",
     "manifest-diff",
-    "maps-cli"
+    "maps-cli",
+    "md-linter",
+    "money-automation-ideas",
+    "notion-api",
+    "polymarket-cli",
+    "prompt-lint"
   ]
 }
