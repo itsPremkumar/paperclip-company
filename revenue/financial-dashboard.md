@@ -1,10 +1,10 @@
 # PREM AUTONOMOUS CO — REVENUE TRACKING DASHBOARD
 
 **Owner:** Hermes CMO / Hermes Engineer · **Status:** live (tracking artifact)
-**Cadence:** updated weekly (every Monday) · **Last updated:** 2026-07-13 (M3 plan set; M1/M2 baselines carried)
-**Window tracked:** Month 1 (30-day) projection, from launch 2026-07-12 — **+ Month-2 projection, burn analysis & runway (PRE-73)** — **+ Month-3 projection, burn analysis & revenue tracking (PRE-75)**
+**Cadence:** updated weekly (every Monday) · **Last updated:** 2026-07-14 (M4 projection + burn reconciliation added; PRE-89 milestone)
+**Window tracked:** Month 1 (30-day) projection, from launch 2026-07-12 — **+ Month-2 projection, burn analysis & runway (PRE-73)** — **+ Month-3 projection, burn analysis & revenue tracking (PRE-75)** — **+ Month-4 projection, burn analysis & reconciliation (PRE-89)**
 **Source of truth for targets:** `revenue/30-day-zero-cost-launch-plan.md` + `revenue/monetization-brief-revenue-engine-v1.md`
-**Burn/runway source of truth:** live Paperclip API telemetry (`/companies/{id}/budgets/overview`, `/costs/summary`) pulled 2026-07-13
+**Burn/runway source of truth:** live Paperclip API telemetry (`/companies/{id}/budgets/overview`, `/costs/summary`) pulled 2026-07-14T14:07Z (this milestone) and 2026-07-13T06:25Z (M3 baseline)
 
 > This is a manual tracking doc. Each metric below has a **Target** (from strategy docs) and an
 > **Actual** (entered weekly from real dashboards). Do NOT estimate — pull real numbers from the
@@ -195,6 +195,106 @@ GET /companies/3056c999-.../revenue/summary  →  entryCount: 0, byCurrency: {},
 
 ---
 
+## 1d. Month-4 Projection, Burn Analysis & Reconciliation ("Revenue dashboard M4" issue)
+
+> Added 2026-07-14. The monetization brief (`revenue/monetization-brief-revenue-engine-v1.md` §6)
+> gives explicit conservative targets through **Month 3** only (35 subs + 2 builds + 1 reseller ≈
+> $3,200/mo). Month 4 has no published figure, so it is **derived** here from the brief's own
+> trajectory — *not invented* — using a transparent, stated method. Live telemetry was re-pulled
+> for this milestone (2026-07-14T14:07Z) and reconciled against the M3 baseline (issue
+> "Revenue dashboard M3").
+
+### 1d.1 Deriving the M4 target (method + result)
+
+The brief's month-over-month subscriber ramp is **5 → 15 → 35**. The incremental adds are
++10 (M1→M2) then +20 (M2→M3) — a ~2x step each month. Two defensible continuations:
+
+- **Linear-of-increments (lower bound):** hold the last increment (+20) → **55 subs**.
+- **Geometric-of-increments (upper bound):** double the last increment (+40) → **75 subs**.
+- **Blended M4 planning figure:** **~60 subscribers** (midpoint, conservative vs the geometric case).
+
+Carrying the brief's revenue mix forward (starter/team blend that produced ~$3,200 at 35 subs,
+plus builds + reseller recurring cut), M4 target is built as:
+
+| Component | M4 planning figure | Rationale |
+|-----------|-------------------:|-----------|
+| Subscribers (blended) | 60 | midpoint of 55–75 derived ramp |
+| Added MRR from subs | +~$2,400 vs M3 (~$5,600/mo gross) | $3,200 ÷ 35 × 60 ≈ $5,486; reseller + 2nd build tail adds ~$115 |
+| One-time builds closed (cumulative) | 3 | +1 build in M4 (M3 was 2) |
+| Reseller / affiliate deals | 2 | +1 reseller (M3 was 1) → adds ~$640/mo recurring |
+| **M4 target MRR (month-end)** | **≈ $5,600/mo** | conservative blend of the two ramp methods |
+| Cumulative build revenue (M1–M4) | ~$2,970–$14,700 | 3 builds × $990–$4,900 |
+
+> This is explicitly a **projection**, not a committed target. It is flagged as the agent-derived
+> M4 line so the founder can ratify or revise it. If Prem prefers the brief's geometric method,
+> the upper bound is ~$7,400/mo at 75 subs; if linear, ~$5,100/mo at 55 subs.
+
+### 1d.2 Month-4 revenue projection (target vs. actual, to be filled weekly)
+
+Month 4 window: 2026-10-11 → 2026-11-11 (90 days after launch). Note the brief's 90-day target
+window closes *inside* M4; M4 is therefore the "steady-state maturity" month.
+
+| Metric | M1 | M2 | M3 | M4 target (derived) | M4 actual (W0 baseline) | Source |
+|--------|---:|---:|---:|---------------------:|-------------------------:|--------|
+| Paid subscribers (starter/team) | 5 | 15 | 35 | **~60** | 0 | Gumroad/Stripe |
+| Builds closed (cumulative) | 0 | 1 | 2 | **3** | 0 | CRM |
+| Reseller / affiliate deals | — | (later) | 1 | **2** | 0 | dashboards |
+| **MRR (month-end)** | $245 | ~$1,240 | ~$3,200 | **≈ $5,600** | $0 | billing |
+| Cumulative build revenue | $0 | ~$990–$4,900 | ~$1,980–$9,800 | ~$2,970–$14,700 | $0 | billing |
+| Affiliate/recurring add-ons | — | — | ~$0–$640 | ~$640 | $0 | dashboards |
+
+### 1d.3 Burn analysis (live — re-pull 2026-07-14T14:07Z)
+
+Reconciled against the M3 baseline (2026-07-13T06:25Z). Same single telemetry source, same
+billing window (2026-07-01 → 2026-08-01 UTC).
+
+| Burn metric | M3 baseline (07-13) | M4 pull (07-14) | Δ | Notes |
+|-------------|--------------------:|----------------:|--:|-------|
+| Recognized revenue (M-T-D) | $0.00 | **$0.00** | — | still pre-revenue |
+| Gross burn (M-T-D) | $70.00 (7,000¢) | **$70.00 (7,000¢)** | $0 | 100% OpenRouter inference (tencent/hy3:free) |
+| Monthly budget cap | $500.00 | $500.00 | — | hard-stop, calendar-month UTC |
+| Budget remaining | $430.00 | **$430.00** | $0 | 14% of cap used |
+| Net burn (M-T-D) | $70.00 | **$70.00** | — | = gross burn (revenue $0) |
+| Burn rate (M-T-D run-rate) | $6.02/day (~$183/mo) | **$6.02/day** | — | $70 ÷ 11.6 days elapsed; planning figure |
+
+> **Reconciliation result:** burn is **flat** across M2→M3→M4 pulls — no new spend has occurred
+> since the 2026-07-12 process boot. The $500/mo cap is safe (14% used, $430 remaining). The
+> process-uptime burst artifact ($35.53/hr) remains excluded from runway math. The fleet is holding
+> a sub-cap, zero-ad-spend burn by policy.
+
+### 1d.4 Reconciliation vs. actual income-engine inventory
+
+The income-engine (`money/INCOME_DASHBOARD.md`, regenerated 2026-07-14) reports a *separate*
+addressable inventory: **74 ready-to-sell packages across 18 pipelines**, combined one-time value
+$47,841, realistic 90-day target **$3,000–$8,000/mo**. Reconciling the two views:
+
+| Lens | Figure | Status | Gap / note |
+|------|-------:|--------|------------|
+| Service-subscription model (brief) — M4 MRR target | ≈ $5,600/mo | projection | gated on Gumroad/Sponsors founder publish |
+| Income-engine package inventory — 90-day realistic | $3,000–$8,000/mo | projection | gated on Fiverr/Upwork founder account setup |
+| Digital-product catalog (product-catalog.json) | 12 products, 9 zips built | ready | 0 published (founder Gumroad gate) |
+| **Actual realized revenue (live ledger)** | **$0.00** | confirmed | matches both models' pre-revenue state |
+
+> **Key reconciliation insight:** both revenue models show strong *probability-weighted* upside
+> ($3k–$8k/mo) but **$0 realized**, and the blocker is identical in both: the founder-owned publish
+> gates (Gumroad PRE-52, GitHub Sponsors PRE-57, Fiverr PRE-58, Medium PRE-54). Burn is not the
+> risk — distribution is. Unblock the founder gates and both engines begin recording real payouts
+> against this ledger.
+
+### 1d.5 Net position & 4-month picture
+
+| Snapshot | Value |
+|----------|------:|
+| Cumulative burn (launch → 2026-07-14) | $70.00 |
+| Cumulative revenue (launch → 2026-07-14) | $0.00 |
+| Net cash impact (launch → now) | **–$70.00** |
+| Month-4 revenue target (added MRR + builds + reseller) | +$5,600/mo |
+| Projected burn if M-T-D pace holds | ~$183/mo |
+| Projected net for Month 4 (if targets hit) | **≈ +$5,417** (deeply net-positive; covers 31x the burn) |
+| Breakeven status | already covered at ~4 retained subscribers; M4 target is ~15x breakeven |
+
+---
+
 ## 2. Products Published
 
 Real inventory as of 2026-07-13 (from `digital-products/product-catalog.json` and
@@ -299,6 +399,7 @@ Append a row every Monday. Keep the latest on top.
 
 | Week of | Products live | MRR | Units sold | Articles | Views | Fiverr gigs | Leads | Notes |
 |---------|--------------:|----:|-----------:|---------:|------:|------------:|------:|-------|
+| 2026-07-14 (M4 baseline) | 2 | $0 | 0 | 3 | untracked | 0 | 0 | "Revenue dashboard M4": M4 projection + burn reconciliation added; re-pulled live telemetry (burn flat $70/$500); derived M4 target ≈ $5,600/mo; reconciled vs income-engine 74-pkg inventory |
 | 2026-07-13 (W0) | 2 | $0 | 0 | 3 | untracked | 0 | 0 | baseline; launch 2026-07-12 |
 | 2026-07-13 (W1) | 0 | $0 | 0 | 0 | untracked | 0 | 0 | cataloged 11 products incl. agent-sentinel bundle (#11) |
 | 2026-07-13 (M3 baseline) | 2 | $0 | 0 | 3 | untracked | 0 | 0 | PRE-75: M3 projection + burn added; revenue ledger route wired into API (app.ts) |
@@ -306,6 +407,7 @@ Append a row every Monday. Keep the latest on top.
 ---
 
 *This dashboard is the single source of truth for PRE-59 (Month-1), PRE-73 (Month-2 projection,
-burn analysis & runway), and PRE-75 (Month-3 projection, burn analysis & revenue tracking). Edit it
+burn analysis & runway), PRE-75 (Month-3 projection, burn analysis & revenue tracking), and
+"Revenue dashboard M4" (Month-4 projection, burn analysis & reconciliation). Edit it
 directly each week; no code changes needed.
 Do not auto-publish founder-owned pricing/payment pages — that remains a Prem (founder) decision.*
