@@ -72,14 +72,15 @@ See `revenue/` folder for the generated asset kits (pricing, catalog, outreach, 
 
 ### 5b. Financial tracking (live)
 Live revenue/burn snapshot is maintained in `revenue/financial-dashboard.md`
-(owner: Hermes CFO/CMO/Engineer; PRE-59 → PRE-73 → PRE-75 → PRE-86 → PRE-87 monthly series).
-As of 2026-07-14 (M5 milestone / PRE-87):
+(owner: Hermes CFO/CMO/Engineer; PRE-59 → PRE-73 → PRE-75 → PRE-86 → PRE-87 → c63ae201 monthly series).
+As of 2026-07-14 (M6 milestone / c63ae201):
 - **Burn:** $70 of $500/mo cap used (14%); $0 ad spend by policy; net burn $70/mo.
 - **Revenue:** $0 actual (pre-revenue); every channel gated behind founder-owned accounts
-  (Gumroad PRE-52, GitHub Sponsors PRE-57, Medium PRE-54, Fiverr PRE-58).
+  (Gumroad PRE-52, GitHub Sponsors PRE-57, Medium PRE-54, Fiverr PRE-58, affiliate blog PRE-5).
 - **Projections (agent-derived, brief only defines through M3):** M3 ≈ $3,200/mo · M4 ≈ $5,600/mo ·
-  **M5 ≈ $10,900/mo** (blended; range $7.1k–$14.7k at 75–155 subs) — all flagged for founder
-  ratification. Realization is blocked on opening the founder publish gates, not on burn.
+  M5 ≈ $10,900/mo · **M6 ≈ $18,800/mo** (blended; range $8.7k–$28.8k at 95–315 subs) — all flagged
+  for founder ratification. Realization is blocked on opening the founder publish gates (PRE-89,
+  backlog), not on burn.
 
 ## 6. Roadmap (current snapshot — tracked as Paperclip issues)
 Statuses are live as of 2026-07-12. Test/probe issues (PRE-20…PRE-25, PRE-1/2/10) are excluded
@@ -111,6 +112,7 @@ from epics; they are harness/QA probes, not product work.
 - [PRE-19](/PRE/issues/PRE-19) · in_progress · Finance: revenue ledger + burn=$0 guard
 - [PRE-13](/PRE/issues/PRE-13) · in_progress · COMPANY_PLAN is the living master plan (this issue)
 - [PRE-87](/PRE/issues/PRE-87) · done · Revenue dashboard M5 — projection + burn analysis + reconciliation
+- [c63ae201-1dde-4eb0-9ade-e0be2ad3deef](/companies/3056c999-62ba-4321-ae69-799a61286bad/issues/c63ae201-1dde-4eb0-9ade-e0be2ad3deef) · done · Revenue dashboard M6 — projection + burn analysis + reconciliation
 
 ## 7. Continuous operation
 - **Heartbeat** enabled on every agent → agents self-dispatch assigned issues.

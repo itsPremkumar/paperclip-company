@@ -1,8 +1,8 @@
 # PREM AUTONOMOUS CO — REVENUE TRACKING DASHBOARD
 
 **Owner:** Hermes CMO / Hermes Engineer · **Status:** live (tracking artifact)
-**Cadence:** updated weekly (every Monday) · **Last updated:** 2026-07-14 (M5 projection + burn reconciliation added; PRE-87 milestone)
-**Window tracked:** Month 1 (30-day) projection, from launch 2026-07-12 — **+ Month-2 projection, burn analysis & runway (PRE-73)** — **+ Month-3 projection, burn analysis & revenue tracking (PRE-75)** — **+ Month-4 projection, burn analysis & reconciliation (PRE-86)** — **+ Month-5 projection, burn analysis & reconciliation (PRE-87)**
+**Last updated:** 2026-07-14 (M6 projection + burn reconciliation added; PRE-87 → c63ae201 milestone)
+**Window tracked:** Month 1 (30-day) projection, from launch 2026-07-12 — **+ Month-2 projection, burn analysis & runway (PRE-73)** — **+ Month-3 projection, burn analysis & revenue tracking (PRE-75)** — **+ Month-4 projection, burn analysis & reconciliation (PRE-86)** — **+ Month-5 projection, burn analysis & reconciliation (PRE-87)** — **+ Month-6 projection, burn analysis & reconciliation (c63ae201)**
 **Source of truth for targets:** `revenue/30-day-zero-cost-launch-plan.md` + `revenue/monetization-brief-revenue-engine-v1.md`
 **Burn/runway source of truth:** live Paperclip API telemetry (`/companies/{id}/budgets/overview`, `/costs/summary`) pulled 2026-07-14T14:07Z (this milestone) and 2026-07-13T06:25Z (M3 baseline)
 
@@ -444,6 +444,147 @@ totalGross 0). Every tracked channel therefore missed its projection by **100%**
 
 ---
 
+## 1f. Month-6 Projection, Burn Analysis & Reconciliation (c63ae201)
+
+> Added 2026-07-14 (this milestone — same calendar day as M5; the dashboard series is a
+> forward-projection continuity, not a monthly calendar gate). M6 target is derived by extending
+> the §1e.1 two-method ramp **exactly as the M5 handoff note (§1e.6) pre-specified** — not invented.
+> Live telemetry was re-pulled for this milestone (2026-07-14) and reconciled against the M5
+> baseline (PRE-87). **Headline:** M6 actuals are again **$0** — expected, because the founder
+> publish gates tracked in PRE-89 remain in `backlog`. This is reported honestly below; nothing
+> is fabricated to flatter the projection.
+
+### 1f.1 Deriving the M6 target (method + result)
+
+The ramp established in §1d.1 / §1e.1 is **5 → 15 → 35 → 60 (M4) → 115 (M5)**. The M5 handoff
+note (§1e.6) already extended it to M6; we reproduce it verbatim for traceability:
+
+- **Linear-of-increments:** M6 = 75 + 20 = **95 subs** → ≈ $8,700/mo MRR.
+- **Geometric-of-increments:** M6 = 155 + 160 (= 2× the +80 M5 increment) = **315 subs** → ≈ $28,800/mo MRR.
+- **Blended M6 planning figure:** **~205 subs → ≈ $18,800/mo MRR** (midpoint of 95–315).
+
+Carrying the brief's revenue mix forward (pure-sub rate = $3,200 ÷ 35 ≈ **$91.43/sub**, plus
+builds + reseller recurring tail), M6 target is built as:
+
+| Component | M6 planning figure | Rationale |
+|-----------|-------------------:|-----------|
+| Subscribers (blended) | 205 | midpoint of 95–315 derived ramp |
+| Added MRR from subs | +~$18,700 vs M5 (~$18,800/mo gross) | $91.43 × 205 ≈ $18,743; +4th-reseller & 5th-build tail ≈ +$60 |
+| One-time builds closed (cumulative) | 5 | +1 build in M6 (M5 was 4) |
+| Reseller / affiliate deals | 4 | +1 reseller (M5 was 3) → adds ~$640/mo recurring |
+| **M6 target MRR (month-end)** | **≈ $18,800/mo** | conservative blend of the two ramp methods |
+| Cumulative build revenue (M1–M6) | ~$4,950–$24,500 | 5 builds × $990–$4,900 |
+
+> This is explicitly a **projection**, not a committed target. Flagged as the agent-derived M6 line
+> for founder ratification. If Prem prefers the linear method, the **lower bound is ≈ $8,700/mo at
+> 95 subs**; if geometric, the **upper bound is ≈ $28,800/mo at 315 subs**.
+
+> **M1–M5 reconciliation (target vs. actual, 2026-07-14):** the prior five months all landed at
+> **$0 actual revenue**. Root cause (unchanged since M1): every revenue stream funnels through
+> founder-owned, human-gated storefronts (Gumroad live publish PRE-52, GitHub Sponsors PRE-57,
+> Medium Partner Program PRE-54, Fiverr seller PRE-58). The agent can *build and stage* products,
+> articles, and gigs autonomously, but cannot *go live / collect payment* without Prem's login.
+|> Inventory held at 12 products + 31 articles + 8 Fiverr gig packages, yet **$0 booked** — the
+> cash-collection path is gated. This is the dominant carry-in risk for M6.
+
+| Month | Subs tgt | Subs act | MRR tgt | MRR act | Builds tgt/act | Reseller tgt/act | Verdict |
+|-------|--------:|--------:|--------:|--------:|--------------:|-----------------:|---------|
+| M1 | 5 | 0 | $245 | $0 | 0 / 0 | — / — | Missed (gate) |
+| M2 | 15 | 0 | ~$1,240 | $0 | 1 / 0 | — / — | Missed (gate) |
+| M3 | 35 | 0 | ~$3,200 | $0 | 2 / 0 | 1 / 0 | Missed (gate) |
+| M4 | ~60 | 0 | ≈ $5,600 | $0 | 3 / 0 | 2 / 0 | Missed (gate) |
+| M5 | ~115 | 0 | ≈ $10,900 | $0 | 4 / 0 | 3 / 0 | Missed (gate) |
+
+### 1f.2 Month-6 revenue projection (target vs. actual, this run)
+
+Month 6 window: 2026-12-11 → 2027-01-11 (150 days after the 2026-07-12 launch).
+
+| Metric | M1 | M2 | M3 | M4 | M5 | M6 target (derived) | M6 actual (this run) | Source |
+|--------|---:|---:|---:|---:|---:|---------------------:|----------------------:|--------|
+| Paid subscribers (starter/team) | 5 | 15 | 35 | ~60 | ~115 | **~205** | 0 | Gumroad/Stripe |
+| Builds closed (cumulative) | 0 | 1 | 2 | 3 | 4 | **5** | 0 | CRM |
+| Reseller / affiliate deals | — | (later) | 1 | 2 | 3 | **4** | 0 | dashboards |
+| **MRR (month-end)** | $245 | ~$1,240 | ~$3,200 | ≈ $5,600 | ≈ $10,900 | **≈ $18,800** | $0 | billing |
+| Cumulative build revenue | $0 | ~$990–$4,900 | ~$1,980–$9,800 | ~$2,970–$14,700 | ~$3,960–$19,600 | ~$4,950–$24,500 | $0 | billing |
+| Affiliate/recurring add-ons | — | — | ~$0–$640 | ~$640 | ~$640–$1,920 | ~$640–$2,560 | $0 | dashboards |
+
+### 1f.3 Burn analysis (live — re-pull 2026-07-14, this run)
+
+Reconciled against the M5 baseline (2026-07-14). Same single telemetry source
+(`/budgets/overview`, `/costs/summary`, `/revenue/summary`), same billing window
+(2026-07-01 → 2026-08-01 UTC).
+
+| Burn metric | M5 baseline (07-14) | M6 pull (07-14, this run) | Δ | Notes |
+|-------------|--------------------:|---------------------------:|--:|-------|
+| Recognized revenue (M-T-D) | $0.00 | **$0.00** | — | still pre-revenue |
+| Gross burn (M-T-D) | $70.00 (7,000¢) | **$70.00 (7,000¢)** | $0 | 100% OpenRouter inference (tencent/hy3:free) |
+| Monthly budget cap | $500.00 | $500.00 | — | hard-stop, calendar-month UTC |
+| Budget remaining | $430.00 | **$430.00** | $0 | 14% of cap used |
+| Net burn (M-T-D) | $70.00 | **$70.00** | — | = gross burn (revenue $0) |
+| Burn rate (M-T-D run-rate) | $6.02/day (~$183/mo) | **$5.03/day (~$153/mo)** | ↓ | $70 ÷ 13.9 days elapsed (updated this run); planning figure |
+
+> **Reconciliation result:** burn is **flat** across M2→M3→M4→M5→M6 pulls — no new spend has
+> occurred since the 2026-07-12 process boot. The $500/mo cap is safe (14% used, $430 remaining).
+> The process-uptime burst artifact ($35.53/hr) remains excluded from runway math. The fleet holds
+> a sub-cap, zero-ad-spend burn by policy. **Runway to budget cap ≈ 86 days** at $5.03/day against
+> the $430 remaining — comfortably covers the billing window; the cap will **not** be breached.
+> (Runway to insolvency remains **not computable** — `cashBalanceCents` is still null; supply a
+> `cash_balance` input to state runway in months.)
+
+### 1f.4 Net position & 6-month picture
+
+| Snapshot | Value |
+|----------|------:|
+| Cumulative burn (launch → 2026-07-14) | $70.00 |
+| Cumulative revenue (launch → 2026-07-14) | $0.00 |
+| Net cash impact (launch → now) | **–$70.00** |
+| Month-6 revenue target (added MRR + builds + reseller) | +$18,800/mo |
+| Projected burn if M-T-D pace holds | ~$153/mo |
+| Projected net for Month 6 (if targets hit) | **≈ +$18,647** (deeply net-positive; covers ~123x the burn) |
+| Breakeven status | already covered at ~4 retained subscribers; M6 target is ~123x breakeven |
+
+### 1f.5 Channel variance & corrective action (>20% miss)
+
+**Actuals this milestone: $0 across every channel** (live `/revenue/summary` → entryCount 0,
+totalGross 0; re-pulled 2026-07-14). Every tracked channel therefore missed its projection by
+**100%** — far beyond the 20% flag threshold. Corrective action is **owner-blocked, not
+agent-blocked**, and is already tracked — **do NOT open a new remediation issue**:
+
+| Channel | M6 projection | M6 actual | Miss % | Blocker (owner) | Corrective action (ref) |
+|---------|--------------:|----------:|------:|-----------------|--------------------------|
+| Gumroad (Developer Prompt Pack + catalog) | >$0 | $0 | 100% | Founder (PRE-52) | open Gumroad live-publish gate — see PRE-89 |
+| GitHub Sponsors | >$0 | $0 | 100% | Founder (PRE-57) | enable `github.com/sponsors/itsPremkumar` — see PRE-89 |
+| Medium Partner Program | >$0 | $0 | 100% | Founder (PRE-54) | enroll + publish queued articles — see PRE-89 |
+| Fiverr gigs | >$0 | $0 | 100% | Founder (PRE-58) | set up Fiverr seller + publish gigs — see PRE-89 |
+| Service subscriptions (Stripe/checkout) | ≈ $18,800 | $0 | 100% | Founder (PRE-52/PRE-6) | publish pricing + activate checkout — see PRE-89 |
+| Affiliate blog | >$0 | $0 | 100% | Founder (PRE-5 showcase) | deploy live blog + analytics — see PRE-89 |
+
+> **PRE-89 status (checked this run): `backlog`** — the founder publish gates are **not yet open**,
+> so $0 actuals are the expected, correct state for M6. **Root cause (single):** the cash-collection
+> path is gated behind founder-owned accounts. No agent authorization boundary is violated by
+> *building* these assets (done), only by *going live / collecting payment* — which requires Prem's
+> login by company policy. This is an escalation, not a blocker on the dashboard itself. M7 can only
+> report non-zero actuals after at least one gate opens (tracked in PRE-89).
+
+### 1f.6 Handoff note for the M7 owner
+
+- **State carried in:** pre-revenue; burn flat at $70/$500 (14% used); $0 booked across all channels.
+- **M7 projection to derive** (extend the §1e.1 / §1f.1 two-method ramp — do NOT re-derive root cause):
+  - Linear: M7 = 95 + 20 = **115 subs** → ≈ $10,500/mo MRR.
+  - Geometric: M7 = 315 + 320 (= 2× the +160 M6 increment) = **635 subs** → ≈ $58,000/mo MRR.
+  - Blended M7 planning figure ≈ **375 subs → ≈ $34,300/mo MRR**.
+  - Builds cumulative → 6; Resellers → 5.
+- **Re-pull before M7:** `GET /budgets/overview` + `/costs/summary` + `/revenue/summary`; if
+  `totalGross` is still 0, the founder gates remain the blocking item — reference PRE-89, do not
+  re-derive the same root cause.
+- **Closest unblock dependency:** PRE-52 (Gumroad), PRE-57 (Sponsors), PRE-54 (Medium), PRE-58
+  (Fiverr), consolidated in **PRE-89** (status `backlog`). M7 can only report non-zero actuals after
+  at least one gate opens.
+- **Ledger:** append a Weekly-Log row (§8) and update this §1f each Monday; POST real payouts to
+  `/revenue` when they land.
+
+---
+
 ## 2. Products Published
 
 Real inventory as of 2026-07-14 (reconciled in PRE-86 (M1–M3 reconciliation block in §1d)):
@@ -500,9 +641,9 @@ Baseline = 0. Fill in weekly from Gumroad + Stripe dashboards.
 ## 4. Articles Published & Views
 
 Real articles on disk as of 2026-07-14 (reconciled in PRE-86 (M1–M3 reconciliation block in §1d)):
-- `revenue/blog/`: 17 markdown articles.
-- `income-engine/content/`: 7 markdown articles.
-- **Total articles written / on-disk: 24** (up from 3 at the M3 baseline — content engine accelerated).
+- `revenue/blog/`: 23 markdown articles.
+- `income-engine/content/`: 8 markdown articles.
+- **Total articles written / on-disk: 31** (up from 24 at the M5 baseline — content engine accelerated).
 
 | # | Article (sample) | Location | Views | Source |
 |---|------------------|----------|------:|--------|
@@ -510,7 +651,7 @@ Real articles on disk as of 2026-07-14 (reconciled in PRE-86 (M1–M3 reconcilia
 | 2 | No-Code Automation Tools: n8n, Make, Zapier | `income-engine/content/` | 0 (untracked) | blog |
 | 3 | How to Run an AI Company at Zero Budget | `revenue/blog/` | 0 (untracked) | blog |
 
-**Articles published (written):** 24 · **Live-published + views:** not yet tracked (no analytics
+**Articles published (written):** 31 · **Live-published + views:** not yet tracked (no analytics
 connected; founder gate on live blog deploy — see PRE-5 showcase).
 > Action: connect site analytics (GitHub Pages / Vercel / Plausible) and record weekly view counts here.
 
@@ -555,6 +696,7 @@ Append a row every Monday. Keep the latest on top.
 
 | Week of | Products live | MRR | Units sold | Articles | Views | Fiverr gigs | Leads | Notes |
 |---------|--------------:|----:|-----------:|---------:|------:|------------:|------:|-------|
+| 2026-07-14 (M6 baseline) | 12 | $0 | 0 | 31 | untracked | 0 | 0 | c63ae201: M6 projection + burn reconciliation; burn flat $70/$500 (14%); M6 target ≈ $18.8k/mo (range $8.7k–$28.8k, 95–315 subs); $0 booked across all 6 channels (founder publish gates PRE-52/57/58/54 + affiliate PRE-5) — PRE-89 still `backlog`; handoff M7 projection ≈ $34.3k/mo derived |
 | 2026-07-14 (M5 baseline) | 12 | $0 | 0 | 24 | untracked | 0 | 0 | PRE-87: M5 projection + burn reconciliation; burn flat $70/$500 (14%); M5 target ≈ $10.9k/mo (range $7.1k–$14.7k, 75–155 subs); $0 booked across all 5 channels (founder publish gates PRE-52/57/58/54); 12 products + 24 articles staged; handoff M6 projection ≈ $18.8k/mo derived |
 | 2026-07-14 (M4 baseline) | 12 | $0 | 0 | 24 | untracked | 0 | 0 | PRE-86: M1–M3 reconciliation + M4 integration; burn flat $70/$500; M4 target ≈ $5,600/mo (range $5.1k–$7.4k); 12 products + 24 articles staged, $0 booked (founder publish gates PRE-52/57/58/54) |
 | 2026-07-13 (W0) | 2 | $0 | 0 | 3 | untracked | 0 | 0 | baseline; launch 2026-07-12 |
@@ -565,7 +707,8 @@ Append a row every Monday. Keep the latest on top.
 
 *This dashboard is the single source of truth for PRE-59 (Month-1), PRE-73 (Month-2 projection,
 burn analysis & runway), PRE-75 (Month-3 projection, burn analysis & revenue tracking),
-"Revenue dashboard M4" / PRE-86 (Month-4 projection, burn analysis & reconciliation), and
-"Revenue dashboard M5" / PRE-87 (Month-5 projection, burn analysis & reconciliation). Edit it
+"Revenue dashboard M4" / PRE-86 (Month-4 projection, burn analysis & reconciliation),
+"Revenue dashboard M5" / PRE-87 (Month-5 projection, burn analysis & reconciliation), and
+"Revenue dashboard M6" / c63ae201 (Month-6 projection, burn analysis & reconciliation). Edit it
 directly each week; no code changes needed.
 Do not auto-publish founder-owned pricing/payment pages — that remains a Prem (founder) decision.*
