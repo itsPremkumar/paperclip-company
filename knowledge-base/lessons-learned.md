@@ -1,5 +1,23 @@
 # Lessons Learned
 
+## TICK-29 — AI music-generator comparison SEO (Suno vs Udio vs Aiva vs Boomy) (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `revenue/blog/suno-vs-udio-vs-aiva-vs-boomy-2026.md` — an AI-music-generator
+  comparison, the *creative-audio* content-medium axis still missing after image
+  (Midjourney), video (Runway), voice/TTS (ElevenLabs), slides (Gamma), and writing
+  (Jasper) were already covered. 30-second verdict, side-by-side table (10 dims incl.
+  vocals / instrumental control / stems / streaming-distribution / lock-in), 12
+  contextual cross-links to faceless-channel, content-repurposing, autonomous-stack,
+  voice/video/image comparisons, zero-cost-products, package-prompts,
+  how-to-run-ai-company, and monetization; funneled to ai-content-machine-blueprint +
+  monetization-kit. Honors seo-comparison-article SKILL.md schema exactly (slug ==
+  filename, no price/checkout link, no secrets). Pure text, zero money movement, no
+  model inference.
+- **Lesson:** the content-medium comparison family (image → video → voice → slides →
+  music) is a self-replenishing axis set — each new medium solo creators adopt opens an
+  unsaturated "X vs Y vs Z" gap the corpus fills by analogy, keeping the series
+  compounding without inventing new angles.
+
 ## TICK-28 — AI SEO-tool comparison SEO (Surfer SEO vs Clearscope vs Frase vs MarketMuse) (2026-07-15)
 - **What was done (agent-executable, zero human gate):** Authored
   `revenue/blog/surfer-seo-vs-clearscope-vs-frase-vs-marketmuse-2026.md` — an AI-SEO-tool

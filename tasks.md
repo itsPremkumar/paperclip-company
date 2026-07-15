@@ -93,6 +93,15 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-15 (29th): authored `suno-vs-udio-vs-aiva-vs-boomy-2026.md`
+      AI-music-generator comparison SEO piece into revenue/blog/ (Suno vs Udio vs
+      Aiva vs Boomy — fills the missing *creative-audio* content-medium axis left by
+      the image/video/voice/slides/write comparisons; 30-second verdict + side-by-side
+      table + 12 cross-links to faceless-channel, content-repurposing, autonomous-stack,
+      voice/video/image comparisons, package-prompts, zero-cost-products,
+      how-to-run-ai-company, monetization; funnels to ai-content-machine-blueprint +
+      monetization-kit). Updated tasks.md + lessons-learned. Pure text, zero money
+      movement, no secrets.
 - [x] Tick 2026-07-15 (28th): authored `surfer-seo-vs-clearscope-vs-frase-vs-marketmuse-2026.md`
       AI-SEO-tool comparison SEO piece into revenue/blog/ (Surfer SEO vs Clearscope vs
       Frase vs MarketMuse — fills the missing *SEO content-optimization* axis, tightly
