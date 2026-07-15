@@ -1,5 +1,26 @@
 # Lessons Learned
 
+## TICK-34 — Appointment scheduling/booking automation SEO (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `income-engine/content/ai-agents-for-appointment-scheduling-and-booking-automation.md`
+  — the missing *high-intent local-service* axis (appointment scheduling & booking
+  automation), distinct from the already-covered voice-agent blueprint
+  (`ai-voice-agents-for-customer-support-automation`) and small-business roundup
+  (`best-ai-agents-for-small-business-automation`). 35-second value prop on
+  after-hours lead capture + no-show reduction, 5 concrete agent capabilities with
+  affiliate anchors, a decision frame (voice vs text vs self-hosted n8n), a 7-day
+  rollout plan, and the four classic failure modes. Slug == filename, no
+  price/checkout link, no secrets (per the proven SEO-article format). Pure text,
+  no model inference, zero money movement. RAM was ~256 MB (below the 300 MB
+  threshold), so this tick ran a lightweight self-improve pass only — no server
+  build, no heavy pipeline.
+- **Lesson:** re-confirmed TICK-32/33 secret hygiene. Staged ONLY the new article +
+  this lessons-learned entry + changelog.md — deliberately NOT `git add -A`. The
+  pre-existing modified `company-report.md` / `issues.json` (machine dumps from
+  prior ticks) and the untracked `start-pc-now.sh` (embeds BETTER_AUTH_SECRET /
+  pulls OPENROUTER_API_KEY path) + `_analyze.py` were left unstaged to keep the
+  commit scoped and secret-clean.
+
 ## TICK-33 — AI inference/API-gateway comparison SEO (OpenRouter vs Together.ai vs Replicate vs Groq) (2026-07-15)
 - **What was done (agent-executable, zero human gate):** Authored
   `revenue/blog/openrouter-vs-together-vs-replicate-vs-groq-2026.md` — the

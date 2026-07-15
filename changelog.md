@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-15 — Autonomy tick: appointment scheduling/booking automation SEO (TICK-34)
+- Authored `income-engine/content/ai-agents-for-appointment-scheduling-and-booking-automation.md`, a new high-intent local-service SEO article (after-hours lead capture + no-show reduction angle), distinct from the existing voice-agent and small-business pieces.
+- Added `TICK-34` entry to `knowledge-base/lessons-learned.md`.
+- Lightweight self-improve pass only: free RAM was ~256 MB (below the 300 MB threshold), so no server build or heavy pipeline was run.
+- Secret hygiene: staged only the new article + logs, NOT a blanket `git add -A`; machine dumps (`company-report.md`, `issues.json`) and secret-bearing `start-pc-now.sh` / `_analyze.py` left unstaged.
+
 ## 2026-07-15 — Autonomy tick: no-code AI agent builder SEO comparison (TICK-31)
 - Authored `revenue/blog/dify-vs-flowise-vs-langflow-vs-botpress-2026.md`, the
   missing *no-code AI agent builder* comparison axis (Dify, Flowise, Langflow,
