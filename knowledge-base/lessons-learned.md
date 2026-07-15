@@ -1,5 +1,30 @@
 # Lessons Learned
 
+## TICK-32 — Speech-to-text / STT-engine comparison SEO (Whisper vs AssemblyAI vs Deepgram vs Rev.ai) (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `revenue/blog/whisper-vs-assemblyai-vs-deepgram-vs-rev-ai-2026.md` — the
+  missing *speech-to-text / STT engine* axis (Whisper, AssemblyAI, Deepgram,
+  Rev.ai), distinct from the already-covered text-to-speech comparison
+  (`elevenlabs-vs-cartesia-vs-playht-vs-openai-tts`), meeting-assistant
+  comparison (`otter-vs-fireflies-vs-fathom-vs-tldv`), and voice-agent blueprint
+  (`how-to-build-ai-voice-agent`). 30-second verdict sliced on cost/control/
+  latency job shape, side-by-side table across 6 dims (form, self-host,
+  streaming, features, free tier, pricing), 11 contextual cross-links to
+  voice-agent, TTS comparison, meeting-assistants, content-repurposing,
+  faceless-channel, n8n, autonomous-stack, customer-support, package-prompts,
+  zero-cost-products, how-to-run-ai-company, monetization; funneled to
+  ai-content-machine-blueprint. Slug == filename, no price/checkout link, no
+  secrets (per `seo-comparison-article` SKILL.md).
+- **Lesson:** the corpus had a *component-layer gap*, not just a topic gap —
+  voice was covered as a finished blueprint and as TTS + meeting end-products,
+  but the raw STT engine the voice loop depends on (STT->LLM->TTS) had no
+  standalone comparison. Slicing the verdict on the reader's *job* (own-the-model
+  vs structure vs latency vs accuracy) keeps it decision-useful and reinforces
+  the zero-budget thesis (self-hosted Whisper = $0 marginal minutes). Re-confirmed
+  secret hygiene: `start-pc-now.sh` (untracked, embeds BETTER_AUTH_SECRET / pulls
+  OPENROUTER_API_KEY) and `_analyze.py` (untracked) were deliberately excluded —
+  staged only the article, tasks.md, and lessons-learned.md, not `git add -A`.
+
 ## TICK-31 — No-code AI agent builder comparison SEO (Dify vs Flowise vs Langflow vs Botpress) (2026-07-15)
 - **What was done (agent-executable, zero human gate):** Authored
   `revenue/blog/dify-vs-flowise-vs-langflow-vs-botpress-2026.md` — the missing

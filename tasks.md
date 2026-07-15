@@ -93,6 +93,23 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-15 (32nd): authored `whisper-vs-assemblyai-vs-deepgram-vs-rev-ai-2026.md`
+      speech-to-text/STT-engine comparison SEO piece into revenue/blog/ (Whisper
+      vs AssemblyAI vs Deepgram vs Rev.ai — fills the missing *STT engine* axis,
+      distinct from the covered TTS comparison, meeting-assistant comparison,
+      and voice-agent blueprint; 30-second verdict + side-by-side table + 11
+      cross-links to voice-agent, TTS comparison, meeting-assistants,
+      content-repurposing, faceless-channel, n8n, autonomous-stack,
+      customer-support, package-prompts, zero-cost-products, how-to-run-ai-company,
+      monetization; funnels to ai-content-machine-blueprint). Updated tasks.md +
+      lessons-learned. Pure text, zero money movement, no secrets.
+- [x] Tick 2026-07-15 (31st): authored `dify-vs-flowise-vs-langflow-vs-botpress-2026.md`
+      no-code AI agent-builder comparison SEO piece into revenue/blog/ (Dify vs
+      Flowise vs Langflow vs Botpress — fills the missing *no-code agent-builder*
+      axis; side-by-side table + 11 cross-links; funnels to ai-content-machine
+      blueprint + zero-to-10k-ai-agents). Pure text, zero money movement, no
+      secrets. (Board backfilled this tick — TICK-31 had updated lessons-learned
+      but not tasks.md.)
 - [x] Tick 2026-07-15 (30th): authored `beehiiv-vs-substack-vs-convertkit-vs-ghost-2026.md`
       creator-email/newsletter-platform comparison SEO piece into revenue/blog/
       (Beehiiv vs Substack vs ConvertKit/Kit vs Ghost — fills the missing
