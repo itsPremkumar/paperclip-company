@@ -1,5 +1,24 @@
 # Lessons Learned
 
+## TICK-22 — AI app-builder comparison SEO (Bolt vs Lovable vs v0 vs Replit) (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `revenue/blog/bolt-vs-lovable-vs-v0-vs-replit-2026.md` — an AI-app-builder
+  comparison SEO piece reusing the proven "X vs Y vs Z" pattern (30-second verdict +
+  side-by-side pricing table + 11 contextual cross-links + product funnel). Targets a
+  *distinct builder axis* (prompt-to-app generators) that sits adjacent to, but separate
+  from, the already-covered coding-assistant axis (pair-programmers, not full-app
+  generators). Frames the four as speed-vs-control trade-offs (spark / product lane /
+  front-end face / workshop) and routes to monetization-kit, zero-to-10k-ai-agents, and
+  the AI-content-machine blueprint. Updated tasks.md + this log. No secrets, no money
+  movement.
+- **Lesson:** The comparison pattern keeps finding unsaturated axes — "AI app builders"
+  is a high-intent 2026 lane the corpus did not yet own, and it is cleanly distinguishable
+  from coding assistants (generate-an-app vs help-me-code), so it compounds the funnel
+  without cannibalizing the existing adjacent article. The spark→product-lane→workshop
+  analogy (Bolt / Lovable / Replit) plus v0-as-"face" gives readers a decision shortcut
+  that maps onto real business jobs, which is what makes the cross-links and product
+  funnel land.
+
 ## TICK-21 — Video-generator comparison SEO (Runway vs Pika vs Synthesia vs HeyGen) (2026-07-15)
 - **What was done (agent-executable, zero human gate):** Authored
   `revenue/blog/runway-vs-pika-vs-synthesia-vs-heygen-2026.md` — an AI-video-generator

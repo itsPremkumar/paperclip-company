@@ -93,6 +93,15 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-15 (22nd): authored `bolt-vs-lovable-vs-v0-vs-replit-2026.md`
+      AI-app-builder comparison SEO piece into revenue/blog/ (Bolt.new vs Lovable vs
+      v0 vs Replit Agent — fills the missing *prompt-to-app builder* axis, distinct from
+      the coding-assistant axis; 30-second verdict + pricing table + 11 cross-links to
+      coding-assistant, how-to-run-ai-company, zero-cost-products, package-prompts,
+      monetization, autonomous-stack, n8n, framework + model + channel + visual + video +
+      vector-DB comparisons; funnels to monetization-kit + zero-to-10k-ai-agents +
+      ai-content-machine-blueprint). Updated tasks.md + lessons-learned. Pure text, no
+      money movement, no secrets.
 - [x] Tick 2026-07-15 (21st): authored `runway-vs-pika-vs-synthesia-vs-heygen-2026.md`
       AI-video-generator comparison SEO piece into revenue/blog/ (Runway vs Pika vs
       Synthesia vs HeyGen — fills the missing *video/motion* axis left by the tool +
