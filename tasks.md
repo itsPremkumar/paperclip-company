@@ -93,6 +93,16 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-15 (34th): authored `perplexity-vs-google-ai-mode-vs-microsoft-copilot-vs-you-2026.md`
+      AI-answer-engine comparison SEO piece into revenue/blog/ (Perplexity vs Google AI Mode vs
+      Microsoft Copilot vs You.com — fills the missing *AI search/answer engine* axis, distinct
+      from the covered LLM + inference-API comparisons; 30-second verdict + side-by-side table
+      across 10 dims + 12 contextual cross-links to LLM comparison, inference-API comparison,
+      autonomous-stack, how-to-run-ai-company, n8n, framework comparison, content-repurposing,
+      faceless-channel, lead-gen, customer-support, package-prompts, monetization; funnels to
+      ai-content-machine-blueprint + zero-to-10k-ai-agents). Resumes the lessons-learned log
+      (last synced at TICK-19) with this tick's entry. Pure text, zero money movement, no
+      secrets, no model inference.
 - [x] Tick 2026-07-15 (33rd): authored `openrouter-vs-together-vs-replicate-vs-groq-2026.md`
       AI-inference-API comparison SEO piece into revenue/blog/ (OpenRouter vs
       Together.ai vs Replicate vs Groq — fills the missing *inference/API

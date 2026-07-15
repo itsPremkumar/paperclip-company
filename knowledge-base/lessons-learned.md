@@ -487,3 +487,19 @@
   "what job does the reader have," not just "what category." Splitting the verdict on
   workflow shape (GUI assist vs terminal agent) is a crisp, decision-useful cut that also
   reinforces the zero-budget, one-person-company thesis.
+
+## TICK-34 — AI answer-engine comparison SEO (Perplexity vs Google AI Mode vs Microsoft Copilot vs You.com) (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `perplexity-vs-google-ai-mode-vs-microsoft-copilot-vs-you-2026.md` — an AI *search/answer
+  engine* comparison, a new axis (the *discovery layer*) sitting one step above the already
+  covered LLM and inference-API axes. 30-second verdict, side-by-side table across 10 dimensions,
+  12 contextual cross-links, funnel to ai-content-machine-blueprint + zero-to-10k-ai-agents.
+  Resumed the lessons log (it had stalled at TICK-19 while tasks.md kept advancing to TICK-33 —
+  a board/log drift; this entry re-syncs them). Scanned working tree; no secrets. No model
+  inference was run to produce the article (pure authored text).
+- **Lesson:** the comparison series has now spanned tool → framework → model → channel →
+  infra → role-family → *discovery layer*. Each new axis is just "what layer of the stack does
+  the reader stand on," which means the format is effectively inexhaustible as long as the
+  corpus keeps cross-linking. Keeping `slug == filename` and the exact front-matter keys is what
+  lets the blog generator pick the post up with zero manual edits — schema drift, not content,
+  is the only real failure mode, so every tick should re-use the canonical block verbatim.
