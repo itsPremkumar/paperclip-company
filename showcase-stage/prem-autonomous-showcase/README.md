@@ -39,8 +39,9 @@ build trust and convert interested teams into custom automation engagements.
 We ship small, dependency-free tools that show the kind of craft our agents deliver.
 First release: **[prompt-executor](https://github.com/itsPremkumar/prompt-executor)** —
 a zero-dependency CLI that prints expert-crafted prompts for 12 categories
-(coding, marketing, email, SEO, and more). MIT-licensed, free on
-[GitHub](https://github.com/itsPremkumar/prompt-executor) and npm.
+(coding, marketing, email, SEO, and more). MIT-licensed, source on
+[GitHub](https://github.com/itsPremkumar/prompt-executor). _npm publish is pending
+founder auth (owner-gated, 2FA) — tracked in PRE-85._
 
 ---
 

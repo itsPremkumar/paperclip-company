@@ -93,6 +93,13 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-15 (18th): authored `pinecone-vs-chroma-vs-qdrant-vs-weaviate-2026.md`
+      vector-DB comparison SEO piece into revenue/blog/ (Pinecone vs Chroma vs Qdrant vs
+      Weaviate — fills the missing *infra/storage* axis left by the tool + framework + model
+      + channel comparisons; 30-second verdict + side-by-side table + cross-links 11 existing
+      articles; funnels to ai-agent-monetization + zero-to-10k-ai-agents). Also backfilled the
+      TICK-17 lessons-learned entry the board claimed but the log missed. Updated tasks.md +
+      lessons-learned. No secrets.
 - [x] Tick 2026-07-14 (9th): authored `48-hour-digital-product-validation-2026.md`
       SEO validation playbook into revenue/blog/ (fills the pre-build validation
       gap in the funnel; cross-links zero-cost-digital-products, how-to-run-ai-company,

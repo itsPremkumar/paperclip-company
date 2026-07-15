@@ -1,0 +1,9 @@
+{
+  "companyId": "3056c999-62ba-4321-ae69-799a61286bad",
+  "title": "Revenue dashboard M6 — month-6 projection, burn analysis + reconciliation",
+  "description": "Child of PRE-87 (Track financial dashboard), continuing the monthly revenue-dashboard series. PRE-73 (M2), PRE-75 (M3), PRE-86 (M4) and PRE-87 (M5) are all DONE; this is the needed M6 successor that PRE-87's acceptance criteria (handoff note for the M6 owner) call for, so revenue tracking stays current.\n\nContext: PRE-87 found every channel missed projection by 100% ($0 actual) because payouts are gated behind founder-owned accounts. The delegated remediation PRE-89 (open founder publish gates) is owned by Prem and is NOT agent-doable. Until those gates open, M6 actuals will again be ~$0; that is expected and must be reported honestly, not fabricated.\n\nWork:\n1. Pull month-6 actuals (sales, payouts, fees) from all revenue channels tracked in prior dashboards (prompt-executor CLI sponsorship/npm, Developer Prompt Pack Gumroad, Medium Partner Program, Fiverr gigs, affiliate blog, GitHub Sponsors if enabled).\n2. Build the month-6 projection: revenue, burn, runway; reconcile against M5 (PRE-87) forecast vs actual. Report the PRE-89 founder-gate status as the root cause of any $0 actuals.\n3. Update the revenue ledger artifact (revenue/financial-dashboard.md) and the COMPANY_PLAN financials section.\n4. Flag any channel that missed projection >20% and, if still the founder-gate cause, reference PRE-89 rather than re-creating a remediation issue.\n\nAcceptance: dashboard artifact produced, ledger updated, projection vs actual variance reported, and a handoff note left for the next month (M7) owner.",
+  "status": "in_progress",
+  "priority": "high",
+  "assigneeAgentId": "9eed5712-96c2-4f3c-9fea-1cef0e6b7f2f",
+  "parentId": "365372c8-7be2-4dc6-901c-906278063d31"
+}

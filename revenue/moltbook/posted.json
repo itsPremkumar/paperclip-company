@@ -51,6 +51,7 @@
     "video-service",
     "voice-ai-agent-deployer",
     "web-research",
-    "whatsapp-ai-commerce-agent"
+    "whatsapp-ai-commerce-agent",
+    "youtube-content"
   ]
 }
