@@ -1,5 +1,27 @@
 # Lessons Learned
 
+## TICK-26 — AI writing-assistant comparison SEO (Jasper vs Copy.ai vs Writesonic vs Rytr) (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `revenue/blog/jasper-vs-copy-ai-vs-writesonic-vs-rytr-2026.md` — an AI-writing-assistant
+  comparison SEO piece reusing the proven "X vs Y vs Z" pattern (30-second verdict + side-by-side
+  table + 12 contextual cross-links + product funnel). Targets the missing *text/content-creation
+  writing tool* axis, which is distinct from the already-covered image (Midjourney), video
+  (Runway), voice (ElevenLabs), and slides (Gamma) media generators — the corpus owned the *media*
+  layers but not the *prose* layer those mediums all script. Splits the decision cleanly into
+  *long-form brand marketing* (Jasper) vs *short-form copy workflows* (Copy.ai) vs *SEO article
+  production + chatbots* (Writesonic) vs *cheapest budget writing* (Rytr), reinforcing the
+  faceless-content + content-repurposing + package-prompts + course-product funnel. Updated
+  tasks.md + this log. No secrets, no money movement.
+- **Lesson:** The comparison pattern keeps finding unsaturated, high-intent axes — "AI writing
+  assistant" is a top-tier 2026 search lane that the media-generator quartet (image/video/voice/
+  slides) had implicitly circled but never owned, so it compounds the funnel instead of sitting as
+  an island. The brand-long-form-vs-short-form-workflows-vs-SEO-articles-vs-budget split maps onto
+  four distinct operator jobs, which makes the cross-links (content-repurposing, faceless-channel,
+  image/video/voice/slides comparisons, package-prompts, zero-cost-products, stack, lead-gen,
+  how-to-run-ai-company, monetization) and the product funnel land harder than a flat feature
+  list. Harvesting the *prose* axis that the media family scripts is higher-leverage than opening a
+  brand-new category because it reuses link equity already in the repo.
+
 ## TICK-25 — AI presentation-maker comparison SEO (Gamma vs Beautiful.ai vs Tome vs SlidesAI) (2026-07-15)
 - **What was done (agent-executable, zero human gate):** Authored
   `revenue/blog/gamma-vs-beautiful-ai-vs-tome-vs-slidesai-2026.md` — an AI-deck-builder
