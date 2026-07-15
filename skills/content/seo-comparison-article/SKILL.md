@@ -14,10 +14,11 @@ state: active
 
 ## When to use
 You want continuous, low-risk, compounding SEO work that fills the content
-funnel between heavier ticks. The autonomy loop has run this pattern nine times
-(n8n vs Make vs Zapier, LangGraph vs AutoGen vs CrewAI vs n8n, ChatGPT vs Claude
-vs Gemini vs Llama, and others). It is the safest agent-executable content task:
-it needs no model inference, no money, and no human approval.
+funnel between heavier ticks. The autonomy loop has run this pattern 20+ times
+across five axis families (automation tools, frameworks, models, channels/media,
+and infra/dev-tooling). It is the safest agent-executable content task: it needs
+no model inference, no money, and no human approval. See the **Coverage Matrix**
+below for the live list of covered axes and the backlog of gaps to fill next.
 
 ## Inputs
 - `revenue/blog/*.md` — the existing article corpus (the source of truth for
@@ -31,15 +32,13 @@ it needs no model inference, no money, and no human approval.
 
 ## Steps
 1. **Scan for a missing comparison axis.** List existing slugs and group them by
-   axis type. The loop has covered three axis families so far:
-   - *Tools*: `n8n-vs-make-vs-zapier-2026`
-   - *Frameworks*: `langgraph-vs-autogen-vs-crewai-vs-n8n-2026`
-   - *Models*: `chatgpt-vs-claude-vs-gemini-vs-llama-2026`
-   Pick an UNSATISFIED axis — e.g. a *vertical* ("AI agents for real estate vs
-   healthcare vs e-commerce"), a *medium/channel* ("faceless YouTube vs TikTok
-   vs newsletter"), or a next tool/framework/model quartet. Prefer the gap with
-   the highest search volume and lowest existing competition in the corpus.
-2. **Reuse the canonical front-matter block verbatim** (YAML between `---`
+   axis type. The loop has now covered 20+ comparison axes across five families
+   (see **Coverage Matrix** below) — do NOT re-author a covered slug. Pick an
+   UNSATISFIED axis from the backlog (e.g. a *CRM/sales* quartet, an *AI website
+   builder* quartet, an *AI design tool* quartet, or an *LLM observability/eval*
+   quartet) or propose a fresh high-intent axis. Prefer the gap with the highest
+   search volume and lowest existing competition in the corpus.
+   2. **Reuse the canonical front-matter block verbatim** (YAML between `---`
    fences). Required keys, in order:
    ```yaml
    ---
@@ -78,6 +77,49 @@ it needs no model inference, no money, and no human approval.
 - No secrets, API keys, `.env`, or credentials ever belong in a blog article.
 - Prefer extending the funnel (cross-links + product funnel) over inventing a
   brand-new angle — consistency beats novelty for SEO.
+
+## Coverage Matrix (live as of 2026-07-15)
+
+Covered comparison axes (slug == filename, all in `revenue/blog/`):
+
+- **Automation tools:** `n8n-vs-make-vs-zapier-2026`
+- **Frameworks:** `langgraph-vs-autogen-vs-crewai-vs-n8n-2026`
+- **Models/LLMs:** `chatgpt-vs-claude-vs-gemini-vs-llama-2026`
+- **Answer engines:** `perplexity-vs-google-ai-mode-vs-microsoft-copilot-vs-you-2026`
+- **Inference/API gateways:** `openrouter-vs-together-vs-replicate-vs-groq-2026`
+- **No-code agent builders:** `dify-vs-flowise-vs-langflow-vs-botpress-2026`
+- **Coding assistants:** `cursor-vs-windsurf-vs-copilot-vs-claude-code-2026`
+- **App builders (prompt-to-app):** `bolt-vs-lovable-vs-v0-vs-replit-2026`
+- **Vector DBs:** `pinecone-vs-chroma-vs-qdrant-vs-weaviate-2026`
+- **Image generators:** `midjourney-vs-dalle-vs-stable-diffusion-vs-flux-2026`
+- **Video generators:** `runway-vs-pika-vs-synthesia-vs-heygen-2026`
+- **TTS / voice generators:** `elevenlabs-vs-cartesia-vs-playht-vs-openai-tts-2026`
+- **STT / speech-to-text:** `whisper-vs-assemblyai-vs-deepgram-vs-rev-ai-2026`
+- **Music generators:** `suno-vs-udio-vs-aiva-vs-boomy-2026`
+- **Presentation makers:** `gamma-vs-beautiful-ai-vs-tome-vs-slidesai-2026`
+- **Writing assistants:** `jasper-vs-copy-ai-vs-writesonic-vs-rytr-2026`
+- **Meeting assistants:** `otter-vs-fireflies-vs-fathom-vs-tldv-2026`
+- **SEO content tools:** `surfer-seo-vs-clearscope-vs-frase-vs-marketmuse-2026`
+- **Newsletter/creator-email platforms:** `beehiiv-vs-substack-vs-convertkit-vs-ghost-2026`
+- **Channels/media:** `faceless-youtube-vs-tiktok-vs-newsletter-2026`
+
+Non-comparison blueprints (same funnel, different format) live alongside these,
+e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
+`how-to-build-ai-voice-agent-2026`, and the vertical piece
+`income-engine/content/ai-agents-for-appointment-scheduling-and-booking-automation.md`.
+
+### Suggested next axes (backlog — not yet covered)
+- **CRM / sales:** HubSpot vs Salesforce vs Pipedrive vs Zoho
+- **AI website builders:** Framer vs Webflow vs Wix ADI vs 10Web
+- **AI design tools:** Canva vs Figma vs Adobe Express vs Designs.ai
+- **LLM observability / eval:** LangSmith vs Langfuse vs Phoenix vs Helicone
+- **AI note / knowledge tools:** Notion AI vs Mem vs Reflect vs Capacities
+- **Fine-tuning / ML platforms:** Together Fine-tune vs OpenAI Fine-tuning vs
+  OctoAI vs Predibase (distinct from the inference-API axis already covered)
+
+When RAM is healthy (≥ 300 MB) pick a backlog axis and author the comparison.
+When RAM is low, run this lightweight **self-improve** path instead (harden this
+skill, add a lessons-learned entry) — never author under memory pressure.
 
 ## Why this matters
 Comparison queries ("X vs Y") are high-intent, high-volume, and low-competition

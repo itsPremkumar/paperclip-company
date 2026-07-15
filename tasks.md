@@ -9,7 +9,7 @@
 - [ ] **Run income-engine generators** (blog + gumroad) and verify site build
 - [x] **Package remaining catalog products** into income-engine/gumroad/products/ (product-3 remotion-templates, product-4 monetization-kit, product-6 job-board-guide — all 8 catalog products now packaged)
 - [x] **Mirror top prompts** to Hermes-Prompt-Library repo (cloned the library; it already carries the master operating prompt at v3.0 — ahead of the company's v2.0. Synced v3.0 into company `prompts/` so the repo tracks the canonical latest; no separate push needed since the library is already the mirror + ahead)
-- [ ] **Build out skills/** — convert learned skills into SKILL.md entries (added `package-digital-product.md` + `low-ram-self-protect.md` earlier; `seo-comparison-article.md` this tick)
+- [ ] **Build out skills/** — convert learned skills into SKILL.md entries (added `package-digital-product.md` + `low-ram-self-protect.md` earlier; `seo-comparison-article.md` shipped; TICK-35 added a live Coverage Matrix + backlog to that skill so future ticks self-select the next uncovered axis)
 - [ ] [HUMAN-GATED] Publish Gumroad listings (needs account + price approval)
 - [ ] [HUMAN-GATED] Connect payouts / bank / PayPal
 - [ ] [HUMAN-GATED] Any paid ad spend or account signup
@@ -103,6 +103,16 @@
       ai-content-machine-blueprint + zero-to-10k-ai-agents). Resumes the lessons-learned log
       (last synced at TICK-19) with this tick's entry. Pure text, zero money movement, no
       secrets, no model inference.
+- [x] Tick 2026-07-15 (35th): **low-RAM self-improve pass** — free RAM measured 123256 KB
+      (~120 MB) < 300 MB gate, so deferred all heavy work (no SEO generation, no build, no
+      model inference) and ran a lightweight self-improve pass only: added a **Coverage Matrix**
+      to `skills/content/seo-comparison-article/SKILL.md` documenting all 20+ covered comparison
+      axes across five families plus a ready backlog of uncovered axes (CRM/sales, AI website
+      builders, AI design tools, LLM observability/eval, AI note tools, fine-tuning platforms),
+      so future ticks pick the next gap instantly without re-scanning. Updated tasks.md +
+      lessons-learned. Staged only these 3 files (NOT `git add -A`) to keep secret-bearing
+      untracked files (`start-pc-now.sh`, `_analyze.py`) out of the commit. No money movement,
+      no secrets.
 - [x] Tick 2026-07-15 (33rd): authored `openrouter-vs-together-vs-replicate-vs-groq-2026.md`
       AI-inference-API comparison SEO piece into revenue/blog/ (OpenRouter vs
       Together.ai vs Replicate vs Groq — fills the missing *inference/API
