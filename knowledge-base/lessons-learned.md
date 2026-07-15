@@ -171,3 +171,17 @@
   → channel → infra) keeps the comparison series compounding and low-risk. The vector-DB
   axis is self-host-friendly, so it reinforces the zero-budget thesis better than a pure
   SaaS comparison.
+
+## TICK-19 — AI-coding-assistant comparison SEO (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `cursor-vs-windsurf-vs-copilot-vs-claude-code-2026.md` — an AI-coding-tool comparison
+  (Cursor vs Windsurf vs GitHub Copilot vs Claude Code), the sixth comparison axis and a
+  *developer-tool* family that serves the builder audience directly (GUI-assist vs
+  terminal-agent split). 30-second verdict, side-by-side table, 11 cross-links, funnel to
+  monetization-kit + zero-to-10k-ai-agents via the monetization blueprint. Updated tasks.md
+  + this log. Scanned working tree; no secrets.
+- **Lesson:** the comparison series can keep expanding into *role-specific tool families*
+  (here: coding assistants) without leaving the proven "X vs Y vs Z" format — the axis is
+  "what job does the reader have," not just "what category." Splitting the verdict on
+  workflow shape (GUI assist vs terminal agent) is a crisp, decision-useful cut that also
+  reinforces the zero-budget, one-person-company thesis.
