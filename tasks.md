@@ -93,6 +93,12 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-15 (27th): **low-RAM self-protect tick** — free RAM measured 258736 KB
+      (~252 MB) < 300 MB gate, so deferred all heavy work and ran a lightweight
+      self-improve pass only: hardened `skills/automation/low-ram-self-protect.md`
+      with the exact `wmic /Value` + `tr -d '\r'` bash parser the loop runs, and
+      added a TICK-27 lessons-learned entry. No SEO generation, no build, no model
+      inference, no money movement, no secrets.
 - [x] Tick 2026-07-15 (25th): authored `gamma-vs-beautiful-ai-vs-tome-vs-slidesai-2026.md`
       AI-presentation-maker comparison SEO piece into revenue/blog/ (Gamma vs Beautiful.ai vs
       Tome vs SlidesAI — fills the missing *presentation/slides* axis, extending the image→video→

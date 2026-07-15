@@ -21,10 +21,23 @@ host and free physical memory routinely oscillates between ~100 MB and ~644 MB.
 
 ## How to measure (Windows / git-bash)
 ```bash
-wmic OS Get FreePhysicalMemory
+wmic OS Get FreePhysicalMemory /Value
 ```
 The value is in **KB**. `236580` = ~231 MB. Parse and compare in KB to avoid
-float rounding.
+float rounding. Copy-paste check used by the loop (`autonomy-loop.py::free_ram_mb`):
+```bash
+free_kb=$(wmic OS Get FreePhysicalMemory /Value 2>/dev/null \
+          | grep -i '=' | cut -d= -f2 | tr -d '\r' | tr -d ' ')
+if [ "${free_kb:-0}" -lt 307200 ]; then   # 300 MiB = 307200 KiB
+  echo "LOW RAM ($((${free_kb:-0}/1024)) MB) — lightweight pass only"
+else
+  echo "OK ($((${free_kb:-0}/1024)) MB)"
+fi
+```
+Note the `/Value` flag yields `FreePhysicalMemory=NNN` (one line, no header
+padding), which is far easier to parse than the default tabular output. Always
+`tr -d '\r'` — `wmic` emits CRLF on Windows and the trailing CR breaks integer
+comparison in bash.
 
 ## Lightweight pass (safe under low RAM)
 - Markdown edits to `knowledge-base/`, `skills/`, `tasks.md` (pure text, no model

@@ -1,5 +1,23 @@
 # Lessons Learned
 
+## TICK-27 — Low-RAM self-protect tick + skill hardening (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Free physical RAM measured
+  `258736 KB` (~252 MB) via `wmic OS Get FreePhysicalMemory`, which is below the
+  `FREE_RAM_WARN_MB = 300` gate. Per `skills/automation/low-ram-self-protect.md` the
+  tick deferred all heavy work (no SEO generation, no build, no generators) and ran
+  only a lightweight self-improve pass: hardened that same skill with a copy-paste
+  bash parser (`/Value` flag + `tr -d '\r'` to strip wmic's CRLF, integer compare
+  against `307200 KiB`) so the documented check matches what `autonomy-loop.py::
+  free_ram_mb` actually runs. Updated tasks.md + this log. No secrets, no money
+  movement, no model inference.
+- **Lesson:** The RAM gate is doing its job — it caught a sub-300 MB tick and kept the
+  loop on cheap, safe text edits instead of thrashing the 6 GB host. Two reusable
+  gotchas worth pinning in the skill: (1) `wmic` default output is padded tabular
+  text that's painful to parse; the `/Value` form (`FreePhysicalMemory=NNN`) is one
+  clean line. (2) `wmic` emits CRLF, so the trailing `\r` must be stripped or the
+  bash integer comparison silently misbehaves. Encoding the exact loop snippet in
+  the skill closes the gap between "documented policy" and "code that runs".
+
 ## TICK-26 — AI writing-assistant comparison SEO (Jasper vs Copy.ai vs Writesonic vs Rytr) (2026-07-15)
 - **What was done (agent-executable, zero human gate):** Authored
   `revenue/blog/jasper-vs-copy-ai-vs-writesonic-vs-rytr-2026.md` — an AI-writing-assistant
