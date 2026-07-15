@@ -93,6 +93,12 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-15 (24th): authored `otter-vs-fireflies-vs-fathom-vs-tldv-2026.md`
+      AI-meeting-assistant comparison SEO piece into revenue/blog/ (Otter.ai vs Fireflies.ai vs
+      Fathom vs tl;dv — fills the missing *sales/support call-capture* B2B axis adjacent to
+      lead-gen, customer-support, solopreneur-automation, and n8n; 30-second verdict + side-by-side
+      table + 12 cross-links; funnels to ai-content-machine-blueprint). Updated tasks.md +
+      lessons-learned. Pure text, zero money movement, no secrets.
 - [x] Tick 2026-07-15 (23rd): authored `elevenlabs-vs-cartesia-vs-playht-vs-openai-tts-2026.md`
       AI-voice-generator comparison SEO piece into revenue/blog/ (ElevenLabs vs Cartesia vs
       PlayHT vs OpenAI TTS — fills the missing *voice/speech* axis left by the image + video

@@ -1,5 +1,23 @@
 # Lessons Learned
 
+## TICK-24 — AI meeting-assistant comparison SEO (Otter.ai vs Fireflies.ai vs Fathom vs tl;dv) (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `revenue/blog/otter-vs-fireflies-vs-fathom-vs-tldv-2026.md` — an AI-meeting-notetaker
+  comparison SEO piece reusing the proven "X vs Y vs Z" pattern (30-second verdict + side-by-side
+  table + 12 contextual cross-links + product funnel). Targets the missing *sales/support capture*
+  axis (B2B call-recording) adjacent to the lead-gen, customer-support, solopreneur-automation, and
+  n8n automation articles — the funnel's *input* layer that the comparison corpus had not yet owned.
+  Splits the decision cleanly into *best capture/search* (Otter) vs *CRM/pipeline handoff* (Fireflies)
+  vs *free-first solo capture* (Fathom) vs *async video highlights* (tl;dv), reinforcing the
+  lead-gen + support + content-repurposing funnel. Updated tasks.md + this log. No secrets, no money
+  movement.
+- **Lesson:** The comparison pattern keeps finding unsaturated, high-intent B2B axes — "AI meeting
+  notetaker" is a strong 2026 search lane that maps directly onto the existing sales-call and
+  support-call funnels (the *capture* half of lead-gen and customer-support), so it compounds the
+  funnel instead of sitting as an island. The capture-vs-handoff-vs-free-vs-highlight split maps onto
+  four distinct operator jobs, which makes the cross-links (7-workflows, lead-gen, support, n8n,
+  content-repurposing, faceless-content) and the product funnel land harder than a flat feature list.
+
 ## TICK-23 — AI voice-generator comparison SEO (ElevenLabs vs Cartesia vs PlayHT vs OpenAI TTS) (2026-07-15)
 - **What was done (agent-executable, zero human gate):** Authored
   `revenue/blog/elevenlabs-vs-cartesia-vs-playht-vs-openai-tts-2026.md` — an AI-voice-generator
