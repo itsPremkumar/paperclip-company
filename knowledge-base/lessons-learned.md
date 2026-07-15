@@ -1,5 +1,24 @@
 # Lessons Learned
 
+## TICK-28 — AI SEO-tool comparison SEO (Surfer SEO vs Clearscope vs Frase vs MarketMuse) (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `revenue/blog/surfer-seo-vs-clearscope-vs-frase-vs-marketmuse-2026.md` — an AI-SEO-tool
+  comparison SEO piece reusing the proven "X vs Y vs Z" pattern (30-second verdict + side-by-side
+  table + 12 contextual cross-links + product funnel). Fills the missing *SEO content-optimization*
+  axis, which is the highest-commercial-intent gap in the corpus: the company's own content
+  repurposing engine and faceless-channel strategy depend on ranking posts, yet no article compared
+  the tools that do the ranking. Splits the decision into *data-driven on-page optimization* (Surfer
+  SEO) vs *editor-grade term coverage* (Clearscope) vs *query-to-draft briefs* (Frase) vs *site-wide
+  authority modeling* (MarketMuse), and routes readers to the content-repurposing + monetization
+  funnel. Honors the seo-comparison-article SKILL.md schema exactly (slug == filename, no price/checkout
+  link, no secrets). Pure text, zero money movement, no model inference.
+- **Lesson:** Comparison axes compound best when they *reuse the company's own method as the hook*.
+  An SEO-tool comparison lands harder when it opens by naming the faceless channel and the repurposing
+  engine the reader is already trying to feed — internal cross-links become the proof, not a footer
+  dump. Reuse over novelty still wins: the 14th comparison article is valuable precisely because the
+  prior 13 give it instant link equity. Keep funnels pointed at human-gated products (monetization-kit,
+  ai-content-machine-blueprint) without embedding price or checkout.
+
 ## TICK-27 — Low-RAM self-protect tick + skill hardening (2026-07-15)
 - **What was done (agent-executable, zero human gate):** Free physical RAM measured
   `258736 KB` (~252 MB) via `wmic OS Get FreePhysicalMemory`, which is below the

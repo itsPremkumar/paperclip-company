@@ -93,6 +93,15 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-15 (28th): authored `surfer-seo-vs-clearscope-vs-frase-vs-marketmuse-2026.md`
+      AI-SEO-tool comparison SEO piece into revenue/blog/ (Surfer SEO vs Clearscope vs
+      Frase vs MarketMuse — fills the missing *SEO content-optimization* axis, tightly
+      coupled to the company's own content method; 30-second verdict + side-by-side table
+      + 12 contextual cross-links to content-repurposing, faceless-channel, jasper writing
+      assistant, LLM comparison, stack, monetization, package-prompts, zero-cost-products,
+      lead-gen, how-to-run-ai-company; funnels to monetization-kit + ai-content-machine
+      blueprint products). Updated tasks.md + lessons-learned. Pure text, zero money
+      movement, no secrets.
 - [x] Tick 2026-07-15 (27th): **low-RAM self-protect tick** — free RAM measured 258736 KB
       (~252 MB) < 300 MB gate, so deferred all heavy work and ran a lightweight
       self-improve pass only: hardened `skills/automation/low-ram-self-protect.md`
