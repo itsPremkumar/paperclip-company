@@ -1,5 +1,23 @@
 # Lessons Learned
 
+## TICK-23 — AI voice-generator comparison SEO (ElevenLabs vs Cartesia vs PlayHT vs OpenAI TTS) (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `revenue/blog/elevenlabs-vs-cartesia-vs-playht-vs-openai-tts-2026.md` — an AI-voice-generator
+  comparison SEO piece reusing the proven "X vs Y vs Z" pattern (30-second verdict + side-by-side
+  table + 11 contextual cross-links + product funnel). Targets the missing *voice/speech* axis
+  next to the already-covered image (Midjourney) and video (Runway) generator axes, completing the
+  image→video→voice content-creation-medium trio. Splits the decision cleanly into *hero realism*
+  (ElevenLabs) vs *real-time latency* (Cartesia) vs *multilingual bulk* (PlayHT) vs *cheapest
+  simple API* (OpenAI TTS), reinforcing the faceless-content + voice-agent funnel and pairing
+  directly with `how-to-build-ai-voice-agent-2026`. Updated tasks.md + this log. No secrets, no
+  money movement.
+- **Lesson:** The comparison pattern keeps finding adjacent unsaturated axes — voice is a natural
+  neighbor of the faceless-content funnel (the audio those channels actually ship), and the
+  realism-vs-latency-vs-bulk-vs-cheap split maps onto four distinct business jobs, which makes the
+  cross-links and product funnel land harder than a flat feature list. Completing the
+  image→video→voice trio also lets the corpus cross-link the three content mediums into one
+  "build a faceless content machine" narrative, compounding link equity across the whole family.
+
 ## TICK-22 — AI app-builder comparison SEO (Bolt vs Lovable vs v0 vs Replit) (2026-07-15)
 - **What was done (agent-executable, zero human gate):** Authored
   `revenue/blog/bolt-vs-lovable-vs-v0-vs-replit-2026.md` — an AI-app-builder

@@ -93,6 +93,14 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-15 (23rd): authored `elevenlabs-vs-cartesia-vs-playht-vs-openai-tts-2026.md`
+      AI-voice-generator comparison SEO piece into revenue/blog/ (ElevenLabs vs Cartesia vs
+      PlayHT vs OpenAI TTS — fills the missing *voice/speech* axis left by the image + video
+      generator comparisons; completes the image→video→voice content-medium trio; 30-second
+      verdict + side-by-side table + 11 cross-links to voice-agent, faceless-channel, video +
+      image comparisons, content-repurposing, zero-cost-products, package-prompts,
+      how-to-run-ai-company, autonomous-stack, monetization; funnels to ai-content-machine
+      blueprint). Pure text, zero money movement, no secrets.
 - [x] Tick 2026-07-15 (22nd): authored `bolt-vs-lovable-vs-v0-vs-replit-2026.md`
       AI-app-builder comparison SEO piece into revenue/blog/ (Bolt.new vs Lovable vs
       v0 vs Replit Agent — fills the missing *prompt-to-app builder* axis, distinct from
