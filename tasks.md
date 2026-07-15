@@ -93,6 +93,17 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-15 (30th): authored `beehiiv-vs-substack-vs-convertkit-vs-ghost-2026.md`
+      creator-email/newsletter-platform comparison SEO piece into revenue/blog/
+      (Beehiiv vs Substack vs ConvertKit/Kit vs Ghost — fills the missing
+      *newsletter/creator-email platform* axis, the channel the company's own
+      funnel leans on; 30-second verdict + side-by-side table across 9 dims +
+      cross-links to faceless-channel, lead-gen, content-repurposing, n8n
+      automation, zero-cost-products, how-to-run-ai-company, monetization,
+      autonomous-stack; funnels to ai-content-machine-blueprint + zero-to-10k
+      products). Honors the seo-comparison-article SKILL schema exactly (slug ==
+      filename, no price/checkout link, no secrets). Pure text, zero money
+      movement, no model inference.
 - [x] Tick 2026-07-15 (29th): authored `suno-vs-udio-vs-aiva-vs-boomy-2026.md`
       AI-music-generator comparison SEO piece into revenue/blog/ (Suno vs Udio vs
       Aiva vs Boomy — fills the missing *creative-audio* content-medium axis left by

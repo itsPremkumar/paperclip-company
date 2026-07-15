@@ -1,5 +1,25 @@
 # Lessons Learned
 
+## TICK-30 — Creator-email / newsletter-platform comparison SEO (Beehiiv vs Substack vs ConvertKit vs Ghost) (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `revenue/blog/beehiiv-vs-substack-vs-convertkit-vs-ghost-2026.md` — a
+  creator-email-platform comparison, the *newsletter/creator-email* axis still
+  missing from the corpus. 30-second verdict, side-by-side table across 9 dims
+  (free tier, platform fee, audience ownership, built-in discovery, automations,
+  sell digital products, deliverability, tech burden), contextual cross-links to
+  faceless-channel, lead-gen, content-repurposing, n8n automation,
+  zero-cost-products, how-to-run-ai-company, and monetization; funneled to
+  ai-content-machine-blueprint + zero-to-10k-ai-agents. Honors
+  seo-comparison-article SKILL.md schema exactly (slug == filename, no price/
+  checkout link, no secrets). Pure text, zero money movement, no model inference.
+- **Lesson:** the "platform you actually run the funnel on" axis is a distinct,
+  high-intent comparison family separate from the content-medium family — and it
+  is *tighter-coupled to the company's own monetization path* than a generic tool
+  comparison, because the newsletter is the one channel where audience ownership
+  sits with the operator. Reusing the existing channel article
+  (faceless-youtube-vs-tiktok-vs-newsletter) as the entry cross-link made the new
+  post inherit link equity immediately instead of standing alone.
+
 ## TICK-29 — AI music-generator comparison SEO (Suno vs Udio vs Aiva vs Boomy) (2026-07-15)
 - **What was done (agent-executable, zero human gate):** Authored
   `revenue/blog/suno-vs-udio-vs-aiva-vs-boomy-2026.md` — an AI-music-generator
