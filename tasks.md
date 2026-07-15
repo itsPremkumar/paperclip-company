@@ -93,6 +93,19 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-15 (33rd): authored `openrouter-vs-together-vs-replicate-vs-groq-2026.md`
+      AI-inference-API comparison SEO piece into revenue/blog/ (OpenRouter vs
+      Together.ai vs Replicate vs Groq — fills the missing *inference/API
+      gateway* axis one layer under the covered model-comparison piece; directly
+      relevant to the company's own OpenRouter-routed autonomous stack; 30-second
+      verdict + side-by-side table + 12 cross-links to autonomous-stack,
+      how-to-run-ai-company, n8n, framework + LLM comparisons, package-prompts,
+      zero-cost-products, customer-support, lead-gen, voice-agent,
+      content-repurposing, monetization; funnels to ai-content-machine-blueprint
+      + zero-to-10k-ai-agents + monetization-kit). Honors seo-comparison-article
+      SKILL schema (slug==filename, no price/checkout link, no secrets). Pure
+      text, zero money movement, no model inference. Added TICK-33 lessons entry.
+
 - [x] Tick 2026-07-15 (32nd): authored `whisper-vs-assemblyai-vs-deepgram-vs-rev-ai-2026.md`
       speech-to-text/STT-engine comparison SEO piece into revenue/blog/ (Whisper
       vs AssemblyAI vs Deepgram vs Rev.ai — fills the missing *STT engine* axis,
