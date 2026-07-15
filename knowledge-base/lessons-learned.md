@@ -1,5 +1,21 @@
 # Lessons Learned
 
+## TICK-21 — Video-generator comparison SEO (Runway vs Pika vs Synthesia vs HeyGen) (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `revenue/blog/runway-vs-pika-vs-synthesia-vs-heygen-2026.md` — an AI-video-generator
+  comparison SEO piece reusing the proven "X vs Y vs Z" pattern (30-second verdict +
+  side-by-side table + 11 cross-links + product funnel). Targets the missing *video/motion*
+  axis next to the already-covered tool, framework, model, channel, visual, vector-DB, and
+  coding-assistant axes. Splits the decision cleanly into *b-roll/motion* (Runway, Pika) vs
+  *talking-head avatar* (Synthesia, HeyGen), reinforcing the faceless-content + content-machine
+  funnel. Updated tasks.md + this log. No secrets, no money movement.
+- **Lesson:** The comparison pattern keeps finding adjacent unsaturated axes — video is a
+  natural neighbor of the faceless-content funnel (the asset those channels actually ship), and
+  the b-roll-vs-avatar split maps onto two distinct business jobs (footage vs presenter), which
+  makes the cross-links and product funnel land harder than a flat feature list. Avatar tools
+  (Synthesia/HeyGen) also let the corpus recommend a camera-free path, extending the zero-budget
+  thesis beyond just self-hostable open-weight software.
+
 ## TICK-20 — Image-generator comparison SEO (Midjourney vs DALL·E 3 vs Stable Diffusion vs Flux) (2026-07-15)
 - **What was done (agent-executable, zero human gate):** Authored
   `revenue/blog/midjourney-vs-dalle-vs-stable-diffusion-vs-flux-2026.md` — an

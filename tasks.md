@@ -93,6 +93,15 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-15 (21st): authored `runway-vs-pika-vs-synthesia-vs-heygen-2026.md`
+      AI-video-generator comparison SEO piece into revenue/blog/ (Runway vs Pika vs
+      Synthesia vs HeyGen — fills the missing *video/motion* axis left by the tool +
+      framework + model + channel + visual + vector-DB + coding-assistant comparisons;
+      30-second verdict + side-by-side table + 11 cross-links to faceless-channel,
+      faceless YouTube-vs-TikTok, content-repurposing, voice-agent, midjourney visual,
+      stack, zero-cost-products, package-prompts, how-to-run-ai-company, monetization;
+      funnels to ai-content-machine-blueprint). Pure text, zero money movement, no
+      secrets.
 - [x] Tick 2026-07-15 (20th): authored `midjourney-vs-dalle-vs-stable-diffusion-vs-flux-2026.md`
       AI-image-generator comparison SEO piece into revenue/blog/ (Midjourney vs DALL·E 3 vs
       Stable Diffusion vs Flux — fills the missing *visual/content-creation* axis left by the
