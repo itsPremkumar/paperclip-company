@@ -93,6 +93,13 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-15 (20th): authored `midjourney-vs-dalle-vs-stable-diffusion-vs-flux-2026.md`
+      AI-image-generator comparison SEO piece into revenue/blog/ (Midjourney vs DALL·E 3 vs
+      Stable Diffusion vs Flux — fills the missing *visual/content-creation* axis left by the
+      tool + framework + model + channel + vector-DB + coding-assistant comparisons; 20-second
+      verdict + side-by-side table + 11 cross-links to faceless-content, content-repurposing,
+      channel, LLM, voice-agent, stack, zero-cost-products, package-prompts, monetization;
+      funnels to ai-content-machine-blueprint). Pure text, zero money movement, no secrets.
 - [x] Tick 2026-07-15 (18th): authored `pinecone-vs-chroma-vs-qdrant-vs-weaviate-2026.md`
       vector-DB comparison SEO piece into revenue/blog/ (Pinecone vs Chroma vs Qdrant vs
       Weaviate — fills the missing *infra/storage* axis left by the tool + framework + model

@@ -1,0 +1,34 @@
+Hermes Engineer — PRE-89 status + corrected founder remediation (verified 2026-07-15T03:46Z, run 0e86b541)
+
+## What I verified live this run
+All agent-buildable assets are STAGED and on disk:
+- showcase-stage/prem-autonomous-showcase/* — README, index.html, linkedin-launch.md, pricing.md, writing.md
+- income-engine/gumroad/products/dev-prompts-pack/{PRODUCT.md, LISTING.txt} (150 prompts, $14)
+- revenue/blog/medium/* — 2 Medium drafts
+- artifacts/PRE-8-free-board-outreach-kit.md — 5-board outreach kit + tracker
+- All 3 AVG sample MP4s present on disk (PRE-7 = done)
+
+Liveness truth-check (curl, 2026-07-15T03:46Z):
+- github.com/itsPremkumar/prompt-executor -> HTTP 200 = LIVE (pushed by PRE-85). This is the agent-executable CLI repo, NOT the PRE-5 showcase.
+- github.com/itsPremkumar/prem-autonomous-showcase -> HTTP 404 = NOT live (staged locally only; PRE-5 still needs founder publish).
+- registry.npmjs.org/prompt-executor -> HTTP 404 = NOT published (npm publish needs founder npm token).
+
+## Corrected gate map (supersedes the issue's generic list with verified facts)
+1. PRE-5 showcase repo/Pages/LinkedIn — staged; publish live (currently 404). Founder GitHub publish.
+2. PRE-72 Gumroad Developer Prompt Pack — staged; publish live on Gumroad login (~5 min).
+3. PRE-54 Medium articles — 2 drafts staged; publish on Medium login + enroll Partner Program.
+4. PRE-6 pricing — sheet staged; confirm floor $129–$499/mo + $990 custom; publish.
+5. PRE-81/8 free-board outreach — kit ready; founder posts on 5 boards.
+6. PRE-74 sample videos — 3 MP4s rendered; upload to YT/TikTok on founder login.
+7. prompt-executor npm — name available; `npm login && npm publish` on founder's npm machine (GitHub part DONE).
+
+## Remediation owner
+Founder (Prem). Agent cannot perform these by policy / auth boundary.
+
+## Acceptance
+When any gate opens, report the public URL on the related issue; agent POSTs the payout to /revenue and the dashboard reconciles (acceptance = totalGross>0 in revenue summary).
+
+## One-line ask
+Reply "approved" + paste live URLs here. Minimal first win to break the $0 streak: open PRE-72 (Gumroad, ~5 min) or publish the showcase repo. Full step-by-step: showcase-stage/prem-autonomous-showcase/FOUNDER-GO-LIVE-CHECKLIST.md (on disk).
+
+PRE-89 remains in_progress with founder as live continuation owner (no agent-executable path to revenue exists until a gate opens).

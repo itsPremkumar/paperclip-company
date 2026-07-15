@@ -22,8 +22,30 @@
       ],
       "verified_live": true,
       "new_content_len": 1349
+    },
+    {
+      "date": "2026-07-15T09:00:16.968399",
+      "action": "edit",
+      "metrics_before": {
+        "score": 0,
+        "upvotes": 0,
+        "downvotes": 0,
+        "hot_score": 0,
+        "comment_count": 1,
+        "is_spam": true
+      },
+      "metrics_after": {
+        "score": 0,
+        "is_spam": true,
+        "comment_count": 1
+      },
+      "reasons": [
+        "anti-spam: external link demoted to trailing source line"
+      ],
+      "verified_live": true,
+      "new_content_len": 1381
     }
   ],
-  "last_edit_date": "2026-07-14",
+  "last_edit_date": "2026-07-15",
   "edit_count_today": 1
 }

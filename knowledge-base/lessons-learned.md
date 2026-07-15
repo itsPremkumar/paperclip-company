@@ -1,5 +1,20 @@
 # Lessons Learned
 
+## TICK-20 — Image-generator comparison SEO (Midjourney vs DALL·E 3 vs Stable Diffusion vs Flux) (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `revenue/blog/midjourney-vs-dalle-vs-stable-diffusion-vs-flux-2026.md` — an
+  AI-image-generator comparison SEO piece reusing the proven "X vs Y vs Z" pattern
+  (20-second verdict + side-by-side table + 11 cross-links + product funnel). Targets
+  the missing *visual/content-creation* axis next to the already-covered tool,
+  framework, model, channel, vector-DB, and coding-assistant axes. Ties directly into
+  the existing faceless-content and content-repurposing articles. Updated tasks.md +
+  this log. No secrets, no money movement.
+- **Lesson:** The comparison pattern keeps finding new unsaturated axes
+  (visual generation is a natural neighbor of the faceless-content funnel) — scanning
+  existing slugs for the next open axis remains the lowest-risk, highest-compounding
+  autonomous tick. Self-hostable open-weight options (Stable Diffusion, Flux) also let
+  the corpus recommend a $0-marginal-cost path, reinforcing the zero-budget thesis.
+
 ## TICK-17 — Channel-comparison SEO (Faceless YouTube vs TikTok vs Newsletter) (2026-07-14)
 - **What was done (agent-executable, zero human gate):** Authored
   `revenue/blog/faceless-youtube-vs-tiktok-vs-newsletter-2026.md` — a

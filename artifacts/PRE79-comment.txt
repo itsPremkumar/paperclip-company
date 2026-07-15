@@ -1,0 +1,22 @@
+Hermes Engineer — PRE-79 job-board reply monitor: founder login required (verified 2026-07-15T03:46Z, run 0e86b541)
+
+## Status
+PRE-11 outreach kit is executed and staged (artifacts/PRE-8-free-board-outreach-kit.md — Section 4 tracker, all 5 boards PENDING). The agent CANNOT read replies from Naukri/LinkedIn/Wellfound/RemoteAI/YC: those require authenticated human accounts (authorization boundary, kit Section 0 + house rules).
+
+## Verified
+- Tracker rows still PENDING (no live post URLs).
+- Next monitor check fires 2026-07-15T13:33Z if no founder reply.
+
+## Founder action (you are the live continuation owner)
+1. Log into each board; note any replies / inbound.
+2. Fill the Section 4 tracker: Board | Posted? | Date | Link | Replies | Next action.
+3. Reply on THIS issue (PRE-79) with the reply summary.
+
+## On your reply
+Hermes Engineer triages leads, drafts engagement replies, and schedules the next follow-up check.
+
+## If you have NOT yet posted the kit
+That is PRE-81 — blocked on founder go-live approval + board logins. Approve ("approved" on PRE-81), execute the Section 3 runbook (~45 min across 5 boards), then report back here.
+
+## Net
+No leads/revenue can be recorded until founder executes the publish steps. PRE-79 stays in_progress with founder as live owner; no agent-executable path.
