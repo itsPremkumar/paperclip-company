@@ -93,6 +93,14 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-15 (25th): authored `gamma-vs-beautiful-ai-vs-tome-vs-slidesai-2026.md`
+      AI-presentation-maker comparison SEO piece into revenue/blog/ (Gamma vs Beautiful.ai vs
+      Tome vs SlidesAI — fills the missing *presentation/slides* axis, extending the image→video→
+      voice→slides content-medium quartet; 30-second verdict + side-by-side table + 12 cross-links
+      to faceless-channel, content-repurposing, image/video/voice comparisons, package-prompts,
+      zero-cost-products, stack, lead-gen, how-to-run-ai-company, monetization; funnels to
+      ai-content-machine-blueprint). Updated tasks.md + lessons-learned. Pure text, no money
+      movement, no secrets.
 - [x] Tick 2026-07-15 (24th): authored `otter-vs-fireflies-vs-fathom-vs-tldv-2026.md`
       AI-meeting-assistant comparison SEO piece into revenue/blog/ (Otter.ai vs Fireflies.ai vs
       Fathom vs tl;dv — fills the missing *sales/support call-capture* B2B axis adjacent to

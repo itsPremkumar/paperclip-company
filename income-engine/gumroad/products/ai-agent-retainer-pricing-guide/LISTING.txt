@@ -1,0 +1,6 @@
+Title: AI Agent Retainer Pricing Guide
+Price: $27
+Description: Pricing tiers, scopes, and contract language to sell monthly agent retainers.
+
+Upload this folder's PRODUCT.md as the product file on Gumroad (free).
+Set the price above. You keep 100% minus Gumroad's standard fee.

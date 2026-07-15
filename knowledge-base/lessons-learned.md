@@ -1,5 +1,26 @@
 # Lessons Learned
 
+## TICK-25 — AI presentation-maker comparison SEO (Gamma vs Beautiful.ai vs Tome vs SlidesAI) (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `revenue/blog/gamma-vs-beautiful-ai-vs-tome-vs-slidesai-2026.md` — an AI-deck-builder
+  comparison SEO piece reusing the proven "X vs Y vs Z" pattern (30-second verdict + side-by-side
+  table + 12 contextual cross-links + product funnel). Targets the missing *presentation/slides*
+  axis adjacent to the already-covered image (Midjourney), video (Runway), and voice (ElevenLabs)
+  generator axes — extending the image→video→voice→slides content-creation-medium quartet.
+  Splits the decision cleanly into *one-click generation* (Gamma) vs *design-polish auto-layout*
+  (Beautiful.ai) vs *narrative media-rich storytelling* (Tome) vs *cheapest bulk text-to-decks*
+  (SlidesAI), reinforcing the faceless-content + content-repurposing + course-product funnel.
+  Updated tasks.md + this log. No secrets, no money movement.
+- **Lesson:** The comparison pattern keeps finding adjacent unsaturated axes — slides are the
+  natural "container" that holds the image/video/voice mediums the corpus already owns, so this
+  completes a four-medium content-family narrative and lets the whole set cross-link into one
+  "build a faceless content machine" story. The generation-vs-polish-vs-storytelling-vs-bulk split
+  maps onto four distinct operator jobs, which makes the cross-links (content-repurposing,
+  faceless-channel, image/video/voice comparisons, package-prompts, zero-cost-products, stack,
+  lead-gen, how-to-run-ai-company, monetization) and the product funnel land harder than a flat
+  feature list. Compounding the content-medium quartet is higher-leverage than opening a brand-new
+  axis because it harvests link equity already in the repo.
+
 ## TICK-24 — AI meeting-assistant comparison SEO (Otter.ai vs Fireflies.ai vs Fathom vs tl;dv) (2026-07-15)
 - **What was done (agent-executable, zero human gate):** Authored
   `revenue/blog/otter-vs-fireflies-vs-fathom-vs-tldv-2026.md` — an AI-meeting-notetaker
