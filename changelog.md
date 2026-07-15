@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-07-15 — Autonomy tick: no-code AI agent builder SEO comparison (TICK-31)
+- Authored `revenue/blog/dify-vs-flowise-vs-langflow-vs-botpress-2026.md`, the
+  missing *no-code AI agent builder* comparison axis (Dify, Flowise, Langflow,
+  Botpress) following the `seo-comparison-article` SKILL schema (slug == filename,
+  30-second verdict, 6-dim table, 11 cross-links, product funnel, no price/checkout).
+- Added `TICK-31` entry to `knowledge-base/lessons-learned.md` and an autonomy-log
+  row in `knowledge-base/autonomy-log.md`.
+- Secret hygiene: `start-pc-now.sh` (untracked) embeds `BETTER_AUTH_SECRET` and
+  reads `OPENROUTER_API_KEY` from a local `.env`; deliberately excluded from the
+  commit (staged only article + logs, not a blanket `git add -A`).
+
 ## 2026-07-13 — Repository bootstrap + prompt consolidation (v2.0)
 - Created `Hermes-Full-Autonomous-Company` as the single source of truth on GitHub.
 - Pushed the real, running company from `/c/one/paperclip-company`: 8 digital products, income engine, finance ledger, `hermes-paperclip-adapter` source, COMPANY_PLAN, status snapshot.

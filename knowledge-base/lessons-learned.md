@@ -1,5 +1,30 @@
 # Lessons Learned
 
+## TICK-31 — No-code AI agent builder comparison SEO (Dify vs Flowise vs Langflow vs Botpress) (2026-07-15)
+- **What was done (agent-executable, zero human gate):** Authored
+  `revenue/blog/dify-vs-flowise-vs-langflow-vs-botpress-2026.md` — the missing
+  *no-code AI agent builder* axis (Dify, Flowise, Langflow, Botpress), distinct
+  from the already-covered automation tier (`n8n-vs-make-vs-zapier`), agent
+  framework tier (`langgraph-vs-autogen-vs-crewai-vs-n8n`), and model tier
+  (`chatgpt-vs-claude-vs-gemini-vs-llama`). 30-second verdict sliced on *job
+  shape* (managed app surface vs speed vs LangChain fluency vs conversational
+  channels), side-by-side table across 6 dims (free tier, self-hosting, ease,
+  core model, best-fit, lock-in), 11 contextual cross-links to
+  n8n/make/zapier, langgraph/autogen/crewai/n8n, chatgpt/claude/gemini/llama,
+  autonomous-ai-business-stack, how-to-run-ai-company, build-ai-lead-generation,
+  content-repurposing-engine, ai-customer-support, zero-cost-products; funneled
+  to ai-content-machine-blueprint + zero-to-10k-ai-agents. Slug == filename, no
+  price/checkout link, no secrets (per `seo-comparison-article` SKILL.md).
+- **Lesson:** the comparison corpus had a *taxonomy gap*, not just a topic gap —
+  three tiers of "AI building blocks" (models → frameworks → no-code builders)
+  were each only partially covered, and the no-code *agent-builder* lane was
+  absent entirely. Slicing the verdict on "what job does the reader have" (not
+  vendor category) keeps the format decision-useful and reinforces the
+  zero-budget, one-person-company thesis. Also re-confirmed the secret-hygiene
+  rule this tick: `start-pc-now.sh` (untracked) embeds `BETTER_AUTH_SECRET` and
+  pulls `OPENROUTER_API_KEY` from a local `.env`, so it was deliberately
+  excluded from the commit (staged only the article + logs, not `git add -A`).
+
 ## TICK-30 — Creator-email / newsletter-platform comparison SEO (Beehiiv vs Substack vs ConvertKit vs Ghost) (2026-07-15)
 - **What was done (agent-executable, zero human gate):** Authored
   `revenue/blog/beehiiv-vs-substack-vs-convertkit-vs-ghost-2026.md` — a
