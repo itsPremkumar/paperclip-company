@@ -164,6 +164,54 @@ A pricing framework for selling monthly AI-agent retainers instead of one-off bu
 Works alongside the AI Agent ROI Calculator to justify the number.
 """
 },
+{
+"slug": "ai-agent-client-dashboard-notion",
+"title": "AI Agent Client Dashboard (Notion Template)",
+"desc": "A ready-to-duplicate Notion dashboard to track agent builds, retainer hours, and client deliverables.",
+"price": "25",
+"body": """# AI Agent Client Dashboard (Notion Template)
+
+A duplicate-and-go Notion workspace for running an automation agency without
+spreadsheet chaos.
+
+## What's inside
+- Build tracker (stage, owner, due date, status)
+- Retainer hours log with weekly caps
+- Client deliverables checklist
+- Revenue + runway mini-dashboard
+
+## How to use
+1. Duplicate the template into your workspace.
+2. Create one page per client.
+3. Log every build and every retainer hour; review weekly.
+
+Pairs with the AI Agent Retainer Pricing Guide to keep scopes honest.
+"""
+},
+{
+"slug": "prompt-library-automation-agents",
+"title": "200-Prompt Library for Automation Agents",
+"desc": "Copy-paste prompts for classifying, routing, and replying across support, sales, and ops agents.",
+"price": "19",
+"body": """# 200-Prompt Library for Automation Agents
+
+A categorized swipe-file of 200 production-ready prompts for building reliable
+agents.
+
+## What's inside
+- 60 classification & routing prompts (triage, intent, priority)
+- 70 reply & draft prompts (support, sales, ops)
+- 40 guardrail & validation prompts (block unsafe actions)
+- 30 evaluation prompts (score agent output)
+
+## How to use
+1. Open the category you need.
+2. Drop in your variables (tone, product, policy).
+3. Paste into your agent's system or task step; test on 10 cases.
+
+Works with any model and any orchestrator (n8n, Make, LangGraph).
+"""
+},
 ]
 
 def load_used():

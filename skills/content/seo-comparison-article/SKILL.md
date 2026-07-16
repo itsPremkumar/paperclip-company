@@ -103,6 +103,7 @@ Covered comparison axes (slug == filename, all in `revenue/blog/`):
 - **Newsletter/creator-email platforms:** `beehiiv-vs-substack-vs-convertkit-vs-ghost-2026`
 - **Channels/media:** `faceless-youtube-vs-tiktok-vs-newsletter-2026`
 - **CRM / sales:** `hubspot-vs-salesforce-vs-pipedrive-vs-zoho-2026`
+- **Customer-support helpdesk:** `zendesk-vs-freshdesk-vs-help-scout-vs-gorgias-2026`
 
 Non-comparison blueprints (same funnel, different format) live alongside these,
 e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
@@ -140,7 +141,7 @@ re-skin of an already-covered quartet):
 
 - **Email marketing / ESP automation:** Mailchimp vs Klaviyo vs ActiveCampaign vs Brevo
 - **Cloud / edge hosting (dev infra):** Vercel vs Netlify vs Railway vs Render
-- **AI customer-support helpdesk:** Zendesk vs Freshdesk vs Help Scout vs Gorgias
+- ~~AI customer-support helpdesk: Zendesk vs Freshdesk vs Help Scout vs Gorgias~~ — COVERED → `zendesk-vs-freshdesk-vs-help-scout-vs-gorgias-2026` (2026-07-16)
 - **E-commerce platforms:** Shopify vs WooCommerce vs BigCommerce vs Squarespace
 - **Landing-page builders:** Unbounce vs Leadpages vs Instapage vs Systeme
 - **Knowledge-base / docs tools:** Confluence vs GitBook vs Docusaurus vs Outline

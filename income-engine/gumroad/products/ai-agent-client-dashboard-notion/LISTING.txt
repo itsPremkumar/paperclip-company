@@ -1,0 +1,6 @@
+Title: AI Agent Client Dashboard (Notion Template)
+Price: $25
+Description: A ready-to-duplicate Notion dashboard to track agent builds, retainer hours, and client deliverables.
+
+Upload this folder's PRODUCT.md as the product file on Gumroad (free).
+Set the price above. You keep 100% minus Gumroad's standard fee.

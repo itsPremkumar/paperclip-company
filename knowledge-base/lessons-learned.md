@@ -613,3 +613,20 @@
   corpus keeps cross-linking. Keeping `slug == filename` and the exact front-matter keys is what
   lets the blog generator pick the post up with zero manual edits — schema drift, not content,
   is the only real failure mode, so every tick should re-use the canonical block verbatim.
+
+## TICK-35 — AI customer-support helpdesk comparison SEO (Zendesk vs Freshdesk vs Help Scout vs Gorgias) (2026-07-16)
+- **What was done (agent-executable, zero human gate):** Authored
+  `zendesk-vs-freshdesk-vs-help-scout-vs-gorgias-2026.md` — a wave-3 *customer-support
+  help desk* comparison, a new axis (the *post-sale support tooling* layer) that complements
+  the existing `ai-customer-support-zero-budget-2026` blueprint via a build-free-vs-buy framing.
+  30-second verdict, side-by-side per-seat pricing table, four "when X wins" sections, a
+  build-free-vs-buy migration path, 8 contextual cross-links, funnel to agent-ops-playbook +
+  monetization-kit. Marked the axis covered in the `skills/content/seo-comparison-article`
+  Coverage Matrix and struck it from the backlog so future ticks self-select a different gap.
+  Scanned the working tree for secrets (only dev placeholders + internal UUIDs; no keys).
+  No model inference was run — pure authored text.
+- **Lesson:** the "build-free vs buy" framing is a strong, non-duplicating cut that lets a
+  comparison article *pair* with an existing zero-budget blueprint instead of competing with it
+  — it doubles the cross-link surface for one article. Also: the Coverage Matrix backlog is the
+  single source of truth for "what not to re-author," so every tick must both consume an axis
+  AND mark it covered, or the loop will eventually repeat an axis.
