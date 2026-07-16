@@ -1,5 +1,25 @@
 # Lessons Learned
 
+## TICK-45 — No-code database comparison SEO article (2026-07-16)
+- **What was done (agent-executable, zero human gate):** Free RAM measured 494304 KB
+  (~494 MB) — well above the 300 MB gate — so this tick ran the **normal SEO-generation path**.
+  Authored `airtable-vs-nocodb-vs-baserow-vs-supabase-2026.md` into `revenue/blog/` — a
+  *no-code database* comparison (Airtable vs NocoDB vs Baserow vs Supabase), the next uncovered
+  axis in the second-wave Coverage-Matrix backlog. 30-second verdict + side-by-side table across
+  free tier / paid start / self-host / lock-in (4 dims) + 10 contextual cross-links (lead-gen,
+  n8n, autonomous-stack, how-to-run-ai-company, vector-DB, zero-cost-products, content-repurposing,
+  monetization, package-and-sell-ai-prompts) funnelling to monetization-kit + zero-to-10k-ai-agents.
+  Marked the axis covered (and struck from backlog) in `skills/content/seo-comparison-article/SKILL.md`.
+  Updated tasks.md. Pure authored text — no model inference, no money movement.
+- **Lesson:** The no-code database axis is a *data-layer* cut that sits beside the already-covered
+  vector-DB quartet (distinct buyer job: operational store vs embeddings), so it reinforces the
+  autonomous-stack narrative without overlap. Supabase's `pgvector` upgrade path is worth naming as
+  the natural graduation from grid-style tools. Verified every `./slug.md` target against the actual
+  `revenue/blog/` file list before writing to avoid dangling links. Staged ONLY the four safe files
+  to keep secret-bearing untracked files (`start-pc-now.sh`, `_analyze.py`, `api-issues.json`,
+  `newissue.json`, `live-issues.json`, `agent-detail.json`, build WIP) out of the commit — never
+  `git add -A` on this repo.
+
 ## TICK-44 — LLM observability/eval comparison SEO article (2026-07-16)
 - **What was done (agent-executable, zero human gate):** Free RAM measured 883164 KB
   (~883 MB) — well above the 300 MB gate — so this tick ran the **normal SEO-generation path**.

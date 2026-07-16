@@ -107,6 +107,7 @@ Covered comparison axes (slug == filename, all in `revenue/blog/`):
 - **Email marketing / ESP automation:** `mailchimp-vs-klaviyo-vs-activecampaign-vs-brevo-2026`
 - **E-commerce platforms:** `shopify-vs-woocommerce-vs-bigcommerce-vs-squarespace-2026`
 - **AI design tools:** `canva-vs-figma-vs-adobe-express-vs-designs-ai-2026`
+- **No-code databases:** `airtable-vs-nocodb-vs-baserow-vs-supabase-2026`
 
 Non-comparison blueprints (same funnel, different format) live alongside these,
 e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
@@ -133,7 +134,7 @@ These are role/layer cuts that sit beside the first wave and keep the
 - **Scheduling / calendar:** Calendly vs Cal.com vs Motion vs Reclaim
 - **Project management:** Linear vs Asana vs ClickUp vs Height
 - **Logo / brand design:** Looka vs Brandmark vs Tailor Brands vs LogoAI
-- **No-code database:** Airtable vs NocoDB vs Baserow vs Supabase
+- ~~No-code database: Airtable vs NocoDB vs Baserow vs Supabase~~ — COVERED → `airtable-vs-nocodb-vs-baserow-vs-supabase-2026` (2026-07-16)
 - **Website chat / chatbot:** Intercom vs Drift vs Tidio vs Crisp
 
 ### Third-wave backlog (added 2026-07-16) — non-overlapping B2B SaaS cuts

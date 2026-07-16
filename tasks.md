@@ -93,6 +93,18 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-16 (45th): authored `airtable-vs-nocodb-vs-baserow-vs-supabase-2026.md`
+      no-code-database comparison SEO piece into revenue/blog/ (Airtable vs NocoDB vs Baserow vs
+      Supabase — fills the *no-code database* axis from the second-wave backlog; distinct data-layer
+      cut from the covered vector-DB quartet; 30-second verdict + side-by-side table across 4 dims +
+      10 contextual cross-links to lead-gen, n8n, autonomous-stack, how-to-run-ai-company,
+      vector-DB, zero-cost-products, content-repurposing, monetization, package-prompts; funnels to
+      monetization-kit + zero-to-10k-ai-agents; names Supabase pgvector as the graduation path).
+      RAM healthy (~494 MB) so ran the normal SEO-generation path. Marked the axis covered (and
+      struck from backlog) in `skills/content/seo-comparison-article/SKILL.md`. Updated tasks.md +
+      lessons-learned. Staged ONLY the new article + SKILL.md + tasks.md + lessons-learned.md (NOT
+      `git add -A`) to keep secret-bearing untracked files out of the commit. Pure text, zero money
+      movement, no model inference, no secrets.
 - [x] Tick 2026-07-16 (44th): authored `langsmith-vs-langfuse-vs-phoenix-vs-helicone-2026.md`
       LLM-observability/eval comparison SEO piece into revenue/blog/ (LangSmith vs Langfuse vs
       Phoenix vs Helicone — fills the missing *LLM observability/eval* axis from the first-wave
