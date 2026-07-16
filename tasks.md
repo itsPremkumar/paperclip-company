@@ -6,6 +6,20 @@
 
 ## Open
 - [ ] **Author next SEO/article drafts into revenue/blog/** (agent-safe, continuous)
+- [x] Tick 2026-07-16 (51st): authored `calendly-vs-cal-com-vs-motion-vs-reclaim-2026.md`
+      scheduling/calendar comparison into revenue/blog/ (Calendly vs Cal.com vs Motion vs
+      Reclaim — fills the *scheduling / calendar* axis from the second-wave backlog; also
+      reinforces the company's own booking-automation vertical; 30-second verdict +
+      side-by-side table across 10 dims + 11 contextual cross-links to how-to-run-ai-company,
+      7-workflows, lead-gen, autonomous-stack, ai-customer-support, n8n comparison,
+      faceless channels, content-repurposing, package-prompts, zero-cost-products,
+      monetization; funnels to monetization-kit + zero-to-10k-ai-agents +
+      ai-content-machine-blueprint). RAM healthy (~572 MB) so ran the normal SEO-generation
+      path. Marked the axis covered (struck from backlog) in
+      `skills/content/seo-comparison-article/SKILL.md`. Updated tasks.md + lessons-learned.
+      Staged ONLY the new article + SKILL.md + tasks.md + lessons-learned.md (NOT `git add -A`)
+      to keep secret-bearing untracked files out of the commit. Pure text, zero money
+      movement, no model inference, no secrets.
 - [x] Tick 2026-07-16 (50th): authored `notion-ai-vs-mem-vs-reflect-vs-capacities-2026.md`
       AI-note/knowledge-tools comparison into revenue/blog/ (Notion AI vs Mem vs Reflect vs
       Capacities — fills the *AI note / knowledge tools* axis from the first-wave backlog; a

@@ -111,6 +111,7 @@ Covered comparison axes (slug == filename, all in `revenue/blog/`):
 - **Password / secrets managers:** `1password-vs-bitwarden-vs-dashlane-vs-keeper-2026`
 - **Project management:** `linear-vs-asana-vs-clickup-vs-height-2026`
 - **AI note / knowledge tools:** `notion-ai-vs-mem-vs-reflect-vs-capacities-2026`
+- **Scheduling / calendar:** `calendly-vs-cal-com-vs-motion-vs-reclaim-2026`
 
 Non-comparison blueprints (same funnel, different format) live alongside these,
 e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
@@ -134,7 +135,7 @@ These are role/layer cuts that sit beside the first wave and keep the
 - **Translation / localization:** DeepL vs Google Translate vs Lilt vs Unbabel
 - **AI spreadsheet / data analysis:** Rows vs GRID vs Equals vs Quadratic
 - **Form / survey builders:** Typeform vs Jotform vs Fillout vs Formstack
-- **Scheduling / calendar:** Calendly vs Cal.com vs Motion vs Reclaim
+- ~~Scheduling / calendar: Calendly vs Cal.com vs Motion vs Reclaim~~ — COVERED → `calendly-vs-cal-com-vs-motion-vs-reclaim-2026` (2026-07-16)
 - **Project management:** Linear vs Asana vs ClickUp vs Height
 - **Logo / brand design:** Looka vs Brandmark vs Tailor Brands vs LogoAI
 - ~~No-code database: Airtable vs NocoDB vs Baserow vs Supabase~~ — COVERED → `airtable-vs-nocodb-vs-baserow-vs-supabase-2026` (2026-07-16)
