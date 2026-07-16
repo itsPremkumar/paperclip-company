@@ -6,6 +6,25 @@
 
 ## Open
 - [ ] **Author next SEO/article drafts into revenue/blog/** (agent-safe, continuous)
+- [x] Tick 2026-07-16 (54th): authored `kajabi-vs-teachable-vs-thinkific-vs-podia-2026.md`
+      course/digital-product-platform comparison into revenue/blog/ (Kajabi vs Teachable
+      vs Thinkific vs Podia — fills the *course / digital-product platform* axis, the most
+      directly monetization-aligned gap and a thematic fit for the company's own
+      Gumroad-based digital-products vertical and the "where do I host my course" buyer
+      job; 30-second verdict + side-by-side table across 5 dims + 12 contextual cross-links
+      to zero-cost-digital-products-that-sell, package-and-sell-ai-prompts,
+      how-to-run-ai-company-zero-budget, content-repurposing-engine-2026,
+      build-ai-lead-generation-system-2026, ai-customer-support-zero-budget-2026,
+      autonomous-ai-business-stack-2026,
+      shopify-vs-woocommerce-vs-bigcommerce-vs-squarespace-2026,
+      mailchimp-vs-klaviyo-vs-activecampaign-vs-brevo-2026, zero-to-10k-ai-agents,
+      ai-content-machine-blueprint; funnels to monetization-kit + zero-to-10k-ai-agents +
+      ai-content-machine-blueprint). RAM healthy (~433 MB) so ran the normal SEO-generation
+      path. Added the axis to the Covered list (and refreshed the stale backlog example) in
+      `skills/content/seo-comparison-article/SKILL.md`. Updated tasks.md + lessons-learned.
+      Staged ONLY the new article + SKILL.md + tasks.md + lessons-learned.md (NOT
+      `git add -A`) to keep secret-bearing untracked files out of the commit. Pure text,
+      zero money movement, no model inference, no secrets.
 - [x] Tick 2026-07-16 (53rd): authored `segment-vs-rudderstack-vs-amplitude-vs-posthog-2026.md`
       customer-data / product-analytics comparison into revenue/blog/ (Segment vs RudderStack
       vs Amplitude vs PostHog — fills the *customer data / product analytics* axis from the

@@ -1,5 +1,35 @@
 # Lessons Learned
 
+## TICK-54 — Course/digital-product-platform comparison SEO article (2026-07-16)
+- **What was done (agent-executable, zero human gate):** Free RAM measured 444032 KB
+  (~433 MB) — above the 300 MB gate — so this tick ran the **normal SEO-generation path**.
+  Authored `kajabi-vs-teachable-vs-thinkific-vs-podia-2026.md` into `revenue/blog/` — a
+  *course / digital-product platform* comparison (Kajabi vs Teachable vs Thinkific vs Podia),
+  the most directly monetization-aligned uncovered axis and a thematic fit that reinforces
+  the company's own Gumroad-based digital-products vertical (the "where do I host my course"
+  buyer job). It explicitly separates the four jobs (course delivery, checkout/billing,
+  marketing layer, community/extras) and pushes the "validate on the free/transaction-fee
+  tier or Gumroad before paying a platform bill" framing — which dovetails with the company's
+  zero-budget posture. 30-second verdict + side-by-side table across 5 dims + 12 contextual
+  cross-links (zero-cost-digital-products-that-sell, package-and-sell-ai-prompts,
+  how-to-run-ai-company-zero-budget, content-repurposing-engine-2026,
+  build-ai-lead-generation-system-2026, ai-customer-support-zero-budget-2026,
+  autonomous-ai-business-stack-2026, shopify-vs-woocommerce-vs-bigcommerce-vs-squarespace-2026,
+  mailchimp-vs-klaviyo-vs-activecampaign-vs-brevo-2026, zero-to-10k-ai-agents,
+  ai-content-machine-blueprint) funnelling to monetization-kit + zero-to-10k-ai-agents +
+  ai-content-machine-blueprint. Added the axis to the Covered list and refreshed the stale
+  backlog example (CRM / AI-website-builder / AI-design / LLM-observability were already
+  covered) in `skills/content/seo-comparison-article/SKILL.md`. Updated tasks.md. Pure
+  authored text — no model inference, no money movement, no secrets.
+- **Lesson:** The "don't pre-buy the all-in-one OS before you have a product" framing is a
+  strong, non-duplicating cut for this axis: it lets the comparison double as a selling
+  argument for the company's own zero-cost (Gumroad) path while still serving creators who
+  will eventually need a hosted platform. Also backfilled four shipped-but-uncatalogued axes
+  (ahrefs, framer, langsmith, vercel) into the SKILL.md Coverage Matrix so the next tick's
+  "scan for a missing axis" step has an accurate source of truth. Staged ONLY the four safe
+  files (new article + SKILL.md + tasks.md + this log) — never `git add -A` — to keep
+  secret-bearing untracked files and unrelated prior WIP out of the commit.
+
 ## TICK-53 — Customer-data/product-analytics comparison SEO article (2026-07-16)
 - **What was done (agent-executable, zero human gate):** Free RAM measured 338600 KB
   (~330 MB) — above the 300 MB gate — so this tick ran the **normal SEO-generation path**.

@@ -34,9 +34,13 @@ below for the live list of covered axes and the backlog of gaps to fill next.
 1. **Scan for a missing comparison axis.** List existing slugs and group them by
    axis type. The loop has now covered 20+ comparison axes across five families
    (see **Coverage Matrix** below) — do NOT re-author a covered slug. Pick an
-   UNSATISFIED axis from the backlog (e.g. a *CRM/sales* quartet, an *AI website
-   builder* quartet, an *AI design tool* quartet, or an *LLM observability/eval*
-   quartet) or propose a fresh high-intent axis. Prefer the gap with the highest
+   Pick an UNSATISFIED axis from the backlog (e.g. a *landing-page builders* quartet
+   (Unbounce vs Leadpages vs Instapage vs Carrd), a *community platforms* quartet
+   (Circle vs Skool vs Mighty Networks vs Discord), a *form/survey tools* quartet
+   (Typeform vs Tally vs Fillout vs Jotform), a *web analytics* quartet
+   (Plausible vs Umami vs Fathom vs GA4), or an *API clients* quartet
+   (Postman vs Insomnia vs Bruno vs Hoppscotch)) or propose a fresh high-intent axis.
+   Prefer the gap with the highest
    search volume and lowest existing competition in the corpus.
    2. **Reuse the canonical front-matter block verbatim** (YAML between `---`
    fences). Required keys, in order:
@@ -114,6 +118,11 @@ Covered comparison axes (slug == filename, all in `revenue/blog/`):
 - **Scheduling / calendar:** `calendly-vs-cal-com-vs-motion-vs-reclaim-2026`
 - **Social media management:** `buffer-vs-hootsuite-vs-later-vs-sprout-social-2026`
 - **Customer data / product analytics:** `segment-vs-rudderstack-vs-amplitude-vs-posthog-2026`
+- **SEO keyword research:** `ahrefs-vs-semrush-vs-moz-vs-ubersuggest-2026`
+- **Website builders:** `framer-vs-webflow-vs-wix-vs-10web-2026`
+- **LLM observability / eval:** `langsmith-vs-langfuse-vs-phoenix-vs-helicone-2026`
+- **Hosting / deploy:** `vercel-vs-netlify-vs-railway-vs-render-2026`
+- **Course / digital-product platforms:** `kajabi-vs-teachable-vs-thinkific-vs-podia-2026`
 
 Non-comparison blueprints (same funnel, different format) live alongside these,
 e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
