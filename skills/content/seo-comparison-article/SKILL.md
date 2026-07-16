@@ -106,6 +106,7 @@ Covered comparison axes (slug == filename, all in `revenue/blog/`):
 - **Customer-support helpdesk:** `zendesk-vs-freshdesk-vs-help-scout-vs-gorgias-2026`
 - **Email marketing / ESP automation:** `mailchimp-vs-klaviyo-vs-activecampaign-vs-brevo-2026`
 - **E-commerce platforms:** `shopify-vs-woocommerce-vs-bigcommerce-vs-squarespace-2026`
+- **AI design tools:** `canva-vs-figma-vs-adobe-express-vs-designs-ai-2026`
 
 Non-comparison blueprints (same funnel, different format) live alongside these,
 e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
@@ -114,7 +115,7 @@ e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
 
 ### Suggested next axes (backlog — not yet covered)
 - ~~AI website builders: Framer vs Webflow vs Wix ADI vs 10Web~~ — COVERED → `framer-vs-webflow-vs-wix-vs-10web-2026` (2026-07-15, TICK-39)
-- **AI design tools:** Canva vs Figma vs Adobe Express vs Designs.ai
+- ~~AI design tools: Canva vs Figma vs Adobe Express vs Designs.ai~~ — COVERED → `canva-vs-figma-vs-adobe-express-vs-designs-ai-2026` (2026-07-16)
 - **LLM observability / eval:** LangSmith vs Langfuse vs Phoenix vs Helicone
 - **AI note / knowledge tools:** Notion AI vs Mem vs Reflect vs Capacities
 - **Fine-tuning / ML platforms:** Together Fine-tune vs OpenAI Fine-tuning vs

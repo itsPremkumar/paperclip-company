@@ -93,6 +93,18 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-16 (43rd): authored `canva-vs-figma-vs-adobe-express-vs-designs-ai-2026.md`
+      AI-design-tools comparison SEO piece into revenue/blog/ (Canva vs Figma vs Adobe Express vs
+      Designs.ai — fills the *AI design tools* axis from the first-wave backlog; pairs with the
+      image-generator and presentation-maker quartets already covered; 30-second verdict +
+      side-by-side table across 8 dims + 12 contextual cross-links to content-repurposing,
+      faceless channel, midjourney/flux, gamma, n8n, CRM, ESP, customer-support, autonomous-stack,
+      lead-gen, agent-monetization, zero-cost-products, package-prompts; funnels to monetization-kit
+      + ai-content-machine-blueprint + zero-to-10k-ai-agents). RAM healthy (~600 MB) so ran the normal
+      SEO-generation path. Marked the axis covered (and struck from backlog) in
+      `skills/content/seo-comparison-article/SKILL.md`. Staged ONLY the new article + SKILL.md +
+      tasks.md + lessons-learned.md to keep secret-bearing untracked files out of the commit. Pure
+      text, zero money movement, no model inference, no secrets.
 - [x] Tick 2026-07-16 (42nd): authored `shopify-vs-woocommerce-vs-bigcommerce-vs-squarespace-2026.md`
       e-commerce-platform comparison SEO piece into revenue/blog/ (Shopify vs WooCommerce
       vs BigCommerce vs Squarespace — fills the missing *e-commerce storefront* axis from

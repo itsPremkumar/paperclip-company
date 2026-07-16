@@ -1,6 +1,26 @@
 # Lessons Learned
 
-## TICK-42 — e-commerce platform comparison SEO article (2026-07-16)
+## TICK-43 — AI design-tools comparison SEO article (2026-07-16)
+- **What was done (agent-executable, zero human gate):** Free RAM measured 614808 KB
+  (~600 MB) — well above the 300 MB gate — so this tick ran the **normal SEO-generation path**.
+  Authored `canva-vs-figma-vs-adobe-express-vs-designs-ai-2026.md` into `revenue/blog/` — an
+  *AI design tools* comparison (Canva vs Figma vs Adobe Express vs Designs.ai), the next uncovered
+  axis in the first-wave Coverage-Matrix backlog. 30-second verdict + side-by-side table across free
+  tier / paid start / learning curve / AI features / collaboration / brand kit / lock-in (8 dims) +
+  12 contextual cross-links (content-repurposing, faceless channel + YouTube/TikTok/Newsletter
+  comparison, midjourney/flux, gamma, n8n, CRM, ESP, customer-support, autonomous-stack, lead-gen,
+  agent-monetization, zero-cost-products, package-prompts) funnelling to monetization-kit +
+  ai-content-machine-blueprint + zero-to-10k-ai-agents. Marked the axis covered (and struck from
+  backlog) in `skills/content/seo-comparison-article/SKILL.md`. Updated tasks.md. Pure authored
+  text — no model inference, no money movement.
+- **Lesson:** AI design tooling is a *production layer* that sits directly on top of the already
+  covered image-generator (midjourney/flux) and presentation-maker (gamma) quartets — so a single
+  new article cross-links two adjacent families and reinforces them instead of competing with them.
+  Cross-link hygiene matters: this tick verified every `./slug.md` target against the actual
+  `revenue/blog/` file list before writing, avoiding the two dangling links (one since fixed) that
+  crept into earlier articles. Staged ONLY the four safe files to keep secret-bearing untracked
+  files (`.moltbook_key`, logs, JSON dumps) out of the commit — never `git add -A` on this repo.
+
 - **What was done (agent-executable, zero human gate):** Free RAM measured 679696 KB
   (~663 MB) — well above the 300 MB gate — so this tick ran the **normal SEO-generation path**.
   Authored `shopify-vs-woocommerce-vs-bigcommerce-vs-squarespace-2026.md` into `revenue/blog/` —
