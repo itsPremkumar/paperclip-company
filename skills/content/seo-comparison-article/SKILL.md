@@ -108,6 +108,7 @@ Covered comparison axes (slug == filename, all in `revenue/blog/`):
 - **E-commerce platforms:** `shopify-vs-woocommerce-vs-bigcommerce-vs-squarespace-2026`
 - **AI design tools:** `canva-vs-figma-vs-adobe-express-vs-designs-ai-2026`
 - **No-code databases:** `airtable-vs-nocodb-vs-baserow-vs-supabase-2026`
+- **Password / secrets managers:** `1password-vs-bitwarden-vs-dashlane-vs-keeper-2026`
 
 Non-comparison blueprints (same funnel, different format) live alongside these,
 e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
@@ -149,7 +150,7 @@ re-skin of an already-covered quartet):
 - ~~E-commerce platforms: Shopify vs WooCommerce vs BigCommerce vs Squarespace~~ — COVERED → `shopify-vs-woocommerce-vs-bigcommerce-vs-squarespace-2026` (2026-07-16)
 - **Landing-page builders:** Unbounce vs Leadpages vs Instapage vs Systeme
 - **Knowledge-base / docs tools:** Confluence vs GitBook vs Docusaurus vs Outline
-- **Password / secrets managers:** 1Password vs Bitwarden vs Dashlane vs Keeper
+- ~~Password / secrets managers: 1Password vs Bitwarden vs Dashlane vs Keeper~~ — COVERED → `1password-vs-bitwarden-vs-dashlane-vs-keeper-2026` (2026-07-16)
 - **Video conferencing:** Zoom vs Google Meet vs Microsoft Teams vs Whereby
 - **AI video editing / short-form:** Descript vs CapCut vs Opus Clip vs Veed
 - **Webinar / live-event platforms:** WebinarJam vs Demio vs Livestorm vs BigMarker

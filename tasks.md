@@ -6,6 +6,19 @@
 
 ## Open
 - [ ] **Author next SEO/article drafts into revenue/blog/** (agent-safe, continuous)
+- [x] Tick 2026-07-16 (47th): authored `1password-vs-bitwarden-vs-dashlane-vs-keeper-2026.md`
+      password/secrets-manager comparison SEO piece into revenue/blog/ (1Password vs Bitwarden
+      vs Dashlane vs Keeper — fills the *password / secrets managers* axis from the third-wave
+      backlog; framed for AI-agent teams juggling API keys to reinforce the company's own
+      secret-scanner/guardrails posture; 30-second verdict + side-by-side table across 10 dims
+      + 8 contextual cross-links to autonomous-stack, security-checklist, inference-API, n8n,
+      how-to-run-ai-company, zero-cost-products, package-prompts, langsmith observability,
+      monetization; funnels to monetization-kit + zero-to-10k-ai-agents +
+      ai-content-machine-blueprint). RAM healthy (~786 MB) so ran the normal SEO-generation path.
+      Marked the axis covered (and struck from backlog) in `skills/content/seo-comparison-article/SKILL.md`.
+      Updated tasks.md + lessons-learned. Staged ONLY the new article + SKILL.md + tasks.md +
+      lessons-learned.md (NOT `git add -A`) to keep secret-bearing untracked files out of the
+      commit. Pure text, zero money movement, no model inference, no secrets.
 - [ ] **Run income-engine generators** (blog + gumroad) and verify site build
 - [x] **Package remaining catalog products** into income-engine/gumroad/products/ (product-3 remotion-templates, product-4 monetization-kit, product-6 job-board-guide — all 8 catalog products now packaged)
 - [x] **Mirror top prompts** to Hermes-Prompt-Library repo (cloned the library; it already carries the master operating prompt at v3.0 — ahead of the company's v2.0. Synced v3.0 into company `prompts/` so the repo tracks the canonical latest; no separate push needed since the library is already the mirror + ahead)
