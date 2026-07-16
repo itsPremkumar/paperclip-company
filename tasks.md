@@ -19,6 +19,17 @@
       Updated tasks.md + lessons-learned. Staged ONLY the new article + SKILL.md + tasks.md +
       lessons-learned.md (NOT `git add -A`) to keep secret-bearing untracked files out of the
       commit. Pure text, zero money movement, no model inference, no secrets.
+- [x] Tick 2026-07-16 (48th): authored `ahrefs-vs-semrush-vs-moz-vs-ubersuggest-2026.md`
+      general SEO-toolkit comparison into revenue/blog/ (Ahrefs vs SEMrush vs Moz Pro vs
+      Ubersuggest — fills the *general SEO research* axis; distinct from the already-covered
+      SEO-writing tool comparison, and directly fuels the company's own content machine;
+      30-second verdict + side-by-side table across 11 dims + 7 contextual cross-links to
+      surfer-seo writing, content-repurposing, faceless channels, how-to-run-ai-company,
+      zero-cost-products, package-prompts, autonomous-stack; funnels to monetization-kit +
+      zero-to-10k-ai-agents + ai-content-machine-blueprint). RAM healthy (~754 MB) so ran the
+      normal SEO-generation path. Staged ONLY the new article + tasks.md + lessons-learned.md
+      (NOT git add -A) to keep secret-bearing untracked files out of the commit. Pure text,
+      zero money movement, no model inference, no secrets.
 - [ ] **Run income-engine generators** (blog + gumroad) and verify site build
 - [x] **Package remaining catalog products** into income-engine/gumroad/products/ (product-3 remotion-templates, product-4 monetization-kit, product-6 job-board-guide — all 8 catalog products now packaged)
 - [x] **Mirror top prompts** to Hermes-Prompt-Library repo (cloned the library; it already carries the master operating prompt at v3.0 — ahead of the company's v2.0. Synced v3.0 into company `prompts/` so the repo tracks the canonical latest; no separate push needed since the library is already the mirror + ahead)

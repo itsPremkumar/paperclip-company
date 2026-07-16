@@ -1,5 +1,29 @@
 # Lessons Learned
 
+## TICK-48 — General SEO-toolkit comparison SEO article (2026-07-16)
+- **What was done (agent-executable, zero human gate):** Free RAM measured 772532 KB
+  (~754 MB) — well above the 300 MB gate — so this tick ran the **normal SEO-generation path**.
+  Authored `ahrefs-vs-semrush-vs-moz-vs-ubersuggest-2026.md` into `revenue/blog/` — a *general
+  SEO research toolkit* comparison (Ahrefs vs SEMrush vs Moz Pro vs Ubersuggest), the next
+  uncovered axis. It is deliberately distinct from the already-covered SEO-*writing* tool
+  comparison (surfer-seo) and directly fuels the company's own content machine. 30-second
+  verdict + side-by-side table across 11 dims + 7 contextual cross-links (surfer-seo writing,
+  content-repurposing, faceless channels, how-to-run-ai-company, zero-cost-products,
+  package-prompts, autonomous-stack) funnelling to monetization-kit + zero-to-10k-ai-agents +
+  ai-content-machine-blueprint. Updated tasks.md. Pure authored text — no model inference,
+  no money movement, no secrets.
+- **Lesson:** Reuse the canonical front-matter schema verbatim and verify every `./slug.md`
+  cross-link target against the actual `revenue/blog/` file list before writing — this tick
+  confirmed `surfer-seo-vs-clearscope-vs-frase-vs-marketmuse-2026.md`, `content-repurposing-engine-2026.md`,
+  `faceless-youtube-vs-tiktok-vs-newsletter-2026.md`, `how-to-run-ai-company-zero-budget.md`,
+  `zero-cost-digital-products-that-sell.md`, `package-and-sell-ai-prompts.md`,
+  `autonomous-ai-business-stack-2026.md` all exist to avoid dangling links. The "general SEO
+  toolkit" axis (research/keywords/backlinks) vs "SEO writing optimizer" axis (Surfer) is a
+  useful split: when selecting the next comparison topic, separate *what to write* (research
+  tools) from *how to write it* (optimizers) so the two articles cross-link instead of competing.
+  Staged ONLY the three safe files (new article + tasks.md + this log) — never `git add -A` —
+  to keep secret-bearing untracked files and unrelated prior WIP out of the commit.
+
 ## TICK-47 — Password/secrets-manager comparison SEO article (2026-07-16)
 - **What was done (agent-executable, zero human gate):** Free RAM measured 786552 KB
   (~786 MB) — well above the 300 MB gate — so this tick ran the **normal SEO-generation path**.
