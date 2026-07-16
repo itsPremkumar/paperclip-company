@@ -6,6 +6,20 @@
 
 ## Open
 - [ ] **Author next SEO/article drafts into revenue/blog/** (agent-safe, continuous)
+- [x] Tick 2026-07-16 (50th): authored `notion-ai-vs-mem-vs-reflect-vs-capacities-2026.md`
+      AI-note/knowledge-tools comparison into revenue/blog/ (Notion AI vs Mem vs Reflect vs
+      Capacities — fills the *AI note / knowledge tools* axis from the first-wave backlog; a
+      natural fit for the company's own knowledge-base + autonomous-stack narrative and the
+      "where does the agent team's memory live" buyer job; 30-second verdict + side-by-side
+      table across 4 dims + 11 contextual cross-links to how-to-run-ai-company,
+      autonomous-stack, content-repurposing, package-prompts, zero-cost-products, n8n
+      comparison, lead-gen, 7-workflows, faceless channel, customer-support, monetization;
+      funnels to monetization-kit + zero-to-10k-ai-agents). RAM healthy (~724 MB) so ran the
+      normal SEO-generation path. Marked the axis covered (struck from backlog) in
+      `skills/content/seo-comparison-article/SKILL.md`. Updated tasks.md + lessons-learned.
+      Staged ONLY the new article + SKILL.md + tasks.md + lessons-learned.md (NOT `git add -A`)
+      to keep secret-bearing untracked files out of the commit. Pure text, zero money movement,
+      no model inference, no secrets.
 - [x] Tick 2026-07-16 (47th): authored `1password-vs-bitwarden-vs-dashlane-vs-keeper-2026.md`
       password/secrets-manager comparison SEO piece into revenue/blog/ (1Password vs Bitwarden
       vs Dashlane vs Keeper — fills the *password / secrets managers* axis from the third-wave

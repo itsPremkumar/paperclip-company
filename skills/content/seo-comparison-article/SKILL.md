@@ -110,6 +110,7 @@ Covered comparison axes (slug == filename, all in `revenue/blog/`):
 - **No-code databases:** `airtable-vs-nocodb-vs-baserow-vs-supabase-2026`
 - **Password / secrets managers:** `1password-vs-bitwarden-vs-dashlane-vs-keeper-2026`
 - **Project management:** `linear-vs-asana-vs-clickup-vs-height-2026`
+- **AI note / knowledge tools:** `notion-ai-vs-mem-vs-reflect-vs-capacities-2026`
 
 Non-comparison blueprints (same funnel, different format) live alongside these,
 e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
@@ -120,7 +121,7 @@ e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
 - ~~AI website builders: Framer vs Webflow vs Wix ADI vs 10Web~~ — COVERED → `framer-vs-webflow-vs-wix-vs-10web-2026` (2026-07-15, TICK-39)
 - ~~AI design tools: Canva vs Figma vs Adobe Express vs Designs.ai~~ — COVERED → `canva-vs-figma-vs-adobe-express-vs-designs-ai-2026` (2026-07-16)
 - ~~LLM observability / eval: LangSmith vs Langfuse vs Phoenix vs Helicone~~ — COVERED → `langsmith-vs-langfuse-vs-phoenix-vs-helicone-2026` (2026-07-16)
-- **AI note / knowledge tools:** Notion AI vs Mem vs Reflect vs Capacities
+- ~~AI note / knowledge tools: Notion AI vs Mem vs Reflect vs Capacities~~ — COVERED → `notion-ai-vs-mem-vs-reflect-vs-capacities-2026` (2026-07-16)
 - **Fine-tuning / ML platforms:** Together Fine-tune vs OpenAI Fine-tuning vs
   OctoAI vs Predibase (distinct from the inference-API axis already covered)
 
