@@ -54,6 +54,32 @@ comparison in bash.
 The `wmic` check runs at the top of every tick. When RAM recovers above 300 MB
 the loop automatically resumes normal work — no flag file or manual action needed.
 
+## Lightweight pass menu (pick one, zero-inference)
+When the low-RAM branch fires, choose ONE or more of these — all are pure-markdown
+and safe under < 300 MB free:
+
+1. **Harden an existing SKILL.md.** Add a missing step, a concrete command, or a
+   gotcha surfaced in a prior tick. Prefer skills the loop already consumes
+   (`skills/automation/`, `skills/content/`).
+2. **Add a lessons-learned entry** (`knowledge-base/lessons-learned.md`) capturing
+   the tick's RAM reading, the branch taken, and the exact action performed.
+3. **Extend the SEO Coverage-Matrix backlog** in
+   `skills/content/seo-comparison-article/SKILL.md` with the *next* candidate axis
+   (research only — authoring the article is the normal-RAM job).
+4. **Tidy the task board** (`tasks.md`): mark done items, re-flag human-gated items,
+   or add a one-line lightweight-tick note. Pure text edits.
+
+Never, under low RAM, run generators, the Paperclip build, `tsc`, npm/node, or
+model inference — those are the deferred heavy jobs.
+
+## Tick record template
+Log a low-RAM tick with just enough detail to keep the next tick consistent:
+```
+TICK-NN (low-RAM): Free RAM = <N> KB (~<M> MB) < 300 MB gate -> lightweight pass.
+Action: <skill hardened / lesson added / backlog extended>. Staged only safe files;
+no `git add -A`. No model inference, no money movement.
+```
+
 ## Why this matters
 On a 6 GB host running three live services, a full build or model spawn under
 < 300 MB free will thrash or OOM-kill the loop. Deferring to a cheap

@@ -14,6 +14,11 @@
 - [ ] [HUMAN-GATED] Connect payouts / bank / PayPal
 - [ ] [HUMAN-GATED] Any paid ad spend or account signup
 
+- [x] Tick 2026-07-16 (low-RAM, autonomy loop): Free RAM = 76412 KB (~75 MB) < 300 MB gate →
+      lightweight self-improve pass (no heavy generators). Hardened
+      `skills/automation/low-ram-self-protect.md` with a concrete lightweight-pass menu +
+      tick-record template, and added a TICK-46 lessons-learned entry. Staged only the two
+      safe files (never `git add -A`); no model inference, no money movement.
 - [x] Tick 2026-07-14 (6th): authored `n8n-vs-make-vs-zapier-2026.md` SEO
       comparison into revenue/blog/ (links to the agency playbook; evergreen
       tool-comparison angle). Updated tasks.md + lessons-learned.

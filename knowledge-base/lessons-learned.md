@@ -1,5 +1,22 @@
 # Lessons Learned
 
+## TICK-46 — Low-RAM self-improve pass (2026-07-16)
+- **What was done (agent-executable, zero human gate):** Free RAM measured 76412 KB
+  (~75 MB) — far below the 300 MB gate — so this tick ran the **lightweight
+  self-improve path** instead of the normal SEO-generation path. Hardened
+  `skills/automation/low-ram-self-protect.md` with a concrete lightweight-pass menu
+  (4 zero-inference actions the loop can pick) and a reusable tick-record template,
+  so future low-RAM ticks stay consistent. Added this TICK-46 lessons-learned entry.
+  Staged ONLY the two safe files (the skill + this log) — never `git add -A` — keeping
+  secret-bearing untracked files out of the commit. No model inference, no money movement.
+- **Lesson:** The low-RAM branch is the correct, expected path on this host and should
+  not be treated as a failure — it still advances the repo (docs/skills) while protecting
+  stability. Capturing the exact `wmic` reading (in KB) + the branch taken + the specific
+  action in a single template line makes every low-RAM tick auditable and keeps the
+  Coverage-Matrix backlog (the normal-RAM work) clearly separated. The `wmic OS Get
+  FreePhysicalMemory` default (no `/Value`) output is parseable too — it returns the bare
+  number on its own line — but `/Value` remains cleaner for scripting.
+
 ## TICK-45 — No-code database comparison SEO article (2026-07-16)
 - **What was done (agent-executable, zero human gate):** Free RAM measured 494304 KB
   (~494 MB) — well above the 300 MB gate — so this tick ran the **normal SEO-generation path**.
