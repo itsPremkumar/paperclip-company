@@ -93,6 +93,22 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-16 (40th): authored `mailchimp-vs-klaviyo-vs-activecampaign-vs-brevo-2026.md`
+      email-marketing/ESP-automation comparison SEO piece into revenue/blog/ (Mailchimp
+      vs Klaviyo vs ActiveCampaign vs Brevo — fills the *email marketing / ESP automation*
+      axis from the third-wave backlog; sits one layer under the already-covered
+      newsletter-platform piece; 30-second verdict + side-by-side table across 8 dims +
+      12 contextual cross-links to newsletter comparison, lead-gen, content-repurposing,
+      faceless-channel, n8n, CRM comparison, customer-support, how-to-run-ai-company,
+      zero-cost-products, autonomous-stack, monetization; funnels to monetization-kit +
+      ai-content-machine-blueprint). RAM healthy (~479 MB) so ran the normal SEO-generation
+      path. Updated tasks.md + lessons-learned + marked the axis covered (and struck from
+      backlog) in `skills/content/seo-comparison-article/SKILL.md`. Staged ONLY the new
+      article + SKILL.md + tasks.md + lessons-learned.md (NOT `git add -A`) to keep
+      secret-bearing untracked files (`start-pc-now.sh`, `_analyze.py`, `api-issues.json`,
+      `newissue.json`) and unrelated build WIP out of the commit. Pure text, zero money
+      movement, no model inference, no secrets.
+
 - [x] Tick 2026-07-16 (36th): **low-RAM self-improve pass** — free RAM measured ~249 MB
       (< 300 MB gate), so deferred all heavy work (no SEO generation, no build, no
       model inference) and ran a lightweight self-improve pass only: extended the

@@ -104,6 +104,7 @@ Covered comparison axes (slug == filename, all in `revenue/blog/`):
 - **Channels/media:** `faceless-youtube-vs-tiktok-vs-newsletter-2026`
 - **CRM / sales:** `hubspot-vs-salesforce-vs-pipedrive-vs-zoho-2026`
 - **Customer-support helpdesk:** `zendesk-vs-freshdesk-vs-help-scout-vs-gorgias-2026`
+- **Email marketing / ESP automation:** `mailchimp-vs-klaviyo-vs-activecampaign-vs-brevo-2026`
 
 Non-comparison blueprints (same funnel, different format) live alongside these,
 e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
@@ -139,7 +140,7 @@ ticks have a deep, non-duplicating bank of axes. Each is a distinct *cut* from t
 email/newsletter, analytics, and chat waves above (different buyer job, not a
 re-skin of an already-covered quartet):
 
-- **Email marketing / ESP automation:** Mailchimp vs Klaviyo vs ActiveCampaign vs Brevo
+- ~~Email marketing / ESP automation: Mailchimp vs Klaviyo vs ActiveCampaign vs Brevo~~ — COVERED → `mailchimp-vs-klaviyo-vs-activecampaign-vs-brevo-2026` (2026-07-16)
 - **Cloud / edge hosting (dev infra):** Vercel vs Netlify vs Railway vs Render
 - ~~AI customer-support helpdesk: Zendesk vs Freshdesk vs Help Scout vs Gorgias~~ — COVERED → `zendesk-vs-freshdesk-vs-help-scout-vs-gorgias-2026` (2026-07-16)
 - **E-commerce platforms:** Shopify vs WooCommerce vs BigCommerce vs Squarespace

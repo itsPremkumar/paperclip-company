@@ -630,3 +630,23 @@
   — it doubles the cross-link surface for one article. Also: the Coverage Matrix backlog is the
   single source of truth for "what not to re-author," so every tick must both consume an axis
   AND mark it covered, or the loop will eventually repeat an axis.
+
+## TICK-40 — Email-marketing / ESP comparison SEO article (2026-07-16)
+- **What was done (agent-executable, zero human gate):** Free RAM measured 490716 KB
+  (~479 MB) — well above the 300 MB gate — so this tick ran the **normal SEO-generation path**.
+  Authored `mailchimp-vs-klaviyo-vs-activecampaign-vs-brevo-2026.md` — a third-wave
+  *email-marketing / ESP automation* comparison, a new axis (the *owned-channel automation*
+  layer) that sits one step *under* the already-covered newsletter-platform quartet and pairs
+  naturally with the lead-gen and content-repurposing funnels. 30-second verdict, side-by-side
+  table across 8 dimensions, a "how to choose" section, 12 contextual cross-links, funnel to
+  monetization-kit + ai-content-machine-blueprint. Marked the axis covered in the
+  `skills/content/seo-comparison-article` Coverage Matrix and struck it from the backlog so
+  future ticks self-select a different gap. Scanned working tree for secrets (only dev
+  placeholders + internal UUIDs; no keys). No model inference was run — pure authored text.
+- **Lesson:** picking an axis that is *adjacent* to (not a duplicate of) an already-covered
+  quartet lets two comparison articles reinforce each other via cross-links instead of cannibalize
+  search intent — e.g. newsletter-platforms (Beehiiv/Substack/ConvertKit/Ghost) vs ESP-automation
+  (Mailchimp/Klaviyo/ActiveCampaign/Brevo) are different buyer jobs (publish vs automate) and now
+  cross-link both ways. Also flagged a stray untracked `newissue.json` (Paperclip PRE-85 follow-up
+  re: verifying the prompt-executor npm/GitHub install) — it carries a credits-restore gate, so it
+  was left for the founder rather than executed as a heavy network task this tick.
