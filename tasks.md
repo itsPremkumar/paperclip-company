@@ -6,6 +6,22 @@
 
 ## Open
 - [ ] **Author next SEO/article drafts into revenue/blog/** (agent-safe, continuous)
+- [x] Tick 2026-07-16 (53rd): authored `segment-vs-rudderstack-vs-amplitude-vs-posthog-2026.md`
+      customer-data / product-analytics comparison into revenue/blog/ (Segment vs RudderStack
+      vs Amplitude vs PostHog — fills the *customer data / product analytics* axis from the
+      second-wave backlog; cleanly separates the two layers, CDP pipe vs analysis destination,
+      a thematic fit for the company's own data-portability + autonomous-stack narrative and the
+      "where does my event data live / how do I avoid vendor lock-in" buyer job; 30-second
+      verdict + side-by-side table across 5 dims + 12 contextual cross-links to
+      how-to-run-ai-company, autonomous-stack, n8n, openrouter inference-API, langsmith
+      observability, airtable/nocodb, vercel/netlify/railway/render, lead-gen, customer-support,
+      content-repurposing, zero-cost-products, monetization; funnels to monetization-kit +
+      zero-to-10k-ai-agents + ai-content-machine-blueprint). RAM healthy (~330 MB) so ran the
+      normal SEO-generation path. Marked the axis covered (and struck from backlog) in
+      `skills/content/seo-comparison-article/SKILL.md`. Updated tasks.md + lessons-learned.
+      Staged ONLY the new article + SKILL.md + tasks.md + lessons-learned.md (NOT `git add -A`)
+      to keep secret-bearing untracked files out of the commit. Pure text, zero money movement,
+      no model inference, no secrets.
 - [x] Tick 2026-07-16 (52nd): authored `buffer-vs-hootsuite-vs-later-vs-sprout-social-2026.md`
       social-media-management comparison into revenue/blog/ (Buffer vs Hootsuite vs Later vs
       Sprout Social — fills the *social media management* axis from the second-wave backlog; a

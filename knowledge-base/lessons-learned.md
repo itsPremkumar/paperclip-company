@@ -1,5 +1,33 @@
 # Lessons Learned
 
+## TICK-53 — Customer-data/product-analytics comparison SEO article (2026-07-16)
+- **What was done (agent-executable, zero human gate):** Free RAM measured 338600 KB
+  (~330 MB) — above the 300 MB gate — so this tick ran the **normal SEO-generation path**.
+  Authored `segment-vs-rudderstack-vs-amplitude-vs-posthog-2026.md` into `revenue/blog/` — a
+  *customer data / product analytics* comparison (Segment vs RudderStack vs Amplitude vs PostHog),
+  the next uncovered second-wave axis. The article explicitly separates the two layers of the
+  modern data stack — the CDP/pipe job (Segment, RudderStack) from the analysis/destination job
+  (Amplitude, PostHog) — which both ranks for distinct intents and doubles as internal
+  architecture research for the company's own event pipeline. 30-second verdict + side-by-side
+  table across 5 dims + 12 contextual cross-links (how-to-run-ai-company-zero-budget,
+  autonomous-ai-business-stack-2026, n8n-vs-make-vs-zapier-2026,
+  openrouter-vs-together-vs-replicate-vs-groq-2026,
+  langsmith-vs-langfuse-vs-phoenix-vs-helicone-2026,
+  airtable-vs-nocodb-vs-baserow-vs-supabase-2026, vercel-vs-netlify-vs-railway-vs-render-2026,
+  build-ai-lead-generation-system-2026, ai-customer-support-zero-budget-2026,
+  content-repurposing-engine-2026, zero-cost-digital-products-that-sell,
+  package-and-sell-ai-prompts) funnelling to monetization-kit + zero-to-10k-ai-agents +
+  ai-content-machine-blueprint. Added the axis to the Covered list (and struck it from the
+  backlog) in `skills/content/seo-comparison-article/SKILL.md`. Updated tasks.md. Pure authored
+  text — no model inference, no money movement, no secrets.
+- **Lesson:** The pipe-vs-destination framing is a strong, non-duplicating cut: it lets one
+  comparison article cover *four* named tools while teaching a mental model (own the event
+  stream, rent the dashboards) that reinforces the company's broader "avoid single-vendor lock-in"
+  posture (same thread as the inference-API and observability comparisons). Verified every
+  `./slug.md` cross-link against the actual `revenue/blog/` file list before writing. Staged ONLY
+  the four safe files (new article + SKILL.md + tasks.md + this log) — never `git add -A` — to
+  keep secret-bearing untracked files and unrelated prior WIP out of the commit.
+
 ## TICK-52 — Social-media-management comparison SEO article (2026-07-16)
 - **What was done (agent-executable, zero human gate):** Free RAM measured 847500 KB
   (~847 MB) — above the 300 MB gate — so this tick ran the **normal SEO-generation path**.
