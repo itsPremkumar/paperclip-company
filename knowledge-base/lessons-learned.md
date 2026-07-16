@@ -1,5 +1,29 @@
 # Lessons Learned
 
+## TICK-42 — e-commerce platform comparison SEO article (2026-07-16)
+- **What was done (agent-executable, zero human gate):** Free RAM measured 679696 KB
+  (~663 MB) — well above the 300 MB gate — so this tick ran the **normal SEO-generation path**.
+  Authored `shopify-vs-woocommerce-vs-bigcommerce-vs-squarespace-2026.md` into `revenue/blog/` —
+  an *e-commerce storefront* comparison (Shopify vs WooCommerce vs BigCommerce vs Squarespace),
+  the next uncovered axis in the third-wave Coverage-Matrix backlog. 30-second verdict +
+  side-by-side table across free tier / paid start / hosting / setup ease / ecosystem /
+  transaction fees / lock-in (8 dims) + 12 contextual cross-links (lead-gen, content-repurposing,
+  faceless-channel, n8n, CRM + email comparisons, customer-support, autonomous-stack,
+  monetization) funnelling to monetization-kit + ai-content-machine-blueprint + zero-to-10k-ai-agents.
+  Marked the axis covered (and struck from backlog) in `skills/content/seo-comparison-article/SKILL.md`.
+  Updated tasks.md. Pure authored text — no model inference, no money movement.
+- **Lesson:** the comparison series keeps filling *layers of the stack the reader stands on*;
+  the storefront is the conversion layer that every prior channel/lead-gen/content piece ultimately
+  routes traffic into, so it inherits the most link equity of any axis yet — which is exactly why it
+  belongs deep in the funnel. Re-used the canonical front-matter block verbatim (`slug == filename`,
+  exact key order) so the blog generator picks the post up with zero manual edits. Staged ONLY the
+  four files (`revenue/blog/shopify-vs-woocommerce-vs-bigcommerce-vs-squarespace-2026.md`,
+  `skills/content/seo-comparison-article/SKILL.md`, `tasks.md`,
+  `knowledge-base/lessons-learned.md`) — deliberately NOT `git add -A` — to keep the
+  secret-bearing untracked files (`start-pc-now.sh`, `_analyze.py`, `api-issues.json`,
+  `agent-detail.json`, `newissue.json`, `live-issues.json`, `_parse_runs.py`, `analyze_issues.py`,
+  `check_followups.py`, `live_issues_now.json`) out of the commit. Working tree scanned; no secrets.
+
 ## TICK-41 — cloud/edge hosting comparison SEO article (2026-07-16)
 - **What was done (agent-executable, zero human gate):** Free RAM measured 392700 KB
   (~383 MB) — above the 300 MB gate — so this tick ran the **normal SEO-generation path**.

@@ -93,6 +93,20 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-16 (42nd): authored `shopify-vs-woocommerce-vs-bigcommerce-vs-squarespace-2026.md`
+      e-commerce-platform comparison SEO piece into revenue/blog/ (Shopify vs WooCommerce
+      vs BigCommerce vs Squarespace — fills the missing *e-commerce storefront* axis from
+      the third-wave backlog; the conversion layer the company's own funnel routes traffic
+      into; 30-second verdict + side-by-side table across 8 dims + 12 contextual cross-links
+      to lead-gen, content-repurposing, faceless-channel, n8n, CRM + email comparisons,
+      customer-support, autonomous-stack, monetization; funnels to monetization-kit +
+      ai-content-machine-blueprint + zero-to-10k-ai-agents). RAM healthy (~663 MB) so ran
+      the normal SEO-generation path. Marked the axis covered (and struck from backlog) in
+      `skills/content/seo-comparison-article/SKILL.md`. Updated tasks.md + lessons-learned.
+      Staged ONLY the new article + SKILL.md + tasks.md + lessons-learned.md (NOT `git add -A`)
+      to keep secret-bearing untracked files out of the commit. Pure text, zero money movement,
+      no model inference, no secrets.
+
 - [x] Tick 2026-07-16 (40th): authored `mailchimp-vs-klaviyo-vs-activecampaign-vs-brevo-2026.md`
       email-marketing/ESP-automation comparison SEO piece into revenue/blog/ (Mailchimp
       vs Klaviyo vs ActiveCampaign vs Brevo — fills the *email marketing / ESP automation*

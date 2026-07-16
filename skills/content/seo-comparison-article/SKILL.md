@@ -105,6 +105,7 @@ Covered comparison axes (slug == filename, all in `revenue/blog/`):
 - **CRM / sales:** `hubspot-vs-salesforce-vs-pipedrive-vs-zoho-2026`
 - **Customer-support helpdesk:** `zendesk-vs-freshdesk-vs-help-scout-vs-gorgias-2026`
 - **Email marketing / ESP automation:** `mailchimp-vs-klaviyo-vs-activecampaign-vs-brevo-2026`
+- **E-commerce platforms:** `shopify-vs-woocommerce-vs-bigcommerce-vs-squarespace-2026`
 
 Non-comparison blueprints (same funnel, different format) live alongside these,
 e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
@@ -143,7 +144,7 @@ re-skin of an already-covered quartet):
 - ~~Email marketing / ESP automation: Mailchimp vs Klaviyo vs ActiveCampaign vs Brevo~~ — COVERED → `mailchimp-vs-klaviyo-vs-activecampaign-vs-brevo-2026` (2026-07-16)
 - ~~Cloud / edge hosting (dev infra): Vercel vs Netlify vs Railway vs Render~~ — COVERED → `vercel-vs-netlify-vs-railway-vs-render-2026` (2026-07-16)
 - ~~AI customer-support helpdesk: Zendesk vs Freshdesk vs Help Scout vs Gorgias~~ — COVERED → `zendesk-vs-freshdesk-vs-help-scout-vs-gorgias-2026` (2026-07-16)
-- **E-commerce platforms:** Shopify vs WooCommerce vs BigCommerce vs Squarespace
+- ~~E-commerce platforms: Shopify vs WooCommerce vs BigCommerce vs Squarespace~~ — COVERED → `shopify-vs-woocommerce-vs-bigcommerce-vs-squarespace-2026` (2026-07-16)
 - **Landing-page builders:** Unbounce vs Leadpages vs Instapage vs Systeme
 - **Knowledge-base / docs tools:** Confluence vs GitBook vs Docusaurus vs Outline
 - **Password / secrets managers:** 1Password vs Bitwarden vs Dashlane vs Keeper
