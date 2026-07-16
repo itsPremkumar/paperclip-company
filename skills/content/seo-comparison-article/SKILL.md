@@ -102,6 +102,7 @@ Covered comparison axes (slug == filename, all in `revenue/blog/`):
 - **SEO content tools:** `surfer-seo-vs-clearscope-vs-frase-vs-marketmuse-2026`
 - **Newsletter/creator-email platforms:** `beehiiv-vs-substack-vs-convertkit-vs-ghost-2026`
 - **Channels/media:** `faceless-youtube-vs-tiktok-vs-newsletter-2026`
+- **CRM / sales:** `hubspot-vs-salesforce-vs-pipedrive-vs-zoho-2026`
 
 Non-comparison blueprints (same funnel, different format) live alongside these,
 e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
@@ -109,7 +110,6 @@ e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
 `income-engine/content/ai-agents-for-appointment-scheduling-and-booking-automation.md`.
 
 ### Suggested next axes (backlog — not yet covered)
-- **CRM / sales:** HubSpot vs Salesforce vs Pipedrive vs Zoho
 - **AI website builders:** Framer vs Webflow vs Wix ADI vs 10Web
 - **AI design tools:** Canva vs Figma vs Adobe Express vs Designs.ai
 - **LLM observability / eval:** LangSmith vs Langfuse vs Phoenix vs Helicone

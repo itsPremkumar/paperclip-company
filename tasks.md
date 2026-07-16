@@ -104,7 +104,22 @@
       Staged only the changed files (NOT `git add -A`) to keep secret-bearing
       untracked files (`start-pc-now.sh`, `_analyze.py`) and unrelated build WIP out
       of the commit. No money movement, no secrets.
-- [x] Tick 2026-07-15 (34th): authored `perplexity-vs-google-ai-mode-vs-microsoft-copilot-vs-you-2026.md`
+
+- [x] Tick 2026-07-16 (37th): authored `hubspot-vs-salesforce-vs-pipedrive-vs-zoho-2026.md`
+      CRM/sales comparison SEO piece into revenue/blog/ (HubSpot vs Salesforce vs
+      Pipedrive vs Zoho — fills the missing *CRM/sales* axis from the first-wave
+      backlog; directly adjacent to the lead-gen + customer-support funnels already
+      authored; 30-second verdict + side-by-side pricing/feature table + 11
+      cross-links to lead-gen, customer-support, n8n, 7-workflows, monetization,
+      how-to-run-ai-company, content-repurposing, zero-cost-products, package-prompts;
+      funnels to monetization-kit + zero-to-10k-ai-agents + ai-content-machine). RAM
+      healthy (~815 MB) so ran the normal SEO-generation path. Updated tasks.md +
+      lessons-learned. Staged ONLY the new article + tasks.md + lessons-learned.md
+      (NOT `git add -A`) to keep secret-bearing untracked files (`start-pc-now.sh`,
+      `_analyze.py`, `api-issues.json`) and unrelated build WIP out of the commit.
+      Pure text, zero money movement, no model inference, no secrets.
+
+ - [x] Tick 2026-07-15 (34th): authored `perplexity-vs-google-ai-mode-vs-microsoft-copilot-vs-you-2026.md`
       AI-answer-engine comparison SEO piece into revenue/blog/ (Perplexity vs Google AI Mode vs
       Microsoft Copilot vs You.com — fills the missing *AI search/answer engine* axis, distinct
       from the covered LLM + inference-API comparisons; 30-second verdict + side-by-side table

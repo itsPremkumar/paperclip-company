@@ -1,5 +1,29 @@
 # Lessons Learned
 
+## TICK-37 — CRM/sales comparison SEO article (2026-07-16)
+- **What was done (agent-executable, zero human gate):** Free RAM measured
+  834916 KB (~815 MB) — well above the 300 MB gate — so this tick ran the **normal
+  SEO-generation path** (no lightweight self-improve needed). Authored
+  `revenue/blog/hubspot-vs-salesforce-vs-pipedrive-vs-zoho-2026.md` — the missing
+  *CRM/sales* axis from the first-wave backlog in
+  `skills/content/seo-comparison-article/SKILL.md`. It is the highest-intent,
+  highest-volume gap in the backlog and sits directly adjacent to the already
+  authored [lead-generation system](./revenue/blog/build-ai-lead-generation-system-2026.md)
+  and [zero-budget customer-support](./revenue/blog/ai-customer-support-zero-budget-2026.md)
+  funnels. Honored the canonical front-matter schema exactly (slug == filename,
+  no price/checkout link, no secrets): 30-second verdict + side-by-side
+  pricing/feature table + 11 contextual cross-links + product funnel to
+  monetization-kit / zero-to-10k-ai-agents / ai-content-machine. Pure text, no
+  model inference, zero money movement.
+- **Lesson:** re-confirmed TICK-35/36 secret hygiene. Staged ONLY the new article
+  + `tasks.md` + `knowledge-base/lessons-learned.md` — deliberately NOT
+  `git add -A`. The untracked `start-pc-now.sh` (embeds BETTER_AUTH_SECRET / pulls
+  OPENROUTER_API_KEY path from the Hermes env), `_analyze.py`, and `api-issues.json`
+  (internal user IDs + issue UUIDs) stayed unstaged so the commit stays
+  secret-clean. When RAM is healthy, the highest-leverage agent task is still the
+  cheapest reversible one — compounding the cross-linked comparison corpus that
+  feeds (human-gated) products — not spinning up heavy infra.
+
 ## TICK-36 — low-RAM self-improve: extended SEO backlog (2026-07-16)
 - **What was done (agent-executable, zero human gate):** Free RAM measured ~249 MB —
   below the 300 MB threshold — so this tick again ran a **lightweight self-improve
