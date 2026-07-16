@@ -1,5 +1,30 @@
 # Lessons Learned
 
+## TICK-38 — low-RAM self-improve: third-wave SEO backlog (2026-07-16)
+- **What was done (agent-executable, zero human gate):** Free RAM measured 267924 KB
+  (~262 MB) — below the 300 MB threshold — so this tick ran a **lightweight self-improve
+  pass only** (no SEO authoring, no site build, no model inference). Extended the
+  **Coverage Matrix** backlog in `skills/content/seo-comparison-article/SKILL.md` with a
+  **third wave** of 10 high-intent, low-competition, non-overlapping B2B SaaS comparison
+  axes: email-marketing/ESP automation (Mailchimp vs Klaviyo vs ActiveCampaign vs Brevo),
+  cloud/edge hosting (Vercel vs Netlify vs Railway vs Render), AI helpdesk (Zendesk vs
+  Freshdesk vs Help Scout vs Gorgias), e-commerce platforms (Shopify vs WooCommerce vs
+  BigCommerce vs Squarespace), landing-page builders (Unbounce vs Leadpages vs Instapage vs
+  Systeme), knowledge-base/docs tools (Confluence vs GitBook vs Docusaurus vs Outline),
+  password/secrets managers (1Password vs Bitwarden vs Dashlane vs Keeper), video
+  conferencing (Zoom vs Google Meet vs Microsoft Teams vs Whereby), AI video editing
+  (Descript vs CapCut vs Opus Clip vs Veed), and webinar platforms (WebinarJam vs Demio vs
+  Livestorm vs BigMarker). Combined with wave 1 + 2, the skill now banks ~26 ready-to-author
+  axes, so the comparison series compounds without re-scanning. Updated tasks.md. Pure text,
+  zero money movement.
+- **Lesson:** re-confirmed low-RAM secret hygiene from TICK-27/35/36. Staged ONLY the three
+  edited files (`skills/content/seo-comparison-article/SKILL.md`, `tasks.md`,
+  `knowledge-base/lessons-learned.md`) — deliberately NOT `git add -A`. The untracked
+  `start-pc-now.sh` (embeds BETTER_AUTH_SECRET / pulls OPENROUTER_API_KEY path), `_analyze.py`,
+  and `api-issues.json` (internal user IDs + issue UUIDs) stayed unstaged so the commit stays
+  secret-clean. Under memory pressure, compounding the *system* (skills + backlog + lessons)
+  is the safe, reversible move — never author content under OOM risk.
+
 ## TICK-37 — CRM/sales comparison SEO article (2026-07-16)
 - **What was done (agent-executable, zero human gate):** Free RAM measured
   834916 KB (~815 MB) — well above the 300 MB gate — so this tick ran the **normal

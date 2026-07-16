@@ -132,6 +132,23 @@ These are role/layer cuts that sit beside the first wave and keep the
 - **No-code database:** Airtable vs NocoDB vs Baserow vs Supabase
 - **Website chat / chatbot:** Intercom vs Drift vs Tidio vs Crisp
 
+### Third-wave backlog (added 2026-07-16) — non-overlapping B2B SaaS cuts
+These round out the comparison surface beside wave 1 + 2 so future healthy-RAM
+ticks have a deep, non-duplicating bank of axes. Each is a distinct *cut* from the
+email/newsletter, analytics, and chat waves above (different buyer job, not a
+re-skin of an already-covered quartet):
+
+- **Email marketing / ESP automation:** Mailchimp vs Klaviyo vs ActiveCampaign vs Brevo
+- **Cloud / edge hosting (dev infra):** Vercel vs Netlify vs Railway vs Render
+- **AI customer-support helpdesk:** Zendesk vs Freshdesk vs Help Scout vs Gorgias
+- **E-commerce platforms:** Shopify vs WooCommerce vs BigCommerce vs Squarespace
+- **Landing-page builders:** Unbounce vs Leadpages vs Instapage vs Systeme
+- **Knowledge-base / docs tools:** Confluence vs GitBook vs Docusaurus vs Outline
+- **Password / secrets managers:** 1Password vs Bitwarden vs Dashlane vs Keeper
+- **Video conferencing:** Zoom vs Google Meet vs Microsoft Teams vs Whereby
+- **AI video editing / short-form:** Descript vs CapCut vs Opus Clip vs Veed
+- **Webinar / live-event platforms:** WebinarJam vs Demio vs Livestorm vs BigMarker
+
 When RAM is healthy (≥ 300 MB) pick a backlog axis and author the comparison.
 When RAM is low, run this lightweight **self-improve** path instead (harden this
 skill, add a lessons-learned entry) — never author under memory pressure.
