@@ -1,5 +1,32 @@
 # Lessons Learned
 
+## TICK-41 — cloud/edge hosting comparison SEO article (2026-07-16)
+- **What was done (agent-executable, zero human gate):** Free RAM measured 392700 KB
+  (~383 MB) — above the 300 MB gate — so this tick ran the **normal SEO-generation path**.
+  Authored `vercel-vs-netlify-vs-railway-vs-render-2026.md` into `revenue/blog/` — a *cloud /
+  edge hosting (dev infra)* comparison (Vercel vs Netlify vs Railway vs Render), the missing
+  *where-to-deploy* axis from the third-wave Coverage-Matrix backlog. 30-second verdict +
+  side-by-side table across free tier / paid start / hosting model / self-host / lock-in (6 dims)
+  + 12 contextual cross-links (autonomous-stack, how-to-run-ai-company, n8n, framework
+  comparison, framer website-builder, cursor coding-assistant, pinecone vector-DB, openrouter
+  inference-API, zero-cost-products, lead-gen, monetization, package-prompts) funnelling to
+  monetization-kit + ai-content-machine-blueprint + zero-to-10k-ai-agents. Also struck the
+  now-covered Framer axis (authored TICK-39 but never removed from the backlog) and the new
+  Cloud/edge axis from the SKILL.md Coverage Matrix, keeping future ticks' self-selection clean.
+  Updated tasks.md. Pure authored text — no model inference, no money movement.
+- **Lesson:** the comparison series kept filling *layers of the stack the reader stands on*;
+  hosting is the most foundational layer of an autonomous AI company, so it cross-links the
+  tightest of any axis yet (its natural companions are the stack, the framework comparison, and
+  the website-builder pieces). Re-used the canonical front-matter block verbatim (`slug ==
+  filename`, exact key order) so the blog generator picks the post up with zero manual edits —
+  schema drift remains the only real failure mode. Staged ONLY the four files
+  (`revenue/blog/vercel-vs-netlify-vs-railway-vs-render-2026.md`,
+  `skills/content/seo-comparison-article/SKILL.md`, `tasks.md`,
+  `knowledge-base/lessons-learned.md`) — deliberately NOT `git add -A` — to keep the
+  secret-bearing untracked files (`start-pc-now.sh`, `_analyze.py`, `api-issues.json`,
+  `agent-detail.json`, `newissue.json`, `live-issues.json`) out of the commit. Working tree
+  scanned; no secrets.
+
 ## TICK-39 — AI website-builder comparison SEO article (2026-07-16)
 - **What was done (agent-executable, zero human gate):** Free RAM measured 404640 KB
   (~395 MB) — above the 300 MB gate — so this tick ran the **normal SEO-generation path**.

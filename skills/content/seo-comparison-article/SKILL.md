@@ -112,7 +112,7 @@ e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
 `income-engine/content/ai-agents-for-appointment-scheduling-and-booking-automation.md`.
 
 ### Suggested next axes (backlog — not yet covered)
-- **AI website builders:** Framer vs Webflow vs Wix ADI vs 10Web
+- ~~AI website builders: Framer vs Webflow vs Wix ADI vs 10Web~~ — COVERED → `framer-vs-webflow-vs-wix-vs-10web-2026` (2026-07-15, TICK-39)
 - **AI design tools:** Canva vs Figma vs Adobe Express vs Designs.ai
 - **LLM observability / eval:** LangSmith vs Langfuse vs Phoenix vs Helicone
 - **AI note / knowledge tools:** Notion AI vs Mem vs Reflect vs Capacities
@@ -141,7 +141,7 @@ email/newsletter, analytics, and chat waves above (different buyer job, not a
 re-skin of an already-covered quartet):
 
 - ~~Email marketing / ESP automation: Mailchimp vs Klaviyo vs ActiveCampaign vs Brevo~~ — COVERED → `mailchimp-vs-klaviyo-vs-activecampaign-vs-brevo-2026` (2026-07-16)
-- **Cloud / edge hosting (dev infra):** Vercel vs Netlify vs Railway vs Render
+- ~~Cloud / edge hosting (dev infra): Vercel vs Netlify vs Railway vs Render~~ — COVERED → `vercel-vs-netlify-vs-railway-vs-render-2026` (2026-07-16)
 - ~~AI customer-support helpdesk: Zendesk vs Freshdesk vs Help Scout vs Gorgias~~ — COVERED → `zendesk-vs-freshdesk-vs-help-scout-vs-gorgias-2026` (2026-07-16)
 - **E-commerce platforms:** Shopify vs WooCommerce vs BigCommerce vs Squarespace
 - **Landing-page builders:** Unbounce vs Leadpages vs Instapage vs Systeme

@@ -109,6 +109,22 @@
       `newissue.json`) and unrelated build WIP out of the commit. Pure text, zero money
       movement, no model inference, no secrets.
 
+- [x] Tick 2026-07-16 (41st): authored `vercel-vs-netlify-vs-railway-vs-render-2026.md`
+      cloud/edge-hosting comparison SEO piece into revenue/blog/ (Vercel vs Netlify
+      vs Railway vs Render — fills the missing *dev-infra / where-to-deploy* axis from
+      the third-wave backlog; the layer the company's own autonomous stack runs on;
+      30-second verdict + side-by-side table across 6 dims + 12 contextual cross-links
+      to autonomous-stack, how-to-run-ai-company, n8n, framework comparison, framer
+      website-builder, cursor coding-assistant, pinecone vector-DB, openrouter
+      inference-API, zero-cost-products, lead-gen, monetization, package-prompts;
+      funnels to monetization-kit + ai-content-machine-blueprint + zero-to-10k-ai-agents).
+      RAM healthy (~383 MB) so ran the normal SEO-generation path. Also struck the now-covered
+      Framer axis and the new Cloud/edge axis from the SKILL.md Coverage Matrix backlog.
+      Updated tasks.md + lessons-learned. Staged ONLY the new article + SKILL.md + tasks.md +
+      lessons-learned.md (NOT `git add -A`) to keep secret-bearing untracked files
+      (`start-pc-now.sh`, `_analyze.py`, `api-issues.json`, `agent-detail.json`, `newissue.json`,
+      `live-issues.json`) out of the commit. Pure text, zero money movement, no model inference,
+      no secrets.
 - [x] Tick 2026-07-16 (36th): **low-RAM self-improve pass** — free RAM measured ~249 MB
       (< 300 MB gate), so deferred all heavy work (no SEO generation, no build, no
       model inference) and ran a lightweight self-improve pass only: extended the
