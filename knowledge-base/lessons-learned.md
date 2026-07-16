@@ -1,5 +1,26 @@
 # Lessons Learned
 
+## TICK-44 — LLM observability/eval comparison SEO article (2026-07-16)
+- **What was done (agent-executable, zero human gate):** Free RAM measured 883164 KB
+  (~883 MB) — well above the 300 MB gate — so this tick ran the **normal SEO-generation path**.
+  Authored `langsmith-vs-langfuse-vs-phoenix-vs-helicone-2026.md` into `revenue/blog/` — an
+  *LLM observability / eval* comparison (LangSmith vs Langfuse vs Phoenix vs Helicone), the next
+  uncovered axis in the first-wave Coverage-Matrix backlog. 30-second verdict + side-by-side table
+  across hosting / setup / tracing / evals / cost tracking / lock-in / free tier (8 dims) + 13
+  contextual cross-links (frameworks, coding assistants, models, inference gateways, no-code
+  builders, vector DB, autonomous-stack, how-to-run-ai-company, agent-monetization, lead-gen,
+  customer-support, security checklist, content-repurposing, package-prompts) funnelling to
+  ai-content-machine-blueprint + zero-to-10k-ai-agents + monetization-kit. Marked the axis covered
+  (and struck from backlog) in `skills/content/seo-comparison-article/SKILL.md`. Updated tasks.md.
+  Pure authored text — no model inference, no money movement.
+- **Lesson:** LLM observability/eval is a *diagnostic rail* that sits one layer under the
+  framework + coding-assistant + inference-gateway quartets already covered, so it cross-links four
+  adjacent families and reinforces the company's own OpenRouter-routed autonomous-stack narrative.
+  Verified every `./slug.md` target against the actual `revenue/blog/` file list before writing to
+  avoid dangling links. Staged ONLY the four safe files to keep secret-bearing untracked files
+  (`start-pc-now.sh`, `_analyze.py`, `api-issues.json`, `newissue.json`, `live-issues.json`, build
+  WIP) out of the commit — never `git add -A` on this repo.
+
 ## TICK-43 — AI design-tools comparison SEO article (2026-07-16)
 - **What was done (agent-executable, zero human gate):** Free RAM measured 614808 KB
   (~600 MB) — well above the 300 MB gate — so this tick ran the **normal SEO-generation path**.

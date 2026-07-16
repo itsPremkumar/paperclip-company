@@ -116,7 +116,7 @@ e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
 ### Suggested next axes (backlog — not yet covered)
 - ~~AI website builders: Framer vs Webflow vs Wix ADI vs 10Web~~ — COVERED → `framer-vs-webflow-vs-wix-vs-10web-2026` (2026-07-15, TICK-39)
 - ~~AI design tools: Canva vs Figma vs Adobe Express vs Designs.ai~~ — COVERED → `canva-vs-figma-vs-adobe-express-vs-designs-ai-2026` (2026-07-16)
-- **LLM observability / eval:** LangSmith vs Langfuse vs Phoenix vs Helicone
+- ~~LLM observability / eval: LangSmith vs Langfuse vs Phoenix vs Helicone~~ — COVERED → `langsmith-vs-langfuse-vs-phoenix-vs-helicone-2026` (2026-07-16)
 - **AI note / knowledge tools:** Notion AI vs Mem vs Reflect vs Capacities
 - **Fine-tuning / ML platforms:** Together Fine-tune vs OpenAI Fine-tuning vs
   OctoAI vs Predibase (distinct from the inference-API axis already covered)

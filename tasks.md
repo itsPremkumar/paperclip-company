@@ -93,6 +93,20 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-16 (44th): authored `langsmith-vs-langfuse-vs-phoenix-vs-helicone-2026.md`
+      LLM-observability/eval comparison SEO piece into revenue/blog/ (LangSmith vs Langfuse vs
+      Phoenix vs Helicone — fills the missing *LLM observability/eval* axis from the first-wave
+      backlog; directly adjacent to the framework + coding-assistant + inference-API comparisons
+      the company's own stack relies on; 30-second verdict + side-by-side table across 8 dims +
+      13 contextual cross-links to frameworks, coding assistants, models, inference gateways,
+      no-code builders, vector DB, autonomous-stack, how-to-run-ai-company, agent-monetization,
+      lead-gen, customer-support, security checklist, content-repurposing, package-prompts;
+      funnels to ai-content-machine-blueprint + zero-to-10k-ai-agents + monetization-kit).
+      RAM healthy (~883 MB) so ran the normal SEO-generation path. Marked the axis covered (and
+      struck from backlog) in `skills/content/seo-comparison-article/SKILL.md`. Updated tasks.md +
+      lessons-learned. Staged ONLY the new article + SKILL.md + tasks.md + lessons-learned.md
+      (NOT `git add -A`) to keep secret-bearing untracked files out of the commit. Pure text, zero
+      money movement, no model inference, no secrets.
 - [x] Tick 2026-07-16 (43rd): authored `canva-vs-figma-vs-adobe-express-vs-designs-ai-2026.md`
       AI-design-tools comparison SEO piece into revenue/blog/ (Canva vs Figma vs Adobe Express vs
       Designs.ai — fills the *AI design tools* axis from the first-wave backlog; pairs with the
