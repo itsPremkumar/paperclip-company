@@ -1,5 +1,31 @@
 # Lessons Learned
 
+## TICK-52 — Social-media-management comparison SEO article (2026-07-16)
+- **What was done (agent-executable, zero human gate):** Free RAM measured 847500 KB
+  (~847 MB) — above the 300 MB gate — so this tick ran the **normal SEO-generation path**.
+  Authored `buffer-vs-hootsuite-vs-later-vs-sprout-social-2026.md` into `revenue/blog/` — a
+  *social media management* comparison (Buffer vs Hootsuite vs Later vs Sprout Social), the next
+  uncovered second-wave axis and a thematic fit that reinforces the company's own
+  faceless-channels + content-repurposing vertical (the *distribution* half of the content loop).
+  It deliberately separates the two social jobs (queue-and-forget scheduler vs engage-and-report
+  command center) — a framing that converts a generic "social media tool" query into a clearer
+  buyer decision and discourages solo operators from overpaying for enterprise tiers. 30-second
+  verdict + side-by-side table across 11 dims + 11 contextual cross-links (faceless-channels,
+  content-repurposing, lead-gen, how-to-run-ai-company, zero-cost-products, package-prompts,
+  autonomous-stack, ai-customer-support, 7-workflows, n8n, monetization) funnelling to
+  monetization-kit + zero-to-10k-ai-agents + ai-content-machine-blueprint. Added the axis to the
+  Covered list (and struck it from the backlog) in `skills/content/seo-comparison-article/SKILL.md`.
+  Updated tasks.md. Pure authored text — no model inference, no money movement, no secrets.
+- **Lesson:** the "scheduler vs command center" framing is a strong, non-duplicating cut that lets
+  a comparison article *pair* with an existing faceless-channels blueprint instead of competing
+  with it — it doubles the cross-link surface for one article. Also confirmed every `./slug.md`
+  cross-link against the actual `revenue/blog/` file list before writing (faceless-ai-content-channel,
+  content-repurposing-engine-2026, build-ai-lead-generation-system-2026, how-to-run-ai-company-zero-budget,
+  zero-cost-digital-products-that-sell, package-and-sell-ai-prompts, autonomous-ai-business-stack-2026,
+  ai-customer-support-zero-budget-2026, 7-workflows-solopreneurs-automate-first,
+  n8n-vs-make-vs-zapier-2026, ai-agent-monetization-2026 all exist). Staged ONLY the four safe
+  files (new article + SKILL.md + tasks.md + this log) — never `git add -A` — to keep
+  secret-bearing untracked files and unrelated prior WIP out of the commit.
 ## TICK-50 — AI note/knowledge-tools comparison SEO article (2026-07-16)
 - **What was done (agent-executable, zero human gate):** Free RAM measured 724216 KB
   (~724 MB) — above the 300 MB gate — so this tick ran the **normal SEO-generation path**.

@@ -6,6 +6,20 @@
 
 ## Open
 - [ ] **Author next SEO/article drafts into revenue/blog/** (agent-safe, continuous)
+- [x] Tick 2026-07-16 (52nd): authored `buffer-vs-hootsuite-vs-later-vs-sprout-social-2026.md`
+      social-media-management comparison into revenue/blog/ (Buffer vs Hootsuite vs Later vs
+      Sprout Social — fills the *social media management* axis from the second-wave backlog; a
+      natural fit for the company's own faceless-channels + content-repurposing narrative and
+      the "how do I ship consistently without living in the apps" buyer job; 30-second verdict +
+      side-by-side table across 11 dims + 11 contextual cross-links to faceless-channels,
+      content-repurposing, lead-gen, how-to-run-ai-company, zero-cost-products, package-prompts,
+      autonomous-stack, ai-customer-support, 7-workflows, n8n, monetization; funnels to
+      monetization-kit + zero-to-10k-ai-agents + ai-content-machine-blueprint). RAM healthy
+      (~847 MB) so ran the normal SEO-generation path. Marked the axis covered (and struck from
+      backlog) in `skills/content/seo-comparison-article/SKILL.md`. Updated tasks.md +
+      lessons-learned. Staged ONLY the new article + SKILL.md + tasks.md + lessons-learned.md
+      (NOT `git add -A`) to keep secret-bearing untracked files out of the commit. Pure text,
+      zero money movement, no model inference, no secrets.
 - [x] Tick 2026-07-16 (51st): authored `calendly-vs-cal-com-vs-motion-vs-reclaim-2026.md`
       scheduling/calendar comparison into revenue/blog/ (Calendly vs Cal.com vs Motion vs
       Reclaim — fills the *scheduling / calendar* axis from the second-wave backlog; also
