@@ -93,6 +93,17 @@
       was left staged-but-uncommitted. Added TICK-17 lessons entry. No secrets.
 
 ## Done (recent ticks)
+- [x] Tick 2026-07-16 (36th): **low-RAM self-improve pass** — free RAM measured ~249 MB
+      (< 300 MB gate), so deferred all heavy work (no SEO generation, no build, no
+      model inference) and ran a lightweight self-improve pass only: extended the
+      **Coverage Matrix** backlog in `skills/content/seo-comparison-article/SKILL.md`
+      with a second wave of 10 high-intent, low-competition comparison axes
+      (customer-analytics, social, translation, spreadsheet, forms, scheduling,
+      project-management, logo/brand, no-code DB, chatbots) so future healthy-RAM
+      ticks self-select the next gap instantly. Added a lessons-learned entry.
+      Staged only the changed files (NOT `git add -A`) to keep secret-bearing
+      untracked files (`start-pc-now.sh`, `_analyze.py`) and unrelated build WIP out
+      of the commit. No money movement, no secrets.
 - [x] Tick 2026-07-15 (34th): authored `perplexity-vs-google-ai-mode-vs-microsoft-copilot-vs-you-2026.md`
       AI-answer-engine comparison SEO piece into revenue/blog/ (Perplexity vs Google AI Mode vs
       Microsoft Copilot vs You.com — fills the missing *AI search/answer engine* axis, distinct

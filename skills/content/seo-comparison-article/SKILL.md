@@ -117,6 +117,21 @@ e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,
 - **Fine-tuning / ML platforms:** Together Fine-tune vs OpenAI Fine-tuning vs
   OctoAI vs Predibase (distinct from the inference-API axis already covered)
 
+### Extended backlog (added 2026-07-16) — second wave of high-intent gaps
+These are role/layer cuts that sit beside the first wave and keep the
+"X vs Y vs Z" format inexhaustible. Pick by search volume × corpus-gap:
+
+- **Customer data / product analytics:** Segment vs RudderStack vs Amplitude vs PostHog
+- **Social media management:** Buffer vs Hootsuite vs Later vs Sprout Social
+- **Translation / localization:** DeepL vs Google Translate vs Lilt vs Unbabel
+- **AI spreadsheet / data analysis:** Rows vs GRID vs Equals vs Quadratic
+- **Form / survey builders:** Typeform vs Jotform vs Fillout vs Formstack
+- **Scheduling / calendar:** Calendly vs Cal.com vs Motion vs Reclaim
+- **Project management:** Linear vs Asana vs ClickUp vs Height
+- **Logo / brand design:** Looka vs Brandmark vs Tailor Brands vs LogoAI
+- **No-code database:** Airtable vs NocoDB vs Baserow vs Supabase
+- **Website chat / chatbot:** Intercom vs Drift vs Tidio vs Crisp
+
 When RAM is healthy (≥ 300 MB) pick a backlog axis and author the comparison.
 When RAM is low, run this lightweight **self-improve** path instead (harden this
 skill, add a lessons-learned entry) — never author under memory pressure.
