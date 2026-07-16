@@ -78,7 +78,7 @@ below for the live list of covered axes and the backlog of gaps to fill next.
 - Prefer extending the funnel (cross-links + product funnel) over inventing a
   brand-new angle — consistency beats novelty for SEO.
 
-## Coverage Matrix (live as of 2026-07-15)
+## Coverage Matrix (live as of 2026-07-16)
 
 Covered comparison axes (slug == filename, all in `revenue/blog/`):
 
@@ -109,6 +109,7 @@ Covered comparison axes (slug == filename, all in `revenue/blog/`):
 - **AI design tools:** `canva-vs-figma-vs-adobe-express-vs-designs-ai-2026`
 - **No-code databases:** `airtable-vs-nocodb-vs-baserow-vs-supabase-2026`
 - **Password / secrets managers:** `1password-vs-bitwarden-vs-dashlane-vs-keeper-2026`
+- **Project management:** `linear-vs-asana-vs-clickup-vs-height-2026`
 
 Non-comparison blueprints (same funnel, different format) live alongside these,
 e.g. `ai-agent-monetization-2026`, `build-ai-lead-generation-system-2026`,

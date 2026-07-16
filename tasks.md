@@ -30,6 +30,20 @@
       normal SEO-generation path. Staged ONLY the new article + tasks.md + lessons-learned.md
       (NOT git add -A) to keep secret-bearing untracked files out of the commit. Pure text,
       zero money movement, no model inference, no secrets.
+- [x] Tick 2026-07-16 (49th): authored `linear-vs-asana-vs-clickup-vs-height-2026.md`
+      project-management comparison into revenue/blog/ (Linear vs Asana vs ClickUp vs
+      Height — fills the high-volume *project management* axis, a distinct role/layer cut
+      from the covered CRM/support/email waves and a natural fit for the company's own
+      "run a 7-agent AI company" narrative; 30-second verdict + side-by-side table across
+      5 dims + 11 contextual cross-links to how-to-run-ai-company, autonomous-stack, n8n
+      comparison, langgraph/frameworks, content-repurposing, lead-gen, monetization,
+      package-prompts, zero-cost-products, faceless channel, 7-workflows; funnels to
+      monetization-kit + zero-to-10k-ai-agents). RAM healthy (~812 MB) so ran the normal
+      SEO-generation path. Marked the axis covered (added to the Covered list) in
+      `skills/content/seo-comparison-article/SKILL.md`. Updated tasks.md + lessons-learned.
+      Staged ONLY the new article + SKILL.md + tasks.md + lessons-learned.md (NOT
+      `git add -A`) to keep secret-bearing untracked files out of the commit. Pure text,
+      zero money movement, no model inference, no secrets.
 - [ ] **Run income-engine generators** (blog + gumroad) and verify site build
 - [x] **Package remaining catalog products** into income-engine/gumroad/products/ (product-3 remotion-templates, product-4 monetization-kit, product-6 job-board-guide — all 8 catalog products now packaged)
 - [x] **Mirror top prompts** to Hermes-Prompt-Library repo (cloned the library; it already carries the master operating prompt at v3.0 — ahead of the company's v2.0. Synced v3.0 into company `prompts/` so the repo tracks the canonical latest; no separate push needed since the library is already the mirror + ahead)
